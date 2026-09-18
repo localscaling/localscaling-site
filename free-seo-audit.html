@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20260917h">
+<link rel="stylesheet" href="/styles.css?v=20260917i">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -49,7 +49,7 @@
       <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Who outranks you, and why</li>
     </ul>
 
-    <p class="audit-fit">For local service businesses only. If you run an online store or a national brand, we're not the right fit.</p>
+    <p class="audit-fit">For local service businesses: contractors, clinics, practices, and the trades. Not for online stores, restaurants, or retail.</p>
   </section>
 
   <div class="form-card">
@@ -76,7 +76,7 @@
 
       <div class="field">
         <label for="fbiz">Business name</label>
-        <input type="text" id="fbiz" name="business" placeholder="Smith Restoration LLC" autocomplete="organization" required>
+        <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
       </div>
 
       <div class="field">
@@ -90,20 +90,33 @@
           <input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>
         </div>
         <div class="field">
-          <label for="ftrade">Trade</label>
-          <select id="ftrade" name="trade" required>
+          <label for="ftrade">Industry</label>
+          <select id="ftrade" name="industry" required>
             <option value="" disabled selected>Select one</option>
-            <option value="Plumbing">Plumbing</option>
-            <option value="HVAC">HVAC</option>
-            <option value="Electrical">Electrical</option>
-            <option value="Roofing">Roofing</option>
-            <option value="Water damage / restoration">Water damage / restoration</option>
-            <option value="Garage doors">Garage doors</option>
-            <option value="Landscaping">Landscaping</option>
-            <option value="Painting">Painting</option>
-            <option value="Cleaning">Cleaning</option>
-            <option value="Pest control">Pest control</option>
-            <option value="Other">Other</option>
+            <optgroup label="Trades and home services">
+              <option value="Plumbing">Plumbing</option>
+              <option value="HVAC">HVAC</option>
+              <option value="Electrical">Electrical</option>
+              <option value="Roofing">Roofing</option>
+              <option value="Restoration">Restoration</option>
+              <option value="Landscaping">Landscaping</option>
+              <option value="Cleaning">Cleaning</option>
+              <option value="Pest control">Pest control</option>
+              <option value="Other trade">Other trade</option>
+            </optgroup>
+            <optgroup label="Health">
+              <option value="Dental">Dental</option>
+              <option value="Medical or clinic">Medical or clinic</option>
+              <option value="Chiropractic or physical therapy">Chiropractic or physical therapy</option>
+              <option value="Other health">Other health</option>
+            </optgroup>
+            <optgroup label="Professional services">
+              <option value="Accounting or finance">Accounting or finance</option>
+              <option value="Legal">Legal</option>
+              <option value="Insurance">Insurance</option>
+              <option value="Other professional service">Other professional service</option>
+            </optgroup>
+            <option value="Other local service">Other local service</option>
           </select>
         </div>
       </div>
@@ -120,7 +133,7 @@
       <div class="field-row">
         <div class="field">
           <label for="fsearch">Search you want to win</label>
-          <input type="text" id="fsearch" name="target_search" placeholder="water damage repair Dallas">
+          <input type="text" id="fsearch" name="target_search" placeholder="emergency plumber Dallas">
         </div>
         <div class="field">
           <label for="fphone">Phone</label>
@@ -154,7 +167,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="logo" href="/"><svg viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LocalScaling"><path d="M22 3C14.82 3 9 8.82 9 16C9 25.5 22 41 22 41C22 41 35 25.5 35 16C35 8.82 29.18 3 22 3Z" stroke="#002c0a" stroke-width="2.5" fill="none"/><circle cx="22" cy="16" r="4.5" stroke="#002c0a" stroke-width="2.5" fill="none"/><text x="46" y="30" font-family="League Spartan, sans-serif" font-weight="800" font-size="22" fill="#002c0a" letter-spacing="-0.5">LocalScaling</text></svg></a>
-        <p>Local SEO for contractors and home service businesses. One operator, month to month, results guaranteed.</p>
+        <p>Local SEO for contractors, clinics, practices, and other local service businesses. One operator, month to month.</p>
       </div>
       <nav class="footer-col" aria-label="Pages">
         <h3>Pages</h3>

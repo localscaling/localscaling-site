@@ -4,7 +4,7 @@ Edit copy here, not in the generated HTML, or the next run overwrites it."""
 import os
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-STYLE_VERSION = "20260917h"  # bump when styles.css changes so browsers fetch the new file
+STYLE_VERSION = "20260917i"  # bump when styles.css changes so browsers fetch the new file
 FORM_APPLY = "https://formspree.io/f/mgoqbjbw"
 FORM_AUDIT = "https://formspree.io/f/mnpnqnyd"
 
@@ -70,7 +70,7 @@ FOOTER = f'''
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="logo" href="/">{LOGO}</a>
-        <p>Local SEO for contractors and home service businesses. One operator, month to month, results guaranteed.</p>
+        <p>Local SEO for contractors, clinics, practices, and other local service businesses. One operator, month to month.</p>
       </div>
       <nav class="footer-col" aria-label="Pages">
         <h3>Pages</h3>
@@ -158,7 +158,7 @@ def cta(h, p):
       <a href="/free-seo-audit" class="btn btn-light">Get a free audit</a>
       <a href="/apply" class="btn btn-ghost">Apply now</a>
     </div>
-    <p class="cta-note">The audit is free and comes with no obligation.</p>
+    <p class="cta-note">Free, no call, in your inbox within 24 hours.</p>
   </div>
 </section>
 '''
@@ -282,7 +282,7 @@ ICON_SITE = '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" r
 
 index = head(
   "Local SEO for Service Businesses | LocalScaling",
-  "LocalScaling gets local service businesses to the top of Google Maps and organic search. Starting at $1,500/mo with a results guarantee. Built for contractors and home service businesses.",
+  "LocalScaling gets local service businesses to the top of Google Maps and organic search. Starting at $1,500/mo, month to month. Built for contractors, clinics, practices, and the trades.",
   "/",
 ).replace("<body>", "<body class=\"has-sticky\">") + NAV + f'''
 <main id="main">
@@ -291,7 +291,7 @@ index = head(
     <div>
       <p class="eyebrow">Local SEO for service businesses</p>
       <h1 id="hero-title">More calls.<br>More jobs.<br><em>Zero ad spend.</em></h1>
-      <p class="lede">We get contractors and home service companies to the top of Google Maps in the neighborhoods they work. Stop renting leads and start owning them.</p>
+      <p class="lede">We get local service businesses to the top of Google Maps in the neighborhoods they serve. Contractors, clinics, practices, and the trades. Stop renting leads and start owning them.</p>
       <div class="hero-actions">
         <a href="/free-seo-audit" class="btn btn-clay">Get a free audit</a>
         <a href="/apply" class="text-link">Or apply to work with us</a>
@@ -300,7 +300,7 @@ index = head(
       <ul class="hero-facts">
         <li>{TICK}Starting at $1,500/mo</li>
         <li>{TICK}Month to month</li>
-        <li>{TICK}Results guarantee</li>
+        <li>{TICK}No setup fee</li>
       </ul>
     </div>
     <div class="map-visual">
@@ -315,10 +315,10 @@ index = head(
   </div>
 </section>
 
-<div class="trades" aria-label="Trades we work with">
+<div class="trades" aria-label="Who we work with">
   <div class="container trades-inner">
-    <strong>Built for the trades</strong>
-    <span>Restoration</span><span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Garage doors</span><span>Electrical</span><span>Landscaping</span>
+    <strong>Built for local services</strong>
+    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span>Dental</span><span>Medical</span><span>Accounting</span><span>Legal</span>
   </div>
 </div>
 
@@ -334,7 +334,7 @@ index = head(
         <div class="field-row">
           <div class="field">
             <label for="tTrade">Your trade</label>
-            <input type="text" id="tTrade" name="trade" placeholder="plumber" autocomplete="off" required>
+            <input type="text" id="tTrade" name="trade" placeholder="plumber, dentist, CPA" autocomplete="off" required>
           </div>
           <div class="field">
             <label for="tCity">Your city</label>
@@ -401,11 +401,11 @@ index = head(
     <div class="reveal">
       <p class="eyebrow">Who we are</p>
       <h2 id="who-title">A small shop, on purpose.</h2>
-      <p>We only work with local service businesses: contractors, restoration companies, garage door techs, and the trades that live on the phone ringing.</p>
+      <p>We only work with local service businesses: contractors, clinics, practices, and the trades. Anyone whose customers search for them nearby and call. Not online stores, not restaurants, not retail.</p>
       <p><strong>One operator.</strong> The person who builds your plan is the person who runs it.</p>
       <p><strong>Month to month.</strong> No setup fee and no long contract.</p>
-      <p><strong>We grow you, or you don't pay.</strong> If your rankings don't move in the agreed timeframe, you owe nothing.</p>
-      <p class="close">If you want one operator who knows your trade, apply. If you want the cheapest package you can find, we're not it.</p>
+      <p><strong>Plain reporting.</strong> Each month you see what moved and what came in, in plain English.</p>
+      <p class="close">If you want one operator who knows your market, apply. If you want the cheapest package you can find, we're not it.</p>
       <a href="/apply" class="btn btn-primary">Apply now</a>
     </div>
     <aside class="facts-card reveal reveal-2" aria-labelledby="facts-title">
@@ -415,7 +415,7 @@ index = head(
         <div class="fact"><dt>Term</dt><dd>Month to month</dd></div>
         <div class="fact"><dt>Setup fee</dt><dd>None</dd></div>
         <div class="fact"><dt>Who runs it</dt><dd>One operator</dd></div>
-        <div class="fact"><dt>Guarantee</dt><dd>Results, or you don't pay</dd></div>
+        <div class="fact"><dt>Reporting</dt><dd>Monthly, plain English</dd></div>
       </dl>
       <a href="/free-seo-audit" class="btn btn-light">Start with a free audit</a>
     </aside>
@@ -448,13 +448,13 @@ index = head(
     <h2 id="faq-title" class="section-title">What owners ask us first</h2>
     <div class="faq">
       {faq("Do you need to be in my city to rank my business?", "No. Every ranking signal is attached to your business, not to ours. We work remotely and the math does not change.")}
-      {faq("How long before I show up in the map pack?", "We target the map pack inside 90 days for most service areas. Dense cities take longer, and we tell you which yours is before you commit.")}
+      {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense cities take longer, and we tell you which yours is before you commit.")}
       {faq("I already have a profile and a website. Do I start over?", "No. You keep your profile and your site. We fix what is holding them back and build from there.")}
       {faq("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month.")}
     </div>
   </div>
 </section>
-''' + cta("We grow you, or you don't pay.", "If your rankings don't move in the agreed timeframe, you owe nothing. Start with the free audit.") + '''
+''' + cta("Ready to own your local market?", "Start with the free audit. We show you where you are losing calls and what it takes to fix it.") + '''
 </main>
 ''' + STICKY + FOOTER + REVEAL_JS + TEST_JS + '''
 </body>
@@ -494,7 +494,7 @@ apply = head(
         <div class="field-row">
           <div class="field">
             <label for="fbiz">Business name</label>
-            <input type="text" id="fbiz" name="business" placeholder="Smith Restoration LLC" autocomplete="organization" required>
+            <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
           </div>
           <div class="field">
             <label for="fcity">City</label>
@@ -597,7 +597,7 @@ audit = head(
       <li>{TICK}Who outranks you, and why</li>
     </ul>
 
-    <p class="audit-fit">For local service businesses only. If you run an online store or a national brand, we're not the right fit.</p>
+    <p class="audit-fit">For local service businesses: contractors, clinics, practices, and the trades. Not for online stores, restaurants, or retail.</p>
   </section>
 
   <div class="form-card">
@@ -624,7 +624,7 @@ audit = head(
 
       <div class="field">
         <label for="fbiz">Business name</label>
-        <input type="text" id="fbiz" name="business" placeholder="Smith Restoration LLC" autocomplete="organization" required>
+        <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
       </div>
 
       <div class="field">
@@ -638,20 +638,33 @@ audit = head(
           <input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>
         </div>
         <div class="field">
-          <label for="ftrade">Trade</label>
-          <select id="ftrade" name="trade" required>
+          <label for="ftrade">Industry</label>
+          <select id="ftrade" name="industry" required>
             <option value="" disabled selected>Select one</option>
-            <option value="Plumbing">Plumbing</option>
-            <option value="HVAC">HVAC</option>
-            <option value="Electrical">Electrical</option>
-            <option value="Roofing">Roofing</option>
-            <option value="Water damage / restoration">Water damage / restoration</option>
-            <option value="Garage doors">Garage doors</option>
-            <option value="Landscaping">Landscaping</option>
-            <option value="Painting">Painting</option>
-            <option value="Cleaning">Cleaning</option>
-            <option value="Pest control">Pest control</option>
-            <option value="Other">Other</option>
+            <optgroup label="Trades and home services">
+              <option value="Plumbing">Plumbing</option>
+              <option value="HVAC">HVAC</option>
+              <option value="Electrical">Electrical</option>
+              <option value="Roofing">Roofing</option>
+              <option value="Restoration">Restoration</option>
+              <option value="Landscaping">Landscaping</option>
+              <option value="Cleaning">Cleaning</option>
+              <option value="Pest control">Pest control</option>
+              <option value="Other trade">Other trade</option>
+            </optgroup>
+            <optgroup label="Health">
+              <option value="Dental">Dental</option>
+              <option value="Medical or clinic">Medical or clinic</option>
+              <option value="Chiropractic or physical therapy">Chiropractic or physical therapy</option>
+              <option value="Other health">Other health</option>
+            </optgroup>
+            <optgroup label="Professional services">
+              <option value="Accounting or finance">Accounting or finance</option>
+              <option value="Legal">Legal</option>
+              <option value="Insurance">Insurance</option>
+              <option value="Other professional service">Other professional service</option>
+            </optgroup>
+            <option value="Other local service">Other local service</option>
           </select>
         </div>
       </div>
@@ -668,7 +681,7 @@ audit = head(
       <div class="field-row">
         <div class="field">
           <label for="fsearch">Search you want to win</label>
-          <input type="text" id="fsearch" name="target_search" placeholder="water damage repair Dallas">
+          <input type="text" id="fsearch" name="target_search" placeholder="emergency plumber Dallas">
         </div>
         <div class="field">
           <label for="fphone">Phone</label>
@@ -722,7 +735,7 @@ chips = "".join(f'<li class="chip">{a}</li>' for a in areas)
 
 la = head(
   "Local SEO Agency in Los Angeles | LocalScaling",
-  "Local SEO for Los Angeles service businesses. We get contractors into the Google map pack across LA County, one service area at a time. Starting at $1,500/mo.",
+  "Local SEO for Los Angeles service businesses. We get contractors, clinics, and practices into the Google map pack across LA County, one service area at a time. Starting at $1,500/mo.",
   "/locations/los-angeles",
 ).replace("<body>", "<body class=\"has-sticky\">") + NAV + f'''
 <main id="main">
@@ -731,7 +744,7 @@ la = head(
     <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep" aria-hidden="true">/</span><span aria-current="page">Los Angeles</span></nav>
     <p class="eyebrow">Serving LA County</p>
     <h1 id="la-title">Local SEO agency in Los Angeles</h1>
-    <p class="lede">We get contractors and home service companies into the map pack where their customers actually search from, one service area at a time. LA is not one market, and treating it like one is why most campaigns here stall.</p>
+    <p class="lede">We get local service businesses into the map pack where their customers actually search from, one service area at a time. LA is not one market, and treating it like one is why most campaigns here stall.</p>
     <div class="hero-actions">
       <a href="/free-seo-audit" class="btn btn-clay">Get a free audit</a>
       <a href="/apply" class="text-link">Or apply to work with us</a>
@@ -740,7 +753,7 @@ la = head(
     <ul class="hero-facts">
       <li>{TICK}Starting at $1,500/mo</li>
       <li>{TICK}Month to month</li>
-      <li>{TICK}Service businesses only</li>
+      <li>{TICK}Local services only</li>
     </ul>
   </div>
 </section>
@@ -750,7 +763,7 @@ la = head(
     <p class="eyebrow">Why LA is different</p>
     <h2 id="la-why" class="section-title">Distance decides who shows up</h2>
     <div class="prose narrow">
-      <p>Google builds the map pack around the person searching, not around your office. A plumber in Van Nuys will not show for a homeowner in Santa Monica, however strong the profile. Los Angeles County is bigger than some states.</p>
+      <p>Google builds the map pack around the person searching, not around your office. A plumber in Van Nuys will not show for a homeowner in Santa Monica, and a dentist in Pasadena will not show for a patient in Torrance, however strong the profile. Los Angeles County is bigger than some states.</p>
       <p class="pull">One profile cannot cover 88 cities. Any agency selling you all of LA is selling you a ranking that geography will not permit.</p>
       <p>So we start by measuring how far your listing already reaches. Some cities sit inside that reach today. The rest need a location page and a longer runway. That map decides the plan.</p>
     </div>
@@ -767,9 +780,9 @@ la = head(
     </div>
     <div class="numbered">
       {num("01", "We map your real radius first", "We check where your profile ranks from a grid of points across the metro, not from one search at your desk. Everything after that is built on that map.")}
-      {num("02", "We target neighborhoods, not the metro", "Nobody searches for a roofer in Los Angeles. They search Sherman Oaks, El Segundo, Highland Park, so we build your site and profile around the names people type.")}
-      {num("03", "We set the profile up the way Google expects", "Plenty of LA contractors run out of a truck or a garage. Google calls that a service area business, and setting it up wrong caps your reach before any content work begins.")}
-      {num("04", "We put your license where people can see it", "California requires a CSLB license for most contracting work, and any homeowner can look yours up. Putting the number on your site and profile gives Google and your customer something they can check.")}
+      {num("02", "We target neighborhoods, not the metro", "Nobody searches for a roofer or a dentist in Los Angeles. They search Sherman Oaks, El Segundo, Highland Park, so we build your site and profile around the names people type.")}
+      {num("03", "We set the profile up the way Google expects", "Plenty of LA businesses work from a truck or from home. Google calls that a service area business, and setting it up wrong caps your reach before any content work begins.")}
+      {num("04", "We put your credentials where people can see it", "Contractors have a CSLB number, clinics and practices have a state board. Any customer can look it up. Putting it on your site and profile gives Google and your customer something they can check.")}
     </div>
   </div>
 </section>
@@ -781,7 +794,6 @@ la = head(
         <p class="eyebrow">The work</p>
         <h2 id="la-work" class="section-title">What running an LA campaign involves</h2>
       </div>
-      <p class="section-intro">Every item links to the application.</p>
     </div>
     <div class="cards">
       {ncard("Google Business Profile", "Categories, services, service area, photos, posts, and the Q and A most owners never touch.")}
@@ -810,7 +822,7 @@ la = head(
     <div class="faq">
       {faq("Do you have to be based in Los Angeles to rank my business here?", "No. Every signal Google weighs is attached to your business, not ours. We work with LA companies remotely.")}
       {faq("Can one Google profile rank across all of Los Angeles?", "No listing ranks county wide. You win a core radius first, then push outward with location pages as the profile gains strength.")}
-      {faq("How long before I show up in the map pack?", "We target placement inside 90 days for most areas. Dense cities take longer, and we tell you which yours is before you commit.")}
+      {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense LA cities take longer, and we tell you which yours is before you commit.")}
       {faq("I already have a profile and a website. Do I start over?", "You keep both. Starting fresh throws away your review history and the listing's age. We fix what exists and build from there.")}
       {faq("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month.")}
     </div>

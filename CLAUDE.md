@@ -22,9 +22,9 @@ serves `apply.html`.
   never a button fill, the dark-on-gold contrast was rejected
 - One primary action, the free audit, in solid green with white text. Apply is
   the secondary action everywhere
-- Layout stays: left-aligned hero with the map illustration, trades band, ten
-  second test, audit checklist, three steps, small-shop prose with facts card,
-  six service cards, accordion FAQ, guarantee band, dark footer
+- Layout stays: left-aligned hero with the map illustration, industries band,
+  ten second test, audit checklist, three steps, small-shop prose with facts
+  card, six service cards, accordion FAQ, closing CTA band, dark footer
 - Keep copy short. One or two sentences per card or answer
 - Every text and control color pair passes WCAG AA. Check ratios before
   changing a token
@@ -34,6 +34,12 @@ serves `apply.html`.
 - No invented proof. No testimonials, logos, counts, or results until the
   operator supplies real ones
 - Prices are "starting at", never fixed
+- No results guarantee anywhere. Removed 2026-09-17 at the operator's request
+- Audience is every local service business: contractors and trades, clinics
+  and practices, accounting, legal, insurance. Not online stores, restaurants,
+  or retail. Do not lean on one trade in examples, vary them
+- Timing claim: "usually three to six months to start seeing big results".
+  Never a 90 day promise
 - Run the anti-AI-writing review and `python3 ../ops/knowledge_lint.py --file`
   on every page before calling it done
 - Preview with a local server and screenshots at desktop and phone width, and
