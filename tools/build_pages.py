@@ -4,7 +4,7 @@ Edit copy here, not in the generated HTML, or the next run overwrites it."""
 import os
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-STYLE_VERSION = "20260917f"  # bump when styles.css changes so browsers fetch the new file
+STYLE_VERSION = "20260917h"  # bump when styles.css changes so browsers fetch the new file
 FORM_APPLY = "https://formspree.io/f/mgoqbjbw"
 FORM_AUDIT = "https://formspree.io/f/mnpnqnyd"
 
@@ -657,7 +657,7 @@ audit = head(
       </div>
 
       <details class="more-fields">
-        <summary>Add more detail <span>(optional, helps us go deeper)</span></summary>
+        <summary>Add more detail <span>(optional)</span></summary>
         <div>
       <div class="field">
         <label for="fgbp">Google Business Profile link</label>
