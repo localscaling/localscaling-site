@@ -4,7 +4,7 @@ Edit copy here, not in the generated HTML, or the next run overwrites it."""
 import os
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-STYLE_VERSION = "20260917e"  # bump when styles.css changes so browsers fetch the new file
+STYLE_VERSION = "20260917f"  # bump when styles.css changes so browsers fetch the new file
 FORM_APPLY = "https://formspree.io/f/mgoqbjbw"
 FORM_AUDIT = "https://formspree.io/f/mnpnqnyd"
 
@@ -585,23 +585,19 @@ audit = head(
 <main class="audit-page" id="main"><div class="container audit-grid">
   <section class="audit-intro" aria-labelledby="audit-h1">
     <p class="eyebrow">Free local SEO audit</p>
-    <h1 id="audit-h1">Find out where you're losing calls to the businesses above you.</h1>
-    <p class="lede">We look at your Google Business Profile, your website, your listings, and the businesses that outrank you, then email you a written audit. No call required.</p>
+    <h1 id="audit-h1">See where you're losing calls.</h1>
+    <p class="lede">We check your business against the three ranking above you and email you what we find. Free, no call, within 24 hours.</p>
 
-    <p class="block-title">What the audit covers</p>
-    <div class="points">
-      {point("Google Business Profile", "Categories, hours, photos, posts, and whether the profile is set up for the searches people run in your city.")}
-      {point("Listings", "Whether your name, address, and phone match on the directories that matter.")}
-      {point("Website", "Whether you have a page for each service and each city you cover, and whether Google can find them.")}
-      {point("Reviews", "How your count and rating compare with the businesses holding the top spots.")}
-      {point("Competitors", "Who holds the top three spots for your main search, and what they do that you do not.")}
-    </div>
+    <p class="block-title">What we check</p>
+    <ul class="audit-list">
+      <li>{TICK}Google Business Profile</li>
+      <li>{TICK}Name, address, and phone across listings</li>
+      <li>{TICK}Service and city pages on your site</li>
+      <li>{TICK}Reviews next to the top three</li>
+      <li>{TICK}Who outranks you, and why</li>
+    </ul>
 
-    <p class="block-title">What happens after you send it</p>
-    <div class="prose">
-      <p>We email the audit within 24 hours. If we can help, we'll say so. If we can't, we'll tell you that too. No sales call unless you ask for one.</p>
-      <p>This is for local service businesses. If you run an online store or a national brand, we're not the right fit.</p>
-    </div>
+    <p class="audit-fit">For local service businesses only. If you run an online store or a national brand, we're not the right fit.</p>
   </section>
 
   <div class="form-card">
@@ -697,7 +693,7 @@ audit = head(
       </button>
     </form>
 
-    <p class="form-footer">Prefer email? Send your business name, website, and city to <a href="mailto:info@localscaling.com">info@localscaling.com</a></p>
+    <p class="form-footer">No sales call unless you ask for one. Prefer email? Send your business name, website, and city to <a href="mailto:info@localscaling.com">info@localscaling.com</a></p>
   </div>
 </div></main>
 ''' + FOOTER + FORM_JS % {"form": "auditForm", "ids": "['fname', 'femail', 'fbiz', 'fsite', 'fcity', 'ftrade']", "next": "/audit-thank-you"} + '''
