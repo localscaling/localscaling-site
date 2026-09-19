@@ -137,7 +137,7 @@ TEST_JS = """
       var city = document.getElementById('tCity').value.trim();
       if (!trade || !city) { (trade ? document.getElementById('tCity') : document.getElementById('tTrade')).focus(); return; }
       var q = encodeURIComponent(trade + ' ' + city);
-      window.open('https://www.google.com/maps/search/' + q, '_blank', 'noopener');
+      window.open('https://www.google.com/search?q=' + q, '_blank', 'noopener');
       result.classList.add('show');
       yes.classList.remove('show'); no.classList.remove('show');
       result.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
@@ -215,6 +215,30 @@ FORM_JS = '''
 </script>
 '''
 
+# ---------------- SHARED ILLUSTRATIONS ----------------
+PIN_SM = '<svg class="pack-pin" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 2C7.03 2 3 6.03 3 11c0 6.5 9 17 9 17s9-10.5 9-17c0-4.97-4.03-9-9-9z"/><circle cx="12" cy="11" r="3"/></svg>'
+
+def serp_card(search, pack_rows, organic_rows, note, you="Your business"):
+    rows = ""
+    for i, (name, sub) in enumerate(pack_rows):
+        top = i == 0
+        tag = '<span class="pack-tag">Map pack</span>' if top else '<span class="pack-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>'
+        rows += f'<div class="pack-row{" top" if top else ""}">{PIN_SM}<div><div class="pack-name">{name}</div><div class="pack-sub">{sub}</div></div>{tag}</div>'
+    orgs = ""
+    for i, (title, url) in enumerate(organic_rows):
+        top = i == 0
+        tag = '<span class="pack-tag">Search result</span>' if top else ''
+        orgs += f'<div class="org-row{" top" if top else ""}"><div><div class="org-url">{url}</div><div class="org-title">{title}</div></div>{tag}</div>'
+    return f'''<div class="pack serp" aria-label="Illustration of a Google results page with {you.lower()} in the map pack and in the search results under it">
+        <div class="pack-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>{search}</div>
+        <p class="pack-label">Map</p>
+        <div class="pack-rows">{rows}</div>
+        <p class="pack-label pack-label-2">Listings under the map</p>
+        <div class="org-rows">{orgs}</div>
+        <p class="pack-note">{note}</p>
+      </div>'''
+
+
 # ---------------- INDEX ----------------
 def neighborhood_map():
     blocks = []
@@ -282,7 +306,7 @@ ICON_SITE = '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" r
 
 index = head(
   "Local SEO for Service Businesses | LocalScaling",
-  "LocalScaling gets local service businesses to the top of Google Maps and organic search. Starting at $1,500/mo, month to month. Built for contractors, clinics, practices, and the trades.",
+  "LocalScaling gets local service businesses to the top of Google Maps and the search results under it. Starting at $1,500/mo, month to month. Built for contractors, clinics, practices, and the trades.",
   "/",
 ).replace("<body>", "<body class=\"has-sticky\">") + NAV + f'''
 <main id="main">
@@ -291,7 +315,7 @@ index = head(
     <div>
       <p class="eyebrow">Local SEO for service businesses</p>
       <h1 id="hero-title">More calls.<br>More jobs.<br><em>Zero ad spend.</em></h1>
-      <p class="lede">We get local service businesses to the top of Google Maps in the neighborhoods they serve. Contractors, clinics, practices, and the trades. Stop renting leads and start owning them.</p>
+      <p class="lede">We get local service businesses to the top of Google Maps and the search results under it, in the neighborhoods they serve. Contractors, clinics, practices, and the trades. Stop renting leads and start owning them.</p>
       <div class="hero-actions">
         <a href="/free-seo-audit" class="btn btn-clay">Get a free audit</a>
         <a href="/apply" class="text-link">Or apply to work with us</a>
@@ -327,8 +351,8 @@ index = head(
     <div class="test-card reveal">
       <div>
         <p class="eyebrow">The ten second test</p>
-        <h2 id="test-title">Are you in the top three right now?</h2>
-        <p>Type your trade and city. We'll open the real Google Maps result in a new tab so you can see who is getting the calls today.</p>
+        <h2 id="test-title">Are you on the map and in the results right now?</h2>
+        <p>Type your trade and city. We'll open the real Google result in a new tab so you can see who holds the map and who holds the listings under it today.</p>
       </div>
       <form id="testForm" class="test-form" novalidate>
         <div class="field-row">
@@ -341,18 +365,33 @@ index = head(
             <input type="text" id="tCity" name="city" placeholder="Dallas" autocomplete="off" required>
           </div>
         </div>
-        <button type="submit" class="btn btn-clay">Check Google Maps</button>
+        <button type="submit" class="btn btn-clay">Check Google</button>
         <div id="testResult" class="test-result" aria-live="polite">
-          <strong>Were you in the top three?</strong>
+          <strong>Were you in the map pack and on the first page?</strong>
           <div class="choices">
             <button type="button" id="choiceYes" class="btn btn-secondary btn-sm">Yes</button>
             <button type="button" id="choiceNo" class="btn btn-secondary btn-sm">No</button>
           </div>
-          <div id="testYes" class="answer">Good. The audit will show you how to hold the spot and push your radius outward. <a href="/free-seo-audit" class="text-link">Get the free audit</a></div>
-          <div id="testNo" class="answer">That is where the calls are going. The audit shows you exactly why they rank above you and what it takes to change it. <a href="/free-seo-audit" class="text-link">Get the free audit</a></div>
+          <div id="testYes" class="answer">Good. The audit will show you how to hold both spots and push your radius outward. <a href="/free-seo-audit" class="text-link">Get the free audit</a></div>
+          <div id="testNo" class="answer">That is where the calls are going. The audit shows you who holds each spot, why, and what it takes to change it. <a href="/free-seo-audit" class="text-link">Get the free audit</a></div>
         </div>
-        <p class="test-note">Opens Google Maps in a new tab. Nothing is sent to us.</p>
+        <p class="test-note">Opens Google in a new tab. Nothing is sent to us.</p>
       </form>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" aria-labelledby="both-title">
+  <div class="container audit-split">
+    <div class="reveal">
+      <p class="eyebrow">Two spots on one page</p>
+      <h2 id="both-title" class="section-title">The map gets the call. The listing under it closes the deal.</h2>
+      <p class="section-intro">When someone searches for what you do, Google shows the map first and the regular results under it. People glance at the map, then scroll to see who else is there. A business that holds a spot in both gets the call more often than one that holds either alone.</p>
+      <p class="section-intro">We work both. Your Google Business Profile wins the map. Your website wins the listing under it. The audit checks where you stand in each.</p>
+      <a href="/free-seo-audit" class="btn btn-primary">See where you stand</a>
+    </div>
+    <div class="reveal reveal-2">
+      {serp_card("emergency plumber near me", [("Your business", "Plumber · 0.6 mi"), ("Another plumber", "Plumber · 1.4 mi"), ("Another plumber", "Plumber · 2.2 mi")], [("Emergency plumber in your city, open now", "yourbusiness.com"), ("Plumbers near you", "a directory"), ("Another plumber", "anotherplumber.com")], "Same search, two places to show up. We work both.")}
     </div>
   </div>
 </section>
@@ -362,7 +401,7 @@ index = head(
     <div class="reveal">
       <p class="eyebrow">Start with the audit</p>
       <h2 id="audit-title" class="section-title">See what is costing you calls before you spend a dollar.</h2>
-      <p class="section-intro">Every engagement starts with a free audit of your profile, your listings, your website, and the three businesses ranking above you. You keep it whether or not we ever work together.</p>
+      <p class="section-intro">Every engagement starts with a free audit of your profile, your website, your listings, and the businesses above you on the map and in the results. You keep it whether or not we ever work together.</p>
       <a href="/free-seo-audit" class="btn btn-primary">Request your audit</a>
     </div>
     <div class="sheet reveal reveal-2">
@@ -371,8 +410,8 @@ index = head(
       {sheet_row("Primary category and services", "Set up for the searches people run in your city")}
       {sheet_row("Name, address, and phone", "Matching on Google, Apple, Yelp, and the rest")}
       {sheet_row("Service and city pages", "One page per service and per area, and Google can find them")}
-      {sheet_row("Reviews", "Count, rating, and recency next to the top three")}
-      {sheet_row("Top three competitors", "Who holds the map pack and what they do differently")}
+      {sheet_row("Reviews", "Count, rating, and recency next to the businesses above you")}
+      {sheet_row("Who is above you", "Who holds the map pack, who holds the listings under it, and what they do differently")}
       {sheet_row("Service radius", "How far your listing reaches, and what is winnable next")}
       </ul>
     </div>
@@ -389,8 +428,8 @@ index = head(
       <p class="section-intro">No long onboarding and no jargon.</p>
     </div>
     <div class="steps">
-      {step("1", "Free local audit", "We check your profile, listings, reviews, and rankings. You see what is costing you calls before you spend anything.")}
-      {step("2", "We build your presence", "Profile setup, listing cleanup, review follow-up, and a page for every service and city you cover. All done for you.")}
+      {step("1", "Free local audit", "We check your profile, your site, your listings, and your reviews, on the map and in the results. You see what is costing you calls before you spend anything.")}
+      {step("2", "We build both", "Your profile and listings for the map. A page for every service and city on your site for the results under it. All done for you.")}
       {step("3", "You get the calls", "Leads go straight to your phone. Each month you get a plain report of what moved and what came in.")}
     </div>
   </div>
@@ -434,7 +473,7 @@ index = head(
     <div class="cards">
       {service(ICON_PIN, "Google Business Profile", "Full setup, weekly posts, Q and A, and photos that win the map pack.")}
       {service(ICON_LIST, "Listings that match", "Your name, address, and phone matched on the directories Google checks.")}
-      {service(ICON_PAGES, "Service and city pages", "One page for each service and each area you cover, written for that area.")}
+      {service(ICON_PAGES, "Service and city pages", "One page for each service and each area you cover. These are what put you in the results under the map.")}
       {service(ICON_STAR, "Review generation", "Follow-up that asks every finished customer at the right moment.")}
       {service(ICON_CHART, "Monthly reporting", "Rankings, calls, and profile activity in one plain report.")}
       {service(ICON_SITE, "A website built for local search", "Built for your trade and service area, with a structure that gets stronger over time.")}
@@ -593,8 +632,8 @@ audit = head(
       <li>{TICK}Google Business Profile</li>
       <li>{TICK}Name, address, and phone across listings</li>
       <li>{TICK}Service and city pages on your site</li>
-      <li>{TICK}Reviews next to the top three</li>
-      <li>{TICK}Who outranks you, and why</li>
+      <li>{TICK}Reviews next to the businesses above you</li>
+      <li>{TICK}Who holds the map and the results, and why</li>
     </ul>
 
     <p class="audit-fit">For local service businesses: contractors, clinics, practices, and the trades. Not for online stores, restaurants, or retail.</p>
@@ -746,7 +785,7 @@ chips = "".join(f'<li class="chip">{a}</li>' for a in areas)
 
 la = head(
   "Local SEO Agency in Los Angeles | LocalScaling",
-  "Local SEO for Los Angeles service businesses. We get contractors, clinics, and practices into the Google map pack across LA County, one service area at a time. Starting at $1,500/mo.",
+  "Local SEO for Los Angeles service businesses. We get contractors, clinics, and practices into the Google map pack and the search results under it across LA County, one service area at a time. Starting at $1,500/mo.",
   "/locations/los-angeles",
 ).replace("<body>", "<body class=\"has-sticky\">") + NAV + f'''
 <main id="main">
@@ -755,7 +794,7 @@ la = head(
     <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep" aria-hidden="true">/</span><span aria-current="page">Los Angeles</span></nav>
     <p class="eyebrow">Serving LA County</p>
     <h1 id="la-title">Local SEO agency in Los Angeles</h1>
-    <p class="lede">We get local service businesses into the map pack where their customers actually search from, one service area at a time. LA is not one market, and treating it like one is why most campaigns here stall.</p>
+    <p class="lede">We get local service businesses into the map pack and the search results under it, in the parts of LA their customers actually search from. LA is not one market, and treating it like one is why most campaigns here stall.</p>
     <div class="hero-actions">
       <a href="/free-seo-audit" class="btn btn-clay">Get a free audit</a>
       <a href="/apply" class="text-link">Or apply to work with us</a>
@@ -858,8 +897,6 @@ def fit_col(title, items, good):
     lis = "".join(f'<li><span class="fit-icon {"yes" if good else "no"}">{icon}</span>{i}</li>' for i in items)
     return f'<div class="card reveal"><h3>{title}</h3><ul class="fit-list">{lis}</ul></div>'
 
-PIN_SM = '<svg class="pack-pin" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 2C7.03 2 3 6.03 3 11c0 6.5 9 17 9 17s9-10.5 9-17c0-4.97-4.03-9-9-9z"/><circle cx="12" cy="11" r="3"/></svg>'
-
 def pack_card(c):
     rows = ""
     for i, (name, sub) in enumerate(c["pack_rows"]):
@@ -960,7 +997,22 @@ def industry_page(c):
   </div>
 </section>
 
-<section class="section bg-sand topo" aria-labelledby="ind-leaks">
+<section class="section bg-sand" aria-labelledby="ind-both">
+  <div class="container audit-split">
+    <div class="reveal">
+      <p class="eyebrow">Two spots on one page</p>
+      <h2 id="ind-both" class="section-title">The map gets the call. The listing under it closes the deal.</h2>
+      <p class="section-intro">{c["both_intro"]}</p>
+      <p class="section-intro">We work both. Your Google Business Profile wins the map. Your website wins the listing under it. The audit checks where you stand in each.</p>
+      <a href="{audit_link}" class="btn btn-primary">See where you stand</a>
+    </div>
+    <div class="reveal reveal-2">
+      {serp_card(c["pack_search"], c["pack_rows"], c["organic_rows"], "Same search, two places to show up. We work both.", you="Your firm")}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white topo" aria-labelledby="ind-leaks">
   <div class="container">
     <div class="section-head">
       <div>

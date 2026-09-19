@@ -1,4 +1,4 @@
-"""Industry page content. The pack card, the year timeline, and the intent
+"""Industry page content. The results card, the year timeline, and the intent
 table are illustrations, not data. Keep them that way.
 
 Industry page content. One dict per industry, rendered by industry_page()
@@ -9,17 +9,19 @@ no client names, no results. Timing is three to six months."""
 ACCOUNTANTS = {
   "slug": "local-seo-for-accountants",
   "title": "Local SEO for Tax Accountants and CPAs | LocalScaling",
-  "meta": "Local SEO for tax accountants, CPAs, and bookkeeping firms. We get your practice into the Google map pack in the neighborhoods you serve, ahead of tax season. Starting at $1,500/mo.",
+  "meta": "Local SEO for tax accountants, CPAs, and bookkeeping firms. We get your practice into the Google map pack and the search results under it, in the neighborhoods you serve, ahead of tax season. Starting at $1,500/mo.",
   "crumb": "Tax accountants and CPAs",
   "eyebrow": "Local SEO for accountants",
   "h1": "Local SEO for tax accountants and CPAs",
-  "lede": "Most people pick an accountant the way they pick a plumber. They search, they look at the map, they call one of the first three. We get your practice into those three spots in the neighborhoods you serve.",
+  "lede": "Most people pick an accountant the way they pick a plumber. They search, they glance at the map, they scroll the listings under it, and they call one of the first few. We get your practice into both places in the neighborhoods you serve.",
   "short": "accountants",
   "industry_value": "Accounting or finance",
 
   "pack_search": "CPA near me",
   "pack_rows": [("Your firm", "Certified public accountant · 0.4 mi"), ("Another firm", "Accountant · 1.1 mi"), ("Another firm", "Tax preparation service · 2.3 mi")],
+  "organic_rows": [("Tax accountant and CPA in your city", "yourfirm.com"), ("Top accountants near you", "a directory"), ("Another firm", "anotherfirm.com")],
   "pack_note": "Three spots. Most people never scroll past them.",
+  "both_intro": "When someone searches for an accountant, Google shows the map first and the regular results under it. People glance at the map, then scroll to see who else is there. A firm that holds a spot in both gets the call more often than one that holds either alone.",
 
   "timeline": [(1, 4, "peak", "Phones ring"), (5, 8, "quiet", "Reviews, planning, city pages"), (9, 12, "build", "Profile, pages, listings")],
   "timeline_start": 9,
@@ -58,7 +60,7 @@ ACCOUNTANTS = {
   "how_h2": "Built around how people find an accountant",
   "how": [
     ("We pick the right category and stick to it", "Google has separate categories for accountant, certified public accountant, tax preparation service, and bookkeeping service. The primary one decides which searches you can win. We choose it for the work you want more of, which is often different from the work you do most."),
-    ("We build a page for each service", "You probably do tax preparation, bookkeeping, payroll, business returns, and IRS representation. Each one gets its own page, written for the person searching for it. A single services page ranks for none of them."),
+    ("We build a page for each service", "You probably do tax preparation, bookkeeping, payroll, business returns, and IRS representation. Each one gets its own page, written for the person searching for it. Those pages are what put you in the results under the map. A single services page ranks for none of them."),
     ("We put your credentials where Google and clients can see them", "Your CPA license, your state board registration, and your firm registration go on the site and on the profile, and they match. It is one of the few trust signals a search engine can check."),
     ("We ask for reviews when clients are happiest", "Right after a return is filed, while the relief is fresh. A follow-up that goes out at that moment turns good work into public proof, and keeps it coming after April."),
     ("We do the work in the right order", "Category and listings first, because everything else sits on them. Then service pages, then city pages, then reviews. Starting with content on a profile that is set up wrong wastes the content."),
@@ -71,8 +73,8 @@ ACCOUNTANTS = {
   "searches_note": "Add your city to any of these and that is the search. The specialty ones have fewer firms competing and better clients behind them. Each one needs its own page, and that is most of the work.",
 
   "included": [
-    ("Google Business Profile", "The right primary category, services listed the way people search for them, and posts through tax season."),
-    ("Service pages", "One page for each service you want more of, written for the person typing the search."),
+    ("Google Business Profile", "The right primary category, services listed the way people search for them, and posts through tax season. This is what wins the map."),
+    ("Service pages", "One page for each service you want more of, written for the person typing the search. This is what wins the listing under the map."),
     ("City pages", "One page for each town you take clients from, so the neighbors can find you too."),
     ("Listings that match", "Your firm name, address, and phone matched across the directories Google checks, including the accounting ones."),
     ("Review generation", "A follow-up that asks right after filing, when clients are relieved, and keeps asking through the year."),

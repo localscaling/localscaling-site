@@ -44,6 +44,10 @@ serves `apply.html`.
 
 - No invented proof. No testimonials, logos, counts, or results until the
   operator supplies real ones
+- The pitch is Google Maps and the search results under it, together. Never
+  the map pack alone. Every page names both, and the home page has a section
+  that shows both on one results page. The profile wins the map, the site
+  wins the listing
 - Prices are "starting at", never fixed
 - No results guarantee anywhere. Removed 2026-09-17 at the operator's request
 - Audience is every local service business: contractors and trades, clinics
