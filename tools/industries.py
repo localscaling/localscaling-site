@@ -1,4 +1,7 @@
-"""Industry page content. One dict per industry, rendered by industry_page()
+"""Industry page content. The pack card, the year timeline, and the intent
+table are illustrations, not data. Keep them that way.
+
+Industry page content. One dict per industry, rendered by industry_page()
 in build_pages.py. To add an industry: copy ACCOUNTANTS, change every value,
 append it to PAGES, run the build. Keep every claim qualitative. No stats,
 no client names, no results. Timing is three to six months."""
@@ -13,6 +16,24 @@ ACCOUNTANTS = {
   "lede": "Most people pick an accountant the way they pick a plumber. They search, they look at the map, they call one of the first three. We get your practice into those three spots in the neighborhoods you serve.",
   "short": "accountants",
   "industry_value": "Accounting or finance",
+
+  "pack_search": "CPA near me",
+  "pack_rows": [("Your firm", "Certified public accountant · 0.4 mi"), ("Another firm", "Accountant · 1.1 mi"), ("Another firm", "Tax preparation service · 2.3 mi")],
+  "pack_note": "Three spots. Most people never scroll past them.",
+
+  "timeline": [(1, 4, "peak", "Phones ring"), (5, 8, "quiet", "Reviews, planning, city pages"), (9, 12, "build", "Profile, pages, listings")],
+  "timeline_start": 9,
+  "timeline_alt": "A twelve month timeline. Searches peak from January to April. The profile, pages, and listings are built from September to December so they are in place before the peak.",
+  "timeline_caption": "The shape of an accountant's year. Google decides who shows up in January based on what it saw in the fall, so the build happens in the fall.",
+
+  "intent": [
+    ("CPA near me", "Someone ready to call this week", "Your Google Business Profile"),
+    ("small business accountant [city]", "An owner comparing two or three firms", "A service page"),
+    ("tax preparer [city]", "A person with a deadline and a shoebox", "A service page and the profile"),
+    ("bookkeeping services [city]", "A business tired of doing it themselves", "A service page"),
+    ("accountant in [the town next door]", "A neighbor who does not know you exist", "A city page"),
+    ("CPA for dentists", "A practice that wants someone who knows their world", "A specialty page"),
+  ],
 
   "why_eyebrow": "Why accounting is different",
   "why_h2": "Referrals built your firm. Search decides who grows it.",
@@ -45,7 +66,7 @@ ACCOUNTANTS = {
   ],
 
   "searches_h2": "What your next client is typing",
-  "searches": ["CPA near me", "tax preparer near me", "small business accountant", "bookkeeping services", "business tax accountant", "accountant for self employed", "IRS help near me", "payroll services", "tax planning for small business", "quarterly taxes help"],
+  "searches": ["business tax accountant", "accountant for self employed", "IRS help near me", "payroll services", "tax planning for small business", "quarterly taxes help", "S corp accountant", "catch up bookkeeping"],
   "specialty_searches": ["accountant for real estate investors", "CPA for dentists", "CPA for contractors", "startup accountant", "nonprofit accounting", "expat tax accountant", "forensic accountant", "multi state tax accountant", "restaurant bookkeeping", "trucking company accountant"],
   "searches_note": "Add your city to any of these and that is the search. The specialty ones have fewer firms competing and better clients behind them. Each one needs its own page, and that is most of the work.",
 

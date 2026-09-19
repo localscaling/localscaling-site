@@ -860,6 +860,53 @@ def fit_col(title, items, good):
     lis = "".join(f'<li><span class="fit-icon {"yes" if good else "no"}">{icon}</span>{i}</li>' for i in items)
     return f'<div class="card reveal"><h3>{title}</h3><ul class="fit-list">{lis}</ul></div>'
 
+PIN_SM = '<svg class="pack-pin" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 2C7.03 2 3 6.03 3 11c0 6.5 9 17 9 17s9-10.5 9-17c0-4.97-4.03-9-9-9z"/><circle cx="12" cy="11" r="3"/></svg>'
+
+def pack_card(c):
+    rows = ""
+    for i, (name, sub) in enumerate(c["pack_rows"]):
+        top = i == 0
+        tag = '<span class="pack-tag">Top result</span>' if top else '<span class="pack-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>'
+        rows += f'<div class="pack-row{" top" if top else ""}">{PIN_SM}<div><div class="pack-name">{name}</div><div class="pack-sub">{sub}</div></div>{tag}</div>'
+    return f'''<div class="pack" aria-label="Illustration of a Google map pack with your firm in the top spot">
+        <div class="pack-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>{c["pack_search"]}</div>
+        <p class="pack-label">Google Maps results</p>
+        <div class="pack-rows">{rows}</div>
+        <p class="pack-note">{c["pack_note"]}</p>
+      </div>'''
+
+def year_timeline(c):
+    months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    w = 720; left = 10; span = (w - 20) / 12
+    labels = "".join(f'<text x="{left + span*i + span/2:.0f}" y="122" text-anchor="middle" class="tl-month">{m}</text>' for i, m in enumerate(months))
+    segs = ""
+    for start, end, cls, title in c["timeline"]:
+        x = left + span*(start-1); wd = span*(end-start+1)
+        segs += f'<rect x="{x:.0f}" y="46" width="{wd:.0f}" height="40" rx="8" class="tl-seg {cls}"/>'
+        segs += f'<text x="{x + wd/2:.0f}" y="71" text-anchor="middle" class="tl-text {cls}">{title}</text>'
+    start_x = left + span*(c["timeline_start"]-1) + span/2
+    stack = "".join(f'<li class="tl-item {cls}"><span class="tl-when">{months[start-1]} to {months[end-1]}</span><span class="tl-what">{title}</span></li>' for start, end, cls, title in c["timeline"])
+    return f'''<figure class="timeline">
+      <ol class="tl-stack" aria-hidden="true">{stack}</ol>
+      <svg viewBox="0 0 {w} 140" role="img" aria-label="{c["timeline_alt"]}">
+        {segs}
+        <line x1="{start_x:.0f}" y1="14" x2="{start_x:.0f}" y2="42" class="tl-line"/>
+        <text x="{start_x:.0f}" y="10" text-anchor="middle" class="tl-start">Start here</text>
+        <line x1="{left}" y1="100" x2="{w-10}" y2="100" class="tl-axis"/>
+        {labels}
+      </svg>
+      <figcaption>{c["timeline_caption"]}</figcaption>
+    </figure>'''
+
+def intent_table(c):
+    rows = "".join(f'<tr><td><span class="intent-q">{q}</span></td><td>{want}</td><td><span class="intent-page">{page}</span></td></tr>' for q, want, page in c["intent"])
+    return f'''<div class="table-wrap">
+      <table class="intent">
+        <thead><tr><th scope="col">What they type</th><th scope="col">What they want</th><th scope="col">The page that wins it</th></tr></thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>'''
+
 def industry_page(c):
     """c is a dict from tools/industries.py. Every new industry page is a new
     dict rendered through this function."""
@@ -880,22 +927,27 @@ def industry_page(c):
     page = head(c["title"], c["meta"], "/industries/" + c["slug"]).replace("<body>", '<body class="has-sticky">') + NAV
     page += f'''
 <main id="main">
-<section class="hero-simple topo" aria-labelledby="ind-title">
+<section class="hero hero-ind topo" aria-labelledby="ind-title">
   <div class="container">
     <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep" aria-hidden="true">/</span><span aria-current="page">{c["crumb"]}</span></nav>
-    <p class="eyebrow">{c["eyebrow"]}</p>
-    <h1 id="ind-title">{c["h1"]}</h1>
-    <p class="lede">{c["lede"]}</p>
-    <div class="hero-actions">
-      <a href="{audit_link}" class="btn btn-clay">Get a free audit</a>
-      <a href="/apply" class="text-link">Or apply to work with us</a>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">{c["eyebrow"]}</p>
+        <h1 id="ind-title">{c["h1"]}</h1>
+        <p class="lede">{c["lede"]}</p>
+        <div class="hero-actions">
+          <a href="{audit_link}" class="btn btn-clay">Get a free audit</a>
+          <a href="/apply" class="text-link">Or apply to work with us</a>
+        </div>
+        <p class="cta-note"><strong>Free.</strong> No call required. Sent to your inbox within 24 hours.</p>
+        <ul class="hero-facts">
+          <li>{TICK}Starting at $1,500/mo</li>
+          <li>{TICK}Month to month</li>
+          <li>{TICK}Local services only</li>
+        </ul>
+      </div>
+      {pack_card(c)}
     </div>
-    <p class="cta-note"><strong>Free.</strong> No call required. Sent to your inbox within 24 hours.</p>
-    <ul class="hero-facts">
-      <li>{TICK}Starting at $1,500/mo</li>
-      <li>{TICK}Month to month</li>
-      <li>{TICK}Local services only</li>
-    </ul>
   </div>
 </section>
 
@@ -906,6 +958,7 @@ def industry_page(c):
     <div class="prose narrow">
       {why}
     </div>
+    {year_timeline(c)}
   </div>
 </section>
 
@@ -943,7 +996,8 @@ def industry_page(c):
   <div class="container">
     <p class="eyebrow">Searches you can win</p>
     <h2 id="ind-searches" class="section-title">{c["searches_h2"]}</h2>
-    <p class="chips-label">Everyday searches</p>
+    {intent_table(c)}
+    <p class="chips-label">More everyday searches</p>
     <ul class="chips">{chip_list(c["searches"])}</ul>
     <p class="chips-label">Specialty searches with less competition</p>
     <ul class="chips">{chip_list(c["specialty_searches"])}</ul>
