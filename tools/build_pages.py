@@ -1,8 +1,9 @@
 """Generates the six site pages from shared head, nav, footer, and form snippets.
 Run from anywhere: python3 tools/build_pages.py
 Edit copy here, not in the generated HTML, or the next run overwrites it."""
-import os
+import os, sys
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(SITE, "tools"))
 
 STYLE_VERSION = "20260917i"  # bump when styles.css changes so browsers fetch the new file
 FORM_APPLY = "https://formspree.io/f/mgoqbjbw"
@@ -78,6 +79,7 @@ FOOTER = f'''
         <a href="/free-seo-audit">Free audit</a>
         <a href="/apply">Apply</a>
         <a href="/locations/los-angeles">Los Angeles</a>
+        <a href="/industries/tax-accountants-cpas">Accountants and CPAs</a>
       </nav>
       <div class="footer-col">
         <h3>Start here</h3>
@@ -318,7 +320,7 @@ index = head(
 <div class="trades" aria-label="Who we work with">
   <div class="container trades-inner">
     <strong>Built for local services</strong>
-    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span>Dental</span><span>Medical</span><span>Accounting</span><span>Legal</span>
+    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span>Dental</span><span>Medical</span><span><a href="/industries/tax-accountants-cpas">Accounting</a></span><span>Legal</span>
   </div>
 </div>
 
@@ -709,7 +711,18 @@ audit = head(
     <p class="form-footer">No sales call unless you ask for one. Prefer email? Send your business name, website, and city to <a href="mailto:info@localscaling.com">info@localscaling.com</a></p>
   </div>
 </div></main>
-''' + FOOTER + FORM_JS % {"form": "auditForm", "ids": "['fname', 'femail', 'fbiz', 'fsite', 'fcity', 'ftrade']", "next": "/audit-thank-you"} + '''
+''' + FOOTER + FORM_JS % {"form": "auditForm", "ids": "['fname', 'femail', 'fbiz', 'fsite', 'fcity', 'ftrade']", "next": "/audit-thank-you"} + """
+<script>
+  (function () {
+    var want = new URLSearchParams(location.search).get('industry');
+    var sel = document.getElementById('ftrade');
+    if (!want || !sel) return;
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === want) { sel.value = want; break; }
+    }
+  })();
+</script>
+""" + '''
 </body>
 </html>
 '''
@@ -835,6 +848,148 @@ la = head(
 </html>
 '''
 
+
+# ---------------- INDUSTRY TEMPLATE ----------------
+from industries import PAGES as INDUSTRY_PAGES
+
+def chip_list(items):
+    return "".join(f'<li class="chip">{c}</li>' for c in items)
+
+def fit_col(title, items, good):
+    icon = TICK if good else '<svg viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>'
+    lis = "".join(f'<li><span class="fit-icon {"yes" if good else "no"}">{icon}</span>{i}</li>' for i in items)
+    return f'<div class="card reveal"><h3>{title}</h3><ul class="fit-list">{lis}</ul></div>'
+
+def industry_page(c):
+    """c is a dict from tools/industries.py. Every new industry page is a new
+    dict rendered through this function."""
+    audit_link = "/free-seo-audit?industry=" + c["industry_value"].replace(" ", "%20")
+    how = "".join(num(f"0{i+1}", t, b) for i, (t, b) in enumerate(c["how"]))
+    why = "".join(
+        (f'<p class="pull">{para[1]}</p>' if isinstance(para, tuple) else f"<p>{para}</p>")
+        for para in c["why_paragraphs"]
+    )
+    leaks = "".join(f'''
+      <li class="leak reveal"><strong>{t}</strong><span>{b}</span></li>''' for t, b in c["leaks"])
+    faqs = "".join(faq(q, a) for q, a in c["faq"])
+    included = "".join(f'''
+      <div class="card card-link reveal">
+        <h3><a href="{audit_link}">{t}</a></h3>
+        <p>{b}</p>
+      </div>''' for t, b in c["included"])
+    page = head(c["title"], c["meta"], "/industries/" + c["slug"]).replace("<body>", '<body class="has-sticky">') + NAV
+    page += f'''
+<main id="main">
+<section class="hero-simple topo" aria-labelledby="ind-title">
+  <div class="container">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep" aria-hidden="true">/</span><span aria-current="page">{c["crumb"]}</span></nav>
+    <p class="eyebrow">{c["eyebrow"]}</p>
+    <h1 id="ind-title">{c["h1"]}</h1>
+    <p class="lede">{c["lede"]}</p>
+    <div class="hero-actions">
+      <a href="{audit_link}" class="btn btn-clay">Get a free audit</a>
+      <a href="/apply" class="text-link">Or apply to work with us</a>
+    </div>
+    <p class="cta-note"><strong>Free.</strong> No call required. Sent to your inbox within 24 hours.</p>
+    <ul class="hero-facts">
+      <li>{TICK}Starting at $1,500/mo</li>
+      <li>{TICK}Month to month</li>
+      <li>{TICK}Local services only</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="ind-why">
+  <div class="container">
+    <p class="eyebrow">{c["why_eyebrow"]}</p>
+    <h2 id="ind-why" class="section-title">{c["why_h2"]}</h2>
+    <div class="prose narrow">
+      {why}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand topo" aria-labelledby="ind-leaks">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Where the calls go missing</p>
+        <h2 id="ind-leaks" class="section-title">{c["leaks_h2"]}</h2>
+      </div>
+      <p class="section-intro">{c["leaks_intro"]}</p>
+    </div>
+    <ol class="leaks">
+      {leaks}
+    </ol>
+    <p class="leaks-cta"><a href="{audit_link}" class="btn btn-primary">Check mine for free</a></p>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="ind-how">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">How we work with {c["short"]}</p>
+        <h2 id="ind-how" class="section-title">{c["how_h2"]}</h2>
+      </div>
+    </div>
+    <div class="numbered">
+      {how}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" aria-labelledby="ind-searches">
+  <div class="container">
+    <p class="eyebrow">Searches you can win</p>
+    <h2 id="ind-searches" class="section-title">{c["searches_h2"]}</h2>
+    <p class="chips-label">Everyday searches</p>
+    <ul class="chips">{chip_list(c["searches"])}</ul>
+    <p class="chips-label">Specialty searches with less competition</p>
+    <ul class="chips">{chip_list(c["specialty_searches"])}</ul>
+    <p class="muted narrow">{c["searches_note"]}</p>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="ind-work">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">The work</p>
+        <h2 id="ind-work" class="section-title">What a campaign for {c["short"]} includes</h2>
+      </div>
+      <p class="section-intro">One flat retainer covers all of it.</p>
+    </div>
+    <div class="cards">
+      {included}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" aria-labelledby="ind-fit">
+  <div class="container">
+    <p class="eyebrow">Is this for you</p>
+    <h2 id="ind-fit" class="section-title">{c["fit_h2"]}</h2>
+    <div class="cards cards-2" style="margin-top:36px;">
+      {fit_col("A good fit", c["fit_yes"], True)}
+      {fit_col("Not a fit", c["fit_no"], False)}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="ind-faq">
+  <div class="container">
+    <p class="eyebrow">Questions</p>
+    <h2 id="ind-faq" class="section-title">What {c["short"]} ask us</h2>
+    <div class="faq">
+      {faqs}
+    </div>
+  </div>
+</section>
+'''
+    page += cta(c["cta_h"], c["cta_p"]) + "\n</main>\n" + STICKY + FOOTER + REVEAL_JS + "\n</body>\n</html>\n"
+    return page
+
 files = {
   "index.html": index,
   "apply.html": apply,
@@ -843,8 +998,11 @@ files = {
   "free-seo-audit.html": audit,
   "locations/los-angeles.html": la,
 }
+for cfg in INDUSTRY_PAGES:
+    files["industries/" + cfg["slug"] + ".html"] = industry_page(cfg)
 for name, content in files.items():
     p = os.path.join(SITE, name)
+    os.makedirs(os.path.dirname(p), exist_ok=True)
     with open(p, "w") as f:
         f.write(content)
     print(f"wrote {name} ({len(content.splitlines())} lines)")

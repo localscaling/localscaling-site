@@ -175,6 +175,7 @@
         <a href="/free-seo-audit">Free audit</a>
         <a href="/apply">Apply</a>
         <a href="/locations/los-angeles">Los Angeles</a>
+        <a href="/industries/tax-accountants-cpas">Accountants and CPAs</a>
       </nav>
       <div class="footer-col">
         <h3>Start here</h3>
@@ -230,6 +231,17 @@
       spinner.style.display = 'none';
     }
   });
+</script>
+
+<script>
+  (function () {
+    var want = new URLSearchParams(location.search).get('industry');
+    var sel = document.getElementById('ftrade');
+    if (!want || !sel) return;
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === want) { sel.value = want; break; }
+    }
+  })();
 </script>
 
 </body>

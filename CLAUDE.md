@@ -13,6 +13,11 @@ serves `apply.html`.
   fetch the new file
 - Form endpoints live in the generator as `FORM_APPLY` and `FORM_AUDIT`. Two
   Formspree forms, one per page
+- Industry pages: one dict per industry in `tools/industries.py`, rendered by
+  `industry_page()` at `/industries/<slug>`. Copy the accountants dict, change
+  every value, add it to `PAGES`, build. Link the new page from the footer and
+  the industries band. The audit link carries `?industry=` so the form
+  preselects. Content stays qualitative: no stats, no client names, no results
 
 ## Design, approved 2026-09-17
 
