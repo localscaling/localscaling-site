@@ -14,10 +14,16 @@ serves `apply.html`.
 - Form endpoints live in the generator as `FORM_APPLY` and `FORM_AUDIT`. Two
   Formspree forms, one per page
 - Industry pages: one dict per industry in `tools/industries.py`, rendered by
-  `industry_page()` at `/industries/<slug>`. Copy the accountants dict, change
-  every value, add it to `PAGES`, build. Link the new page from the footer and
-  the industries band. The audit link carries `?industry=` so the form
-  preselects. Content stays qualitative: no stats, no client names, no results
+  `industry_page()`. Copy the accountants dict, change every value, add it to
+  `PAGES`, build. Link the new page from the industries band. The audit link
+  carries `?industry=` so the form preselects. Content stays qualitative: no
+  stats, no client names, no results. No "X, not Y" contrast sentences, the
+  anti-AI review flags them
+- URLs are flat and read like the search: `/local-seo-for-accountants`,
+  `/local-seo-los-angeles`. No `/industries/` or `/locations/` folders. A live
+  URL never changes without a permanent redirect in `vercel.json`
+- The footer lists Home, Free audit, and Apply only. Industry and city pages
+  are linked from the industries band and from each other, not the footer
 
 ## Design, approved 2026-09-17
 

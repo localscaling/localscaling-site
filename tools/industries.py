@@ -7,7 +7,7 @@ append it to PAGES, run the build. Keep every claim qualitative. No stats,
 no client names, no results. Timing is three to six months."""
 
 ACCOUNTANTS = {
-  "slug": "tax-accountants-cpas",
+  "slug": "local-seo-for-accountants",
   "title": "Local SEO for Tax Accountants and CPAs | LocalScaling",
   "meta": "Local SEO for tax accountants, CPAs, and bookkeeping firms. We get your practice into the Google map pack in the neighborhoods you serve, ahead of tax season. Starting at $1,500/mo.",
   "crumb": "Tax accountants and CPAs",

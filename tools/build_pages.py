@@ -78,8 +78,6 @@ FOOTER = f'''
         <a href="/">Home</a>
         <a href="/free-seo-audit">Free audit</a>
         <a href="/apply">Apply</a>
-        <a href="/locations/los-angeles">Los Angeles</a>
-        <a href="/industries/tax-accountants-cpas">Accountants and CPAs</a>
       </nav>
       <div class="footer-col">
         <h3>Start here</h3>
@@ -320,7 +318,7 @@ index = head(
 <div class="trades" aria-label="Who we work with">
   <div class="container trades-inner">
     <strong>Built for local services</strong>
-    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span>Dental</span><span>Medical</span><span><a href="/industries/tax-accountants-cpas">Accounting</a></span><span>Legal</span>
+    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span>Dental</span><span>Medical</span><span><a href="/local-seo-for-accountants">Accounting</a></span><span>Legal</span>
   </div>
 </div>
 
@@ -924,7 +922,7 @@ def industry_page(c):
         <h3><a href="{audit_link}">{t}</a></h3>
         <p>{b}</p>
       </div>''' for t, b in c["included"])
-    page = head(c["title"], c["meta"], "/industries/" + c["slug"]).replace("<body>", '<body class="has-sticky">') + NAV
+    page = head(c["title"], c["meta"], "/" + c["slug"]).replace("<body>", '<body class="has-sticky">') + NAV
     page += f'''
 <main id="main">
 <section class="hero hero-ind topo" aria-labelledby="ind-title">
@@ -1053,7 +1051,7 @@ files = {
   "locations/los-angeles.html": la,
 }
 for cfg in INDUSTRY_PAGES:
-    files["industries/" + cfg["slug"] + ".html"] = industry_page(cfg)
+    files[cfg["slug"] + ".html"] = industry_page(cfg)
 for name, content in files.items():
     p = os.path.join(SITE, name)
     os.makedirs(os.path.dirname(p), exist_ok=True)
