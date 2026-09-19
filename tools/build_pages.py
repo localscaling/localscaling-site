@@ -403,7 +403,7 @@ index = head(
     <div class="reveal">
       <p class="eyebrow">Who we are</p>
       <h2 id="who-title">A small shop, on purpose.</h2>
-      <p>We only work with local service businesses: contractors, clinics, practices, and the trades. Anyone whose customers search for them nearby and call. Not online stores, not restaurants, not retail.</p>
+      <p>We only work with local service businesses: contractors, clinics, practices, and the trades. Anyone whose customers search for them nearby and call. Online stores, restaurants, and retail are a different job, and we leave that job to someone else.</p>
       <p><strong>One operator.</strong> The person who builds your plan is the person who runs it.</p>
       <p><strong>Month to month.</strong> No setup fee and no long contract.</p>
       <p><strong>Plain reporting.</strong> Each month you see what moved and what came in, in plain English.</p>
@@ -449,7 +449,7 @@ index = head(
     <p class="eyebrow">Questions</p>
     <h2 id="faq-title" class="section-title">What owners ask us first</h2>
     <div class="faq">
-      {faq("Do you need to be in my city to rank my business?", "No. Every ranking signal is attached to your business, not to ours. We work remotely and the math does not change.")}
+      {faq("Do you need to be in my city to rank my business?", "No. Every signal Google weighs belongs to your business: your location, your profile, your reviews, your site. We work remotely and the math does not change.")}
       {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense cities take longer, and we tell you which yours is before you commit.")}
       {faq("I already have a profile and a website. Do I start over?", "No. You keep your profile and your site. We fix what is holding them back and build from there.")}
       {faq("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month.")}
@@ -776,7 +776,7 @@ la = head(
     <p class="eyebrow">Why LA is different</p>
     <h2 id="la-why" class="section-title">Distance decides who shows up</h2>
     <div class="prose narrow">
-      <p>Google builds the map pack around the person searching, not around your office. A plumber in Van Nuys will not show for a homeowner in Santa Monica, and a dentist in Pasadena will not show for a patient in Torrance, however strong the profile. Los Angeles County is bigger than some states.</p>
+      <p>Google builds the map pack around wherever the person is standing when they search, and your office address matters less than most owners think. A plumber in Van Nuys will not show for a homeowner in Santa Monica, and a dentist in Pasadena will not show for a patient in Torrance, however strong the profile. Los Angeles County is bigger than some states.</p>
       <p class="pull">One profile cannot cover 88 cities. Any agency selling you all of LA is selling you a ranking that geography will not permit.</p>
       <p>So we start by measuring how far your listing already reaches. Some cities sit inside that reach today. The rest need a location page and a longer runway. That map decides the plan.</p>
     </div>
@@ -792,8 +792,8 @@ la = head(
       </div>
     </div>
     <div class="numbered">
-      {num("01", "We map your real radius first", "We check where your profile ranks from a grid of points across the metro, not from one search at your desk. Everything after that is built on that map.")}
-      {num("02", "We target neighborhoods, not the metro", "Nobody searches for a roofer or a dentist in Los Angeles. They search Sherman Oaks, El Segundo, Highland Park, so we build your site and profile around the names people type.")}
+      {num("01", "We map your real radius first", "We check where your profile ranks from a grid of points across the metro. One search from your own desk tells you almost nothing. Everything after that is built on the map.")}
+      {num("02", "We target neighborhoods", "Nobody searches for a roofer or a dentist in Los Angeles. They search Sherman Oaks, El Segundo, Highland Park, so we build your site and profile around the names people type.")}
       {num("03", "We set the profile up the way Google expects", "Plenty of LA businesses work from a truck or from home. Google calls that a service area business, and setting it up wrong caps your reach before any content work begins.")}
       {num("04", "We put your credentials where people can see it", "Contractors have a CSLB number, clinics and practices have a state board. Any customer can look it up. Putting it on your site and profile gives Google and your customer something they can check.")}
     </div>
@@ -833,7 +833,7 @@ la = head(
     <p class="eyebrow">Questions</p>
     <h2 id="la-faq" class="section-title">What LA owners ask us</h2>
     <div class="faq">
-      {faq("Do you have to be based in Los Angeles to rank my business here?", "No. Every signal Google weighs is attached to your business, not ours. We work with LA companies remotely.")}
+      {faq("Do you have to be based in Los Angeles to rank my business here?", "No. Every signal Google weighs belongs to your business: your location, your profile, your reviews, your site. We work with LA companies remotely and nothing about that changes.")}
       {faq("Can one Google profile rank across all of Los Angeles?", "No listing ranks county wide. You win a core radius first, then push outward with location pages as the profile gains strength.")}
       {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense LA cities take longer, and we tell you which yours is before you commit.")}
       {faq("I already have a profile and a website. Do I start over?", "You keep both. Starting fresh throws away your review history and the listing's age. We fix what exists and build from there.")}

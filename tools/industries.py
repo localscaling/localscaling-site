@@ -48,7 +48,7 @@ ACCOUNTANTS = {
   "leaks_intro": "None of them is dramatic. Together they are the difference between page one and nowhere.",
   "leaks": [
     ("The wrong primary category", "Listed as a generic business or financial service instead of accountant, CPA, or tax preparation service. Google can only rank you for what you say you are."),
-    ("One page called Services", "Tax prep, bookkeeping, payroll, and business returns all on one page. Google ranks pages, not paragraphs, so that page ranks for none of them."),
+    ("One page called Services", "Tax prep, bookkeeping, payroll, and business returns all on one page. Google ranks whole pages, so a page that covers four services ranks for none of them."),
     ("Reviews that stop in April", "A burst of reviews at filing time and silence for eight months. Google reads the gap as a business that went quiet."),
     ("An old suite number on the directories", "The firm moved years ago. The old address is still on half the listings Google checks, and the mismatch drags the profile down."),
     ("No page for the towns next door", "You take clients from four cities. Your site mentions one. The other three are searching and finding someone else."),
@@ -57,12 +57,12 @@ ACCOUNTANTS = {
 
   "how_h2": "Built around how people find an accountant",
   "how": [
-    ("We pick the right category and stick to it", "Google has separate categories for accountant, certified public accountant, tax preparation service, and bookkeeping service. The primary one decides which searches you can win. We choose it for the work you want more of, not the work you do most."),
-    ("We build a page for each service", "Tax preparation, bookkeeping, payroll, business returns, IRS representation. One page each, written for the person searching for it. A single services page ranks for none of them."),
-    ("We put your credentials where Google and clients can see them", "Your CPA license, your state board, your firm registration. On the site, on the profile, matching. It is one of the few trust signals a search engine can check."),
-    ("We ask for reviews when clients are happiest", "Right after a return is filed, not in the middle of an audit. A follow-up that goes out at the right moment turns good work into public proof, and keeps it coming after April."),
+    ("We pick the right category and stick to it", "Google has separate categories for accountant, certified public accountant, tax preparation service, and bookkeeping service. The primary one decides which searches you can win. We choose it for the work you want more of, which is often different from the work you do most."),
+    ("We build a page for each service", "You probably do tax preparation, bookkeeping, payroll, business returns, and IRS representation. Each one gets its own page, written for the person searching for it. A single services page ranks for none of them."),
+    ("We put your credentials where Google and clients can see them", "Your CPA license, your state board registration, and your firm registration go on the site and on the profile, and they match. It is one of the few trust signals a search engine can check."),
+    ("We ask for reviews when clients are happiest", "Right after a return is filed, while the relief is fresh. A follow-up that goes out at that moment turns good work into public proof, and keeps it coming after April."),
     ("We do the work in the right order", "Category and listings first, because everything else sits on them. Then service pages, then city pages, then reviews. Starting with content on a profile that is set up wrong wastes the content."),
-    ("We report calls and bookings, not traffic", "Each month you see where you rank across your area, how that moved, and how many people called or booked. Plain English, one page."),
+    ("We report what you can bank", "Each month you see where you rank across your area, how that moved, and how many people called or booked. Traffic numbers stay off the report because nobody pays you in traffic."),
   ],
 
   "searches_h2": "What your next client is typing",
@@ -82,7 +82,7 @@ ACCOUNTANTS = {
   "fit_h2": "Who this works for",
   "fit_yes": [
     "A firm with an office, or a defined area you take clients from",
-    "One to a handful of partners who want more local clients, not a national brand",
+    "One to a handful of partners who want more local clients",
     "You already do good work and have clients who would say so",
     "You can start before tax season, so the work lands in time",
   ],
@@ -94,11 +94,11 @@ ACCOUNTANTS = {
   ],
 
   "faq": [
-    ("We work with clients remotely. Can you still rank us locally?", "Yes, as long as you have a real office address or a defined service area. Google ranks you around that. Remote clients are a bonus on top of the map, not a replacement for it."),
+    ("We work with clients remotely. Can you still rank us locally?", "Yes, as long as you have a real office address or a defined service area. Google ranks you around that, and remote clients come on top of it."),
     ("How long until we see results?", "Usually three to six months to start seeing big results. For accountants the timing matters more than the length. Start in the fall so the work lands before January."),
     ("We tried SEO before and nothing happened. Why would this be different?", "Most accounting firm SEO is blog posts on a profile that was set up wrong. We fix the category, the listings, and the pages first. That is the part that moves the map, and it is usually the part that was skipped."),
     ("Our website already looks professional. Is that not enough?", "A good looking site and a site that ranks are different things. Google cannot see design. It reads categories, pages, listings, and reviews. Plenty of beautiful firm sites are invisible on the map."),
-    ("How do we compete with the big national chains?", "You do not fight them on the head terms. You win your city, your neighborhoods, and the specialty searches they ignore. A local firm with the right pages beats a national brand on a local search more often than you would think."),
+    ("How do we compete with the big national chains?", "Nobody beats a national chain on the head terms, so we skip them. You win your own city and the specialty searches the chains ignore, which is where the better clients are anyway. A local firm with the right pages beats a national brand on a local search more often than you would think."),
     ("Do you write tax content for our site?", "We write service pages and city pages. We do not give tax advice on your site, and anything technical goes past you before it publishes."),
     ("We have two offices. Does that change things?", "Each office gets its own profile, its own page, and its own reviews. Google treats them as two businesses, so we do too."),
     ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
