@@ -18,14 +18,21 @@ serves `apply.html`.
   lastmod moves only when its content changes, tracked in
   `tools/sitemap-ledger.json`, which is committed with the pages
 - Industry pages: one dict per industry in `tools/industries.py`, rendered by
-  `industry_page()`. Copy the accountants dict, change every value, add it to
-  `PAGES`, build. Link the new page from the industries band. The audit link
-  carries `?industry=` so the form preselects. Content stays qualitative: no
-  stats, no client names, no results. No "X, not Y" contrast sentences, the
-  anti-AI review flags them
-- URLs are flat and read like the search: `/local-seo-for-accountants`,
-  `/local-seo-los-angeles`. No `/industries/` or `/locations/` folders. A live
-  URL never changes without a permanent redirect in `vercel.json`
+  `industry_page()`. City pages: one dict per city in `tools/cities.py`,
+  rendered by `city_page()`. Copy the newest dict, change every value, add it
+  to `PAGES`, build. Content stays qualitative: no stats, no client names, no
+  results. No "X, not Y" contrast sentences
+- `python3 tools/review_page.py <page.html>` is the anti-AI-writing review as
+  a script, and it calls the hub lint. Zero findings before a page is done
+- The page routine: a scheduled task on this Mac runs `tools/PAGE-ROUTINE.md`
+  daily, and `tools/routine_gate.py` lets it through every four days. It
+  builds the next city and the next industry from `tools/page-queue.json`,
+  reviews, commits, and publishes when `publish` is true. Change the
+  procedure in the runbook, the queue in the JSON, never in the task prompt
+- URLs are flat and read like the search: `/local-seo-for-<industry>`,
+  `/local-seo-<city>`. No folders. A live URL never changes without a
+  permanent redirect in `vercel.json`. The old `/locations/los-angeles`
+  redirects that way
 - The footer lists Home, Free audit, and Apply only. Industry and city pages
   are linked from the industries band and from each other, not the footer
 

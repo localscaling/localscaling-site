@@ -764,6 +764,555 @@ audit = head(
 </html>
 '''
 
+# ---------------- SHARED ILLUSTRATIONS ----------------
+PIN_SM = '<svg class="pack-pin" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 2C7.03 2 3 6.03 3 11c0 6.5 9 17 9 17s9-10.5 9-17c0-4.97-4.03-9-9-9z"/><circle cx="12" cy="11" r="3"/></svg>'
+
+def serp_card(search, pack_rows, organic_rows, note, you="Your business"):
+    rows = ""
+    for i, (name, sub) in enumerate(pack_rows):
+        top = i == 0
+        tag = '<span class="pack-tag">Map pack</span>' if top else '<span class="pack-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>'
+        rows += f'<div class="pack-row{" top" if top else ""}">{PIN_SM}<div><div class="pack-name">{name}</div><div class="pack-sub">{sub}</div></div>{tag}</div>'
+    orgs = ""
+    for i, (title, url) in enumerate(organic_rows):
+        top = i == 0
+        tag = '<span class="pack-tag">Search result</span>' if top else ''
+        orgs += f'<div class="org-row{" top" if top else ""}"><div><div class="org-url">{url}</div><div class="org-title">{title}</div></div>{tag}</div>'
+    return f'''<div class="pack serp" aria-label="Illustration of a Google results page with {you.lower()} in the map pack and in the search results under it">
+        <div class="pack-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>{search}</div>
+        <p class="pack-label">Map</p>
+        <div class="pack-rows">{rows}</div>
+        <p class="pack-label pack-label-2">Listings under the map</p>
+        <div class="org-rows">{orgs}</div>
+        <p class="pack-note">{note}</p>
+      </div>'''
+
+
+# ---------------- INDEX ----------------
+def neighborhood_map():
+    blocks = []
+    park = (2, 2)
+    for col in range(7):
+        for row in range(6):
+            x = 10 + col * 76; y = 10 + row * 64
+            fill = "#bfe0c9" if (col, row) == park else "#d3e0d8"
+            blocks.append(f'<rect x="{x}" y="{y}" width="60" height="50" rx="5" fill="{fill}"/>')
+    pin = 'M12 2C7 2 3 6 3 11c0 6.5 9 17 9 17s9-10.5 9-17c0-5-4-9-9-9z'
+    def pin_at(x, y, color, ring=False):
+        out = ""
+        if ring:
+            out += f'<circle class="radius" cx="{x}" cy="{y}" r="112" fill="#e39b2c" fill-opacity="0.10" stroke="#e39b2c" stroke-width="1.5" stroke-dasharray="6 6"/>'
+        out += f'<g transform="translate({x-16},{y-38}) scale(1.35)"><path d="{pin}" fill="{color}" stroke="#ffffff" stroke-width="1.2"/><circle cx="12" cy="11" r="3.2" fill="#ffffff"/></g>'
+        return out
+    return f'''<svg viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a neighborhood map with a service radius drawn around your business">
+  <rect width="520" height="380" fill="#e6eee9"/>
+  {"".join(blocks)}
+  <path d="M-10 330 C 120 300, 200 180, 330 140 S 480 40, 540 20" stroke="#ffffff" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M-10 330 C 120 300, 200 180, 330 140 S 480 40, 540 20" stroke="#b9cbc0" stroke-width="1.5" fill="none" stroke-dasharray="10 10"/>
+  {pin_at(118, 128, "#6f8478")}
+  {pin_at(402, 262, "#6f8478")}
+  {pin_at(262, 206, "#e39b2c", ring=True)}
+  <rect x="290" y="184" width="118" height="30" rx="15" fill="#0f1c15"/>
+  <text x="349" y="204" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Your business</text>
+</svg>'''
+
+def sheet_row(title, sub):
+    return f'''
+        <li class="sheet-row">
+          <span class="sheet-box">{TICK}</span>
+          <span><strong>{title}</strong><span>{sub}</span></span>
+        </li>'''
+
+def step(n, title, text):
+    return f'''
+      <div class="step reveal reveal-{n}">
+        <div class="step-num" aria-hidden="true">{n}</div>
+        <h3>{title}</h3>
+        <p>{text}</p>
+      </div>'''
+
+def service(icon, title, text):
+    return f'''
+      <div class="card reveal">
+        <div class="card-icon" aria-hidden="true">{icon}</div>
+        <h3>{title}</h3>
+        <p>{text}</p>
+      </div>'''
+
+def faq(q, a):
+    return f'''
+      <details class="faq-item">
+        <summary>{q}</summary>
+        <p>{a}</p>
+      </details>'''
+
+ICON_PIN = '<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>'
+ICON_LIST = '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h10M7 17h6"/></svg>'
+ICON_PAGES = '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>'
+ICON_STAR = '<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+ICON_CHART = '<svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>'
+ICON_SITE = '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M7 13h4M7 17h8"/></svg>'
+
+index = head(
+  "Local SEO for Service Businesses | LocalScaling",
+  "LocalScaling gets local service businesses to the top of Google Maps and the search results under it. Starting at $1,500/mo, month to month. Built for contractors, clinics, practices, and the trades.",
+  "/",
+).replace("<body>", "<body class=\"has-sticky\">") + NAV + f'''
+<main id="main">
+<section class="hero topo" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Local SEO for service businesses</p>
+      <h1 id="hero-title">More calls.<br>More jobs.<br><em>Zero ad spend.</em></h1>
+      <p class="lede">We get local service businesses to the top of Google Maps and the search results under it, in the neighborhoods they serve. Contractors, clinics, practices, and the trades. Stop renting leads and start owning them.</p>
+      <div class="hero-actions">
+        <a href="/free-seo-audit" class="btn btn-clay">Get a free audit</a>
+        <a href="/apply" class="text-link">Or apply to work with us</a>
+      </div>
+      <p class="cta-note"><strong>Free.</strong> No call required. Sent to your inbox within 24 hours.</p>
+      <ul class="hero-facts">
+        <li>{TICK}Starting at $1,500/mo</li>
+        <li>{TICK}Month to month</li>
+        <li>{TICK}No setup fee</li>
+      </ul>
+    </div>
+    <div class="map-visual">
+      <div class="map-frame">
+        {neighborhood_map()}
+        <div class="map-caption">
+          <strong>Your service radius</strong>
+          <span>Google ranks your profile by distance from the searcher. We find out how far yours reaches, then push it outward.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trades" aria-label="Who we work with">
+  <div class="container trades-inner">
+    <strong>Built for local services</strong>
+    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span>Dental</span><span>Medical</span><span><a href="/local-seo-for-accountants">Accounting</a></span><span>Legal</span>
+  </div>
+</div>
+
+<section class="test" aria-labelledby="test-title">
+  <div class="container">
+    <div class="test-card reveal">
+      <div>
+        <p class="eyebrow">The ten second test</p>
+        <h2 id="test-title">Are you on the map and in the results right now?</h2>
+        <p>Type your trade and city. We'll open the real Google result in a new tab so you can see who holds the map and who holds the listings under it today.</p>
+      </div>
+      <form id="testForm" class="test-form" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="tTrade">Your trade</label>
+            <input type="text" id="tTrade" name="trade" placeholder="plumber, dentist, CPA" autocomplete="off" required>
+          </div>
+          <div class="field">
+            <label for="tCity">Your city</label>
+            <input type="text" id="tCity" name="city" placeholder="Dallas" autocomplete="off" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-clay">Check Google</button>
+        <div id="testResult" class="test-result" aria-live="polite">
+          <strong>Were you in the map pack and on the first page?</strong>
+          <div class="choices">
+            <button type="button" id="choiceYes" class="btn btn-secondary btn-sm">Yes</button>
+            <button type="button" id="choiceNo" class="btn btn-secondary btn-sm">No</button>
+          </div>
+          <div id="testYes" class="answer">Good. The audit will show you how to hold both spots and push your radius outward. <a href="/free-seo-audit" class="text-link">Get the free audit</a></div>
+          <div id="testNo" class="answer">That is where the calls are going. The audit shows you who holds each spot, why, and what it takes to change it. <a href="/free-seo-audit" class="text-link">Get the free audit</a></div>
+        </div>
+        <p class="test-note">Opens Google in a new tab. Nothing is sent to us.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" aria-labelledby="both-title">
+  <div class="container audit-split">
+    <div class="reveal">
+      <p class="eyebrow">Two spots on one page</p>
+      <h2 id="both-title" class="section-title">The map gets the call. The listing under it closes the deal.</h2>
+      <p class="section-intro">When someone searches for what you do, Google shows the map first and the regular results under it. People glance at the map, then scroll to see who else is there. A business that holds a spot in both gets the call more often than one that holds either alone.</p>
+      <p class="section-intro">We work both. Your Google Business Profile wins the map. Your website wins the listing under it. The audit checks where you stand in each.</p>
+      <a href="/free-seo-audit" class="btn btn-primary">See where you stand</a>
+    </div>
+    <div class="reveal reveal-2">
+      {serp_card("emergency plumber near me", [("Your business", "Plumber · 0.6 mi"), ("Another plumber", "Plumber · 1.4 mi"), ("Another plumber", "Plumber · 2.2 mi")], [("Emergency plumber in your city, open now", "yourbusiness.com"), ("Plumbers near you", "a directory"), ("Another plumber", "anotherplumber.com")], "Same search, two places to show up. We work both.")}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="audit-title">
+  <div class="container audit-split">
+    <div class="reveal">
+      <p class="eyebrow">Start with the audit</p>
+      <h2 id="audit-title" class="section-title">See what is costing you calls before you spend a dollar.</h2>
+      <p class="section-intro">Every engagement starts with a free audit of your profile, your website, your listings, and the businesses above you on the map and in the results. You keep it whether or not we ever work together.</p>
+      <a href="/free-seo-audit" class="btn btn-primary">Request your audit</a>
+    </div>
+    <div class="sheet reveal reveal-2">
+      <div class="sheet-head"><h3>Local audit</h3><span>What we check</span></div>
+      <ul class="sheet-list">
+      {sheet_row("Primary category and services", "Set up for the searches people run in your city")}
+      {sheet_row("Name, address, and phone", "Matching on Google, Apple, Yelp, and the rest")}
+      {sheet_row("Service and city pages", "One page per service and per area, and Google can find them")}
+      {sheet_row("Reviews", "Count, rating, and recency next to the businesses above you")}
+      {sheet_row("Who is above you", "Who holds the map pack, who holds the listings under it, and what they do differently")}
+      {sheet_row("Service radius", "How far your listing reaches, and what is winnable next")}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand topo" id="how" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title" class="section-title">Ranked in three plain steps</h2>
+      </div>
+      <p class="section-intro">No long onboarding and no jargon.</p>
+    </div>
+    <div class="steps">
+      {step("1", "Free local audit", "We check your profile, your site, your listings, and your reviews, on the map and in the results. You see what is costing you calls before you spend anything.")}
+      {step("2", "We build both", "Your profile and listings for the map. A page for every service and city on your site for the results under it. All done for you.")}
+      {step("3", "You get the calls", "Leads go straight to your phone. Each month you get a plain report of what moved and what came in.")}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white manifesto" aria-labelledby="who-title">
+  <div class="container manifesto-grid">
+    <div class="reveal">
+      <p class="eyebrow">Who we are</p>
+      <h2 id="who-title">A small shop, on purpose.</h2>
+      <p>We only work with local service businesses: contractors, clinics, practices, and the trades. Anyone whose customers search for them nearby and call. Online stores, restaurants, and retail are a different job, and we leave that job to someone else.</p>
+      <p><strong>One operator.</strong> The person who builds your plan is the person who runs it.</p>
+      <p><strong>Month to month.</strong> No setup fee and no long contract.</p>
+      <p><strong>Plain reporting.</strong> Each month you see what moved and what came in, in plain English.</p>
+      <p class="close">If you want one operator who knows your market, apply. If you want the cheapest package you can find, we're not it.</p>
+      <a href="/apply" class="btn btn-primary">Apply now</a>
+    </div>
+    <aside class="facts-card reveal reveal-2" aria-labelledby="facts-title">
+      <h3 id="facts-title">The short version</h3>
+      <dl class="facts">
+        <div class="fact"><dt>Retainer</dt><dd>Starting at $1,500/mo</dd></div>
+        <div class="fact"><dt>Term</dt><dd>Month to month</dd></div>
+        <div class="fact"><dt>Setup fee</dt><dd>None</dd></div>
+        <div class="fact"><dt>Who runs it</dt><dd>One operator</dd></div>
+        <div class="fact"><dt>Reporting</dt><dd>Monthly, plain English</dd></div>
+      </dl>
+      <a href="/free-seo-audit" class="btn btn-light">Start with a free audit</a>
+    </aside>
+  </div>
+</section>
+
+<section class="section bg-sand" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">What you get</p>
+        <h2 id="services-title" class="section-title">Everything a local campaign needs</h2>
+      </div>
+      <p class="section-intro">One flat retainer covers all of it.</p>
+    </div>
+    <div class="cards">
+      {service(ICON_PIN, "Google Business Profile", "Full setup, weekly posts, Q and A, and photos that win the map pack.")}
+      {service(ICON_LIST, "Listings that match", "Your name, address, and phone matched on the directories Google checks.")}
+      {service(ICON_PAGES, "Service and city pages", "One page for each service and each area you cover. These are what put you in the results under the map.")}
+      {service(ICON_STAR, "Review generation", "Follow-up that asks every finished customer at the right moment.")}
+      {service(ICON_CHART, "Monthly reporting", "Rankings, calls, and profile activity in one plain report.")}
+      {service(ICON_SITE, "A website built for local search", "Built for your trade and service area, with a structure that gets stronger over time.")}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="faq-title">
+  <div class="container">
+    <p class="eyebrow">Questions</p>
+    <h2 id="faq-title" class="section-title">What owners ask us first</h2>
+    <div class="faq">
+      {faq("Do you need to be in my city to rank my business?", "No. Every signal Google weighs belongs to your business: your location, your profile, your reviews, your site. We work remotely and the math does not change.")}
+      {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense cities take longer, and we tell you which yours is before you commit.")}
+      {faq("I already have a profile and a website. Do I start over?", "No. You keep your profile and your site. We fix what is holding them back and build from there.")}
+      {faq("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month.")}
+    </div>
+  </div>
+</section>
+''' + cta("Ready to own your local market?", "Start with the free audit. We show you where you are losing calls and what it takes to fix it.") + '''
+</main>
+''' + STICKY + FOOTER + REVEAL_JS + TEST_JS + '''
+</body>
+</html>
+'''
+
+# ---------------- APPLY ----------------
+apply = head(
+  "Apply Now | LocalScaling",
+  "Apply to work with LocalScaling. Tell us about your business and we will send you a free local SEO audit within 24 hours.",
+  "/apply", robots="noindex, follow",
+) + NAV_MIN + f'''
+<main class="form-page" id="main">
+  <div class="container form-center">
+    <div class="form-card">
+      <h1>Apply now</h1>
+      <p class="sub">Tell us about your business. We respond within 24 hours.</p>
+
+      <form id="applyForm" action="{FORM_APPLY}" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New LocalScaling application">
+        <div class="honey" aria-hidden="true">
+          <label for="fcompany">Leave this empty</label>
+          <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" name="email" placeholder="john@yourbiz.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fbiz">Business name</label>
+            <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
+          </div>
+          <div class="field">
+            <label for="fcity">City</label>
+            <input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fbudget">Monthly budget</label>
+          <select id="fbudget" name="budget" required>
+            <option value="" disabled selected>Select a range</option>
+            <option value="Under $1,500/mo">Under $1,500/mo</option>
+            <option value="$1,500 to $2,500/mo">$1,500 to $2,500/mo</option>
+            <option value="$2,500/mo and up">$2,500/mo and up</option>
+          </select>
+        </div>
+
+        <div class="form-error" id="formError" role="alert">
+          Something went wrong. Email us at <a href="mailto:info@localscaling.com">info@localscaling.com</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+          <span id="submitText">Submit application</span>
+          <span class="spinner" id="submitSpinner" aria-hidden="true"></span>
+        </button>
+      </form>
+
+      <p class="form-footer">Questions? <a href="mailto:info@localscaling.com">info@localscaling.com</a></p>
+    </div>
+  </div>
+</main>
+''' + FOOTER + FORM_JS % {"form": "applyForm", "ids": "['fname', 'femail', 'fbiz', 'fcity', 'fbudget']", "next": "/thank-you"} + '''
+</body>
+</html>
+'''
+
+# ---------------- THANK YOU ----------------
+def notice_page(title, desc, path, h1, intro, steps):
+    step_html = "".join(f'''
+        <li class="next-step"><span class="n" aria-hidden="true">{i+1}</span><p>{s}</p></li>''' for i, s in enumerate(steps))
+    return head(title, desc, path, robots="noindex, follow") + NAV_MIN + f'''
+<main class="notice-page" id="main">
+  <div class="notice">
+    <div class="notice-check" aria-hidden="true">{TICK}</div>
+    <h1>{h1}</h1>
+    <p>{intro}</p>
+    <hr class="hairline">
+    <div class="next">
+      <p class="label">What happens next</p>
+      <ol>{step_html}
+      </ol>
+    </div>
+    <a href="/" class="btn btn-primary">Back to LocalScaling</a>
+  </div>
+</main>
+</body>
+</html>
+'''
+
+thankyou = notice_page(
+  "Application Received | LocalScaling",
+  "Thank you for applying to LocalScaling. We will review your details and be in touch within 24 hours.",
+  "/thank-you",
+  "Application received.",
+  "Thanks for applying. We'll review your details and be in touch within 24 hours.",
+  ["We review your business and pull a competitor snapshot for your market",
+   "We send you a custom local SEO audit within 24 hours",
+   "If it's a fit, we get started with no long sales process"],
+)
+
+audit_thanks = notice_page(
+  "Audit Request Received | LocalScaling",
+  "Thanks for requesting a free local SEO audit from LocalScaling. We will email your audit within 24 hours.",
+  "/audit-thank-you",
+  "Audit request received.",
+  "Thanks. We'll look over your business and email your audit within 24 hours. Check your spam folder if it hasn't turned up by then.",
+  ["We check your Google Business Profile, your listings, and your website",
+   "We look at who holds the top spots for your main search and what they do differently",
+   "You get the written audit by email. Reply to it if you want to talk it through"],
+)
+
+# ---------------- AUDIT ----------------
+audit = head(
+  "Free Local SEO Audit | LocalScaling",
+  "Get a free local SEO audit for your service business. We check your Google Business Profile, listings, website, and reviews against the competitors ranking above you and email you the findings.",
+  "/free-seo-audit",
+) + NAV + f'''
+<main class="audit-page" id="main"><div class="container audit-grid">
+  <section class="audit-intro" aria-labelledby="audit-h1">
+    <p class="eyebrow">Free local SEO audit</p>
+    <h1 id="audit-h1">See where you're losing calls.</h1>
+    <p class="lede">We check your business against the three ranking above you and email you what we find. Free, no call, within 24 hours.</p>
+
+    <p class="block-title">What we check</p>
+    <ul class="audit-list">
+      <li>{TICK}Google Business Profile</li>
+      <li>{TICK}Name, address, and phone across listings</li>
+      <li>{TICK}Service and city pages on your site</li>
+      <li>{TICK}Reviews next to the businesses above you</li>
+      <li>{TICK}Who holds the map and the results, and why</li>
+    </ul>
+
+    <p class="audit-fit">For local service businesses: contractors, clinics, practices, and the trades. Not for online stores, restaurants, or retail.</p>
+  </section>
+
+  <div class="form-card">
+    <h2>Request your audit</h2>
+    <p class="sub">Six quick fields. We email the audit within 24 hours.</p>
+
+    <form id="auditForm" action="{FORM_AUDIT}" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="New free SEO audit request">
+      <div class="honey" aria-hidden="true">
+        <label for="fcompany">Leave this empty</label>
+        <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="femail">Email</label>
+          <input type="email" id="femail" name="email" placeholder="john@yourbiz.com" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="fbiz">Business name</label>
+        <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
+      </div>
+
+      <div class="field">
+        <label for="fsite">Website</label>
+        <input type="text" id="fsite" name="website" placeholder="yourbusiness.com" inputmode="url" autocomplete="url" required>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fcity">City you serve</label>
+          <input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>
+        </div>
+        <div class="field">
+          <label for="ftrade">Industry</label>
+          <select id="ftrade" name="industry" required>
+            <option value="" disabled selected>Select one</option>
+            <optgroup label="Trades and home services">
+              <option value="Plumbing">Plumbing</option>
+              <option value="HVAC">HVAC</option>
+              <option value="Electrical">Electrical</option>
+              <option value="Roofing">Roofing</option>
+              <option value="Restoration">Restoration</option>
+              <option value="Landscaping">Landscaping</option>
+              <option value="Cleaning">Cleaning</option>
+              <option value="Pest control">Pest control</option>
+              <option value="Other trade">Other trade</option>
+            </optgroup>
+            <optgroup label="Health">
+              <option value="Dental">Dental</option>
+              <option value="Medical or clinic">Medical or clinic</option>
+              <option value="Chiropractic or physical therapy">Chiropractic or physical therapy</option>
+              <option value="Other health">Other health</option>
+            </optgroup>
+            <optgroup label="Professional services">
+              <option value="Accounting or finance">Accounting or finance</option>
+              <option value="Legal">Legal</option>
+              <option value="Insurance">Insurance</option>
+              <option value="Other professional service">Other professional service</option>
+            </optgroup>
+            <option value="Other local service">Other local service</option>
+          </select>
+        </div>
+      </div>
+
+      <details class="more-fields">
+        <summary>Add more detail <span>(optional)</span></summary>
+        <div>
+      <div class="field">
+        <label for="fgbp">Google Business Profile link</label>
+        <p class="hint" id="fgbp-hint">Find your business on Google Maps, tap Share, and paste the link here.</p>
+        <input type="text" id="fgbp" name="gbp_link" placeholder="maps.app.goo.gl/..." inputmode="url" aria-describedby="fgbp-hint">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fsearch">Search you want to win</label>
+          <input type="text" id="fsearch" name="target_search" placeholder="emergency plumber Dallas">
+        </div>
+        <div class="field">
+          <label for="fphone">Phone</label>
+          <input type="tel" id="fphone" name="phone" placeholder="(555) 555-0100" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="fnotes">Anything else we should look at?</label>
+        <textarea id="fnotes" name="notes" placeholder="A competitor that keeps beating you, a listing with the wrong number, a second location..."></textarea>
+      </div>
+        </div>
+      </details>
+
+      <div class="form-error" id="formError" role="alert">
+        Something went wrong. Email us at <a href="mailto:info@localscaling.com">info@localscaling.com</a>
+      </div>
+
+      <button type="submit" class="btn btn-clay btn-block" id="submitBtn">
+        <span id="submitText">Send my free audit request</span>
+        <span class="spinner" id="submitSpinner" aria-hidden="true"></span>
+      </button>
+    </form>
+
+    <p class="form-footer">No sales call unless you ask for one. Prefer email? Send your business name, website, and city to <a href="mailto:info@localscaling.com">info@localscaling.com</a></p>
+  </div>
+</div></main>
+''' + FOOTER + FORM_JS % {"form": "auditForm", "ids": "['fname', 'femail', 'fbiz', 'fsite', 'fcity', 'ftrade']", "next": "/audit-thank-you"} + """
+<script>
+  (function () {
+    var want = new URLSearchParams(location.search).get('industry');
+    var sel = document.getElementById('ftrade');
+    if (!want || !sel) return;
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === want) { sel.value = want; break; }
+    }
+  })();
+</script>
+""" + '''
+</body>
+</html>
+'''
+
 # ---------------- LOS ANGELES ----------------
 def ncard(title, text):
     return f'''
@@ -888,6 +1437,7 @@ la = head(
 
 # ---------------- INDUSTRY TEMPLATE ----------------
 from industries import PAGES as INDUSTRY_PAGES
+from cities import PAGES as CITY_PAGES
 
 def chip_list(items):
     return "".join(f'<li class="chip">{c}</li>' for c in items)
@@ -941,6 +1491,126 @@ def intent_table(c):
         <tbody>{rows}</tbody>
       </table>
     </div>'''
+
+def ncard(title, text, href="/free-seo-audit"):
+    return f'''
+      <div class="card card-link reveal">
+        <h3><a href="{href}">{title}</a></h3>
+        <p>{text}</p>
+      </div>'''
+
+def num(n, title, text):
+    return f'''
+      <div class="numbered-item reveal">
+        <p class="n" aria-hidden="true">{n}</p>
+        <h3>{title}</h3>
+        <p>{text}</p>
+      </div>'''
+
+def city_page(c):
+    """c is a dict from tools/cities.py."""
+    how = "".join(num(f"0{i+1}", t, b) for i, (t, b) in enumerate(c["how"]))
+    why = "".join((f'<p class="pull">{p[1]}</p>' if isinstance(p, tuple) else f"<p>{p}</p>") for p in c["why_paragraphs"])
+    faqs = "".join(faq(q, a) for q, a in c["faq"])
+    included = "".join(ncard(t, b) for t, b in c["included"])
+    chips = "".join(f'<li class="chip">{a}</li>' for a in c["areas"])
+    page = head(c["title"], c["meta"], "/" + c["slug"]).replace("<body>", '<body class="has-sticky">') + NAV
+    page += f'''
+<main id="main">
+<section class="hero-simple topo" aria-labelledby="city-title">
+  <div class="container">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep" aria-hidden="true">/</span><span aria-current="page">{c["city"]}</span></nav>
+    <p class="eyebrow">{c["eyebrow"]}</p>
+    <h1 id="city-title">{c["h1"]}</h1>
+    <p class="lede">{c["lede"]}</p>
+    <div class="hero-actions">
+      <a href="/free-seo-audit" class="btn btn-clay">Get a free audit</a>
+      <a href="/apply" class="text-link">Or apply to work with us</a>
+    </div>
+    <p class="cta-note"><strong>Free.</strong> No call required. Sent to your inbox within 24 hours.</p>
+    <ul class="hero-facts">
+      <li>{TICK}Starting at $1,500/mo</li>
+      <li>{TICK}Month to month</li>
+      <li>{TICK}Local services only</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="city-why">
+  <div class="container">
+    <p class="eyebrow">{c["why_eyebrow"]}</p>
+    <h2 id="city-why" class="section-title">{c["why_h2"]}</h2>
+    <div class="prose narrow">
+      {why}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" aria-labelledby="city-both">
+  <div class="container audit-split">
+    <div class="reveal">
+      <p class="eyebrow">Two spots on one page</p>
+      <h2 id="city-both" class="section-title">The map gets the call. The listing under it closes the deal.</h2>
+      <p class="section-intro">{c["both_intro"]}</p>
+      <p class="section-intro">We work both. Your Google Business Profile wins the map. Your website wins the listing under it. The audit checks where you stand in each.</p>
+      <a href="/free-seo-audit" class="btn btn-primary">See where you stand</a>
+    </div>
+    <div class="reveal reveal-2">
+      {serp_card(c["search_example"], c["pack_rows"], c["organic_rows"], "Same search, two places to show up. We work both.")}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white topo" aria-labelledby="city-how">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">How we work here</p>
+        <h2 id="city-how" class="section-title">{c["how_h2"]}</h2>
+      </div>
+    </div>
+    <div class="numbered">
+      {how}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" aria-labelledby="city-work">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">The work</p>
+        <h2 id="city-work" class="section-title">What running a campaign in {c["short"]} involves</h2>
+      </div>
+      <p class="section-intro">One flat retainer covers all of it.</p>
+    </div>
+    <div class="cards">
+      {included}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="city-areas">
+  <div class="container">
+    <p class="eyebrow">Coverage</p>
+    <h2 id="city-areas" class="section-title">{c["areas_h2"]}</h2>
+    <ul class="chips">{chips}</ul>
+    <p class="muted narrow">{c["areas_note"]}</p>
+  </div>
+</section>
+
+<section class="section bg-sand" aria-labelledby="city-faq">
+  <div class="container">
+    <p class="eyebrow">Questions</p>
+    <h2 id="city-faq" class="section-title">What {c["short"]} owners ask us</h2>
+    <div class="faq">
+      {faqs}
+    </div>
+  </div>
+</section>
+'''
+    page += cta(c["cta_h"], c["cta_p"]) + "\n</main>\n" + STICKY + FOOTER + REVEAL_JS + "\n</body>\n</html>\n"
+    return page
 
 def industry_page(c):
     """c is a dict from tools/industries.py. Every new industry page is a new
@@ -1100,8 +1770,9 @@ files = {
   "thank-you.html": thankyou,
   "audit-thank-you.html": audit_thanks,
   "free-seo-audit.html": audit,
-  "locations/los-angeles.html": la,
 }
+for cfg in CITY_PAGES:
+    files[cfg["slug"] + ".html"] = city_page(cfg)
 for cfg in INDUSTRY_PAGES:
     files[cfg["slug"] + ".html"] = industry_page(cfg)
 for name, content in files.items():
