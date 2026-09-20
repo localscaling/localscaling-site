@@ -1,25 +1,93 @@
 {
   "publish": true,
   "cadence_days": 4,
-  "last_run": null,
+  "last_run": "2026-09-20",
   "cities": [
-    "Houston", "Phoenix", "Dallas", "San Diego", "Chicago", "San Antonio", "Austin",
-    "Jacksonville", "Fort Worth", "Charlotte", "Columbus", "Indianapolis", "San Jose",
-    "Seattle", "Denver", "Nashville", "Las Vegas", "Atlanta", "Miami", "Tampa",
-    "Orlando", "Portland", "Sacramento", "Kansas City", "Raleigh", "Minneapolis",
-    "Boston", "Philadelphia", "Oklahoma City", "New York"
+    "Phoenix",
+    "Dallas",
+    "San Diego",
+    "Chicago",
+    "San Antonio",
+    "Austin",
+    "Jacksonville",
+    "Fort Worth",
+    "Charlotte",
+    "Columbus",
+    "Indianapolis",
+    "San Jose",
+    "Seattle",
+    "Denver",
+    "Nashville",
+    "Las Vegas",
+    "Atlanta",
+    "Miami",
+    "Tampa",
+    "Orlando",
+    "Portland",
+    "Sacramento",
+    "Kansas City",
+    "Raleigh",
+    "Minneapolis",
+    "Boston",
+    "Philadelphia",
+    "Oklahoma City",
+    "New York"
   ],
   "industries": [
-    "dentists", "plumbers", "HVAC contractors", "roofers", "personal injury lawyers",
-    "chiropractors", "electricians", "med spas", "veterinarians", "family law attorneys",
-    "physical therapists", "pest control companies", "landscapers", "insurance agents",
-    "financial advisors", "orthodontists", "garage door companies", "water damage restoration companies",
-    "home care agencies", "auto repair shops", "estate planning attorneys", "optometrists",
-    "dermatologists", "tree services", "moving companies", "locksmiths", "cleaning companies",
-    "home inspectors", "mortgage brokers", "painters"
+    "plumbers",
+    "HVAC contractors",
+    "roofers",
+    "personal injury lawyers",
+    "chiropractors",
+    "electricians",
+    "med spas",
+    "veterinarians",
+    "family law attorneys",
+    "physical therapists",
+    "pest control companies",
+    "landscapers",
+    "insurance agents",
+    "financial advisors",
+    "orthodontists",
+    "garage door companies",
+    "water damage restoration companies",
+    "home care agencies",
+    "auto repair shops",
+    "estate planning attorneys",
+    "optometrists",
+    "dermatologists",
+    "tree services",
+    "moving companies",
+    "locksmiths",
+    "cleaning companies",
+    "home inspectors",
+    "mortgage brokers",
+    "painters"
   ],
   "done": [
-    {"type": "industry", "name": "tax accountants and CPAs", "slug": "local-seo-for-accountants", "date": "2026-09-19"},
-    {"type": "city", "name": "Los Angeles", "slug": "local-seo-los-angeles", "date": "2026-09-17"}
+    {
+      "type": "industry",
+      "name": "tax accountants and CPAs",
+      "slug": "local-seo-for-accountants",
+      "date": "2026-09-19"
+    },
+    {
+      "type": "city",
+      "name": "Los Angeles",
+      "slug": "local-seo-los-angeles",
+      "date": "2026-09-17"
+    },
+    {
+      "type": "city",
+      "name": "Houston",
+      "slug": "local-seo-houston",
+      "date": "2026-09-20"
+    },
+    {
+      "type": "industry",
+      "name": "dentists",
+      "slug": "local-seo-for-dentists",
+      "date": "2026-09-20"
+    }
   ]
 }

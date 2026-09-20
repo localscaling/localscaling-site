@@ -342,7 +342,7 @@ index = head(
 <div class="trades" aria-label="Who we work with">
   <div class="container trades-inner">
     <strong>Built for local services</strong>
-    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span>Dental</span><span>Medical</span><span><a href="/local-seo-for-accountants">Accounting</a></span><span>Legal</span>
+    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span><a href="/local-seo-for-dentists">Dental</a></span><span>Medical</span><span><a href="/local-seo-for-accountants">Accounting</a></span><span>Legal</span>
   </div>
 </div>
 
@@ -891,7 +891,7 @@ index = head(
 <div class="trades" aria-label="Who we work with">
   <div class="container trades-inner">
     <strong>Built for local services</strong>
-    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span>Dental</span><span>Medical</span><span><a href="/local-seo-for-accountants">Accounting</a></span><span>Legal</span>
+    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span><a href="/local-seo-for-dentists">Dental</a></span><span>Medical</span><span><a href="/local-seo-for-accountants">Accounting</a></span><span>Legal</span>
   </div>
 </div>
 
@@ -1470,7 +1470,7 @@ def year_timeline(c):
         segs += f'<rect x="{x:.0f}" y="46" width="{wd:.0f}" height="40" rx="8" class="tl-seg {cls}"/>'
         segs += f'<text x="{x + wd/2:.0f}" y="71" text-anchor="middle" class="tl-text {cls}">{title}</text>'
     start_x = left + span*(c["timeline_start"]-1) + span/2
-    stack = "".join(f'<li class="tl-item {cls}"><span class="tl-when">{months[start-1]} to {months[end-1]}</span><span class="tl-what">{title}</span></li>' for start, end, cls, title in c["timeline"])
+    stack = "".join(f'<li class="tl-item {cls}"><span class="tl-when">{months[start-1] if start == end else months[start-1] + " to " + months[end-1]}</span><span class="tl-what">{title}</span></li>' for start, end, cls, title in c["timeline"])
     return f'''<figure class="timeline">
       <ol class="tl-stack" aria-hidden="true">{stack}</ol>
       <svg viewBox="0 0 {w} 140" role="img" aria-label="{c["timeline_alt"]}">
@@ -1677,7 +1677,7 @@ def industry_page(c):
       <a href="{audit_link}" class="btn btn-primary">See where you stand</a>
     </div>
     <div class="reveal reveal-2">
-      {serp_card(c["pack_search"], c["pack_rows"], c["organic_rows"], "Same search, two places to show up. We work both.", you="Your firm")}
+      {serp_card(c["pack_search"], c["pack_rows"], c["organic_rows"], "Same search, two places to show up. We work both.", you=c.get("you", "Your firm"))}
     </div>
   </div>
 </section>

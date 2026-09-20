@@ -110,4 +110,109 @@ ACCOUNTANTS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three firms ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS]
+DENTISTS = {
+  "slug": "local-seo-for-dentists",
+  "title": "Local SEO for Dentists and Dental Practices | LocalScaling",
+  "meta": "Local SEO for dentists. We get your practice into the Google map pack and the search results under it for the neighborhoods your patients live in, for the services you want more of. Starting at $1,500/mo.",
+  "crumb": "Dentists",
+  "eyebrow": "Local SEO for dentists",
+  "h1": "Local SEO for dentists and dental practices",
+  "lede": "A new patient picks a dentist on a phone, in about a minute. They search, look at the map, read a few reviews, and scroll the listings under it. We get your practice into both places for the neighborhoods your patients live in and the services you want more of.",
+  "short": "dentists",
+  "industry_value": "Dental",
+  "you": "Your practice",
+
+  "pack_search": "dentist near me",
+  "pack_rows": [("Your practice", "Dentist · 0.6 mi"), ("Another practice", "Dental clinic · 1.3 mi"), ("Another practice", "Cosmetic dentist · 2.1 mi")],
+  "organic_rows": [("Family dentist in your city, new patients welcome", "yourpractice.com"), ("Best dentists near you", "a directory"), ("Another practice", "anotherpractice.com")],
+  "pack_note": "Three spots. Most patients pick from these.",
+  "both_intro": "When someone searches for a dentist, Google shows the map first and the regular results under it. They read the reviews on the map, then scroll to see who has a real website. A practice that holds a spot in both gets the booking more often than one that holds either alone.",
+
+  "timeline": [(1, 2, "peak", "New benefits"), (3, 4, "quiet", "Steady"), (5, 7, "build", "Profile and pages"), (8, 8, "peak", "School"), (9, 10, "quiet", "Reviews"), (11, 12, "peak", "Benefits rush")],
+  "timeline_start": 5,
+  "timeline_alt": "A twelve month timeline. New patient searches bump in January and February when insurance benefits reset, in August before school starts, and in November and December when unused benefits are about to expire. The profile and pages are built from May to July so they are in place before the busy stretches.",
+  "timeline_caption": "The shape of a dental practice's year. Demand never really stops, but it bumps in August and again when unused benefits expire in December. A build that starts in late spring is in place for both.",
+
+  "intent": [
+    ("dentist near me", "Someone new to the area, or in pain, choosing today", "Your Google Business Profile"),
+    ("emergency dentist [city]", "A person with a broken tooth who will call the first open office", "A service page and the profile"),
+    ("dental implants [city]", "A patient comparing three practices on a big decision", "A service page"),
+    ("Invisalign [city]", "An adult who has been thinking about it for a year", "A service page"),
+    ("pediatric dentist [city]", "A parent picking for two or three kids at once", "A service page"),
+    ("dentist in [the suburb next door]", "A family fifteen minutes away who does not know you exist", "A city page"),
+  ],
+
+  "why_eyebrow": "Why dentistry is different",
+  "why_h2": "Patients choose from the map, and they choose fast",
+  "why_paragraphs": [
+    "Most people do not shop for a dentist until something forces them to. A move, a new insurance plan, a cracked tooth on a Saturday. When it happens they open Google Maps, look at the three practices closest to them, and read the reviews. The whole decision takes a minute. If you are not in that map, you are not in the decision.",
+    "Reviews carry more weight here than in almost any other local search. Nobody lets a stranger work in their mouth on the strength of a logo. Patients read what other patients said, and Google reads the same reviews to decide who ranks. A practice with recent, specific reviews wins both.",
+    ("pull", "A practice that is booked out has no reason to be on page two. Google does not know you are good until your patients say so where it can read it."),
+    "Then there is the calendar. Dental demand never fully stops, but it bumps when benefits reset in January, when school is about to start, and when unused benefits are about to expire in December. Google decides who shows up in those weeks based on what your profile, your reviews, and your website looked like months earlier.",
+  ],
+
+  "leaks_h2": "Six things we find on most dental practice profiles",
+  "leaks_intro": "Each one is small. Together they are the difference between the map and nowhere.",
+  "leaks": [
+    ("The practice and the dentist competing with each other", "The office has a profile and so does the doctor, with a different name and a different phone. Google cannot tell which one is the business, so it trusts neither."),
+    ("A category that undersells you", "Listed as a dental clinic when the searches you want are cosmetic dentist, pediatric dentist, or emergency dental service. Google can only rank you for what you say you are."),
+    ("One page called Services", "Cleanings, implants, Invisalign, veneers, and emergencies on one page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("Reviews with no words in them", "Dozens of five star ratings and no text. Patients skip them and Google learns nothing about what you do or where you are."),
+    ("An old phone number on the directories", "The practice changed its number or moved down the road years ago. The old details are still on half the listings Google checks, and the mismatch drags the profile down."),
+    ("No way to book from the page", "The person who found you at ten at night wants an appointment. The site offers a phone number and office hours, so they book with the practice that had a button."),
+  ],
+
+  "how_h2": "Built around how people find a dentist",
+  "how": [
+    ("We fix the profile before anything else", "One profile for the practice, one for each dentist if it earns its place, and the same name and phone on both. Then the right primary category for the patients you want, the services listed the way people search for them, and photos of the actual office."),
+    ("We build a page for each service", "Implants, Invisalign, veneers, crowns, emergencies, kids, sedation. Each one gets its own page, written for the patient searching for it. Those pages are what put you in the results under the map."),
+    ("We put your credentials where Google and patients can see them", "Your state dental board license, your degrees, and your memberships go on the site and on the profile, and they match. A patient can check them, and so can a search engine."),
+    ("We ask for reviews when patients are happiest", "At the front desk after a good visit, with a text that makes it a two tap job. The ask mentions the service, so the review does too, and Google learns what you are good at."),
+    ("We do the work in the right order", "Profile and listings first, because everything else sits on them. Then service pages, then pages for the suburbs you draw from, then reviews. Content on a profile that is set up wrong is content nobody sees."),
+    ("We report what you can bank", "Each month you see where you rank across your area for the searches that matter, how that moved, and how many people called or booked. Traffic stays off the report because nobody pays you in traffic."),
+  ],
+
+  "searches_h2": "What your next patient is typing",
+  "searches": ["dentist open Saturday", "dentist that takes my insurance", "teeth cleaning near me", "tooth extraction cost", "dentist accepting new patients", "wisdom teeth removal", "root canal near me", "dental crown same day"],
+  "specialty_searches": ["emergency dentist open now", "dental implants", "Invisalign dentist", "pediatric dentist", "sedation dentist", "veneers", "dentures near me", "TMJ dentist", "sleep apnea dentist", "dentist that takes Medicaid", "Spanish speaking dentist", "dentist for anxious patients"],
+  "searches_note": "Add your city or suburb to any of these and that is the search. The specialty ones have fewer practices competing and higher case values behind them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "The right primary category, services listed the way patients search for them, photos of the real office, and posts through the busy stretches. This is what wins the map."),
+    ("Service pages", "One page for each treatment you want more of, written for the patient typing the search. This is what wins the listing under the map."),
+    ("City pages", "One page for each suburb or neighborhood you draw patients from, so the families fifteen minutes away can find you too."),
+    ("Listings that match", "Your practice name, address, and phone matched across the directories Google checks, including the dental and insurance ones."),
+    ("Review generation", "A follow-up that asks after a good visit, mentions the treatment, and keeps asking all year instead of in bursts."),
+    ("Your website", "Built for local search, with your credentials up front, online booking, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which practices this is for",
+  "fit_yes": [
+    "A practice with one office, or a few, and a defined area you draw patients from",
+    "One or a handful of dentists who want more of a particular kind of case",
+    "You already do good work and have patients who would say so",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "A practice with no fixed address, or one that is about to move",
+    "You want new patients next week. That is an ads job",
+    "You want blog posts by the dozen instead of patients",
+    "You are shopping on price. There are cheaper options and they are not us",
+  ],
+
+  "faq": [
+    ("We have several dentists. Does each one need a profile?", "Sometimes. Google allows a profile for the practice and one for each practitioner. They help when a dentist is known by name or has a specialty. They hurt when they carry a different phone number or address. We set them up so they support the practice instead of competing with it."),
+    ("How long until we see new patients?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Service pages and reviews take longer and keep building."),
+    ("We are already busy. Why would we need this?", "Busy with the wrong cases, or busy this year. A practice that ranks for implants and Invisalign chooses its schedule. A practice that only ranks for its own name fills up with whoever walks in, and that changes the day a chain opens down the road."),
+    ("Can we compete with the big dental chains?", "On the map, yes. Google ranks the closest, best reviewed, best described practice, and a chain location is one profile like yours. You win your own neighborhoods and the specialty searches the chains do not bother with."),
+    ("Do you write about treatments on our site?", "We write service pages and city pages. Anything clinical goes past you before it publishes, and we make no claims about outcomes."),
+    ("What about the reviews we cannot control?", "You reply to every one, and we help you do it without confirming anyone was a patient. A calm reply to a bad review does more for the next reader than five more good ones."),
+    ("We are opening a second location. What changes?", "Almost everything doubles. The new office gets its own profile, its own page, and its own reviews from day one, and the two never share a phone number. Google treats them as two businesses, and so do we."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Fill the schedule with the cases you want.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three practices ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS]

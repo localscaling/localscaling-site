@@ -22,6 +22,14 @@ PARALLEL = r"\b(not just|not only|not merely|isn'?t just|aren'?t just|no .{1,25}
 CONTRAST = r"[^.!?]*\b(, not [a-z]|not to ours|not ours\b)[^.!?]*[.!?]"
 PARTICIPLE = r",\s+(ensuring|reflecting|highlighting|showcasing|underscoring|emphasizing|signaling|fostering|contributing to|cementing|solidifying)\b"
 BANNED = r"\b(guarantee\w*|90 days|ninety days|money.back|no.risk)\b"
+# City names are proper nouns, so they do not count toward a Title Case heading.
+try:
+    sys.path.insert(0, os.path.join(SITE, "tools"))
+    from cities import PAGES as _CITIES
+    PROPER_WORDS = {w for c in _CITIES for w in c["city"].split()} | {"Google"}
+except Exception:
+    PROPER_WORDS = {"Google"}
+
 PRICE = r"(?<!starting at )(?<!start at )(?<!starts at )\$[0-9,]+(/mo| a month| per month)"
 
 def text_of(path):
@@ -52,6 +60,7 @@ def review(path):
         caps = [w for w in words if w[0].isupper()]
         proper = {"Google Business Profile", "Google Maps"}
         if h in proper: continue
+        caps = [w for w in caps if w not in PROPER_WORDS]
         if len(words) >= 3 and len(caps) >= len(words) - 1 and h != h.upper() and "SEO" not in h:
             findings.append(("titlecase", h))
     body = re.sub(r"<title>.*?</title>|<meta[^>]*>|<select.*?</select>", "", raw, flags=re.S)
