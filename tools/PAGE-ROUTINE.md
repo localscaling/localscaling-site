@@ -130,3 +130,10 @@ and left out. Nothing else.
 If something about the process was wrong or slow, add a dated lesson to the
 hub `LESSONS.md` in the format it uses. Do not add a lesson for a run that
 went as planned.
+
+## 10. Stop
+
+The run ends after the report. Do not add features, refactor the generator,
+change the review script, restyle anything, or start another page. If you
+noticed something that should change, it goes in the report as one line and
+the operator decides. A run that keeps working after its report is a bug.
