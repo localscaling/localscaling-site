@@ -13,6 +13,10 @@ serves `apply.html`.
   fetch the new file
 - Form endpoints live in the generator as `FORM_APPLY` and `FORM_AUDIT`. Two
   Formspree forms, one per page
+- `sitemap.xml` and `robots.txt` are written by the same build from the same
+  page list. Never edit them by hand. Noindex pages are left out. A page's
+  lastmod moves only when its content changes, tracked in
+  `tools/sitemap-ledger.json`, which is committed with the pages
 - Industry pages: one dict per industry in `tools/industries.py`, rendered by
   `industry_page()`. Copy the accountants dict, change every value, add it to
   `PAGES`, build. Link the new page from the industries band. The audit link

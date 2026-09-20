@@ -1110,3 +1110,42 @@ for name, content in files.items():
     with open(p, "w") as f:
         f.write(content)
     print(f"wrote {name} ({len(content.splitlines())} lines)")
+
+# ---------------- SITEMAP ----------------
+# Rebuilt on every run from the same page list, so it cannot go stale.
+# A page's lastmod only moves when its content changes. The ledger keeps
+# the last content hash and date per page.
+import hashlib, json, datetime, re
+
+def page_url(name):
+    if name == "index.html":
+        return "https://www.localscaling.com/"
+    return "https://www.localscaling.com/" + name[:-5]
+
+ledger_path = os.path.join(SITE, "tools", "sitemap-ledger.json")
+try:
+    ledger = json.load(open(ledger_path))
+except FileNotFoundError:
+    ledger = {}
+today = datetime.date.today().isoformat()
+entries = []
+for name, content in files.items():
+    if 'name="robots" content="noindex' in content:
+        continue
+    body = re.sub(r'styles\.css\?v=[0-9a-z]+', 'styles.css', content)
+    digest = hashlib.sha256(body.encode()).hexdigest()[:16]
+    prev = ledger.get(name, {})
+    lastmod = prev.get("lastmod", today) if prev.get("hash") == digest else today
+    ledger[name] = {"hash": digest, "lastmod": lastmod}
+    priority = "1.0" if name == "index.html" else ("0.9" if name == "free-seo-audit.html" else "0.8")
+    entries.append((page_url(name), lastmod, priority))
+ledger = {k: v for k, v in ledger.items() if k in files}
+json.dump(ledger, open(ledger_path, "w"), indent=2, sort_keys=True)
+
+xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+for url, lastmod, priority in entries:
+    xml.append(f"  <url><loc>{url}</loc><lastmod>{lastmod}</lastmod><priority>{priority}</priority></url>")
+xml.append("</urlset>")
+open(os.path.join(SITE, "sitemap.xml"), "w").write("\n".join(xml) + "\n")
+open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nAllow: /\n\nSitemap: https://www.localscaling.com/sitemap.xml\n")
+print(f"wrote sitemap.xml ({len(entries)} urls) and robots.txt")
