@@ -9,7 +9,7 @@ STYLE_VERSION = "20260917i"  # bump when styles.css changes so browsers fetch th
 FORM_APPLY = "https://formspree.io/f/mgoqbjbw"
 FORM_AUDIT = "https://formspree.io/f/mnpnqnyd"
 
-LOGO = '''<svg viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LocalScaling"><path d="M22 3C14.82 3 9 8.82 9 16C9 25.5 22 41 22 41C22 41 35 25.5 35 16C35 8.82 29.18 3 22 3Z" stroke="#002c0a" stroke-width="2.5" fill="none"/><circle cx="22" cy="16" r="4.5" stroke="#002c0a" stroke-width="2.5" fill="none"/><text x="46" y="30" font-family="League Spartan, sans-serif" font-weight="800" font-size="22" fill="#002c0a" letter-spacing="-0.5">LocalScaling</text></svg>'''
+LOGO = '''<svg viewBox="0 0 214 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LocalScaling"><path d="M22 3C13.7 3 7 9.6 7 17.9C7 24.4 10.4 33.2 14.6 39.4C17.2 43.2 19.8 45.5 22 45.5C24.2 45.5 26.8 43.2 29.4 39.4C33.6 33.2 37 24.4 37 17.9C37 9.6 30.3 3 22 3Z" stroke="#002c0a" stroke-width="3.2" stroke-linejoin="round" fill="none"/><circle cx="22" cy="18" r="5" stroke="#002c0a" stroke-width="3.2" fill="none"/><text x="48" y="32" font-family="League Spartan, sans-serif" font-weight="800" font-size="24" fill="#002c0a" letter-spacing="-0.4">LocalScaling</text></svg>'''
 
 TICK = '<svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>'
 
