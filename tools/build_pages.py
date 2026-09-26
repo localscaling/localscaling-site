@@ -342,7 +342,7 @@ index = head(
 <div class="trades" aria-label="Who we work with">
   <div class="container trades-inner">
     <strong>Built for local services</strong>
-    <span>Plumbing</span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span><a href="/local-seo-for-dentists">Dental</a></span><span>Medical</span><span><a href="/local-seo-for-accountants">Accounting</a></span><span>Legal</span>
+    <span><a href="/local-seo-for-plumbers">Plumbing</a></span><span>HVAC</span><span>Roofing</span><span>Electrical</span><span><a href="/local-seo-for-dentists">Dental</a></span><span>Medical</span><span><a href="/local-seo-for-accountants">Accounting</a></span><span>Legal</span>
   </div>
 </div>
 
@@ -843,6 +843,9 @@ def city_page(c):
     faqs = "".join(faq(q, a) for q, a in c["faq"])
     included = "".join(ncard(t, b) for t, b in c["included"])
     chips = "".join(f'<li class="chip">{a}</li>' for a in c["areas"])
+    names = {p["slug"]: p["city"] for p in CITY_PAGES}
+    more = ", ".join(f'<a href="/{s}">{names[s]}</a>' for s in c.get("more_cities", []))
+    more = f'\n    <p class="muted narrow">More cities: {more}</p>' if more else ""
     page = head(c["title"], c["meta"], "/" + c["slug"]).replace("<body>", '<body class="has-sticky">') + NAV
     page += f'''
 <main id="main">
@@ -924,7 +927,7 @@ def city_page(c):
     <p class="eyebrow">Coverage</p>
     <h2 id="city-areas" class="section-title">{c["areas_h2"]}</h2>
     <ul class="chips">{chips}</ul>
-    <p class="muted narrow">{c["areas_note"]}</p>
+    <p class="muted narrow">{c["areas_note"]}</p>{more}
   </div>
 </section>
 

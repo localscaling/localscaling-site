@@ -215,4 +215,109 @@ DENTISTS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three practices ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS]
+PLUMBERS = {
+  "slug": "local-seo-for-plumbers",
+  "title": "Local SEO for Plumbers and Plumbing Companies | LocalScaling",
+  "meta": "Local SEO for plumbers. We get your plumbing company into the Google map pack and the search results under it, in the towns your trucks drive to, for the jobs you want more of. Starting at $1,500/mo.",
+  "crumb": "Plumbers",
+  "eyebrow": "Local SEO for plumbers",
+  "h1": "Local SEO for plumbers and plumbing companies",
+  "lede": "Most plumbing calls start with a search on a phone, often with water on the floor. People look at the map, tap the first plumber who looks open and trusted, and scroll the listings under it when the job is bigger. We get your company into both places in the towns your trucks already drive to.",
+  "short": "plumbers",
+  "industry_value": "Plumbing",
+  "you": "Your company",
+
+  "pack_search": "plumber near me",
+  "pack_rows": [("Your company", "Plumber · 0.7 mi"), ("Another company", "Plumber · 1.5 mi"), ("Another company", "Drainage service · 2.6 mi")],
+  "organic_rows": [("Water heater replacement in your town", "yourcompany.com"), ("Plumbers near you", "a directory"), ("Another company", "anothercompany.com")],
+  "pack_note": "Three spots. In an emergency, most people call one of these.",
+  "both_intro": "When someone searches for a plumber, Google shows the map first and the regular results under it. The person with a burst pipe calls from the map. The person pricing a new water heater or a sewer line scrolls down and reads. A company that holds a spot in both gets the emergency and the big job.",
+
+  "timeline": [(1, 2, "peak", "Cold snaps, heaters"), (3, 5, "quiet", "Remodels, repipes"), (6, 9, "build", "Profile and pages"), (10, 10, "quiet", "Reviews"), (11, 12, "peak", "Holiday drains")],
+  "timeline_start": 6,
+  "timeline_alt": "A twelve month timeline. Calls climb in January and February with cold snaps and water heater failures, stay steady through spring with remodels and repipes, and climb again in November and December with holiday drains and the first freezes. The profile and pages are built from June to September so they are in place before the winter rush.",
+  "timeline_caption": "The shape of a plumber's year in a cold climate. Emergencies never stop, but the winter weeks are the loud ones. A build that starts in summer is in place before the first freeze.",
+
+  "intent": [
+    ("plumber near me", "Someone with water on the floor who will call the first number that looks right", "Your Google Business Profile"),
+    ("emergency plumber [city]", "A homeowner late at night who wants a person to answer", "The profile and a service page"),
+    ("water heater replacement [city]", "A household comparing two or three quotes this week", "A service page"),
+    ("sewer line repair [city]", "A big job, and a customer who reads everything before calling", "A service page"),
+    ("slab leak detection", "Someone who just found a warm spot on the floor", "A service page"),
+    ("plumber in [the town next door]", "A homeowner twenty minutes away who has never heard of you", "A city page"),
+  ],
+
+  "why_eyebrow": "Why plumbing is different",
+  "why_h2": "Half your calls cannot wait, and the other half shop around",
+  "why_paragraphs": [
+    "An emergency search is over in a minute. Nobody with a burst pipe reads five websites. They open the map, look for a plumber who is close, open now, and has recent reviews, and they tap call. If you are not one of the first three at that moment, the job goes to someone who is.",
+    "The bigger jobs work the other way. A water heater, a repipe, a sewer line, a remodel. The customer takes a day or a week, gets quotes, and reads the sites of the companies they found. That is where the listings under the map carry the weight.",
+    ("pull", "The map wins the burst pipe. Your website wins the repipe."),
+    "Then there are the ads. Many plumbing searches show paid listings above the map, and they stop the day the budget does. The map and the results under it keep sending calls whether or not you paid this month, and that is the part we build.",
+  ],
+
+  "leaks_h2": "Six things we find on most plumbing company profiles",
+  "leaks_intro": "Each one looks minor. Together they are why the phone rings for the company down the road.",
+  "leaks": [
+    ("A service area drawn around the whole state", "Or a home address showing on the map when the business runs from trucks. Google ranks you around a real place, and a service area that claims everywhere reaches nowhere in particular."),
+    ("Hours that do not match the phone", "The profile says open 24 hours and the phone goes to voicemail at night, or it says closed when you do take emergency calls. Both lose the job, and the first one earns bad reviews."),
+    ("One page called Services", "Drains, water heaters, leaks, sewer lines, and gas lines on one page. Google ranks whole pages, so a page about every job ranks for none of them."),
+    ("Stock photos of someone else's van", "Customers want to see the truck that will park in their driveway. A profile with real photos of your crew and your work gets chosen over one with none."),
+    ("A different phone number on every directory", "Old ad tracking numbers and a line from before the move, scattered across the listings Google checks. The mismatch drags the profile down."),
+    ("Reviews that stopped when the office manager left", "Someone used to ask. Nobody does now. Google reads the gap as a business that went quiet, and so do customers."),
+  ],
+
+  "how_h2": "Built around how people find a plumber",
+  "how": [
+    ("We set up the service area the way Google expects", "Most plumbing companies work from trucks, so the profile is set up as a service area business, the address is handled correctly, and the towns listed are the ones you really drive to."),
+    ("We pick the categories that match the work", "Plumber is the primary. Secondary categories such as drainage service, septic system service, or gas installation service go on only when they are a real part of the business that a customer could hire on its own."),
+    ("We build a page for each job", "Water heaters, drain clearing, leak detection, sewer lines, repipes, gas lines. Each one gets its own page, written for the person searching for it. Those pages are what put you in the results under the map, and they bring the bigger tickets."),
+    ("We make calling you the easiest thing on the page", "A call button at the top on a phone, hours that are true, and your license number where your state issues one. The person in a hurry should be able to call in one tap."),
+    ("We ask for reviews at the truck", "The tech asks before leaving, while the customer is still relieved, and a text follows with a link that names the job. The review mentions the work, so Google learns what you do and where you do it."),
+    ("We report calls", "Each month you see where you rank across your service area, how that moved, and how many people called. Traffic stays off the report because nobody pays you in traffic."),
+  ],
+
+  "searches_h2": "What your next customer is typing",
+  "searches": ["plumber open now", "leaking pipe repair", "toilet repair near me", "garbage disposal installation", "low water pressure fix", "water heater not working", "clogged kitchen sink", "sump pump replacement"],
+  "specialty_searches": ["tankless water heater installation", "sewer camera inspection", "hydro jetting", "slab leak detection", "whole house repipe", "gas line installation", "water softener installation", "backflow testing", "trenchless sewer repair", "well pump repair", "commercial plumber", "bathroom remodel plumbing"],
+  "searches_note": "Add your town to any of these and that is the search. The specialty ones have fewer plumbers competing and bigger tickets behind them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "A service area set up correctly, the right categories, true hours, real photos of your crew, and posts through the busy weeks. This is what wins the map."),
+    ("Service pages", "One page for each job you want more of, written for the person typing the search. This is what wins the listing under the map."),
+    ("City pages", "One page for each town your trucks cover, so the homeowners twenty minutes away can find you too."),
+    ("Listings that match", "One name, one address, and one phone number across the directories Google checks, including the home service ones."),
+    ("Review generation", "A text that goes out after every job, sent while the tech is still on site, that names the work and keeps coming all year."),
+    ("Your website", "Built for local search, with a call button up top, your license where it applies, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which plumbing companies this is for",
+  "fit_yes": [
+    "A shop with trucks on the road and a defined area you serve",
+    "One truck or a small fleet, with room for more work",
+    "Someone answers the phone when it rings, day or night",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You are booked solid and cannot take more calls",
+    "You want the phone ringing this week. That is an ads job",
+    "You want to rank in towns your trucks will not drive to",
+    "You want blog posts by the dozen instead of booked jobs",
+  ],
+
+  "faq": [
+    ("We work out of our trucks with no storefront. Can we still show on the map?", "Yes. Google calls that a service area business. The profile is set up around where you work, your home address stays hidden, and you rank around the area you serve."),
+    ("How long until the phone rings more?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Service pages and reviews take longer and keep building."),
+    ("Should we stop paying for ads?", "Keep them running while this builds, if they pay for themselves. Ads stop the day the budget does. Once the map and your pages are bringing calls, you can decide how much ad spend you still need, and we show you the numbers to decide with."),
+    ("We only want the bigger jobs. Can you do that?", "Yes, within reason. The categories and pages decide which searches you win, so we build more around water heaters, sewer lines, and repipes if that is the work you want. You will still get some drain calls, and they turn into the big jobs later."),
+    ("Can we compete with the big franchise brands?", "On the map, yes. A franchise location is one profile like yours, and Google ranks the closest, best reviewed, best described plumber. You win your own towns and the specialty searches the franchises do not bother with."),
+    ("Do we need a profile for every town we cover?", "No. One profile for each real, staffed location. The other towns are covered by your service area and a page for each one. A fake address for a second profile is the quickest way to lose the first one."),
+    ("Do you write about plumbing on our site?", "We write the service pages and city pages. Anything technical goes past you before it publishes, and we make no promises about prices or arrival times you have not set."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the plumber they call first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three plumbers ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS]

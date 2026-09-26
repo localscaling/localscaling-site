@@ -120,4 +120,64 @@ HOUSTON = {
   "cta_p": "We map where you rank across the metro, show you which suburbs are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON]
+PHOENIX = {
+  "slug": "local-seo-phoenix",
+  "city": "Phoenix",
+  "short": "Phoenix",
+  "region": "the Valley",
+  "title": "Local SEO Agency in Phoenix | LocalScaling",
+  "meta": "Local SEO for Phoenix service businesses. We get contractors, clinics, and practices into the Google map pack and the search results under it, city by city across the Valley. Starting at $1,500/mo.",
+  "eyebrow": "Serving the Valley",
+  "h1": "Local SEO agency in Phoenix",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Valley cities their customers search from. Phoenix is one metro made of many cities, and people search by the name of the one they live in.",
+
+  "why_eyebrow": "Why Phoenix is different",
+  "why_h2": "The Valley is a set of cities, and each one searches by name",
+  "why_paragraphs": [
+    "People here say they live in the Valley, then they name the city. Mesa, Chandler, Gilbert, Scottsdale, Glendale, Peoria. Each has its own city hall and its own name in the search bar. A pest control company in Mesa will not show on the map for a homeowner in Peoria, and a dental practice in Scottsdale will not show for a family in Goodyear, however strong the profile.",
+    ("pull", "One profile reaches one part of the Valley. The rest of it needs pages with each city's name on them."),
+    "Then there is the heat. Air conditioners, pools, and roofs all get tested in the same summer weeks, and a monsoon storm sends whole neighborhoods looking for help on the same night. In the cooler months the winter visitors come back, and some trades get busier just as others slow down. Google decides who shows up in each rush based on what your profile and site looked like before it started.",
+    "The Valley also keeps building outward. New neighborhoods at the edges fill with families who have no plumber, dentist, or accountant yet, and they find one by searching the name of the town they just moved to.",
+  ],
+
+  "search_example": "pest control Mesa",
+  "pack_rows": [("Your business", "Pest control service · 0.9 mi"), ("Another company", "Pest control service · 2.2 mi"), ("Another company", "Pest control service · 3.6 mi")],
+  "organic_rows": [("Pest and scorpion control in Mesa", "yourbusiness.com"), ("Pest control companies in Mesa", "a directory"), ("Another company", "anothercompany.com")],
+  "both_intro": "When someone in the Valley searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the city they are searching from. A business that holds a spot in both, in that city, gets the call.",
+
+  "how_h2": "Built around how the Valley searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across the metro, from the West Valley to the East Valley. A search from your own office says almost nothing about the rest. The plan is built on the grid."),
+    ("We build a page for each city you serve", "Nobody in Gilbert searches for an electrician in Phoenix. They type Gilbert, and a family in Surprise types Surprise. Your site and profile are built around the names people actually use."),
+    ("We set the profile up the way Google expects", "A lot of Valley businesses run from a truck or a home office. Google calls that a service area business. Set it up wrong and your reach is capped before any page gets written."),
+    ("We plan around your busy season", "Summer and monsoon season for some trades, the winter months for others. The profile, the pages, and the review push are in place before your rush begins, because the rankings in July come from the work done in spring."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the cities you actually work, photos, and posts. This is what wins the map."),
+    ("City pages", "One page for each Valley city you want to win, written for that city. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone the same on every directory Google compares, including the Arizona and trade ones."),
+    ("Review generation", "A follow-up that asks every finished customer at the right moment, all year, including the slow months."),
+    ("Monthly reporting", "Where you rank on the grid, city by city, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every city and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across the Valley",
+  "areas": ["Downtown Phoenix","Arcadia","Biltmore","Desert Ridge","Ahwatukee","Laveen","Paradise Valley","Scottsdale","Tempe","Mesa","Chandler","Gilbert","Queen Creek","Glendale","Peoria","Surprise","Goodyear","Avondale","Cave Creek","Fountain Hills"],
+  "areas_note": "This list is where we start. Your own reach decides the plan, so if your city is missing, ask and we will tell you straight whether it is winnable.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston"],
+
+  "faq": [
+    ("Do you need to be in Phoenix to rank my business here?", "No. What Google weighs is your location, your profile, your reviews, and your site. We run Valley campaigns remotely and the work is the same."),
+    ("Can one profile cover Phoenix, Scottsdale, and the East Valley?", "No single listing reaches the whole Valley. You win the cities closest to you first, then reach further out with city pages as the profile gets stronger."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some cities move sooner than others, and we tell you which yours is before you commit."),
+    ("We are slow all summer. Is it worth running the whole year?", "Yes. The slow months are when the work gets done, so the rankings are there when the busy months arrive. Reviews from last season keep working through this one."),
+    ("Our office is in one city and we work in five. Do we need more addresses?", "No. The other cities are covered by your service area and by a page for each one. A second listing needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which Valley cities you can win.",
+  "cta_p": "We map where you rank from one side of the Valley to the other, show you which cities are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX]

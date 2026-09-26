@@ -4,8 +4,8 @@
     "lastmod": "2026-09-19"
   },
   "index.html": {
-    "hash": "92c38c4e03d5bf28",
-    "lastmod": "2026-09-20"
+    "hash": "000fa6d76e004b9a",
+    "lastmod": "2026-09-26"
   },
   "local-seo-for-accountants.html": {
     "hash": "9e43abe129ee1c7e",
@@ -15,6 +15,10 @@
     "hash": "2840b9ead170f52f",
     "lastmod": "2026-09-20"
   },
+  "local-seo-for-plumbers.html": {
+    "hash": "ddfebe4372633df3",
+    "lastmod": "2026-09-26"
+  },
   "local-seo-houston.html": {
     "hash": "49734397c59ceda4",
     "lastmod": "2026-09-20"
@@ -22,5 +26,9 @@
   "local-seo-los-angeles.html": {
     "hash": "1172aa1675ab7c57",
     "lastmod": "2026-09-19"
+  },
+  "local-seo-phoenix.html": {
+    "hash": "efc7438c454088b0",
+    "lastmod": "2026-09-26"
   }
 }
