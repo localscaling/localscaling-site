@@ -320,4 +320,109 @@ PLUMBERS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three plumbers ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS]
+VETERINARIANS = {
+  "slug": "local-seo-for-veterinarians",
+  "title": "Local SEO for Veterinarians and Animal Hospitals | LocalScaling",
+  "meta": "Local SEO for veterinarians. We get your clinic or animal hospital into the Google map pack and the search results under it, in the neighborhoods your clients live in, for the care you want more of. Starting at $1,500/mo.",
+  "crumb": "Veterinarians",
+  "eyebrow": "Local SEO for veterinarians",
+  "h1": "Local SEO for veterinarians and animal hospitals",
+  "lede": "A pet owner picks a vet the way they pick most things now. They search on a phone, look at the map, read what other owners said, and check the clinics listed under it. We get your practice into both places for the neighborhoods your clients live in and the care you want to do more of.",
+  "short": "veterinarians",
+  "industry_value": "Veterinary",
+  "you": "Your clinic",
+
+  "pack_search": "vet near me",
+  "pack_rows": [("Your clinic", "Animal hospital · 0.8 mi"), ("Another clinic", "Veterinarian · 1.4 mi"), ("Another clinic", "Emergency veterinarian service · 3.2 mi")],
+  "organic_rows": [("Dog and cat dental cleanings in your city", "yourclinic.com"), ("Best vets near you", "a directory"), ("Another clinic", "anotherclinic.com")],
+  "pack_note": "Three spots. A worried owner usually calls one of these.",
+  "both_intro": "When someone searches for a vet, Google shows the map first and the regular results under it. The owner with a sick dog calls from the map. The owner choosing a clinic for a new kitten, or pricing a dental cleaning, scrolls down and reads. A practice that holds a spot in both gets the first visit and keeps the client.",
+
+  "timeline": [(1, 2, "build", "Profile and pages"), (3, 5, "peak", "Puppies, kittens, fleas"), (6, 8, "peak", "Boarding and travel"), (9, 10, "quiet", "Reviews"), (11, 12, "peak", "Holidays")],
+  "timeline_start": 1,
+  "timeline_alt": "A twelve month timeline. New client searches climb in spring with new puppies and kittens and the start of flea and tick season, stay busy through summer with boarding and travel vaccines, ease in the fall, and climb again in November and December with holiday emergencies. The profile and pages are built in January and February so they are in place before spring.",
+  "timeline_caption": "The shape of a small animal practice's year. Pets get sick in every month, but spring and summer bring the new clients. A build that starts in winter is ready when they arrive.",
+
+  "intent": [
+    ("vet near me", "Someone with a new puppy or a new address, choosing a clinic this week", "Your Google Business Profile"),
+    ("emergency vet open now", "An owner whose dog ate something at nine at night", "The profile, with true hours"),
+    ("cat vet [city]", "A cat owner who wants a calmer visit than the last one", "A service page"),
+    ("dog dental cleaning [city]", "An owner comparing what a few clinics charge and include", "A service page"),
+    ("exotic vet [city]", "A rabbit, bird, or reptile owner with few clinics to pick from", "A service page"),
+    ("vet in [the neighborhood next door]", "A family ten minutes away who drives past your sign and has never called", "A city page"),
+  ],
+
+  "why_eyebrow": "Why veterinary care is different",
+  "why_h2": "A new client can mean years of visits",
+  "why_paragraphs": [
+    "People go looking for a vet at a few moments. A new puppy, a move, a pet that stopped eating, a clinic that closed or changed hands. In every one of them they open the map, look at the closest few, and read the reviews. The client who picks you then may stay for the whole life of the pet, and the next one after that.",
+    "Owners read reviews for different things than most customers do. They want to know how the staff treated a scared animal, whether the vet explained the bill, and how the clinic handled a hard day. Google reads the same reviews to decide who ranks. A clinic with recent, specific reviews wins on both counts.",
+    ("pull", "The owner with a sick pet at night calls whoever the map says is open. Make sure the map is telling the truth about you."),
+    "Emergencies are the other half. Some searches happen after hours, and the owner needs to know at a glance who is open and who is not. A clinic with honest hours and a clear note about where to go after closing earns trust even from people it cannot see that night.",
+  ],
+
+  "leaks_h2": "Six things we find on most veterinary profiles",
+  "leaks_intro": "None of them look serious on their own. Together they send new clients to the clinic down the road.",
+  "leaks": [
+    ("An emergency category on a clinic that closes at six", "It brings calls at midnight you cannot take, and the owners who drove over leave angry reviews. List the categories that match the care you really give, and nothing more."),
+    ("Hours with no word about after hours", "The profile says closed and stops there. An owner in a panic wants to know where to go, and the clinic that tells them is the one they remember."),
+    ("One page called Services", "Wellness exams, vaccines, dentals, surgery, and senior care on one page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("Stock photos of a golden retriever", "Owners want to see the lobby, the exam rooms, and the people who will hold their pet. Real photos get chosen over pictures from a stock library."),
+    ("An old name still on the directories", "The practice was bought, renamed, or moved, and the old details are still on half the listings Google checks. The mismatch drags the profile down."),
+    ("Reviews nobody answered", "Some of the most read reviews for a vet are about cost or about losing a pet. A calm reply, with no details from the visit, shows the next owner how you treat people."),
+  ],
+
+  "how_h2": "Built around how owners find a vet",
+  "how": [
+    ("We fix the profile before anything else", "The right primary category, which is usually Veterinarian or Animal hospital, and secondary ones such as Emergency veterinarian service only when you really provide it. Then true hours, an after hours note, the services owners search for, and photos of your real clinic."),
+    ("We build a page for each kind of care", "Wellness and vaccines, dental cleanings, surgery, senior pets, cats, exotics. Each one gets its own page, written for the owner searching for it. Those pages are what put you in the results under the map."),
+    ("We show the things owners check", "Your vets, their state licenses, and any accreditation or certification you hold, such as AAHA or Fear Free, go on the site and on the profile, and they match."),
+    ("We ask for reviews after the good visits", "The front desk asks at checkout after a wellness visit or a pet that went home better, and a text follows with a link. We never ask after a hard visit."),
+    ("We do the work in the right order", "Profile and listings first, because everything else sits on them. Then service pages, then pages for the neighborhoods you draw from, then reviews."),
+    ("We report new clients", "Each month you see where you rank across your area for the searches that matter, how that moved, and how many people called or booked. Traffic stays off the report because nobody pays you in traffic."),
+  ],
+
+  "searches_h2": "What your next client is typing",
+  "searches": ["vet open Saturday", "vet accepting new patients", "puppy shots near me", "cat vaccinations near me", "spay and neuter near me", "dog limping should I go to the vet", "pet microchip near me", "senior dog checkup"],
+  "specialty_searches": ["emergency vet open now", "urgent care vet", "exotic vet", "rabbit vet", "avian vet", "reptile vet", "cat only vet", "dog dental cleaning", "fear free vet", "mobile vet", "in home pet euthanasia", "TPLO surgery"],
+  "searches_note": "Add your city or neighborhood to any of these and that is the search. The specialty ones have fewer clinics competing for them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your care, true hours with an after hours note, the services owners search for, and real photos of your clinic. This is what wins the map."),
+    ("Service pages", "One page for each kind of care you want more of, written for the owner typing the search. This is what wins the listing under the map."),
+    ("City pages", "One page for each neighborhood or suburb you draw clients from, so the owners ten minutes away can find you too."),
+    ("Listings that match", "Your clinic name, address, and phone matched across the directories Google checks, including the pet and veterinary ones."),
+    ("Review generation", "A follow-up after the good visits that names the pet's care and keeps asking all year instead of in bursts."),
+    ("Your website", "Built for local search, with your vets up front, online booking, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which practices this is for",
+  "fit_yes": [
+    "A clinic or animal hospital with a fixed address, or a mobile practice with a defined area",
+    "One or a handful of vets with room in the schedule for new clients",
+    "You already give good care and have owners who would say so",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You are closed to new clients and plan to stay that way",
+    "You want the phones busy next week. That is an ads job",
+    "You want blog posts by the dozen instead of new clients",
+    "You are shopping on price. There are cheaper options and they are not us",
+  ],
+
+  "faq": [
+    ("Should we list ourselves as an emergency vet?", "Only if you see emergencies when owners need you to. The category brings calls at every hour, and a clinic that cannot take them earns bad reviews. If you see urgent cases during the day, we say that on the profile and on a page instead."),
+    ("How long until we see new clients?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Service pages and reviews take longer and keep building."),
+    ("Our vets are booked weeks out. Why would we need this?", "Busy with what, and for how long. A clinic that ranks for dentals, surgery, or cats chooses the work it fills the schedule with. A clinic that only ranks for its own name fills up with whoever calls, and that changes the day a new hospital opens nearby."),
+    ("Can we compete with the corporate groups?", "On the map, yes. A group hospital is one profile like yours, and Google ranks the closest, best reviewed, best described clinic. You win your own neighborhoods and the specialty searches the big groups do not bother with."),
+    ("We are a mobile vet. Can we still show on the map?", "Yes. Google calls that a service area business. The profile is set up around where you travel, your home address stays hidden, and you rank around the area you serve."),
+    ("How do we answer a review about a pet that died?", "Kindly and briefly, with no details from the visit. We help you write replies that thank the owner and invite them to call. The next owner reading it cares more about the reply than the review."),
+    ("Do you write about pet health on our site?", "We write service pages and city pages. Anything medical goes past your vets before it publishes, and we make no claims about outcomes."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the vet they find first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three clinics ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS]

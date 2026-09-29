@@ -39,7 +39,6 @@
     "chiropractors",
     "electricians",
     "med spas",
-    "veterinarians",
     "family law attorneys",
     "physical therapists",
     "pest control companies",
@@ -98,6 +97,12 @@
       "name": "plumbers",
       "slug": "local-seo-for-plumbers",
       "date": "2026-09-26"
+    },
+    {
+      "type": "industry",
+      "name": "veterinarians",
+      "slug": "local-seo-for-veterinarians",
+      "date": "2026-09-29"
     }
   ]
 }
