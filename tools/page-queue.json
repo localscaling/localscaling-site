@@ -1,9 +1,8 @@
 {
   "publish": true,
   "cadence_days": 4,
-  "last_run": "2026-09-26",
+  "last_run": "2026-09-30",
   "cities": [
-    "Dallas",
     "San Diego",
     "Chicago",
     "San Antonio",
@@ -33,7 +32,6 @@
     "New York"
   ],
   "industries": [
-    "HVAC contractors",
     "roofers",
     "personal injury lawyers",
     "chiropractors",
@@ -103,6 +101,18 @@
       "name": "veterinarians",
       "slug": "local-seo-for-veterinarians",
       "date": "2026-09-29"
+    },
+    {
+      "type": "city",
+      "name": "Dallas",
+      "slug": "local-seo-dallas",
+      "date": "2026-09-30"
+    },
+    {
+      "type": "industry",
+      "name": "HVAC contractors",
+      "slug": "local-seo-for-hvac-contractors",
+      "date": "2026-09-30"
     }
   ]
 }

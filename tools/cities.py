@@ -180,4 +180,65 @@ PHOENIX = {
   "cta_p": "We map where you rank from one side of the Valley to the other, show you which cities are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX]
+DALLAS = {
+  "slug": "local-seo-dallas",
+  "city": "Dallas",
+  "short": "Dallas",
+  "region": "the Dallas side of the Metroplex",
+  "title": "Local SEO Agency in Dallas | LocalScaling",
+  "meta": "Local SEO for Dallas service businesses. We get contractors, clinics, and practices into the Google map pack and the search results under it, from Oak Cliff to Frisco. Starting at $1,500/mo.",
+  "eyebrow": "Serving Dallas and its suburbs",
+  "h1": "Local SEO agency in Dallas",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Dallas neighborhoods and suburbs their customers search from. The Metroplex is one name on a map and dozens of markets in the search bar.",
+
+  "why_eyebrow": "Why Dallas is different",
+  "why_h2": "Every suburb searches by its own name",
+  "why_paragraphs": [
+    "Most people in the Dallas area live outside the city limits. Plano, Frisco, McKinney, Richardson, Garland, Irving. Each is its own city with its own name, and people type that name when they search. A roofer in Garland will not show on the map for a homeowner in Frisco, and a physical therapy clinic in Lakewood will not show for a family in Carrollton, however strong the profile.",
+    ("pull", "A profile tied to one address reaches one part of the Metroplex. Every suburb past that needs a page with its own name on it."),
+    "Fort Worth is the other half of DFW, and it searches as its own market. A company that wants both needs a plan for each side, and most should win the side they are on first.",
+    "Then there is the weather. Spring storms bring hail across North Texas, and a single evening can send whole neighborhoods looking for a roofer, a glass company, or an auto body shop. Summer heat tests every air conditioner at once. Google decides who shows up in those weeks from what your profile and site looked like before the storm.",
+    "The northern suburbs also keep growing. New subdivisions fill with families who have no dentist, electrician, or insurance agent yet, and they find one by searching the name of the town they just moved to.",
+  ],
+
+  "search_example": "roof repair Frisco",
+  "pack_rows": [("Your business", "Roofing contractor · 1.1 mi"), ("Another company", "Roofing contractor · 2.3 mi"), ("Another company", "Roofing contractor · 3.8 mi")],
+  "organic_rows": [("Hail damage roof repair in Frisco", "yourbusiness.com"), ("Roofers in Frisco", "a directory"), ("Another company", "anothercompany.com")],
+  "both_intro": "When someone in the Dallas area searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the suburb or neighborhood they are searching from. A business that holds a spot in both, in that place, gets the call.",
+
+  "how_h2": "Built around how Dallas searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across the Dallas side of the Metroplex, from Oak Cliff up to the northern suburbs. A search from your own office tells you almost nothing about the rest. The plan is built on the grid."),
+    ("We build a page for each suburb you serve", "Nobody in McKinney searches for a dentist in Dallas. They type McKinney, and a family in Mesquite types Mesquite. Your site and profile are built around the names people actually use."),
+    ("We get ready before storm season", "For roofers, restoration crews, and anyone else the spring storms keep busy, the profile, the pages, and the review push are in place before hail season. The rankings you have the morning after a storm come from work done months earlier."),
+    ("We put your license where people can check it", "In Texas, air conditioning and heating contractors are licensed by the state, and clinics and practices have their own boards. Any customer can look a license up. Putting it on your site and profile gives Google and the customer something to verify."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the suburbs you actually work, photos, and posts. This is what wins the map."),
+    ("Suburb and neighborhood pages", "One page for each place you want to win, written for that place. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone the same on every directory Google compares, including the Texas and trade ones."),
+    ("Review generation", "A follow-up that asks every finished customer at the right moment, and keeps asking after the busy season ends."),
+    ("Monthly reporting", "Where you rank on the grid, suburb by suburb, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every suburb and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across Dallas and its suburbs",
+  "areas": ["Uptown","Oak Lawn","Deep Ellum","Lower Greenville","Lakewood","Lake Highlands","Preston Hollow","Oak Cliff","Bishop Arts District","Highland Park","University Park","Plano","Frisco","McKinney","Allen","Richardson","Garland","Irving","Carrollton","Mesquite"],
+  "areas_note": "This list is where we start. Your own reach decides the plan, so if your suburb is missing, ask and we will tell you straight whether it is winnable.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix"],
+
+  "faq": [
+    ("Do you need to be in Dallas to rank my business here?", "No. What Google weighs is your location, your profile, your reviews, and your site. We run Dallas campaigns remotely and the work is the same."),
+    ("Can one profile cover Dallas and Fort Worth?", "No single listing reaches across the whole Metroplex. You win the area around your address first, then reach further with suburb pages as the profile gets stronger. Fort Worth is usually a separate push."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some suburbs move sooner than others, and we tell you which yours is before you commit."),
+    ("Our office is in Dallas and most of our work is in Collin County. Is that a problem?", "No. Your service area and a page for each suburb cover the places you drive to. A second listing needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("Every roofer in town shows up after a hailstorm. How do we stand out?", "By being ready before it hits. Recent reviews, true hours, real photos of your crew, and a page for each suburb are what Google has to go on when the searches spike. They cannot be built the morning after."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which Dallas suburbs you can win.",
+  "cta_p": "We map where you rank across the Dallas side of the Metroplex, show you which suburbs are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS]

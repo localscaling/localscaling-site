@@ -425,4 +425,109 @@ VETERINARIANS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three clinics ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS]
+HVAC = {
+  "slug": "local-seo-for-hvac-contractors",
+  "title": "Local SEO for HVAC Contractors and Companies | LocalScaling",
+  "meta": "Local SEO for HVAC contractors. We get your heating and air company into the Google map pack and the search results under it, in the towns you serve, for the repairs and replacements you want more of. Starting at $1,500/mo.",
+  "crumb": "HVAC contractors",
+  "eyebrow": "Local SEO for HVAC contractors",
+  "h1": "Local SEO for HVAC contractors",
+  "lede": "When the air stops blowing cold or the house will not warm up, people search on a phone and call someone from the map. When it is time to replace the whole system, they scroll the listings under it and read. We get your company into both places in the towns you already serve.",
+  "short": "heating and air companies",
+  "industry_value": "HVAC",
+  "you": "Your company",
+
+  "pack_search": "ac repair near me",
+  "pack_rows": [("Your company", "HVAC contractor · 0.9 mi"), ("Another company", "Air conditioning repair service · 1.8 mi"), ("Another company", "Heating contractor · 3.1 mi")],
+  "organic_rows": [("Heat pump installation in your town", "yourcompany.com"), ("Best HVAC companies near you", "a directory"), ("Another company", "anothercompany.com")],
+  "pack_note": "Three spots. On the hottest day of the year, most people call one of these.",
+  "both_intro": "When someone searches for heating or air, Google shows the map first and the regular results under it. The family with no cooling in July calls from the map. The homeowner pricing a new system reads the sites under it for a week before calling anyone. A company that holds a spot in both gets the repair and the replacement that follows it.",
+
+  "timeline": [(1, 2, "peak", "No heat calls"), (3, 4, "build", "Profile and pages"), (5, 8, "peak", "No cool calls"), (9, 10, "quiet", "Tune-ups, reviews"), (11, 12, "peak", "First cold snaps")],
+  "timeline_start": 3,
+  "timeline_alt": "A twelve month timeline. Calls climb in January and February with furnace and heat pump failures, ease in March and April, climb again from May to August when air conditioners fail in the heat, ease in September and October with tune-ups, and climb again in November and December with the first cold snaps. The profile and pages are built in March and April so they are in place before the summer rush.",
+  "timeline_caption": "The shape of an HVAC company's year in most of the country. Two busy seasons with quiet weeks between them. The quiet weeks are when the work that wins the next rush gets done.",
+
+  "intent": [
+    ("ac repair near me", "Someone sweating in their own living room who will call the first number that looks right", "Your Google Business Profile"),
+    ("furnace not working [city]", "A family on a cold night who wants a person to answer", "The profile and a service page"),
+    ("ac replacement cost [city]", "A homeowner comparing quotes on a large purchase, over days", "A service page"),
+    ("heat pump installation [city]", "Someone who has read about heat pumps and wants a company that knows them", "A service page"),
+    ("ductless mini split [city]", "A household cooling one room, an addition, or a garage", "A service page"),
+    ("hvac company in [the town next door]", "A homeowner twenty minutes away who has never heard of you", "A city page"),
+  ],
+
+  "why_eyebrow": "Why HVAC is different",
+  "why_h2": "Two busy seasons, and the big job comes after the repair",
+  "why_paragraphs": [
+    "Heating and air has two rushes. Air conditioners fail in the first long heat wave, and furnaces and heat pumps fail in the first hard freeze. In both, everyone searches in the same few days, and the companies already on the map take the calls. Google decides who is there from what your profile and site looked like weeks before.",
+    "The repair call is often the start of a bigger decision. The tech says the system is old, and the homeowner starts reading about replacement, heat pumps, and what a new unit costs. They search again, and this time they read the sites under the map before they call anyone. The company whose pages answered their questions gets the quote.",
+    ("pull", "The map wins the service call. Your website wins the new system."),
+    "Then there is the quiet time between seasons. It is when tune-ups and maintenance plans get sold, and it is when the profile, the pages, and the review push get built. The companies that use those weeks well are the ones on the map when the phones light up.",
+  ],
+
+  "leaks_h2": "Six things we find on most HVAC company profiles",
+  "leaks_intro": "Each one looks small. Together they are why the phone rings for the company across town.",
+  "leaks": [
+    ("Only one category, or a pile of wrong ones", "HVAC contractor with nothing under it, or categories for work the company does not do. The secondary categories should match the jobs you really take, and nothing more."),
+    ("A service area drawn around half the state", "Google ranks you around a real place. A service area that claims every county reaches none of them well, and a home address showing on the map when you run from trucks causes problems of its own."),
+    ("One page for heating and one for cooling", "Repairs, replacements, heat pumps, mini splits, duct work, and tune-ups squeezed onto two pages. Google ranks whole pages, so a page about everything ranks for nothing in particular."),
+    ("Hours that say 24/7 when nobody answers", "The profile promises emergency service and the phone goes to voicemail at night. That loses the job and earns a bad review from someone who was already hot or cold."),
+    ("A different phone number on every directory", "Old tracking lines, a number from before the rebrand, a line from a lead service. The mismatch across the listings Google checks drags the profile down."),
+    ("Reviews that come in with the weather", "Plenty in July, none in October. Google reads a long gap as a business that went quiet, and so do customers who check the dates."),
+  ],
+
+  "how_h2": "Built around how people find heating and air",
+  "how": [
+    ("We set up the categories and service area", "HVAC contractor is usually the primary. Secondary categories such as Air conditioning repair service, Heating contractor, Furnace repair service, or Air duct cleaning service go on only when they are a real part of the work. The service area covers the towns you actually drive to."),
+    ("We build a page for each job", "AC repair, furnace repair, system replacement, heat pumps, mini splits, duct work, and maintenance plans. Each one gets its own page, written for the person searching for it. Those pages are what put you in the results under the map, and they bring the replacements."),
+    ("We answer the replacement questions", "What a new system involves, how long it takes, what financing you offer, and the brands you install. Only what is true for your company, and no prices you have not set. The homeowner reading for a week should find the answers on your site."),
+    ("We show what can be checked", "Your license number where your state issues one, and any certifications or dealer programs you really hold. They go on the site and the profile, and they match."),
+    ("We keep reviews coming in both seasons", "The tech asks before leaving, and a text follows with a link that names the job. We keep it going through the tune-up months so the reviews never stop."),
+    ("We report calls", "Each month you see where you rank across your service area, how that moved, and how many people called. Traffic stays off the report because nobody pays you in traffic."),
+  ],
+
+  "searches_h2": "What your next customer is typing",
+  "searches": ["ac not blowing cold", "furnace blowing cold air", "hvac repair open now", "ac unit making noise", "thermostat not working", "heater repair near me", "ac tune up near me", "air conditioner leaking water"],
+  "specialty_searches": ["heat pump installation", "ductless mini split installation", "ac replacement", "furnace replacement", "dual fuel system", "duct replacement", "zoning system installation", "indoor air quality", "whole house dehumidifier", "commercial hvac service", "rooftop unit repair", "hvac maintenance plan"],
+  "searches_note": "Add your town to any of these and that is the search. The specialty ones have fewer companies competing and bigger tickets behind them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your work, a service area set up correctly, true hours, real photos of your crew and installs, and posts through both seasons. This is what wins the map."),
+    ("Service pages", "One page for each job you want more of, from repairs to full replacements, written for the person typing the search. This is what wins the listing under the map."),
+    ("City pages", "One page for each town your trucks cover, so the homeowners twenty minutes away can find you too."),
+    ("Listings that match", "One name, one address, and one phone number across the directories Google checks, including the home service ones."),
+    ("Review generation", "A text after every job that names the work, sent while the tech is still there, all year round."),
+    ("Your website", "Built for local search, with a call button up top, your license where it applies, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which HVAC companies this is for",
+  "fit_yes": [
+    "A residential or light commercial shop with a defined area you serve",
+    "A few trucks or a growing fleet, with room for more installs",
+    "Someone answers the phone in the busy weeks",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You are booked through the season and cannot take more work",
+    "You want the phone ringing this week. That is an ads job",
+    "You want to rank in towns your trucks will not drive to",
+    "You want blog posts by the dozen instead of booked jobs",
+  ],
+
+  "faq": [
+    ("When should we start?", "In the quiet weeks before your busy season. Rankings in July come from work done in spring, and rankings in January come from work done in the fall. Any month is fine to begin, and the plan is timed to your next rush."),
+    ("How long until the phone rings more?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Service pages and reviews take longer and keep building."),
+    ("We want more replacements and fewer service calls. Can you do that?", "Partly. The pages and categories decide which searches you win, so we build more around replacements, heat pumps, and mini splits. Service calls still come, and many of them turn into replacements later."),
+    ("Should we stop paying for ads?", "Keep them running while this builds, if they pay for themselves. Ads stop the day the budget does. Once the map and your pages bring calls on their own, you decide how much ad spend you still need, and we show you the numbers to decide with."),
+    ("Can we compete with the big franchise brands?", "On the map, yes. A franchise location is one profile like yours, and Google ranks the closest, best reviewed, best described company. You win your own towns and the specialty searches the franchises skip."),
+    ("We work from trucks with no showroom. Can we still show on the map?", "Yes. Google calls that a service area business. The profile is set up around where you work, your home address stays hidden, and you rank around the area you serve."),
+    ("Do you write about HVAC on our site?", "We write the service pages and city pages. Anything technical goes past you before it publishes, and nothing about prices, rebates, or arrival times goes up unless you have set it."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the HVAC company they call first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three companies ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC]
