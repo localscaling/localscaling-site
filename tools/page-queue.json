@@ -1,9 +1,8 @@
 {
   "publish": true,
   "cadence_days": 4,
-  "last_run": "2026-09-30",
+  "last_run": "2026-10-04",
   "cities": [
-    "San Diego",
     "Chicago",
     "San Antonio",
     "Austin",
@@ -32,7 +31,6 @@
     "New York"
   ],
   "industries": [
-    "roofers",
     "personal injury lawyers",
     "chiropractors",
     "electricians",
@@ -113,6 +111,18 @@
       "name": "HVAC contractors",
       "slug": "local-seo-for-hvac-contractors",
       "date": "2026-09-30"
+    },
+    {
+      "type": "city",
+      "name": "San Diego",
+      "slug": "local-seo-san-diego",
+      "date": "2026-10-04"
+    },
+    {
+      "type": "industry",
+      "name": "roofers",
+      "slug": "local-seo-for-roofers",
+      "date": "2026-10-04"
     }
   ]
 }

@@ -241,4 +241,65 @@ DALLAS = {
   "cta_p": "We map where you rank across the Dallas side of the Metroplex, show you which suburbs are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS]
+SAN_DIEGO = {
+  "slug": "local-seo-san-diego",
+  "city": "San Diego",
+  "short": "San Diego",
+  "region": "San Diego County",
+  "title": "Local SEO Agency in San Diego | LocalScaling",
+  "meta": "Local SEO for San Diego service businesses. We get contractors, clinics, and practices into the Google map pack and the search results under it, from North County to the South Bay. Starting at $1,500/mo.",
+  "eyebrow": "Serving San Diego County",
+  "h1": "Local SEO agency in San Diego",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the San Diego neighborhoods and county towns their customers search from. The county splits into regions that rarely cross into each other, and people search that way too.",
+
+  "why_eyebrow": "Why San Diego is different",
+  "why_h2": "Canyons, mesas, and regions that search on their own",
+  "why_paragraphs": [
+    "Locals talk about the county in pieces. North County, East County, the South Bay, the beach towns, and the neighborhoods of the city itself. Canyons and freeways cut the city into pockets, and a drive that looks short on a map can take a long time at five o'clock. An electrician in Chula Vista will not show on the map for a homeowner in Carlsbad, and a dental office in Clairemont will not show for a family in El Cajon, however strong the profile.",
+    ("pull", "One profile reaches one part of the county. Every region past that needs pages with its own names on them."),
+    "The weather changes a few miles inland. The coast stays mild under the marine layer, and the inland valleys get real summer heat. A cooling company, a pool service, or a pest control crew sees a different year in Santee than in Pacific Beach, and the pages for each should say so.",
+    "San Diego is also a military town, and families move in and out all year. A family that just arrived at a new base has no dentist, no mechanic, and no accountant here yet. They find one by searching the name of the neighborhood they just rented in.",
+    "In the South Bay many households speak Spanish at home. For some trades a Spanish page and Spanish review replies earn calls an English only campaign never sees. We check whether that is true for your trade before we suggest it.",
+  ],
+
+  "search_example": "electrician Chula Vista",
+  "pack_rows": [("Your business", "Electrician · 1.0 mi"), ("Another company", "Electrician · 2.1 mi"), ("Another company", "Electrical installation service · 3.4 mi")],
+  "organic_rows": [("Panel upgrades and EV chargers in Chula Vista", "yourbusiness.com"), ("Electricians in Chula Vista", "a directory"), ("Another company", "anothercompany.com")],
+  "both_intro": "When someone in San Diego searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the neighborhood they are searching from. A business that holds a spot in both, in that neighborhood, gets the call.",
+
+  "how_h2": "Built around how San Diego searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across the county, from Oceanside down to the border. A search from your own office says almost nothing about the rest. The plan is built on the grid."),
+    ("We build pages region by region", "Nobody in Encinitas searches for a dentist in San Diego. They type Encinitas, and a family in La Mesa types La Mesa. We start with the region you are in and add the next one as the profile gets stronger."),
+    ("We write for the coast and for inland", "Where the work changes with the climate, the pages change with it. A page for Escondido talks about the heat, and a page for Point Loma talks about salt air and damp. Only where that is true for your trade."),
+    ("We put your license where people can check it", "California contractors hold a license from the Contractors State License Board, and anyone can look one up on the board's site. Clinics and practices have their own state boards. Putting the number on your site and profile gives Google and the customer something to verify."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the regions you actually work, photos, and posts. This is what wins the map."),
+    ("Neighborhood and town pages", "One page for each place you want to win, written for that place. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone the same on every directory Google compares, including the California and trade ones."),
+    ("Review generation", "A follow-up that asks every finished customer at the right moment, in English or Spanish."),
+    ("Monthly reporting", "Where you rank on the grid, region by region, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every area and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across San Diego County",
+  "areas": ["La Jolla","Pacific Beach","Point Loma","North Park","Hillcrest","Mission Valley","Clairemont","Kearny Mesa","Mira Mesa","Rancho Bernardo","Carmel Valley","Del Mar","Encinitas","Carlsbad","Oceanside","Escondido","Poway","La Mesa","El Cajon","Chula Vista"],
+  "areas_note": "This list is where we start. Your own reach decides the plan, so if your neighborhood is missing, ask and we will tell you straight whether it is winnable.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas"],
+
+  "faq": [
+    ("Do you need to be in San Diego to rank my business here?", "No. What Google weighs is your location, your profile, your reviews, and your site. We run San Diego campaigns remotely and the work is the same."),
+    ("Can one profile cover North County and the South Bay?", "No single listing reaches the whole county. You win the region around your address first, then reach further with town pages as the profile gets stronger."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some neighborhoods move sooner than others, and we tell you which yours is before you commit."),
+    ("A lot of our customers are military families who move every few years. Is that a problem?", "It is a steady source of new customers. Every move brings a family that needs a new provider and searches for one. Recent reviews and a page for the neighborhoods near the bases help you be the one they pick."),
+    ("Should our site have a Spanish version?", "For some trades in some parts of the county, yes, and we will tell you which. When it makes sense we build the pages properly, in Spanish someone would actually speak, and we set up the review replies to match."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of San Diego you can win.",
+  "cta_p": "We map where you rank across the county, show you which neighborhoods are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO]

@@ -530,4 +530,109 @@ HVAC = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three companies ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC]
+ROOFERS = {
+  "slug": "local-seo-for-roofers",
+  "title": "Local SEO for Roofers and Roofing Companies | LocalScaling",
+  "meta": "Local SEO for roofers. We get your roofing company into the Google map pack and the search results under it, in the towns you serve, for the repairs and replacements you want more of. Starting at $1,500/mo.",
+  "crumb": "Roofers",
+  "eyebrow": "Local SEO for roofers",
+  "h1": "Local SEO for roofers and roofing companies",
+  "lede": "A homeowner with water coming through the ceiling searches on a phone and calls someone from the map. A homeowner pricing a new roof reads the sites under it for weeks. We get your company into both places in the towns you already work.",
+  "short": "roofing companies",
+  "industry_value": "Roofing",
+  "you": "Your company",
+
+  "pack_search": "roof repair near me",
+  "pack_rows": [("Your company", "Roofing contractor · 1.1 mi"), ("Another company", "Roofing contractor · 2.0 mi"), ("Another company", "Roofing contractor · 3.5 mi")],
+  "organic_rows": [("Roof replacement in your town, free inspection", "yourcompany.com"), ("Best roofers near you", "a directory"), ("Another company", "anothercompany.com")],
+  "pack_note": "Three spots. The morning after a storm, most homeowners call one of these.",
+  "both_intro": "When someone searches for a roofer, Google shows the map first and the regular results under it. The homeowner with a leak calls from the map. The one replacing a whole roof reads the sites under it, checks the reviews, and asks for a few quotes. A company that holds a spot in both gets the repair and the replacement.",
+
+  "timeline": [(1, 2, "build", "Profile and pages"), (3, 6, "peak", "Spring storms"), (7, 8, "peak", "Replacements"), (9, 10, "peak", "Before the cold"), (11, 12, "quiet", "Reviews, planning")],
+  "timeline_start": 1,
+  "timeline_alt": "A twelve month timeline. Leak and storm calls climb from March to June, replacements keep crews busy through July and August, homeowners rush to finish work in September and October before the weather turns, and November and December are quieter, the time for reviews and planning. The profile and pages are built in January and February so they are in place before spring.",
+  "timeline_caption": "The shape of a roofing company's year in much of the country. Storm timing changes by region, and warm states stay busier in winter. The slow weeks are when the work that wins the next season gets done.",
+
+  "intent": [
+    ("roof repair near me", "Someone with a drip in the hallway who wants a person on the roof soon", "Your Google Business Profile"),
+    ("roof leak repair [city]", "A homeowner who found a stain on the ceiling after the last rain", "The profile and a service page"),
+    ("roof replacement cost [city]", "A homeowner comparing quotes on one of the biggest bills a house brings", "A service page"),
+    ("storm damage roof inspection [city]", "Someone whose neighbors are getting new roofs after a storm", "A service page"),
+    ("metal roofing contractor [city]", "A homeowner who already knows the material they want", "A service page"),
+    ("roofer in [the town next door]", "A homeowner twenty minutes away who has never heard of you", "A city page"),
+  ],
+
+  "why_eyebrow": "Why roofing is different",
+  "why_h2": "Few jobs, big tickets, and a lot of trucks after every storm",
+  "why_paragraphs": [
+    "Most homeowners hire a roofer a few times in their life. They have no one to call, so they search, and they look hard at who they are letting onto the house. They read the reviews, check whether the company is local, and look for a license and real photos of real roofs.",
+    "Storms change everything for a week. After hail or high wind, trucks from out of town arrive and knock on every door, and homeowners get wary of anyone they cannot look up. The local company with years of reviews, a real address, and pages about the neighborhoods it works in is the one people trust. Google decides who shows up from what the profile and site looked like before the storm.",
+    ("pull", "The map wins the leak. Your website wins the new roof."),
+    "Replacement is a long decision. The homeowner reads about materials, asks about insurance, and gets three quotes. They search again and again, and the company whose pages answer their questions is usually one of the three they call.",
+  ],
+
+  "leaks_h2": "Six things we find on most roofing company profiles",
+  "leaks_intro": "Each one looks small. Together they hand the job to the roofer across town.",
+  "leaks": [
+    ("Categories for work the company does not do", "Roofing contractor is right. A pile of extras for siding, gutters, and solar when the crew only does roofs confuses Google about what you are."),
+    ("A service area that covers three states", "Storm work pulls crews far from home, and the service area grows with it. Google ranks you around a real place, and a giant area reaches none of it well."),
+    ("One page called Services", "Repairs, replacements, inspections, metal, tile, flat roofs, and gutters on one page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("Photos from a stock library", "A homeowner wants to see your crew, your trucks, and roofs you finished nearby. Real job photos get chosen over pictures anyone could buy."),
+    ("A different name on every directory", "The old company name, a new LLC, a number from a lead service. The mismatch across the listings Google checks drags the profile down."),
+    ("Reviews that stop after storm season", "A burst of reviews one spring and nothing since. Google reads the gap as a business that went quiet, and so do homeowners who check the dates."),
+  ],
+
+  "how_h2": "Built around how people find a roofer",
+  "how": [
+    ("We set up the categories and service area", "Roofing contractor is the primary. Secondary categories such as Gutter service, Siding contractor, or Skylight contractor go on only when they are a real part of the work. Repairs, replacements, and inspections go in as services. The service area covers the towns you actually drive to."),
+    ("We build a page for each job", "Leak repair, full replacement, storm inspections, metal, tile, shingle, and flat roofs. Each one gets its own page, written for the person searching for it. Those pages are what put you in the results under the map."),
+    ("We answer the replacement questions", "What a new roof involves, how long it takes, how insurance claims usually work, the warranties you offer, and the materials you install. Only what is true for your company, and no prices you have not set."),
+    ("We show you are the local roofer", "Your license where your state issues one, your real address or service area, and photos of finished roofs in named towns. They go on the site and the profile, and they match."),
+    ("We keep reviews coming all year", "The crew lead asks when the job is done, and a text follows with a link that names the work. It keeps going after storm season so the reviews never stop."),
+    ("We report calls", "Each month you see where you rank across your service area, how that moved, and how many people called. Traffic stays off the report because nobody pays you in traffic."),
+  ],
+
+  "searches_h2": "What your next customer is typing",
+  "searches": ["roof leaking in rain", "missing shingles after wind", "roof inspection near me", "emergency roof tarp", "roofer free estimate", "roof repair open Saturday", "water stain on ceiling roof", "gutter repair near me"],
+  "specialty_searches": ["metal roof installation", "tile roof repair", "flat roof repair", "TPO roofing contractor", "cedar shake roof", "slate roof repair", "skylight leak repair", "roof replacement financing", "hail damage roof inspection", "insurance claim roofer", "commercial roofing contractor", "solar panel roof repair"],
+  "searches_note": "Add your town to any of these and that is the search. The specialty ones have fewer roofers competing and bigger jobs behind them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your work, a service area set up correctly, true hours, real photos of your crews and finished roofs, and posts all year. This is what wins the map."),
+    ("Service pages", "One page for each job you want more of, from leak repairs to full replacements, written for the person typing the search. This is what wins the listing under the map."),
+    ("City pages", "One page for each town your crews cover, so the homeowners twenty minutes away can find you too."),
+    ("Listings that match", "One name, one address, and one phone number across the directories Google checks, including the home service ones."),
+    ("Review generation", "A text after every job that names the work, sent while the crew is still on site, all year round."),
+    ("Your website", "Built for local search, with a call button up top, your license where it applies, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which roofing companies this is for",
+  "fit_yes": [
+    "A residential or light commercial roofer with a home base and a defined area",
+    "One crew or several, with room on the schedule for more jobs",
+    "You want to be the roofer people trust between storms too",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You follow storms from state to state and never stay",
+    "You want the phone ringing this week. That is an ads job",
+    "You want to rank in towns your crews will not drive to",
+    "You want blog posts by the dozen instead of signed jobs",
+  ],
+
+  "faq": [
+    ("Every roofer shows up after a storm. How do we stand out?", "By being ready before it hits. Recent reviews, true hours, real photos of your crews, and a page for each town are what Google and homeowners have to go on when the searches spike. None of it can be built the morning after."),
+    ("How long until the phone rings more?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Service pages and reviews take longer and keep building."),
+    ("We want more replacements and fewer small repairs. Can you do that?", "Partly. The pages and categories decide which searches you win, so we build more around replacements, metal, and tile if that is the work you want. Repair calls still come, and some of them turn into new roofs."),
+    ("We buy leads now. Should we stop?", "Keep buying them while this builds, if they pay for themselves. A shared lead goes to several roofers at once. A call from your own profile goes to you. Once those calls come in, you decide how many leads you still need, and we show you the numbers to decide with."),
+    ("We work from a yard with no showroom. Can we still show on the map?", "Yes. If customers do not come to you, Google calls that a service area business. The profile is set up around where you work, your home address stays hidden, and you rank around the area you serve."),
+    ("Do we need a profile for every town we cover?", "No. One profile for each real, staffed location. The other towns are covered by your service area and a page for each one. A fake address for a second profile is the quickest way to lose the first one."),
+    ("Do you write about roofing and insurance on our site?", "We write the service pages and city pages. Anything technical goes past you before it publishes, and nothing about prices, warranties, or insurance goes up unless you have confirmed it."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the roofer they call first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three roofers ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS]
