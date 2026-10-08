@@ -302,4 +302,65 @@ SAN_DIEGO = {
   "cta_p": "We map where you rank across the county, show you which neighborhoods are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO]
+CHICAGO = {
+  "slug": "local-seo-chicago",
+  "city": "Chicago",
+  "short": "Chicago",
+  "region": "Chicagoland",
+  "title": "Local SEO Agency in Chicago | LocalScaling",
+  "meta": "Local SEO for Chicago service businesses. We get contractors, clinics, and practices into the Google map pack and the search results under it, from Rogers Park to Beverly and out into the suburbs. Starting at $1,500/mo.",
+  "eyebrow": "Serving Chicago and its suburbs",
+  "h1": "Local SEO agency in Chicago",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Chicago neighborhoods and suburbs their customers search from. Chicago is a city of neighborhoods, and people search it one neighborhood at a time.",
+
+  "why_eyebrow": "Why Chicago is different",
+  "why_h2": "People here search by neighborhood",
+  "why_paragraphs": [
+    "Ask someone in Chicago where they live and they name a neighborhood. Logan Square, Bridgeport, Rogers Park, Beverly. They search the same way. A dentist in Lincoln Park will not show on the map for a family in Hyde Park, and a heating company in Portage Park will not show for a homeowner in Evanston, however strong the profile.",
+    ("pull", "The city is dozens of small markets laid along the lake. One profile reaches a few of them."),
+    "Past the city limits the suburbs run out in every direction, into DuPage, Lake, Will, Kane, and McHenry counties, and east into Northwest Indiana. Each town searches by its own name, and Indiana is a different state with its own rules. Most businesses should win the side of the region they are on first.",
+    "Winter decides a lot. One cold snap sends half the city looking for a furnace repair or a plumber for a frozen pipe on the same night, and heavy summer storms send people looking for help with a wet basement. Google decides who shows up on those nights from what your profile and site looked like before the weather turned.",
+    "Much of the city is older housing. Two-flats, bungalows, greystones, and brick that needs tuckpointing. The searches follow the buildings, and a page that names the work an old Chicago house needs reads like it came from someone who has been inside one.",
+  ],
+
+  "search_example": "dentist Logan Square",
+  "pack_rows": [("Your business", "Dentist · 0.6 mi"), ("Another practice", "Dentist · 1.2 mi"), ("Another practice", "Cosmetic dentist · 1.9 mi")],
+  "organic_rows": [("Family dentist in Logan Square", "yourbusiness.com"), ("Dentists in Logan Square", "a directory"), ("Another practice", "anotherpractice.com")],
+  "both_intro": "When someone in Chicago searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the neighborhood or suburb they are searching from. A business that holds a spot in both, in that place, gets the call.",
+
+  "how_h2": "Built around how Chicago searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across the city and the suburbs you serve, from Rogers Park down to Beverly. A search from your own office tells you almost nothing about the rest. The plan is built on the grid."),
+    ("We build a page for each neighborhood and suburb", "Nobody in Oak Park searches for a dentist in Chicago. They type Oak Park, and a family in Andersonville types Andersonville. Your site and profile are built around the names people actually use."),
+    ("We get ready before winter", "For heating, plumbing, roofing, and anyone else the cold keeps busy, the profile, the pages, and the review push are in place by the fall. The rankings you have on the first frozen night come from work done months earlier."),
+    ("We put your license where people can check it", "In Illinois, roofing contractors are licensed by the state's Department of Financial and Professional Regulation, and anyone can look a license up on its site. Clinics and practices have their own boards. Putting the number on your site and profile gives Google and the customer something to verify."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the neighborhoods and suburbs you actually work, photos, and posts. This is what wins the map."),
+    ("Neighborhood and suburb pages", "One page for each place you want to win, written for that place. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone the same on every directory Google compares, including the Illinois and trade ones."),
+    ("Review generation", "A follow-up that asks every finished customer at the right moment, and keeps asking after the winter rush ends."),
+    ("Monthly reporting", "Where you rank on the grid, neighborhood by neighborhood, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every area and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across Chicago and its suburbs",
+  "areas": ["Lincoln Park","Lakeview","Wicker Park","Bucktown","Logan Square","West Loop","River North","Pilsen","Bridgeport","Hyde Park","Bronzeville","Andersonville","Rogers Park","Portage Park","Jefferson Park","Beverly","Evanston","Oak Park","Naperville","Schaumburg"],
+  "areas_note": "This list is where we start. Your own reach decides the plan, so if your neighborhood or suburb is missing, ask and we will tell you straight whether it is winnable.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego"],
+
+  "faq": [
+    ("Do you need to be in Chicago to rank my business here?", "No. What Google weighs is your location, your profile, your reviews, and your site. We run Chicago campaigns remotely and the work is the same."),
+    ("Can one profile cover the city and the suburbs?", "No single listing reaches all of Chicagoland. You win the area around your address first, then reach further with neighborhood and suburb pages as the profile gets stronger."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some neighborhoods move sooner than others, and we tell you which yours is before you commit."),
+    ("We are in the suburbs and want customers in the city too. Can we reach them?", "Yes, in steps. The towns around your address come first. The city neighborhoods closest to you come next, each with its own page. A second listing needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("Winter is our busy season. When should we start?", "Before it. Spring or summer is best, so the profile and pages have months to settle before the first cold snap. Starting later still helps, mostly with the winter after."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of Chicago you can win.",
+  "cta_p": "We map where you rank across the city and the suburbs you serve, show you which neighborhoods are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO]

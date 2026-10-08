@@ -635,4 +635,109 @@ ROOFERS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three roofers ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS]
+PERSONAL_INJURY = {
+  "slug": "local-seo-for-personal-injury-lawyers",
+  "title": "Local SEO for Personal Injury Lawyers | LocalScaling",
+  "meta": "Local SEO for personal injury lawyers. We get your firm into the Google map pack and the search results under it, in the cities you serve, for the cases you want more of. Starting at $1,500/mo.",
+  "crumb": "Personal injury lawyers",
+  "eyebrow": "Local SEO for personal injury lawyers",
+  "h1": "Local SEO for personal injury lawyers",
+  "lede": "Someone who was hit on the way to work searches on a phone and calls a firm from the map. Someone still deciding whether they even need a lawyer reads the pages under it for days. We get your firm into both places in the cities you already serve.",
+  "short": "personal injury firms",
+  "industry_value": "Legal",
+  "you": "Your firm",
+
+  "pack_search": "car accident lawyer near me",
+  "pack_rows": [("Your firm", "Personal injury attorney · 0.8 mi"), ("Another firm", "Personal injury attorney · 1.9 mi"), ("Another firm", "Lawyer · 2.6 mi")],
+  "organic_rows": [("Car accident lawyer in your city", "yourfirm.com"), ("Best injury lawyers near you", "a directory"), ("Another firm", "anotherfirm.com")],
+  "pack_note": "Three spots. Someone calling from a tow lot rarely scrolls past them.",
+  "both_intro": "When someone searches for an injury lawyer, Google shows the map first and the regular results under it. The person who was just hurt calls from the map. The person who is unsure reads the sites under it, checks the reviews, and calls the firm whose pages answered their questions. A firm that holds a spot in both gets both calls.",
+
+  "timeline": [(1, 2, "peak", "Ice, falls, crashes"), (3, 4, "build", "Profile and pages"), (5, 8, "peak", "Road trips, motorcycles"), (9, 10, "quiet", "Reviews"), (11, 12, "peak", "Holiday travel")],
+  "timeline_start": 3,
+  "timeline_alt": "A twelve month timeline. In a cold climate, icy roads and sidewalks bring crashes and falls in January and February, summer brings more driving and motorcycle season from May to August, September and October are steadier, and holiday travel fills November and December. The profile and pages are built in March and April so they are in place before summer.",
+  "timeline_caption": "The shape of an injury firm's year in a cold climate. Accidents happen in every month, so the build can start any time. Spring is a good moment to have the profile and pages ready before the summer roads fill up.",
+
+  "intent": [
+    ("car accident lawyer near me", "Someone who was hit yesterday and wants to talk to a person today", "Your Google Business Profile"),
+    ("truck accident attorney [city]", "A family facing a serious case and a trucking company's insurer", "A service page"),
+    ("slip and fall lawyer [city]", "Someone hurt on a wet store floor or an icy sidewalk who is not sure they have a case", "A service page"),
+    ("do I need a lawyer after a car accident", "A person still deciding whether to call anyone", "A plain answer page"),
+    ("abogado de accidentes [city]", "A Spanish speaker who wants a lawyer they can talk to in their own language", "A Spanish page, if your firm speaks it"),
+    ("injury lawyer in [the town next door]", "Someone hurt across the county who has never heard of you", "A city page"),
+  ],
+
+  "why_eyebrow": "Why injury law is different",
+  "why_h2": "Every firm in town wants the same call",
+  "why_paragraphs": [
+    "Personal injury is one of the most crowded local searches there is. Billboard firms, national referral networks, and lead sellers all chase the same few words. The map is where a local firm with a real office and real reviews gets to stand next to them.",
+    "Most people hire an injury lawyer once in their life, if ever. They are hurt, they are dealing with an insurer, and they are not sure they have a case. They read reviews for how a firm treated people, how fast it called back, and whether anyone explained things plainly.",
+    ("pull", "Someone who was just hurt calls from the map. Someone who is still deciding reads the pages under it."),
+    "The rules are tighter, too. Every state bar has rules about how lawyers advertise, and some states limit words like specialist or expert. Google has its own rules about firm names and attorney profiles. A campaign that ignores either one puts the firm at risk, so we write inside both and an attorney at your firm approves every page.",
+  ],
+
+  "leaks_h2": "Six things we find on most injury firm profiles",
+  "leaks_intro": "Each one looks small. Together they hand the case to the firm across town.",
+  "leaks": [
+    ("Lawyer as the primary category", "Google has a category called Personal injury attorney. A firm that only picked Lawyer is telling Google less about what it does than the firm above it."),
+    ("Keywords added to the firm name", "Car Accident Lawyer tacked onto the name breaks Google's rules. Competitors report it, and the edit or suspension that follows costs more than the name ever earned."),
+    ("One page for every kind of case", "Car crashes, trucks, dog bites, and falls on a single practice areas page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("Attorney profiles set up wrong", "Google allows a profile for a lawyer who meets clients, and it has rules for how one is named. Set up badly, those profiles compete with the firm's own listing."),
+    ("A different name on every directory", "Partners join and leave, and the firm name changes with them. The old name and old number keep living on the directories Google checks, and the mismatch drags the profile down."),
+    ("Calls that go to voicemail", "Accidents happen at night and on weekends. A profile that ranks and a phone nobody answers sends the case to the next firm on the map."),
+  ],
+
+  "how_h2": "Built around how people find an injury lawyer",
+  "how": [
+    ("We set up the categories and the profile", "Personal injury attorney is the primary. Secondary categories such as Law firm or Civil law attorney go on only when they fit the work. Your case types go in as services, and your hours say when someone will actually answer."),
+    ("We build a page for each kind of case", "Car crashes, truck crashes, motorcycles, falls, dog bites, and wrongful death, only for the cases you take. Each one gets its own page, written for the person searching for it. Those pages are what put you in the results under the map."),
+    ("We answer the questions people ask before they call", "What to do after a crash, how your fees work, how long a case usually takes, and how long someone has to file in your state. Only what is true for your firm, inside your state bar's rules, and approved by an attorney before it goes up."),
+    ("We show you are the local firm", "Your real office, your attorneys and where they are admitted, and photos of the people a client will actually meet. They go on the site and the profile, and they match."),
+    ("We keep reviews coming", "A request goes out when a case closes, never with pressure and never asking for details. Replies stay short and never confirm anything about anyone's case."),
+    ("We report calls", "Each month you see where you rank across the cities you serve, how that moved, and how many people called. Traffic stays off the report because nobody signs a case from traffic."),
+  ],
+
+  "searches_h2": "What your next client is typing",
+  "searches": ["car accident lawyer near me", "rear ended need a lawyer", "injury lawyer free consultation", "hit by a car what to do", "uber accident lawyer", "slip and fall lawyer near me", "dog bite lawyer", "injury lawyer open now"],
+  "specialty_searches": ["truck accident attorney", "motorcycle accident lawyer", "pedestrian accident lawyer", "bicycle accident lawyer", "wrongful death attorney", "brain injury lawyer", "nursing home abuse lawyer", "construction accident lawyer", "rideshare accident attorney", "premises liability lawyer", "medical malpractice lawyer", "abogado de accidentes"],
+  "searches_note": "Add your city to any of these and that is the search. The specialty ones have fewer firms competing and often bigger cases behind them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your practice, true hours, the case types you take, real photos of your office and people, and posts all year. This is what wins the map."),
+    ("Case type pages", "One page for each kind of case you want more of, written for the person typing the search and approved by an attorney. This is what wins the listing under the map."),
+    ("City pages", "One page for each city you serve, so someone hurt twenty minutes away can find you too."),
+    ("Listings that match", "One name, one address, and one phone number across the directories Google checks, including the legal ones."),
+    ("Review generation", "A request when a case closes, worded to fit your state bar's rules, with replies that never confirm a client."),
+    ("Your website", "Built for local search, with a call button up top, your attorneys and their admissions, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which injury firms this is for",
+  "fit_yes": [
+    "A firm with a real office and attorneys who take injury cases",
+    "A solo practice or a team, with room for more cases",
+    "You want cases from your own profile instead of shared leads",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You want the phone ringing this week. That is an ads job",
+    "You want keywords in your firm name or reviews you paid for",
+    "You want to rank in cities where you have no real presence",
+    "You want blog posts by the dozen instead of signed cases",
+  ],
+
+  "faq": [
+    ("We already spend on TV and billboards. Do we still need this?", "Yes. People who see the ad often search your name before they call, and many more never saw it and search the kind of accident they had. The profile and the pages catch both."),
+    ("How long until the phone rings more?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Case pages and reviews take longer and keep building."),
+    ("The firms above us have far more reviews. Can we catch up?", "You do not need the most. You need recent ones that talk about how you treated people, coming in at a steady pace. Google and the people reading them both look at the dates."),
+    ("Can you get us more of one kind of case?", "Partly. The pages and categories decide which searches you win, so we build more around truck crashes or wrongful death if those are the cases you want. Other calls still come, and some of them turn into the cases you were after."),
+    ("Should each attorney have a Google profile?", "Sometimes. Google allows one for a lawyer who meets clients at the office, and it has rules for how it is named. Set up right it can help. Set up wrong it competes with the firm. We decide that with you."),
+    ("We serve the next county but have no office there. Can we rank there?", "With a city page, often yes, and the profile gets stronger around your office first. A second profile needs a real staffed office. A virtual office or a mailbox is the quickest way to lose the first one."),
+    ("Do you write about the law on our site?", "We write the case pages and city pages in plain words. An attorney at your firm approves every page before it publishes, and nothing about fees, outcomes, or deadlines goes up unless you have confirmed it."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Get the call before the billboard firm does.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three firms ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY]
