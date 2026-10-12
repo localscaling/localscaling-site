@@ -740,4 +740,109 @@ PERSONAL_INJURY = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three firms ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY]
+CHIROPRACTORS = {
+  "slug": "local-seo-for-chiropractors",
+  "title": "Local SEO for Chiropractors | LocalScaling",
+  "meta": "Local SEO for chiropractors. We get your practice into the Google map pack and the search results under it, in the neighborhoods your patients live in, for the care you want to do more of. Starting at $1,500/mo.",
+  "crumb": "Chiropractors",
+  "eyebrow": "Local SEO for chiropractors",
+  "h1": "Local SEO for chiropractors",
+  "lede": "Someone whose back went out this morning searches on a phone and calls a practice from the map. Someone with headaches that keep coming back reads the pages under it for a week before booking. We get your practice into both places for the neighborhoods you draw from and the care you want to do more of.",
+  "short": "chiropractors",
+  "industry_value": "Chiropractic or physical therapy",
+  "you": "Your practice",
+
+  "pack_search": "chiropractor near me",
+  "pack_rows": [("Your practice", "Chiropractor · 0.7 mi"), ("Another practice", "Chiropractor · 1.5 mi"), ("Another practice", "Wellness center · 2.2 mi")],
+  "organic_rows": [("Chiropractor for sciatica in your city", "yourpractice.com"), ("Best chiropractors near you", "a directory"), ("Another practice", "anotherpractice.com")],
+  "pack_note": "Three spots. Someone who can barely stand up calls one of these.",
+  "both_intro": "When someone searches for a chiropractor, Google shows the map first and the regular results under it. The person in pain today calls from the map. The person who has never seen a chiropractor reads the sites under it, checks what a first visit is like, and books with the practice that answered their questions. A practice that holds a spot in both gets both patients.",
+
+  "timeline": [(1, 2, "peak", "New year goals"), (3, 4, "build", "Profile and pages"), (5, 8, "peak", "Yard work, sports, travel"), (9, 10, "quiet", "Reviews"), (11, 12, "peak", "Unused benefits")],
+  "timeline_start": 3,
+  "timeline_alt": "A twelve month timeline. New patient searches pick up in January and February with new year goals, climb from May to August with yard work, weekend sports, and long drives, settle in September and October, and pick up again in November and December as patients use benefits before the year ends. The profile and pages are built in March and April so they are in place before summer.",
+  "timeline_caption": "The shape of a chiropractic practice's year. Backs go out in every month, so the build can start any time. Spring is a good moment to have the profile and pages ready before the summer busy stretch.",
+
+  "intent": [
+    ("chiropractor near me", "Someone whose back went out this morning and wants to be seen today", "Your Google Business Profile"),
+    ("chiropractor for sciatica [city]", "Someone with leg pain who has tried rest and is ready to try something else", "A service page"),
+    ("auto accident chiropractor [city]", "A driver who was rear ended last week and is still stiff", "A service page"),
+    ("prenatal chiropractor [city]", "An expecting mother looking for someone trained to treat her", "A service page"),
+    ("chiropractor or physical therapist for back pain", "Someone still deciding who to call at all", "A plain answer page"),
+    ("chiropractor in [the neighborhood next door]", "A family ten minutes away who drives past your sign and has never come in", "A city page"),
+  ],
+
+  "why_eyebrow": "Why chiropractic is different",
+  "why_h2": "Most new patients are strangers to chiropractic",
+  "why_paragraphs": [
+    "Plenty of people searching for a chiropractor have never been to one. They are in pain, a little nervous, and unsure what happens at a first visit or what it will cost. They read reviews for whether the doctor listened, explained things, and did not push a long plan on the first day.",
+    "Then there is the patient who already knows what they want. A sports chiropractor, someone trained in prenatal care, a practice that takes their insurance, or one technique they trust. Those searches are specific, fewer practices compete for them, and a page written for each one is what wins them.",
+    ("pull", "A patient who trusts you comes back for years and sends their family. The first visit is the hard part."),
+    "The trust works both ways. Google reads health claims carefully, and so do patients. A practice that promises to cure everything reads as a sales pitch to both. Plain pages about what you treat and how you work earn more trust than big promises.",
+  ],
+
+  "leaks_h2": "Six things we find on most chiropractic profiles",
+  "leaks_intro": "None of them look serious alone. Together they send new patients to the practice down the road.",
+  "leaks": [
+    ("Categories that do not exist or do not fit", "Some guides tell practices to add categories Google does not offer, or ones for services nobody at the practice provides. Chiropractor is the primary. Anything else has to match real work done in your office."),
+    ("One page called Services", "Adjustments, sciatica, headaches, prenatal care, and auto injuries on one page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("A shared office with a muddled listing", "Many practices share space with a massage therapist or a physical therapist. When the listings blur together, Google cannot tell which business is which, and both rank worse."),
+    ("An old name or address on the directories", "The practice moved, changed names, or an associate bought it, and the old details still sit on half the listings Google checks. The mismatch drags the profile down."),
+    ("No word about insurance or cost", "New patients want to know if you take their plan or what a first visit costs. A profile and site that say nothing send them to the practice that does."),
+    ("Review replies that say too much", "A reply that mentions someone's treatment confirms they are a patient. Short, kind replies with no details are safer and read better to the next person."),
+  ],
+
+  "how_h2": "Built around how patients find a chiropractor",
+  "how": [
+    ("We fix the profile before anything else", "Chiropractor as the primary category, and secondary ones such as Massage therapist or Physical therapy clinic only when someone on staff provides that care. Then true hours, the services patients search for, insurance details, and photos of your real office."),
+    ("We build a page for each kind of care", "Back pain, sciatica, neck pain and headaches, auto injuries, sports care, prenatal and pediatric care, only for what you offer. Each one gets its own page, written for the person searching for it. Those pages are what put you in the results under the map."),
+    ("We answer the questions people ask before they book", "What happens at a first visit, how your fees and insurance work, and whether a chiropractor or a physical therapist is the right first call. Plain answers, approved by you, with no promises about outcomes."),
+    ("We show who patients will meet", "Your doctors, their state licenses, the techniques they use, and photos of the people at the front desk. They go on the site and the profile, and they match."),
+    ("We keep reviews coming", "The front desk asks after a good visit, and a text follows with a link. Replies stay short and never confirm anything about anyone's care."),
+    ("We report new patients", "Each month you see where you rank across your area for the searches that matter, how that moved, and how many people called or booked. Traffic stays off the report because nobody pays you in traffic."),
+  ],
+
+  "searches_h2": "What your next patient is typing",
+  "searches": ["chiropractor near me", "chiropractor open Saturday", "walk in chiropractor", "chiropractor that takes my insurance", "lower back pain relief near me", "neck pain chiropractor", "chiropractor for headaches", "how much is a chiropractor visit"],
+  "specialty_searches": ["sports chiropractor", "prenatal chiropractor", "Webster technique chiropractor", "pediatric chiropractor", "auto accident chiropractor", "upper cervical chiropractor", "Gonstead chiropractor", "activator chiropractor", "spinal decompression", "chiropractor for sciatica", "chiropractor for TMJ", "quiropráctico"],
+  "searches_note": "Add your city or neighborhood to any of these and that is the search. The specialty ones have fewer practices competing for them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your care, true hours, the services and insurance details patients look for, and real photos of your office. This is what wins the map."),
+    ("Service pages", "One page for each kind of care you want more of, written for the person typing the search. This is what wins the listing under the map."),
+    ("City pages", "One page for each neighborhood or suburb you draw patients from, so the family ten minutes away can find you too."),
+    ("Listings that match", "Your practice name, address, and phone matched across the directories Google checks, including the health ones."),
+    ("Review generation", "A follow-up after the good visits that keeps asking all year, with replies that never confirm a patient."),
+    ("Your website", "Built for local search, with your doctors up front, online booking, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which practices this is for",
+  "fit_yes": [
+    "A practice with a real office, solo or with associates",
+    "Room in the schedule for new patients",
+    "You already help people and have patients who would say so",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You want the schedule full next week. That is an ads job",
+    "You want pages that promise to cure things",
+    "You work from home with no office patients can visit",
+    "You want blog posts by the dozen instead of new patients",
+  ],
+
+  "faq": [
+    ("We are a cash practice. Does that change anything?", "A little. Patients still search the same way, but the questions change. Your pages explain what a visit costs and why you work that way, so the people who call are the ones who are fine with it."),
+    ("How long until we see new patients?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Service pages and reviews take longer and keep building."),
+    ("We share an office with a massage therapist. Do we need separate listings?", "If you are separate businesses, yes, each with its own name, phone, and profile. If the massage therapist works for your practice, it is one listing, and massage goes on as a service or a secondary category."),
+    ("Should each of our doctors have a Google profile?", "Sometimes. Google allows one for a practitioner who sees patients, and it has rules for how it is named. Set up right it can help. Set up wrong it competes with the practice. We decide that with you."),
+    ("Can we get more of one kind of patient?", "Partly. The pages and categories decide which searches you win, so we build more around sports care or prenatal care if that is the work you want. Other patients still come, and some of them turn into the patients you were after."),
+    ("Can we compete with the big chiropractic chains?", "On the map, yes. A chain location is one profile like yours, and Google ranks the closest, best reviewed, best described practice. You win your own neighborhoods and the specialty searches the chains do not bother with."),
+    ("Do you write about health on our site?", "We write service pages and city pages in plain words. You approve anything clinical before it publishes, and we make no claims about outcomes."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the chiropractor they find first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three practices ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS]

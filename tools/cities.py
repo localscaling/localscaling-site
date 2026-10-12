@@ -363,4 +363,65 @@ CHICAGO = {
   "cta_p": "We map where you rank across the city and the suburbs you serve, show you which neighborhoods are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO]
+SAN_ANTONIO = {
+  "slug": "local-seo-san-antonio",
+  "city": "San Antonio",
+  "short": "San Antonio",
+  "region": "the San Antonio area",
+  "title": "Local SEO Agency in San Antonio | LocalScaling",
+  "meta": "Local SEO for San Antonio service businesses. We get contractors, clinics, and practices into the Google map pack and the search results under it, from Stone Oak to Southtown and out to New Braunfels. Starting at $1,500/mo.",
+  "eyebrow": "Serving San Antonio and the towns around it",
+  "h1": "Local SEO agency in San Antonio",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the San Antonio neighborhoods and nearby towns their customers search from. The city keeps growing outward past its loops, and people search by the part of town they live in.",
+
+  "why_eyebrow": "Why San Antonio is different",
+  "why_h2": "Small cities inside a big one",
+  "why_paragraphs": [
+    "San Antonio has small cities inside it. Alamo Heights, Olmos Park, Terrell Hills, Castle Hills, Leon Valley, and Windcrest each sit within the larger city with their own names, and the people who live there search with those names. An AC company in Leon Valley will not show on the map for a homeowner in Windcrest, and a physical therapy clinic in Stone Oak will not show for a family in Southtown, however strong the profile.",
+    ("pull", "Every new subdivision past 1604 is one more place name someone will type into Google."),
+    "The city keeps spreading. Loop 410 and Loop 1604 ring it, and much of the newer building sits past 1604, out toward Alamo Ranch, Helotes, and Stone Oak. Up I-35 the suburbs run northeast through Live Oak, Universal City, and Schertz toward New Braunfels, and Boerne sits to the northwest in the Hill Country. Each one searches by its own name.",
+    "Summers are long and hot, and an air conditioner that quits in July is an emergency. Heavy rain can flood low water crossings in a few hours. Google decides who shows up on those days from what your profile and site looked like before them.",
+    "San Antonio is a military city. Joint Base San Antonio covers Fort Sam Houston, Lackland, and Randolph, and families arrive all year with no plumber, no vet, and no accountant here yet. They find one by searching the neighborhood they just moved into.",
+  ],
+
+  "search_example": "ac repair Stone Oak",
+  "pack_rows": [("Your business", "Air conditioning contractor · 0.9 mi"), ("Another company", "HVAC contractor · 1.8 mi"), ("Another company", "Air conditioning repair service · 2.7 mi")],
+  "organic_rows": [("AC repair and replacement in Stone Oak", "yourbusiness.com"), ("AC repair in Stone Oak", "a directory"), ("Another company", "anothercompany.com")],
+  "both_intro": "When someone in San Antonio searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the neighborhood or town they are searching from. A business that holds a spot in both, in that place, gets the call.",
+
+  "how_h2": "Built around how San Antonio searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across the city and the towns you serve, from Helotes over to Converse. A search from your own office says little about the rest. The plan is built on the grid."),
+    ("We build a page for each neighborhood and town", "Nobody in Boerne searches for an electrician in San Antonio. They type Boerne, and a family in Alamo Heights types Alamo Heights. Your site and profile are built around the names people actually use."),
+    ("We are ready before the heat", "For cooling, plumbing, pest control, and anyone else the summer keeps busy, the profile, the pages, and the review push are in place by spring. The calls you get in July come from work done months before."),
+    ("We put your license where people can check it", "In Texas, air conditioning and refrigeration contractors are licensed by the Texas Department of Licensing and Regulation, and anyone can look a license up on its site. Clinics and practices have their own state boards. Putting the number on your site and profile gives Google and the customer something to verify."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the parts of town you actually work, photos, and posts. This is what wins the map."),
+    ("Neighborhood and town pages", "One page for each place you want to win, written for that place. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone the same on every directory Google compares, including the Texas and trade ones."),
+    ("Review generation", "A follow-up that asks every finished customer at the right moment, in English or Spanish."),
+    ("Monthly reporting", "Where you rank on the grid, area by area, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every area and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across San Antonio and nearby towns",
+  "areas": ["Alamo Heights","Olmos Park","Terrell Hills","Monte Vista","Tobin Hill","Southtown","King William","Dignowity Hill","Medical Center","Stone Oak","Shavano Park","Leon Valley","Helotes","Alamo Ranch","Windcrest","Live Oak","Universal City","Schertz","Boerne","New Braunfels"],
+  "areas_note": "This list is where we start. Your own reach decides the plan, so if your part of town is missing, ask and we will tell you straight whether it is winnable.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego", "local-seo-chicago"],
+
+  "faq": [
+    ("Do you need to be in San Antonio to rank my business here?", "No. What Google weighs is your location, your profile, your reviews, and your site. We run San Antonio campaigns remotely and the work is the same."),
+    ("Can one profile cover the whole city?", "No single listing reaches from Helotes to Schertz. You win the area around your address first, then reach further with neighborhood and town pages as the profile gets stronger."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some parts of town move sooner than others, and we tell you which yours is before you commit."),
+    ("We are in Alamo Heights. Should our pages say Alamo Heights or San Antonio?", "Both. People who live there search by the small city's name, and people nearby search for San Antonio. Your profile uses your real address, and your site gets a page for each name you want to win."),
+    ("Our customers stretch from the city up to New Braunfels. Where do we start?", "Where you are. The neighborhoods around your address come first, then the towns along the way, each with its own page. A second listing up the highway needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of San Antonio you can win.",
+  "cta_p": "We map where you rank across the city and the towns you serve, show you which areas are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO]
