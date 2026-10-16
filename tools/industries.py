@@ -845,4 +845,109 @@ CHIROPRACTORS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three practices ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS]
+ELECTRICIANS = {
+  "slug": "local-seo-for-electricians",
+  "title": "Local SEO for Electricians and Electrical Contractors | LocalScaling",
+  "meta": "Local SEO for electricians. We get your shop into the Google map pack and the search results under it, in the towns you serve, for the jobs you want more of. Starting at $1,500/mo.",
+  "crumb": "Electricians",
+  "eyebrow": "Local SEO for electricians",
+  "h1": "Local SEO for electricians",
+  "lede": "Someone with a breaker that will not reset calls an electrician from the map. Someone planning a car charger or a panel upgrade reads the pages under it for a week first. We get your shop into both places, in the towns you serve, for the work you want more of.",
+  "short": "electricians",
+  "industry_value": "Electrical",
+  "you": "Your shop",
+
+  "pack_search": "electrician near me",
+  "pack_rows": [("Your shop", "Electrician · 0.8 mi"), ("Another shop", "Electrician · 1.6 mi"), ("Another shop", "Electrical installation service · 2.4 mi")],
+  "organic_rows": [("Panel upgrades in your town", "yourshop.com"), ("Best electricians near you", "a directory"), ("Another shop", "anothershop.com")],
+  "pack_note": "Three spots. Someone standing in a dark kitchen calls one of these.",
+  "both_intro": "When someone searches for an electrician, Google shows the map first and the regular results under it. The person with half the house dark calls from the map. The homeowner planning a charger, a generator, or a new panel reads the sites under it, compares a few shops, and calls the one that explained the job. A shop that holds a spot in both gets the service call and the project after it.",
+
+  "timeline": [(1, 2, "build", "Profile and pages"), (3, 5, "peak", "Remodels and new projects"), (6, 8, "peak", "Heat, storms, outages"), (9, 10, "quiet", "Reviews"), (11, 12, "peak", "Lighting and cold snaps")],
+  "timeline_start": 1,
+  "timeline_alt": "A twelve month timeline. The profile and pages are built in January and February. Remodels and new projects pick up from March to May, storms, heat, and outages keep calls coming from June to August, September and October are a good time to push reviews, and lighting work and cold weather bring calls in November and December.",
+  "timeline_caption": "The general shape of an electrical shop's year. Breakers trip in every month, so the build can start any time. Your region moves the peaks around, and we plan from yours.",
+
+  "intent": [
+    ("electrician near me", "Someone whose outlets just went dead in half the house", "Your Google Business Profile"),
+    ("ev charger installation [city]", "A new car owner who wants a charger in the garage before the car arrives", "A service page"),
+    ("panel upgrade [city]", "A homeowner told the old panel cannot carry a heat pump or a charger", "A service page"),
+    ("whole house generator installation [city]", "Someone who sat through a long outage and wants to skip the next one", "A service page"),
+    ("do I need a permit to replace a panel", "Someone still working out whether this is a job for a pro", "A plain answer page"),
+    ("electrician in [the town next door]", "A family fifteen minutes away who has never heard of you", "A city page"),
+  ],
+
+  "why_eyebrow": "Why electrical work is different",
+  "why_h2": "Customers cannot see the work, so they check the electrician",
+  "why_paragraphs": [
+    "Most people cannot judge wiring. It sits behind the walls, and if it is done badly they may not find out for years. So they judge the person instead. They read reviews for whether the electrician showed up on time, explained the problem, cleaned up, and charged what they said. They look for a license number.",
+    "The job list has also changed. Car chargers, panel upgrades, standby generators, batteries, and smart home wiring each bring their own searches, and the people typing them are usually planning a real project. Many local shops still have one page that lists all of it. A page for each job is how a shop wins those searches.",
+    ("pull", "A homeowner who trusts their electrician calls them for every job in the house after that."),
+    "Then there is the split between homes and businesses. A property manager looking for a commercial electrician searches differently from a homeowner with a flickering light, and wants different proof. If you do both, each side needs its own pages.",
+  ],
+
+  "leaks_h2": "Six things we find on most electrician profiles",
+  "leaks_intro": "None of them look serious alone. Together they send calls to the shop down the road.",
+  "leaks": [
+    ("Categories that miss the work", "Electrician alone, when the shop installs chargers and generators every week. Or extra categories for work nobody on the crew does. Electrician is the primary. Every other category matches real jobs."),
+    ("One page called Services", "Panels, chargers, generators, lighting, rewiring, and troubleshooting on one page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("No license number anywhere", "Careful customers look for it before they let anyone open a panel. A site and profile with no license number make them wonder why."),
+    ("Hours that promise more than the phone delivers", "The listing says open all night and the call goes to voicemail. The next review says so, and the next customer reads it."),
+    ("Homes and businesses blurred together", "One page tries to speak to the homeowner and the facilities manager at once. Neither one finds what they came for."),
+    ("Stock photos of light bulbs", "Customers want to see your panels, your trucks, and your crew. Google uses real photos to understand the business, and a stock image tells it nothing."),
+  ],
+
+  "how_h2": "Built around how people find an electrician",
+  "how": [
+    ("We fix the profile before anything else", "Electrician as the primary category, and secondary ones such as Electrical installation service, Lighting contractor, or Electric vehicle charging station contractor only when you do that work. Then true hours, a service area drawn around where your trucks go, and photos of real jobs."),
+    ("We build a page for each job you want more of", "Panel upgrades, car chargers, generators, rewiring, lighting, troubleshooting, and commercial work, only for what you offer. Each one gets its own page, written for the person searching for it. Those pages are what put you in the results under the map."),
+    ("We answer the questions people ask before they call", "Whether a job needs a permit, whether the panel can handle a charger, what drives the cost, and how long it takes. Plain answers, approved by you, with prices only if you choose to share them."),
+    ("We show what can be checked", "Your license number where your state or city issues one, your insurance, and photos of your crew on real jobs. They go on the site and the profile, and they match."),
+    ("We keep reviews coming", "The tech asks at the end of a good job, and a text follows with a link. Replies stay short and friendly, and they keep the customer's address and details out of it."),
+    ("We report booked jobs", "Each month you see where you rank across your area for the searches that matter, how that moved, and how many people called. Traffic stays off the report because nobody pays you in traffic."),
+  ],
+
+  "searches_h2": "What your next customer is typing",
+  "searches": ["electrician near me", "emergency electrician", "electrician open now", "breaker keeps tripping", "outlet not working", "power out in half of house", "licensed electrician near me", "how much does an electrician cost"],
+  "specialty_searches": ["ev charger installation", "panel upgrade", "200 amp service upgrade", "whole house generator installation", "knob and tube rewiring", "recessed lighting installation", "ceiling fan installation", "surge protection", "hot tub wiring", "outdoor lighting", "commercial electrician", "electricista"],
+  "searches_note": "Add your city or town to any of these and that is the search. The project ones are planned by people ready to spend, and often fewer local shops compete for them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your work, true hours, a service area around where your trucks go, and real photos of your jobs. This is what wins the map."),
+    ("Service pages", "One page for each job you want more of, written for the person typing the search. This is what wins the listing under the map."),
+    ("City pages", "One page for each town you serve, so the homeowner fifteen minutes away can find you too."),
+    ("Listings that match", "Your shop name, address, and phone matched across the directories Google checks, including the trade ones."),
+    ("Review generation", "A follow-up after every good job that keeps asking all year, with replies that keep customer details private."),
+    ("Your website", "Built for local search, with a call button up top, your license where it applies, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which shops this is for",
+  "fit_yes": [
+    "A licensed shop working homes, businesses, or both, in an area you can name",
+    "One truck or several, with room in the schedule",
+    "Someone picks up the phone during the hours you list",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You are booked months out and turning work away",
+    "You need calls by Friday. Paid ads do that faster",
+    "You want to show up across the whole state from one address",
+    "You care more about traffic numbers than booked jobs",
+  ],
+
+  "faq": [
+    ("Should we list ourselves as open all night if we only take some emergency calls?", "List what is true. If someone answers after hours, show it and build a page for emergency work. If night calls go to voicemail, keep the hours honest, because a listing that says open and a phone that rings out turns into bad reviews."),
+    ("We do homes and businesses. One profile or two?", "One business gets one profile. Each side gets its own pages on the site. A second profile only makes sense for a separate business with its own staffed office."),
+    ("How long until we see more calls?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Service pages and reviews take longer and keep building."),
+    ("Can we rank for car chargers and generators if we are newer to that work?", "Yes, if you do the work. A category, a page, and photos of real installs tell Google you do it. The customers who type those searches are planning a project, and the page is what they read before they call."),
+    ("Do you put our prices on the site?", "Only if you want them there. Some shops post a starting price for common jobs, and some explain what drives the cost. Both answer what people are typing, and you decide."),
+    ("Most of our work comes from builders. Is this worth it?", "It depends on what you want next. If you want more service calls and homeowner projects, yes, that is exactly what the map and the listings bring. If you plan to stay with builders, a strong profile still helps, but the push may not pay back."),
+    ("Can we compete with the big franchise shops?", "On the map, yes. A franchise location is one profile like yours, and Google ranks the closest, best reviewed, best described shop. You win your own towns and the project searches they do not cover well."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the electrician they call first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three shops ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS]

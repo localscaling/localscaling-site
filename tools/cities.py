@@ -424,4 +424,65 @@ SAN_ANTONIO = {
   "cta_p": "We map where you rank across the city and the towns you serve, show you which areas are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO]
+AUSTIN = {
+  "slug": "local-seo-austin",
+  "city": "Austin",
+  "short": "Austin",
+  "region": "the Austin area",
+  "title": "Local SEO Agency in Austin | LocalScaling",
+  "meta": "Local SEO for Austin service businesses. We get contractors, clinics, and firms into the Google map pack and the search results under it, from Hyde Park to Circle C and up to Round Rock. Starting at $1,500/mo.",
+  "eyebrow": "Serving Austin and the Hill Country towns around it",
+  "h1": "Local SEO agency in Austin",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Austin neighborhoods and nearby towns their customers search from. New people arrive here all the time, and they find every service they need by searching the name of the place they just moved to.",
+
+  "why_eyebrow": "Why Austin is different",
+  "why_h2": "A city full of people with no one to call yet",
+  "why_paragraphs": [
+    "Austin keeps filling with people who just got here. They have no family dentist, no electrician, and no lawyer they trust, and nobody to ask. So they search, and they read the reviews harder than someone who grew up here would. The businesses they find in their first year are often the ones they keep.",
+    ("pull", "Someone who moved to Leander last month types Leander. They do not type Austin."),
+    "The growth runs along I-35. North of the city it reaches Pflugerville, Round Rock, and Georgetown, south it reaches Buda and Kyle, and west it climbs into the Hill Country toward Lakeway and Bee Cave. Each of those towns is its own search. A law firm in Round Rock will not show on the map for a family in Kyle, and an electrician near Mueller will not show for a homeowner in Circle C, however strong the profile.",
+    "Inside the city the river splits it. Locals talk about north and south of the river, and the older central neighborhoods like Hyde Park, Travis Heights, and Tarrytown have very different homes and needs from the new subdivisions at the edges. A page for each part of town lets you speak to the people who live there.",
+    "The weather adds its own rushes. Summers are long and hot, heavy rain can flood creeks fast, and a rare hard freeze can send the whole city looking for help at once. Google decides who shows up on those days from what your profile and site looked like before them.",
+  ],
+
+  "search_example": "family lawyer Round Rock",
+  "pack_rows": [("Your firm", "Family law attorney · 0.8 mi"), ("Another firm", "Family law attorney · 1.9 mi"), ("Another firm", "Law firm · 3.2 mi")],
+  "organic_rows": [("Divorce and custody lawyer in Round Rock", "yourfirm.com"), ("Family lawyers in Round Rock", "a directory"), ("Another firm", "anotherfirm.com")],
+  "both_intro": "When someone in the Austin area searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the neighborhood or town they are searching from. A business that holds a spot in both, in that place, gets the call.",
+
+  "how_h2": "Built around how Austin searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across the city and the towns you serve, from Cedar Park down to Buda. A search from your own desk tells you very little about the rest. The plan is built on the grid."),
+    ("We build a page for each neighborhood and town", "Nobody in Georgetown searches for a dentist in Austin. They type Georgetown, and a family in Travis Heights types Travis Heights. Your site and profile are built around the names people actually use."),
+    ("We write for the newcomer", "Someone new to town reads more before they call. Your pages answer what they would have asked a neighbor: who you are, what you do, the areas you cover, and what working with you is like. Your reviews do the rest."),
+    ("We put your license where people can check it", "In Texas, electricians and electrical contractors are licensed by the Texas Department of Licensing and Regulation, and anyone can search a license on its site. Health, legal, and financial practices answer to their own state bodies. A number on your site and profile gives Google and the customer something to verify."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the parts of town you really work, photos, and posts. This is what wins the map."),
+    ("Neighborhood and town pages", "One page for each place you want to win, written for the people who live there. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone the same on every directory Google compares, including the Texas and industry ones."),
+    ("Review generation", "A follow-up that asks every happy customer at the right moment, so new arrivals have plenty of recent reviews to read."),
+    ("Monthly reporting", "Where you rank on the grid, area by area, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every area and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across Austin and nearby towns",
+  "areas": ["Hyde Park","Clarksville","Tarrytown","Travis Heights","Bouldin Creek","Zilker","Mueller","Allandale","Crestview","Circle C Ranch","West Lake Hills","Round Rock","Cedar Park","Leander","Georgetown","Pflugerville","Lakeway","Bee Cave","Kyle","Buda"],
+  "areas_note": "This list is where we start. Your own reach decides the plan, so if your part of town is missing, ask and we will tell you straight whether it is winnable.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego", "local-seo-chicago", "local-seo-san-antonio"],
+
+  "faq": [
+    ("Do you need to be in Austin to rank my business here?", "No. What Google weighs is your location, your profile, your reviews, and your site. We run Austin campaigns remotely and the work is the same."),
+    ("Can one profile cover Austin, Round Rock, and Kyle?", "No single listing reaches that far. You win the area around your address first, then reach further with town pages as the profile gets stronger."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some parts of town move sooner than others, and we tell you which yours is before you commit."),
+    ("Our office is in Cedar Park. Should our pages say Cedar Park or Austin?", "Both, each on its own page. People who live there search for Cedar Park, and people further in search for Austin. Your profile keeps your real address, and your site gets a page for each name you want to win."),
+    ("We are south of the river and a lot of our customers are north. Is that a problem?", "Your service area and a page for each part of town cover the places you go. A second listing needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of Austin you can win.",
+  "cta_p": "We map where you rank across the city and the towns you serve, show you which areas are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN]
