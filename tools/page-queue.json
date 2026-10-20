@@ -1,9 +1,8 @@
 {
   "publish": true,
   "cadence_days": 4,
-  "last_run": "2026-10-16",
+  "last_run": "2026-10-20",
   "cities": [
-    "Jacksonville",
     "Fort Worth",
     "Charlotte",
     "Columbus",
@@ -28,7 +27,6 @@
     "New York"
   ],
   "industries": [
-    "med spas",
     "family law attorneys",
     "physical therapists",
     "pest control companies",
@@ -153,6 +151,18 @@
       "name": "electricians",
       "slug": "local-seo-for-electricians",
       "date": "2026-10-16"
+    },
+    {
+      "type": "city",
+      "name": "Jacksonville",
+      "slug": "local-seo-jacksonville",
+      "date": "2026-10-20"
+    },
+    {
+      "type": "industry",
+      "name": "med spas",
+      "slug": "local-seo-for-med-spas",
+      "date": "2026-10-20"
     }
   ]
 }

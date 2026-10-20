@@ -950,4 +950,109 @@ ELECTRICIANS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three shops ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS]
+MED_SPAS = {
+  "slug": "local-seo-for-med-spas",
+  "title": "Local SEO for Med Spas and Aesthetic Clinics | LocalScaling",
+  "meta": "Local SEO for med spas. We get your clinic into the Google map pack and the search results under it, in the neighborhoods your clients live in, for the treatments you want to book more of. Starting at $1,500/mo.",
+  "crumb": "Med spas",
+  "eyebrow": "Local SEO for med spas",
+  "h1": "Local SEO for med spas",
+  "lede": "Someone who wants a touch up before a wedding searches on a phone and books from the map. Someone thinking about filler for the first time reads the pages under it for weeks first. We get your med spa into both places, for the neighborhoods your clients come from and the treatments you want to do more of.",
+  "short": "med spas",
+  "industry_value": "Medical or clinic",
+  "you": "Your med spa",
+
+  "pack_search": "med spa near me",
+  "pack_rows": [("Your med spa", "Medical spa · 0.6 mi"), ("Another med spa", "Medical spa · 1.4 mi"), ("Another clinic", "Skin care clinic · 2.3 mi")],
+  "organic_rows": [("Lip filler in your city", "yourmedspa.com"), ("Best med spas near you", "a directory"), ("Another med spa", "anothermedspa.com")],
+  "pack_note": "Three spots. Someone with an event on Saturday books one of these.",
+  "both_intro": "When someone searches for a med spa, Google shows the map first and the regular results under it. The regular client who wants a top up books from the map. The first timer reads the sites under it, looks at who does the injecting, checks what it costs, and books with the clinic that answered those questions. A med spa that holds a spot in both gets both clients.",
+
+  "timeline": [(1, 2, "peak", "New year resets"), (3, 5, "peak", "Weddings and summer"), (6, 7, "build", "Profile and pages"), (8, 8, "quiet", "Reviews"), (9, 12, "peak", "Laser season and holidays")],
+  "timeline_start": 6,
+  "timeline_alt": "A twelve month timeline. Bookings pick up in January and February with new year resets, stay busy from March to May ahead of weddings and summer, and the profile and pages are built in June and July. August is a good month to push reviews, and September to December bring laser treatments that need time out of the sun plus the run up to holiday parties.",
+  "timeline_caption": "The general shape of a med spa's year. Some treatments book all year, so the build can start any time. Early summer is a good moment to have the profile and pages ready before fall laser season and the holidays.",
+
+  "intent": [
+    ("med spa near me", "A regular client in a new part of town who wants a top up this week", "Your Google Business Profile"),
+    ("lip filler [city]", "Someone who has been thinking about it for months and is finally ready to book", "A service page"),
+    ("laser hair removal [city]", "Someone tired of shaving who wants to start before next summer", "A service page"),
+    ("medical weight loss [city]", "Someone who wants a supervised program close to home", "A service page"),
+    ("microneedling or chemical peel for acne scars", "Someone still working out which treatment fits their skin", "A plain answer page"),
+    ("med spa in [the neighborhood next door]", "A client ten minutes away who drives past your sign and has never come in", "A city page"),
+  ],
+
+  "why_eyebrow": "Why med spas are different",
+  "why_h2": "Clients are trusting someone with their face",
+  "why_paragraphs": [
+    "A first time client is nervous. They want to know who will hold the needle, what training that person has, whether the result will look natural, and what it will cost. They read reviews for whether the injector listened, explained the risks, and did not push extra syringes. Then they look at your photos and your team page before they book.",
+    "Each treatment is its own search. Lip filler, laser hair removal, microneedling, chemical peels, and medical weight loss are typed by different people with different worries. Many clinics still list them all on one page. A page for each treatment is how a med spa wins those searches.",
+    ("pull", "A client who trusts their injector comes back for years and brings friends."),
+    "Google reads health and beauty claims carefully, and so do clients. Pages that promise to take ten years off read as a sales pitch to both. Plain pages about what a treatment does, who it suits, how long it lasts, and who performs it earn more trust and more bookings.",
+  ],
+
+  "leaks_h2": "Six things we find on most med spa profiles",
+  "leaks_intro": "None of them look serious alone. Together they send new clients to the clinic down the road.",
+  "leaks": [
+    ("Day spa as the main category", "The listing says Day spa or Beauty salon, so Google shows it to people looking for a massage. Medical spa is the primary for a clinic doing injectables and lasers. Every other category has to match real treatments."),
+    ("One page called Treatments", "Injectables, lasers, facials, peels, and weight loss all on one page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("No word about who does the work", "Clients want to know who injects and what their license is. A site that hides the team behind stock models makes them wonder why."),
+    ("A business name stuffed with treatments", "Adding Botox and Filler to the name on the profile breaks Google's rules. It can work for a while, and then the profile gets suspended or a competitor reports it."),
+    ("Stock photos of models", "Clients want to see your rooms, your team, and your front desk. Google uses real photos to understand the business, and a stock face tells it nothing."),
+    ("Review replies that say too much", "A reply that mentions someone's treatment confirms they are a client. Short, warm replies with no details are safer and read better to the next person."),
+  ],
+
+  "how_h2": "Built around how clients find a med spa",
+  "how": [
+    ("We fix the profile before anything else", "Medical spa as the primary category, and secondary ones such as Skin care clinic, Laser hair removal service, Facial spa, or Weight loss service only when you offer that care. Then true hours, the treatments clients search for, and photos of your real clinic."),
+    ("We build a page for each treatment", "Injectables, fillers, laser hair removal, skin treatments, body treatments, and weight loss, only for what you offer. Each one gets its own page, written for the person searching for it. Those pages are what put you in the results under the map."),
+    ("We answer the questions people ask before they book", "Does it hurt, how long does it last, how much downtime is there, and what does it cost. Plain answers, approved by your medical team, with prices only if you choose to share them."),
+    ("We show who clients will meet", "Your medical director, your injectors and their licenses, and photos of the people at the front desk. They go on the site and the profile, and they match."),
+    ("We keep reviews coming", "The front desk asks after a good visit, and a text follows with a link. Replies stay short and never confirm anything about anyone's treatment."),
+    ("We report booked clients", "Each month you see where you rank across your area for the searches that matter, how that moved, and how many people called or booked. Traffic stays off the report because nobody pays you in traffic."),
+  ],
+
+  "searches_h2": "What your next client is typing",
+  "searches": ["med spa near me", "botox near me", "lip filler near me", "laser hair removal near me", "facials near me", "med spa open Saturday", "best injector near me", "how much is botox"],
+  "specialty_searches": ["lip flip", "cheek filler", "tear trough filler", "microneedling", "RF microneedling", "chemical peel", "IPL photofacial", "laser hair removal for men", "tattoo removal", "medical weight loss", "PRP for hair loss", "hydrafacial"],
+  "searches_note": "Add your city or neighborhood to any of these and that is the search. The treatment ones are typed by people close to booking, and often fewer clinics compete for them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your treatments, true hours, the services clients look for, and real photos of your clinic and team. This is what wins the map."),
+    ("Service pages", "One page for each treatment you want more of, written for the person typing the search. This is what wins the listing under the map."),
+    ("City pages", "One page for each neighborhood or suburb you draw clients from, so the client ten minutes away can find you too."),
+    ("Listings that match", "Your clinic name, address, and phone matched across the directories Google checks, including the beauty and health ones."),
+    ("Review generation", "A follow-up after the good visits that keeps asking all year, with replies that never confirm a client."),
+    ("Your website", "Built for local search, with your team up front, online booking, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which med spas this is for",
+  "fit_yes": [
+    "A clinic with a real location and licensed providers on staff",
+    "Open spots in the book you want filled",
+    "Clients who like your work and would say so",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You need the book full by next week. That is an ads job",
+    "You want pages that promise to make people look years younger",
+    "You only want to post discounts and flash sales",
+    "You care more about followers than booked clients",
+  ],
+
+  "faq": [
+    ("Can we show before and after photos?", "On your own site, with written consent and an honest note on what a typical result looks like, yes. We keep identifying details out, and your medical team approves every one. Google has its own rules for photos on the profile, and we follow them."),
+    ("How long until we see new clients?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Treatment pages and reviews take longer and keep building."),
+    ("Should our injectors each have a Google profile?", "Sometimes. Google allows one for a provider who sees clients, with rules for how it is named. Set up right it can help. Set up wrong it competes with the clinic. We decide that with you."),
+    ("Can we rank for one treatment we want to grow?", "Yes, if you offer it. A category where one exists, a page written for that treatment, real photos, and reviews that mention it tell Google you do it well. We put more of the work into the treatment you want to grow."),
+    ("Do you put our prices on the site?", "Only if you want them there. Some clinics show a starting price per unit or per session, and some explain what drives the cost. Both answer what people are typing, and you decide."),
+    ("Can we compete with the big med spa chains?", "On the map, yes. A chain location is one profile like yours, and Google ranks the closest, best reviewed, best described clinic. You win your own neighborhoods and the treatment searches the chains do not cover well."),
+    ("Do you write the medical content?", "We write treatment pages and city pages in plain words. Your medical director approves anything clinical before it publishes, and we make no claims about outcomes."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the med spa they book first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three clinics ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS]
