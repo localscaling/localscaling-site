@@ -1130,6 +1130,178 @@ def industry_page(c):
     page += cta(c["cta_h"], c["cta_p"]) + "\n</main>\n" + STICKY + FOOTER + REVEAL_JS + "\n</body>\n</html>\n"
     return page
 
+# ---------------- AD LANDING PAGES ----------------
+# Google Ads traffic only. noindex, no menu, form on the first screen.
+from ad_pages import PAGES as AD_PAGES
+
+AD_NAV = f"""
+<header class="nav">
+  <div class="nav-inner">
+    <span class="logo">{LOGO}</span>
+  </div>
+</header>
+"""
+
+AD_FOOTER = """
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 LocalScaling</span>
+      <a href="mailto:info@localscaling.com">info@localscaling.com</a>
+    </div>
+  </div>
+</footer>
+"""
+
+def ad_page(c):
+    return head(
+      f"{c['eyebrow']} | LocalScaling",
+      f"Free local SEO audit for {c['plural']}. We check your Google Business Profile, listings, website, and reviews against the businesses above you and email you the findings within 24 hours.",
+      "/" + c["slug"], robots="noindex, follow",
+    ) + AD_NAV + f"""
+<main class="audit-page" id="main"><div class="container audit-grid">
+  <section class="audit-intro" aria-labelledby="audit-h1">
+    <p class="eyebrow">{c['eyebrow']}</p>
+    <h1 id="audit-h1">{c['h1']}</h1>
+    <p class="lede">{c['lede']}</p>
+    <p class="audit-fit">Free, no call, in your inbox within 24 hours.</p>
+  </section>
+
+  <div class="form-card">
+    <h2>Get your free audit</h2>
+    <p class="sub">Five quick fields. We email the audit within 24 hours.</p>
+
+    <form id="auditForm" action="{FORM_AUDIT}" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="New free SEO audit request ({c['industry']}, ad page)">
+      <input type="hidden" name="industry" value="{c['industry']}">
+      <input type="hidden" name="form_page" value="/{c['slug']}">
+      {ATTR_INPUTS}
+      <div class="honey" aria-hidden="true">
+        <label for="fcompany">Leave this empty</label>
+        <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="femail">Email</label>
+          <input type="email" id="femail" name="email" placeholder="john@yourbiz.com" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="fbiz">Business name</label>
+        <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fsite">Website</label>
+          <input type="text" id="fsite" name="website" placeholder="yourbusiness.com" inputmode="url" autocomplete="url" required>
+        </div>
+        <div class="field">
+          <label for="fcity">City you serve</label>
+          <input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>
+        </div>
+      </div>
+
+      <details class="more-fields">
+        <summary>Add more detail <span>(optional)</span></summary>
+        <div>
+      <div class="field">
+        <label for="fgbp">Google Business Profile link</label>
+        <p class="hint" id="fgbp-hint">Find your business on Google Maps, tap Share, and paste the link here.</p>
+        <input type="text" id="fgbp" name="gbp_link" placeholder="maps.app.goo.gl/..." inputmode="url" aria-describedby="fgbp-hint">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fsearch">Search you want to win</label>
+          <input type="text" id="fsearch" name="target_search" placeholder="{c['search']}">
+        </div>
+        <div class="field">
+          <label for="fphone">Phone</label>
+          <input type="tel" id="fphone" name="phone" placeholder="(555) 555-0100" autocomplete="tel">
+        </div>
+      </div>
+        </div>
+      </details>
+
+      <div class="form-error" id="formError" role="alert">
+        Something went wrong. Email us at <a href="mailto:info@localscaling.com">info@localscaling.com</a>
+      </div>
+
+      <button type="submit" class="btn btn-clay btn-block" id="submitBtn">
+        <span id="submitText">Send my free audit request</span>
+        <span class="spinner" id="submitSpinner" aria-hidden="true"></span>
+      </button>
+    </form>
+
+    <p class="form-footer">No sales call unless you ask for one.</p>
+  </div>
+</div></main>
+
+<section class="section bg-white" aria-labelledby="checks-title">
+  <div class="container">
+    <p class="eyebrow">The audit</p>
+    <h2 id="checks-title" class="section-title">What the free audit checks</h2>
+    <ul class="audit-list">
+      <li>{TICK}Your Google Business Profile</li>
+      <li>{TICK}Name, address, and phone across listings</li>
+      <li>{TICK}Service and city pages on your site</li>
+      <li>{TICK}Reviews next to the {c['plural']} above you</li>
+      <li>{TICK}Who holds the map and the results, and why</li>
+    </ul>
+    <p class="audit-fit">The audit is free and yours to keep. If you want us to do the work after, it is starting at $1,500/mo, month to month, with no setup fee.</p>
+  </div>
+</section>
+
+<section class="section bg-sand topo" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">What happens next</p>
+        <h2 id="how-title" class="section-title">From form to audit in 24 hours</h2>
+      </div>
+    </div>
+    <div class="steps">
+      {step("1", "You send the form", "It takes about a minute. No call and no card.")}
+      {step("2", "We build your audit", f"We check your profile, your site, your listings, and your reviews against the {c['plural']} above you, on the map and in the results.")}
+      {step("3", "It lands in your inbox", "Within 24 hours. You see what is costing you calls and what it takes to fix. If you want us to do the work, reply to the email.")}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="faq-title">
+  <div class="container">
+    <p class="eyebrow">Questions</p>
+    <h2 id="faq-title" class="section-title">What owners ask us first</h2>
+    <div class="faq">
+      {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense cities take longer, and we tell you which yours is before you commit.")}
+      {faq("Do you need to be in my city to rank my business?", "No. Every signal Google weighs belongs to your business: your location, your profile, your reviews, your site. We work remotely and the math does not change.")}
+      {faq("I already have a profile and a website. Do I start over?", "No. You keep your profile and your site. We fix what is holding them back and build from there.")}
+      {faq("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month.")}
+    </div>
+  </div>
+</section>
+
+<section class="bg-forest cta topo" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 id="cta-title">See where your calls are going</h2>
+    <p class="lede">Five fields, no call, and the audit is in your inbox within 24 hours.</p>
+    <div class="cta-actions">
+      <a href="#auditForm" class="btn btn-light">Get my free audit</a>
+    </div>
+  </div>
+</section>
+""" + AD_FOOTER + FORM_JS % {"form": "auditForm", "ids": "['fname', 'femail', 'fbiz', 'fsite', 'fcity']", "next": "/audit-thank-you"} + REVEAL_JS + """
+</body>
+</html>
+"""
+
 files = {
   "index.html": index,
   "apply.html": apply,
@@ -1141,6 +1313,8 @@ for cfg in CITY_PAGES:
     files[cfg["slug"] + ".html"] = city_page(cfg)
 for cfg in INDUSTRY_PAGES:
     files[cfg["slug"] + ".html"] = industry_page(cfg)
+for cfg in AD_PAGES:
+    files[cfg["slug"] + ".html"] = ad_page(cfg)
 for name, content in files.items():
     p = os.path.join(SITE, name)
     os.makedirs(os.path.dirname(p), exist_ok=True)
