@@ -545,4 +545,65 @@ JACKSONVILLE = {
   "cta_p": "We map where you rank across the city, the Beaches, and the towns you serve, show you which areas are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE]
+FORT_WORTH = {
+  "slug": "local-seo-fort-worth",
+  "city": "Fort Worth",
+  "short": "Fort Worth",
+  "region": "Tarrant County and the towns around it",
+  "title": "Local SEO Agency in Fort Worth | LocalScaling",
+  "meta": "Local SEO for Fort Worth service businesses. We get contractors, clinics, and law firms into the Google map pack and the search results under it, from Fairmount to Keller and out to Weatherford. Starting at $1,500/mo.",
+  "eyebrow": "Serving Fort Worth, the Mid-Cities, and Tarrant County",
+  "h1": "Local SEO agency in Fort Worth",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Fort Worth neighborhoods and nearby towns their customers search from. Fort Worth is half of DFW on a map, and in the search bar it behaves like its own region.",
+
+  "why_eyebrow": "Why Fort Worth is different",
+  "why_h2": "The west side of the Metroplex searches on its own",
+  "why_paragraphs": [
+    "People here say Fort Worth, and they mean it. Most of the city sits in Tarrant County, with its own courts, its own suburbs, and its own sense of where home ends. Someone in Benbrook looking for a contractor wants one close by, and a company across the county in Mesquite rarely shows up for them on the map.",
+    ("pull", "A family in Keller types Keller. Fort Worth is where they drive for a night out at the Stockyards."),
+    "Between the two big cities sit the Mid-Cities: Hurst, Euless, Bedford, and their neighbors. People there search by their own town name, and the map can pull in businesses from either direction. A clinic in North Richland Hills will not show for a patient in Mansfield, however strong the profile, and a firm near Sundance Square will not show for someone in Southlake.",
+    "The growth keeps pushing outward. North along I-35W toward Alliance and Saginaw, south toward Burleson, southwest toward Benbrook, and west into Parker County toward Weatherford. New neighborhoods fill with families who have no plumber, dentist, or lawyer yet, and they find one by searching the name of the place they just moved to.",
+    "The ground matters too. North Texas clay swells when it rains and shrinks in a dry summer, so foundations, driveways, and sprinkler lines all take a beating, and the busy weeks for those trades follow the weather. Google decides who shows up in those weeks from what your profile and site looked like before them.",
+  ],
+
+  "search_example": "foundation repair Keller",
+  "pack_rows": [("Your business", "Foundation repair service · 0.9 mi"), ("Another company", "Foundation repair service · 2.1 mi"), ("Another company", "Contractor · 3.4 mi")],
+  "organic_rows": [("Foundation repair in Keller, free inspection", "yourbusiness.com"), ("Foundation repair companies in Keller", "a directory"), ("Another company", "anothercompany.com")],
+  "both_intro": "When someone in the Fort Worth area searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the neighborhood or town they are searching from. A business that holds a spot in both, in that place, gets the call.",
+
+  "how_h2": "Built around how Fort Worth searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across Fort Worth and the towns you serve, from Saginaw down to Burleson. A search from your own office tells you very little about the next town over. The plan is built on the grid."),
+    ("We build a page for each neighborhood and town", "Nobody in Southlake searches for a dentist in Fort Worth. They type Southlake, and a family in Ryan Place types Ryan Place. Your site and profile are built around the names people actually use."),
+    ("We pick a side of the Metroplex", "Most businesses here should win the Fort Worth side first. If you also want Dallas work, it gets its own plan once the west side is holding, because one profile cannot stretch across both."),
+    ("We put your license where people can check it", "In Texas, electricians and air conditioning contractors are licensed by the Texas Department of Licensing and Regulation, and anyone can look a license up on its site. Lawyers, clinics, and other practices answer to their own state bodies. A number on your site and profile gives Google and the customer something to verify."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the towns you really work, photos, and posts. This is what wins the map."),
+    ("Neighborhood and town pages", "One page for each place you want to win, written for the people who live there. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone the same on every directory Google compares, including the Texas and industry ones."),
+    ("Review generation", "A follow-up that asks every happy customer at the right moment, so each town you serve has recent reviews from its own people."),
+    ("Monthly reporting", "Where you rank on the grid, town by town, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every area and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across Fort Worth and nearby towns",
+  "areas": ["Near Southside","Fairmount","Ryan Place","Arlington Heights","Rivercrest","Tanglewood","Wedgwood","Stockyards","Alliance","Saginaw","Keller","Southlake","North Richland Hills","Hurst","Euless","Bedford","Benbrook","Burleson","Mansfield","Weatherford"],
+  "areas_note": "This list is where we start. Your own reach decides the plan, so if your part of town is missing, ask and we will tell you straight whether it is winnable.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego", "local-seo-chicago", "local-seo-san-antonio", "local-seo-austin", "local-seo-jacksonville"],
+
+  "faq": [
+    ("Do you need to be in Fort Worth to rank my business here?", "No. What Google weighs is your location, your profile, your reviews, and your site. We run Fort Worth campaigns remotely and the work is the same."),
+    ("Can one profile cover Fort Worth and Dallas?", "No single listing reaches across the whole Metroplex. You win the area around your address first, then reach further with town pages as the profile gets stronger. Dallas is usually a separate push."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some towns move sooner than others, and we tell you which yours is before you commit."),
+    ("We are in the Mid-Cities. Should our pages say Fort Worth or our town?", "Both, each on its own page. People nearby search for Bedford or Euless, and people further out search for Fort Worth. Your profile keeps your real address, and your site gets a page for each name you want to win."),
+    ("Our shop is in Fort Worth and a lot of our work is out in Parker County. Is that a problem?", "Your service area and a page for each town you drive to cover it. A second listing needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of Fort Worth you can win.",
+  "cta_p": "We map where you rank across Fort Worth and the towns you serve, show you which areas are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH]

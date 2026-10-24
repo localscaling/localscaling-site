@@ -1055,4 +1055,109 @@ MED_SPAS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three clinics ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS]
+FAMILY_LAW = {
+  "slug": "local-seo-for-family-law-attorneys",
+  "title": "Local SEO for Family Law Attorneys | LocalScaling",
+  "meta": "Local SEO for family law attorneys and divorce lawyers. We get your firm into the Google map pack and the search results under it, in the counties you practice in, for the cases you want more of. Starting at $1,500/mo.",
+  "crumb": "Family law attorneys",
+  "eyebrow": "Local SEO for family law attorneys",
+  "h1": "Local SEO for family law attorneys",
+  "lede": "Someone served with papers on Friday searches on a phone that night and calls a firm from the map. Someone still deciding whether to leave reads the pages under it for weeks, often in private. We get your firm into both places, in the counties where you file.",
+  "short": "family law firms",
+  "industry_value": "Legal",
+  "you": "Your firm",
+
+  "pack_search": "divorce lawyer near me",
+  "pack_rows": [("Your firm", "Family law attorney · 0.7 mi"), ("Another firm", "Divorce lawyer · 1.5 mi"), ("Another firm", "Law firm · 2.8 mi")],
+  "organic_rows": [("Divorce and custody lawyer in your county", "yourfirm.com"), ("Best divorce lawyers near you", "a directory"), ("Another firm", "anotherfirm.com")],
+  "pack_note": "Three spots. A parent with a hearing next week calls one of these.",
+  "both_intro": "When someone searches for a family lawyer, Google shows the map first and the regular results under it. The person with a deadline calls from the map. The person who is still deciding reads the sites under it, checks how firms talk about custody and cost, and calls the one that sounded calm and clear. A firm that holds a spot in both gets both calls.",
+
+  "timeline": [(1, 3, "peak", "After the holidays"), (4, 6, "build", "Profile, pages, listings"), (7, 7, "quiet", "Reviews"), (8, 9, "peak", "Back to school"), (10, 12, "quiet", "Steady calls, reviews")],
+  "timeline_start": 4,
+  "timeline_alt": "A twelve month timeline. Calls often pick up from January to March once the holidays are over, the profile, pages, and listings are built from April to June, July is a good month for reviews, August and September bring another rise as children go back to school, and October to December are steadier.",
+  "timeline_caption": "The general shape of a family law firm's year. Many families wait until after the holidays or until the school year starts before they act. Cases come in every month, so the build can start any time.",
+
+  "intent": [
+    ("divorce lawyer near me", "Someone who has decided and wants to talk to a person this week", "Your Google Business Profile"),
+    ("child custody lawyer [county]", "A parent worried about time with their kids", "A service page"),
+    ("how much does a divorce cost in [state]", "Someone still deciding, trying to work out what they can afford", "A plain answer page"),
+    ("modify child support [county]", "A parent whose job or income changed since the order", "A service page"),
+    ("uncontested divorce lawyer", "A couple who agree on most things and want it done simply", "A service page"),
+    ("family lawyer in [the county next door]", "Someone who needs a lawyer who knows that courthouse", "A county or city page"),
+  ],
+
+  "why_eyebrow": "Why family law is different",
+  "why_h2": "People search for a family lawyer in private",
+  "why_paragraphs": [
+    "Most people hire a family lawyer at the worst moment of their life. They may be searching on a phone their spouse can see, late at night, and they read carefully before they call anyone. They look for a firm that sounds calm, explains the process plainly, and talks about the children before it talks about winning.",
+    "Each kind of case is its own search. Divorce, custody, child support, adoption, protective orders, and prenups are typed by different people with different fears. A single page called practice areas tells none of them they are in the right place.",
+    ("pull", "The person searching for a family lawyer wants to feel safe calling. Every page should make that easy."),
+    "The work is local by nature. Cases are filed in a county court, and people often search by county or ask for a lawyer who knows their judges. The rules are tight too. State bars limit how lawyers advertise, and reviews and replies have to protect the people involved. We write inside those rules, and an attorney at your firm approves every page.",
+  ],
+
+  "leaks_h2": "Six things we find on most family law profiles",
+  "leaks_intro": "Each one looks minor. Together they send the call to the firm across town.",
+  "leaks": [
+    ("Lawyer as the only category", "Google has Family law attorney and Divorce lawyer as categories. A firm listed only as Lawyer tells Google less than the firms above it."),
+    ("One page for every kind of case", "Divorce, custody, support, and adoption on a single page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("Review replies that confirm a client", "A warm reply that mentions a divorce or a custody fight tells the world that person was your client. Short replies with no details protect them and read better to the next person."),
+    ("Pages that sound like a fight", "Aggressive and ruthless read badly to a parent who wants this over without hurting the kids. Plenty of people are looking for a steady hand."),
+    ("No word about cost or process", "People want to know how a retainer works and what happens first. A site that says call us for everything loses the reader who is not ready to call."),
+    ("Old names on the directories", "Partners come and go, and the old firm name and number keep living on the legal directories Google checks. The mismatch drags the profile down."),
+  ],
+
+  "how_h2": "Built around how people find a family lawyer",
+  "how": [
+    ("We set up the categories and the profile", "Family law attorney as the primary. Divorce lawyer or Law firm as secondaries only when they fit the work. Your case types go in as services, and your hours say when someone will actually answer."),
+    ("We build a page for each kind of case", "Divorce, contested and uncontested, custody, child support, spousal support, adoption, protective orders, and prenups, only for the cases you take. Each one gets its own page. Those pages are what put you in the results under the map."),
+    ("We build a page for each county you practice in", "People search by the county where they will file. A page for each courthouse you know, written for the people who live there, reaches them before they call anyone."),
+    ("We answer the questions people ask before they call", "How long a divorce usually takes in your state, how custody is decided, how your fees work, and what to bring to the first meeting. Only what is true for your firm, inside your state bar's rules, and approved by an attorney."),
+    ("We keep reviews coming, carefully", "A request goes out when a matter closes, only to clients who are comfortable sharing, never asking for details. Replies stay short and never confirm anything about anyone's case."),
+    ("We report calls", "Each month you see where you rank across the counties you serve, how that moved, and how many people called. Traffic stays off the report because nobody hires you from traffic."),
+  ],
+
+  "searches_h2": "What your next client is typing",
+  "searches": ["divorce lawyer near me", "family lawyer near me", "child custody lawyer", "how to file for divorce", "how much is a divorce", "free consultation divorce lawyer", "child support lawyer", "family lawyer open Saturday"],
+  "specialty_searches": ["uncontested divorce", "fathers rights lawyer", "grandparents rights lawyer", "military divorce lawyer", "high asset divorce attorney", "prenuptial agreement lawyer", "stepparent adoption lawyer", "paternity lawyer", "protective order lawyer", "relocation custody lawyer", "divorce mediation", "collaborative divorce"],
+  "searches_note": "Add your county or city to any of these and that is the search. The specialty ones have fewer firms competing and often the cases you want most. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your practice, true hours, the case types you take, real photos of your office and people, and posts all year. This is what wins the map."),
+    ("Case type pages", "One page for each kind of case you want more of, written for the person typing the search and approved by an attorney. This is what wins the listing under the map."),
+    ("County and city pages", "One page for each county or city you serve, so someone filing in the next courthouse over can find you too."),
+    ("Listings that match", "One name, one address, and one phone number across the directories Google checks, including the legal ones."),
+    ("Review generation", "A careful request when a matter closes, worded to fit your state bar's rules, with replies that never confirm a client."),
+    ("Your website", "Built for local search, with a call button up top, your attorneys and where they are admitted, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which family law firms this is for",
+  "fit_yes": [
+    "A firm with a real office and attorneys who practice family law",
+    "A solo practice or a team, with room for more cases",
+    "You want calls from your own profile instead of shared leads",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You need consultations booked this week. That is an ads job",
+    "You want keywords in your firm name or reviews you paid for",
+    "You want pages that promise to win custody",
+    "You want to rank in counties where you never appear in court",
+  ],
+
+  "faq": [
+    ("Our clients do not want to leave reviews. How do we get any?", "Many will not, and that is fine. We ask only clients whose matter went well and who are comfortable, and we never ask for details. A steady trickle of recent reviews does more than a big batch."),
+    ("How long until the phone rings more?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Case pages and county pages take longer and keep building."),
+    ("Can you get us more of one kind of case?", "Partly. The pages and categories decide which searches you win, so we build more around custody or high asset divorce if those are the cases you want. Other calls still come."),
+    ("Should each attorney have a Google profile?", "Sometimes. Google allows one for a lawyer who meets clients, with rules for how it is named. Set up right it can help. Set up wrong it competes with the firm. We decide that with you."),
+    ("We practice in three counties but have one office. Can we rank in all three?", "With a page for each county, often yes, and the profile gets stronger around your office first. A second profile needs a real staffed office. A virtual office or a mailbox can get the first one suspended."),
+    ("Do you put our fees on the site?", "Only if you want them there. Some firms explain how a retainer works and what drives the cost, and some list a starting figure for an uncontested divorce. Both answer what people are typing, and you decide."),
+    ("Do you write about the law on our site?", "We write the case pages and county pages in plain words. An attorney at your firm approves every page before it publishes, and nothing about outcomes, timelines, or fees goes up unless you have confirmed it."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the firm they feel safe calling.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three firms ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW]
