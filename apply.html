@@ -20,6 +20,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css?v=20260917i">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18477157066"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18477157066');
+  try {
+    var g = new URLSearchParams(location.search).get('gclid');
+    if (g) localStorage.setItem('ls_gclid', JSON.stringify({v: g, t: Date.now()}));
+  } catch (e) {}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -41,6 +52,7 @@
 
       <form id="applyForm" action="https://formspree.io/f/mgoqbjbw" method="POST" novalidate>
         <input type="hidden" name="_subject" value="New LocalScaling application">
+        <input type="hidden" name="gclid" id="fgclid" value="">
         <div class="honey" aria-hidden="true">
           <label for="fcompany">Leave this empty</label>
           <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -137,6 +149,11 @@
       if (!el.value.trim()) { el.classList.add('error'); el.setAttribute('aria-invalid', 'true'); valid = false; first = first || el; }
     });
     if (!valid) { first.focus(); return; }
+
+    try {
+      const g = JSON.parse(localStorage.getItem('ls_gclid') || 'null');
+      if (g && Date.now() - g.t < 90 * 864e5) document.getElementById('fgclid').value = g.v;
+    } catch (err) {}
 
     btn.disabled = true;
     submitText.style.display = 'none';

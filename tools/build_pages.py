@@ -8,6 +8,21 @@ sys.path.insert(0, os.path.join(SITE, "tools"))
 STYLE_VERSION = "20260917i"  # bump when styles.css changes so browsers fetch the new file
 FORM_APPLY = "https://formspree.io/f/mgoqbjbw"
 FORM_AUDIT = "https://formspree.io/f/mnpnqnyd"
+GOOGLE_TAG = "AW-18477157066"  # Google Ads tag. Conversions fire on /audit-thank-you and /thank-you
+
+# Google tag, plus the ad click ID (gclid) kept for 90 days so a form sent later
+# can carry it. The forms copy it into a hidden field on submit.
+GTAG = f'''<script async src="https://www.googletagmanager.com/gtag/js?id={GOOGLE_TAG}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', '{GOOGLE_TAG}');
+  try {{
+    var g = new URLSearchParams(location.search).get('gclid');
+    if (g) localStorage.setItem('ls_gclid', JSON.stringify({{v: g, t: Date.now()}}));
+  }} catch (e) {{}}
+</script>'''
 
 LOGO = '''<svg viewBox="0 0 214 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LocalScaling"><path d="M22 3C13.7 3 7 9.6 7 17.9C7 24.4 10.4 33.2 14.6 39.4C17.2 43.2 19.8 45.5 22 45.5C24.2 45.5 26.8 43.2 29.4 39.4C33.6 33.2 37 24.4 37 17.9C37 9.6 30.3 3 22 3Z" stroke="#002c0a" stroke-width="3.2" stroke-linejoin="round" fill="none"/><circle cx="22" cy="18" r="5" stroke="#002c0a" stroke-width="3.2" fill="none"/><text x="48" y="32" font-family="League Spartan, sans-serif" font-weight="800" font-size="24" fill="#002c0a" letter-spacing="-0.4">LocalScaling</text></svg>'''
 
@@ -37,6 +52,7 @@ def head(title, desc, path, robots="index, follow"):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css?v={STYLE_VERSION}">
+{GTAG}
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -189,6 +205,11 @@ FORM_JS = '''
       if (!el.value.trim()) { el.classList.add('error'); el.setAttribute('aria-invalid', 'true'); valid = false; first = first || el; }
     });
     if (!valid) { first.focus(); return; }
+
+    try {
+      const g = JSON.parse(localStorage.getItem('ls_gclid') || 'null');
+      if (g && Date.now() - g.t < 90 * 864e5) document.getElementById('fgclid').value = g.v;
+    } catch (err) {}
 
     btn.disabled = true;
     submitText.style.display = 'none';
@@ -514,6 +535,7 @@ apply = head(
 
       <form id="applyForm" action="{FORM_APPLY}" method="POST" novalidate>
         <input type="hidden" name="_subject" value="New LocalScaling application">
+        <input type="hidden" name="gclid" id="fgclid" value="">
         <div class="honey" aria-hidden="true">
           <label for="fcompany">Leave this empty</label>
           <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -645,6 +667,7 @@ audit = head(
 
     <form id="auditForm" action="{FORM_AUDIT}" method="POST" novalidate>
       <input type="hidden" name="_subject" value="New free SEO audit request">
+      <input type="hidden" name="gclid" id="fgclid" value="">
       <div class="honey" aria-hidden="true">
         <label for="fcompany">Leave this empty</label>
         <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -1136,6 +1159,7 @@ for name, content in files.items():
     if 'name="robots" content="noindex' in content:
         continue
     body = re.sub(r'styles\.css\?v=[0-9a-z]+', 'styles.css', content)
+    body = body.replace(GTAG + "\n", "")  # tracking code is not page content
     digest = hashlib.sha256(body.encode()).hexdigest()[:16]
     prev = ledger.get(name, {})
     lastmod = prev.get("lastmod", today) if prev.get("hash") == digest else today
