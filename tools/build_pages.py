@@ -1,7 +1,7 @@
 """Generates the six site pages from shared head, nav, footer, and form snippets.
 Run from anywhere: python3 tools/build_pages.py
 Edit copy here, not in the generated HTML, or the next run overwrites it."""
-import os, sys
+import os, sys, json
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(SITE, "tools"))
 
@@ -12,15 +12,24 @@ GOOGLE_TAG = "AW-18477157066"  # Google Ads tag. Conversions fire on /audit-than
 
 # Google tag, plus the ad click ID (gclid) kept for 90 days so a form sent later
 # can carry it. The forms copy it into a hidden field on submit.
+ATTR_KEYS = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "matchtype"]
+ATTR_FIELDS = ATTR_KEYS + ["landing_page", "first_seen"]
+ATTR_INPUTS = "".join(f'<input type="hidden" name="{f}" data-attr="{f}" value="">' for f in ATTR_FIELDS)
 GTAG = f'''<script async src="https://www.googletagmanager.com/gtag/js?id={GOOGLE_TAG}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
   gtag('config', '{GOOGLE_TAG}');
+  var ATTR_KEYS = {json.dumps(ATTR_KEYS)};
   try {{
-    var g = new URLSearchParams(location.search).get('gclid');
-    if (g) localStorage.setItem('ls_gclid', JSON.stringify({{v: g, t: Date.now()}}));
+    var q = new URLSearchParams(location.search), a = {{}};
+    ATTR_KEYS.forEach(function (k) {{ if (q.get(k)) a[k] = q.get(k).slice(0, 200); }});
+    if (a.gclid || a.utm_source) {{
+      a.landing_page = location.pathname;
+      a.first_seen = new Date().toISOString();
+      localStorage.setItem('ls_attr', JSON.stringify({{v: a, t: Date.now()}}));
+    }}
   }} catch (e) {{}}
 </script>'''
 
@@ -207,8 +216,10 @@ FORM_JS = '''
     if (!valid) { first.focus(); return; }
 
     try {
-      const g = JSON.parse(localStorage.getItem('ls_gclid') || 'null');
-      if (g && Date.now() - g.t < 90 * 864e5) document.getElementById('fgclid').value = g.v;
+      const a = JSON.parse(localStorage.getItem('ls_attr') || 'null');
+      if (a && Date.now() - a.t < 90 * 864e5) {
+        this.querySelectorAll('[data-attr]').forEach(el => { el.value = a.v[el.dataset.attr] || ''; });
+      }
     } catch (err) {}
 
     btn.disabled = true;
@@ -535,7 +546,7 @@ apply = head(
 
       <form id="applyForm" action="{FORM_APPLY}" method="POST" novalidate>
         <input type="hidden" name="_subject" value="New LocalScaling application">
-        <input type="hidden" name="gclid" id="fgclid" value="">
+        {ATTR_INPUTS}
         <div class="honey" aria-hidden="true">
           <label for="fcompany">Leave this empty</label>
           <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -667,7 +678,7 @@ audit = head(
 
     <form id="auditForm" action="{FORM_AUDIT}" method="POST" novalidate>
       <input type="hidden" name="_subject" value="New free SEO audit request">
-      <input type="hidden" name="gclid" id="fgclid" value="">
+      {ATTR_INPUTS}
       <div class="honey" aria-hidden="true">
         <label for="fcompany">Leave this empty</label>
         <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">

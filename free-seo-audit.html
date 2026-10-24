@@ -26,9 +26,15 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18477157066');
+  var ATTR_KEYS = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "matchtype"];
   try {
-    var g = new URLSearchParams(location.search).get('gclid');
-    if (g) localStorage.setItem('ls_gclid', JSON.stringify({v: g, t: Date.now()}));
+    var q = new URLSearchParams(location.search), a = {};
+    ATTR_KEYS.forEach(function (k) { if (q.get(k)) a[k] = q.get(k).slice(0, 200); });
+    if (a.gclid || a.utm_source) {
+      a.landing_page = location.pathname;
+      a.first_seen = new Date().toISOString();
+      localStorage.setItem('ls_attr', JSON.stringify({v: a, t: Date.now()}));
+    }
   } catch (e) {}
 </script>
 </head>
@@ -69,7 +75,7 @@
 
     <form id="auditForm" action="https://formspree.io/f/mnpnqnyd" method="POST" novalidate>
       <input type="hidden" name="_subject" value="New free SEO audit request">
-      <input type="hidden" name="gclid" id="fgclid" value="">
+      <input type="hidden" name="gclid" data-attr="gclid" value=""><input type="hidden" name="utm_source" data-attr="utm_source" value=""><input type="hidden" name="utm_medium" data-attr="utm_medium" value=""><input type="hidden" name="utm_campaign" data-attr="utm_campaign" value=""><input type="hidden" name="utm_term" data-attr="utm_term" value=""><input type="hidden" name="utm_content" data-attr="utm_content" value=""><input type="hidden" name="matchtype" data-attr="matchtype" value=""><input type="hidden" name="landing_page" data-attr="landing_page" value=""><input type="hidden" name="first_seen" data-attr="first_seen" value="">
       <div class="honey" aria-hidden="true">
         <label for="fcompany">Leave this empty</label>
         <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -220,8 +226,10 @@
     if (!valid) { first.focus(); return; }
 
     try {
-      const g = JSON.parse(localStorage.getItem('ls_gclid') || 'null');
-      if (g && Date.now() - g.t < 90 * 864e5) document.getElementById('fgclid').value = g.v;
+      const a = JSON.parse(localStorage.getItem('ls_attr') || 'null');
+      if (a && Date.now() - a.t < 90 * 864e5) {
+        this.querySelectorAll('[data-attr]').forEach(el => { el.value = a.v[el.dataset.attr] || ''; });
+      }
     } catch (err) {}
 
     btn.disabled = true;
