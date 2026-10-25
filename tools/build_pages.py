@@ -5,7 +5,7 @@ import os, sys, json
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(SITE, "tools"))
 
-STYLE_VERSION = "20260917i"  # bump when styles.css changes so browsers fetch the new file
+STYLE_VERSION = "20261024c"  # bump when styles.css changes so browsers fetch the new file
 FORM_APPLY = "https://formspree.io/f/mgoqbjbw"
 FORM_AUDIT = "https://formspree.io/f/mnpnqnyd"
 GOOGLE_TAG = "AW-18477157066"  # Google Ads tag. Conversions fire on /audit-thank-you and /thank-you
@@ -306,6 +306,52 @@ def sheet_row(title, sub):
           <span><strong>{title}</strong><span>{sub}</span></span>
         </li>'''
 
+def results_section(title_id, trades=True):
+    """Real client numbers, names removed. The home page names trade and city.
+    Industry pages name the city only, so a plumber page never shows a dentist."""
+    who = {
+        "dentist": "Dentist in Vancouver, BC" if trades else "Business in Vancouver, BC",
+        "plumber": "Plumbing company in Plano, TX" if trades else "Business in Plano, TX",
+        "roofer": "Roofing company in Boise, ID" if trades else "Business in Boise, ID",
+    }
+    alt_who = {k: v[0].lower() + v[1:] for k, v in who.items()}
+    return f'''<section class="section bg-white results" id="results" aria-labelledby="{title_id}">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Results</p>
+        <h2 id="{title_id}" class="section-title">Three clients, straight from Google</h2>
+      </div>
+      <p class="section-intro">Their numbers on the map and in the search results under it, with the names taken out.</p>
+    </div>
+    <figure class="result-figure">
+      <div class="result-shot">
+        <img src="/images/results-search-clicks.png" width="1489" height="455" loading="lazy" alt="Google Search Console chart for a {alt_who["dentist"]}, daily clicks from September 1 to October 19, 2026. Clicks sit at about 3 to 6 a day until September 13, when we started, and climb to about 30 to 45 a day, 585 clicks in total.">
+        <span class="start-mark" style="left:27.13%;top:88.13%;" aria-hidden="true"><span class="start-label">We started here</span></span>
+      </div>
+      <figcaption><strong>{who["dentist"]}.</strong> Search results: clicks from Google search by day, September 1 to October 19, 2026. We started September 13.</figcaption>
+    </figure>
+    <div class="result-pair">
+      <figure class="result-figure">
+        <div class="result-shot">
+          <img src="/images/results-profile-calls.png" width="1175" height="433" loading="lazy" alt="Google Business Profile chart for a {alt_who["plumber"]}, monthly calls from May to October 2026, 96 in total. Calls are at their lowest in July, when we started, and rise in September and October.">
+          <span class="start-mark" style="left:40.68%;top:72.06%;" aria-hidden="true"><span class="start-label">We started here</span></span>
+        </div>
+        <figcaption><strong>{who["plumber"]}.</strong> Google Maps: calls from the Business Profile by month, May to October 2026. We started in July.</figcaption>
+      </figure>
+      <figure class="result-figure">
+        <div class="result-shot">
+          <img src="/images/results-profile-website-clicks.png" width="1188" height="438" loading="lazy" alt="Google Business Profile chart for a {alt_who["roofer"]}, monthly website clicks from May to October 2026, 144 in total. Clicks fall to almost zero in July, when we started, then climb to the highest month in October.">
+          <span class="start-mark" style="left:40.07%;top:83.56%;" aria-hidden="true"><span class="start-label">We started here</span></span>
+        </div>
+        <figcaption><strong>{who["roofer"]}.</strong> Google Maps: website visits from the Business Profile by month, May to October 2026. We started in July, at the low point.</figcaption>
+      </figure>
+    </div>
+    <p class="result-note">October was still in progress when the two Google Maps charts were taken. Most businesses take three to six months to start seeing big results, so these are early numbers.</p>
+  </div>
+</section>'''
+
+
 def step(n, title, text):
     return f'''
       <div class="step reveal reveal-{n}">
@@ -377,6 +423,8 @@ index = head(
     <span><a href="/local-seo-for-plumbers">Plumbing</a></span><span><a href="/local-seo-for-hvac-contractors">HVAC</a></span><span><a href="/local-seo-for-roofers">Roofing</a></span><span><a href="/local-seo-for-electricians">Electrical</a></span><span><a href="/local-seo-for-dentists">Dental</a></span><span>Medical</span><span><a href="/local-seo-for-accountants">Accounting</a></span><span><a href="/local-seo-for-personal-injury-lawyers">Legal</a></span>
   </div>
 </div>
+
+{results_section("results-title")}
 
 <section class="test" aria-labelledby="test-title">
   <div class="container">
@@ -1021,6 +1069,8 @@ def industry_page(c):
     </div>
   </div>
 </section>
+
+{results_section("ind-results", trades=False)}
 
 <section class="section bg-white" aria-labelledby="ind-why">
   <div class="container">

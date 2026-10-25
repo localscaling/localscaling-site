@@ -55,6 +55,10 @@ serves `apply.html`.
 
 - No invented proof. No testimonials, logos, counts, or results until the
   operator supplies real ones
+- Results section, `results_section()`, approved 2026-10-24: real client
+  charts sit under the hero. The home page names trade and city, industry
+  pages name the city only. This is the operator's exception to the hub's
+  city plus trade rule. Client names never appear
 - The pitch is Google Maps and the search results under it, together. Never
   the map pack alone. Every page names both, and the home page has a section
   that shows both on one results page. The profile wins the map, the site
