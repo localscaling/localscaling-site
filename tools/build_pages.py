@@ -1265,7 +1265,7 @@ def ad_page(c, vkey):
     <p class="eyebrow">{c['eyebrow']}</p>
     <h1 id="audit-h1">{c['h1']}</h1>
     <p class="lede">{c['lede']}</p>
-    <p class="audit-fit">Free, no call, in your inbox within 24 hours.</p>
+    <p class="audit-fit">Free, no call, in your inbox within 24 hours. <a href="#results">See three clients' Google numbers</a></p>
   </section>
 
   <div class="form-card">
@@ -1304,7 +1304,9 @@ def ad_page(c, vkey):
   </div>
 </div></main>
 
-<section class="section bg-white" aria-labelledby="checks-title">
+{results_section("ad-results", trades=False)}
+
+<section class="section bg-sand" aria-labelledby="checks-title">
   <div class="container">
     <p class="eyebrow">The audit</p>
     <h2 id="checks-title" class="section-title">What the free audit checks</h2>
@@ -1319,7 +1321,7 @@ def ad_page(c, vkey):
   </div>
 </section>
 
-<section class="section bg-sand topo" aria-labelledby="how-title">
+<section class="section bg-white" aria-labelledby="how-title">
   <div class="container">
     <div class="section-head">
       <div>
@@ -1335,7 +1337,7 @@ def ad_page(c, vkey):
   </div>
 </section>
 
-<section class="section bg-white" aria-labelledby="faq-title">
+<section class="section bg-sand" aria-labelledby="faq-title">
   <div class="container">
     <p class="eyebrow">Questions</p>
     <h2 id="faq-title" class="section-title">What owners ask us first</h2>
@@ -1343,7 +1345,7 @@ def ad_page(c, vkey):
       {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense cities take longer, and we tell you which yours is before you commit.")}
       {faq("Do you need to be in my city to rank my business?", "No. Every signal Google weighs belongs to your business: your location, your profile, your reviews, your site. We work remotely and the math does not change.")}
       {faq("I already have a profile and a website. Do I start over?", "No. You keep your profile and your site. We fix what is holding them back and build from there.")}
-      {faq("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month.")}
+      {faq("What does it cost?", "Campaigns start at $1,500 a month, with no setup fee. Month to month.")}
     </div>
   </div>
 </section>

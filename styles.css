@@ -615,6 +615,7 @@ h1.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: 0.14em; line-hei
 .audit-list li:first-child { border-top: 1px solid var(--line); }
 .audit-list svg { width: 18px; height: 18px; flex-shrink: 0; stroke: var(--forest); fill: none; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
 .audit-fit { font-size: 15px; color: var(--muted); max-width: 440px; }
+.audit-fit a { color: var(--forest); font-weight: 700; white-space: nowrap; }
 .points { border-top: 1px solid var(--line-strong); }
 .point { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--line-strong); }
 .point-icon {
