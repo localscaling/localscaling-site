@@ -18,14 +18,21 @@
 <meta name="theme-color" content="#0e5a38">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20261024c">
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18477157066"></script>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap"></noscript>
+<link rel="stylesheet" href="/styles.css?v=20261026b">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18477157066');
+  // gtag.js loads after the page has drawn; the commands above wait in dataLayer
+  window.addEventListener('load', function () {
+    var t = document.createElement('script');
+    t.async = true;
+    t.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18477157066';
+    document.head.appendChild(t);
+  });
   var ATTR_KEYS = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "matchtype"];
   try {
     var q = new URLSearchParams(location.search), a = {};

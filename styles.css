@@ -715,3 +715,9 @@ h1.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: 0.14em; line-hei
   .audit-intro h1 { font-size: 34px; }
   .pull { font-size: 21px; }
 }
+
+/* Ad landing page form details, 2026-10-26 */
+.result-shot picture, .result-shot img { display: block; }
+.form-legend { font-size: 13px; color: var(--muted); margin: -4px 0 12px; }
+.form-legend .req { color: var(--forest); }
+.field-msg { font-size: 13px; color: #a32d2d; margin-top: 2px; }

@@ -18,14 +18,21 @@
 <meta name="theme-color" content="#0e5a38">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20261024c">
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18477157066"></script>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap"></noscript>
+<link rel="stylesheet" href="/styles.css?v=20261026b">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18477157066');
+  // gtag.js loads after the page has drawn; the commands above wait in dataLayer
+  window.addEventListener('load', function () {
+    var t = document.createElement('script');
+    t.async = true;
+    t.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18477157066';
+    document.head.appendChild(t);
+  });
   var ATTR_KEYS = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "matchtype"];
   try {
     var q = new URLSearchParams(location.search), a = {};
@@ -92,7 +99,7 @@
     </div>
     <figure class="result-figure">
       <div class="result-shot">
-        <img src="/images/results-search-clicks.png" width="1489" height="455" loading="lazy" alt="Google Search Console chart for a business in Vancouver, BC, daily clicks from September 1 to October 19, 2026. Clicks sit at about 3 to 6 a day until September 13, when we started, and climb to about 30 to 45 a day, 585 clicks in total.">
+        <picture><source srcset="/images/results-search-clicks.webp" type="image/webp"><img src="/images/results-search-clicks.png" width="1489" height="455" loading="lazy" alt="Google Search Console chart for a business in Vancouver, BC, daily clicks from September 1 to October 19, 2026. Clicks sit at about 3 to 6 a day until September 13, when we started, and climb to about 30 to 45 a day, 585 clicks in total."></picture>
         <span class="start-mark" style="left:27.13%;top:88.13%;" aria-hidden="true"><span class="start-label">We started here</span></span>
       </div>
       <figcaption><strong>Business in Vancouver, BC.</strong> Search results: clicks from Google search by day, September 1 to October 19, 2026. We started September 13.</figcaption>
@@ -100,14 +107,14 @@
     <div class="result-pair">
       <figure class="result-figure">
         <div class="result-shot">
-          <img src="/images/results-profile-calls.png" width="1175" height="433" loading="lazy" alt="Google Business Profile chart for a business in Plano, TX, monthly calls from May to October 2026, 96 in total. Calls are at their lowest in July, when we started, and rise in September and October.">
+          <picture><source srcset="/images/results-profile-calls.webp" type="image/webp"><img src="/images/results-profile-calls.png" width="1175" height="433" loading="lazy" alt="Google Business Profile chart for a business in Plano, TX, monthly calls from May to October 2026, 96 in total. Calls are at their lowest in July, when we started, and rise in September and October."></picture>
           <span class="start-mark" style="left:40.68%;top:72.06%;" aria-hidden="true"><span class="start-label">We started here</span></span>
         </div>
         <figcaption><strong>Business in Plano, TX.</strong> Google Maps: calls from the Business Profile by month, May to October 2026. We started in July.</figcaption>
       </figure>
       <figure class="result-figure">
         <div class="result-shot">
-          <img src="/images/results-profile-website-clicks.png" width="1188" height="438" loading="lazy" alt="Google Business Profile chart for a business in Boise, ID, monthly website clicks from May to October 2026, 144 in total. Clicks fall to almost zero in July, when we started, then climb to the highest month in October.">
+          <picture><source srcset="/images/results-profile-website-clicks.webp" type="image/webp"><img src="/images/results-profile-website-clicks.png" width="1188" height="438" loading="lazy" alt="Google Business Profile chart for a business in Boise, ID, monthly website clicks from May to October 2026, 144 in total. Clicks fall to almost zero in July, when we started, then climb to the highest month in October."></picture>
           <span class="start-mark" style="left:40.07%;top:83.56%;" aria-hidden="true"><span class="start-label">We started here</span></span>
         </div>
         <figcaption><strong>Business in Boise, ID.</strong> Google Maps: website visits from the Business Profile by month, May to October 2026. We started in July, at the low point.</figcaption>

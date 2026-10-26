@@ -18,14 +18,21 @@
 <meta name="theme-color" content="#0e5a38">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20261024c">
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18477157066"></script>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap"></noscript>
+<link rel="stylesheet" href="/styles.css?v=20261026b">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18477157066');
+  // gtag.js loads after the page has drawn; the commands above wait in dataLayer
+  window.addEventListener('load', function () {
+    var t = document.createElement('script');
+    t.async = true;
+    t.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18477157066';
+    document.head.appendChild(t);
+  });
   var ATTR_KEYS = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "matchtype"];
   try {
     var q = new URLSearchParams(location.search), a = {};
@@ -267,9 +274,23 @@
     const el = document.getElementById(id);
     if (!el) return;
     el.addEventListener('blur', () => {
-      const bad = !el.value.trim() || (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim()));
+      const v = el.value.trim();
+      const bad = !v || (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v));
       el.classList.toggle('error', bad);
-      if (bad) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+      let msg = document.getElementById(id + '-msg');
+      if (bad) {
+        el.setAttribute('aria-invalid', 'true');
+        if (!msg) {
+          msg = document.createElement('p');
+          msg.className = 'field-msg'; msg.id = id + '-msg'; msg.setAttribute('role', 'alert');
+          el.insertAdjacentElement('afterend', msg);
+          el.setAttribute('aria-describedby', ((el.getAttribute('aria-describedby') || '') + ' ' + msg.id).trim());
+        }
+        msg.textContent = !v ? 'This one is needed for your audit.' : 'Check the email, like you@yourbusiness.com';
+      } else {
+        el.removeAttribute('aria-invalid');
+        if (msg) msg.remove();
+      }
     });
   });
 </script>

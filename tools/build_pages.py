@@ -5,7 +5,8 @@ import os, sys, json
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(SITE, "tools"))
 
-STYLE_VERSION = "20261024c"  # bump when styles.css changes so browsers fetch the new file
+STYLE_VERSION = "20261026b"  # bump when styles.css changes so browsers fetch the new file
+PRICE = "$1,500"  # starting monthly retainer. Every page reads it from here
 FORM_APPLY = "https://formspree.io/f/mgoqbjbw"
 FORM_AUDIT = "https://formspree.io/f/mnpnqnyd"
 GOOGLE_TAG = "AW-18477157066"  # Google Ads tag. Conversions fire on /audit-thank-you and /thank-you
@@ -15,12 +16,18 @@ GOOGLE_TAG = "AW-18477157066"  # Google Ads tag. Conversions fire on /audit-than
 ATTR_KEYS = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "matchtype"]
 ATTR_FIELDS = ATTR_KEYS + ["landing_page", "first_seen"]
 ATTR_INPUTS = "".join(f'<input type="hidden" name="{f}" data-attr="{f}" value="">' for f in ATTR_FIELDS)
-GTAG = f'''<script async src="https://www.googletagmanager.com/gtag/js?id={GOOGLE_TAG}"></script>
-<script>
+GTAG = f'''<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
   gtag('config', '{GOOGLE_TAG}');
+  // gtag.js loads after the page has drawn; the commands above wait in dataLayer
+  window.addEventListener('load', function () {{
+    var t = document.createElement('script');
+    t.async = true;
+    t.src = 'https://www.googletagmanager.com/gtag/js?id={GOOGLE_TAG}';
+    document.head.appendChild(t);
+  }});
   var ATTR_KEYS = {json.dumps(ATTR_KEYS)};
   try {{
     var q = new URLSearchParams(location.search), a = {{}};
@@ -59,7 +66,8 @@ def head(title, desc, path, robots="index, follow"):
 <meta name="theme-color" content="#0e5a38">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=League+Spartan:wght@800&display=swap"></noscript>
 <link rel="stylesheet" href="/styles.css?v={STYLE_VERSION}">
 {GTAG}
 </head>
@@ -257,9 +265,23 @@ FORM_JS = '''
     const el = document.getElementById(id);
     if (!el) return;
     el.addEventListener('blur', () => {
-      const bad = !el.value.trim() || (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim()));
+      const v = el.value.trim();
+      const bad = !v || (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v));
       el.classList.toggle('error', bad);
-      if (bad) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+      let msg = document.getElementById(id + '-msg');
+      if (bad) {
+        el.setAttribute('aria-invalid', 'true');
+        if (!msg) {
+          msg = document.createElement('p');
+          msg.className = 'field-msg'; msg.id = id + '-msg'; msg.setAttribute('role', 'alert');
+          el.insertAdjacentElement('afterend', msg);
+          el.setAttribute('aria-describedby', ((el.getAttribute('aria-describedby') || '') + ' ' + msg.id).trim());
+        }
+        msg.textContent = !v ? 'This one is needed for your audit.' : 'Check the email, like you@yourbusiness.com';
+      } else {
+        el.removeAttribute('aria-invalid');
+        if (msg) msg.remove();
+      }
     });
   });
 </script>
@@ -344,7 +366,7 @@ def results_section(title_id, trades=True):
     </div>
     <figure class="result-figure">
       <div class="result-shot">
-        <img src="/images/results-search-clicks.png" width="1489" height="455" loading="lazy" alt="Google Search Console chart for a {alt_who["dentist"]}, daily clicks from September 1 to October 19, 2026. Clicks sit at about 3 to 6 a day until September 13, when we started, and climb to about 30 to 45 a day, 585 clicks in total.">
+        <picture><source srcset="/images/results-search-clicks.webp" type="image/webp"><img src="/images/results-search-clicks.png" width="1489" height="455" loading="lazy" alt="Google Search Console chart for a {alt_who["dentist"]}, daily clicks from September 1 to October 19, 2026. Clicks sit at about 3 to 6 a day until September 13, when we started, and climb to about 30 to 45 a day, 585 clicks in total."></picture>
         <span class="start-mark" style="left:27.13%;top:88.13%;" aria-hidden="true"><span class="start-label">We started here</span></span>
       </div>
       <figcaption><strong>{who["dentist"]}.</strong> Search results: clicks from Google search by day, September 1 to October 19, 2026. We started September 13.</figcaption>
@@ -352,14 +374,14 @@ def results_section(title_id, trades=True):
     <div class="result-pair">
       <figure class="result-figure">
         <div class="result-shot">
-          <img src="/images/results-profile-calls.png" width="1175" height="433" loading="lazy" alt="Google Business Profile chart for a {alt_who["plumber"]}, monthly calls from May to October 2026, 96 in total. Calls are at their lowest in July, when we started, and rise in September and October.">
+          <picture><source srcset="/images/results-profile-calls.webp" type="image/webp"><img src="/images/results-profile-calls.png" width="1175" height="433" loading="lazy" alt="Google Business Profile chart for a {alt_who["plumber"]}, monthly calls from May to October 2026, 96 in total. Calls are at their lowest in July, when we started, and rise in September and October."></picture>
           <span class="start-mark" style="left:40.68%;top:72.06%;" aria-hidden="true"><span class="start-label">We started here</span></span>
         </div>
         <figcaption><strong>{who["plumber"]}.</strong> Google Maps: calls from the Business Profile by month, May to October 2026. We started in July.</figcaption>
       </figure>
       <figure class="result-figure">
         <div class="result-shot">
-          <img src="/images/results-profile-website-clicks.png" width="1188" height="438" loading="lazy" alt="Google Business Profile chart for a {alt_who["roofer"]}, monthly website clicks from May to October 2026, 144 in total. Clicks fall to almost zero in July, when we started, then climb to the highest month in October.">
+          <picture><source srcset="/images/results-profile-website-clicks.webp" type="image/webp"><img src="/images/results-profile-website-clicks.png" width="1188" height="438" loading="lazy" alt="Google Business Profile chart for a {alt_who["roofer"]}, monthly website clicks from May to October 2026, 144 in total. Clicks fall to almost zero in July, when we started, then climb to the highest month in October."></picture>
           <span class="start-mark" style="left:40.07%;top:83.56%;" aria-hidden="true"><span class="start-label">We started here</span></span>
         </div>
         <figcaption><strong>{who["roofer"]}.</strong> Google Maps: website visits from the Business Profile by month, May to October 2026. We started in July, at the low point.</figcaption>
@@ -402,7 +424,7 @@ ICON_SITE = '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" r
 
 index = head(
   "Local SEO for Service Businesses | LocalScaling",
-  "LocalScaling gets local service businesses to the top of Google Maps and the search results under it. Starting at $1,500/mo, month to month. Built for contractors, clinics, practices, and the trades.",
+  f"LocalScaling gets local service businesses to the top of Google Maps and the search results under it. Starting at {PRICE}/mo, month to month. Built for contractors, clinics, practices, and the trades.",
   "/",
 ).replace("<body>", "<body class=\"has-sticky\">") + NAV + f'''
 <main id="main">
@@ -418,7 +440,7 @@ index = head(
       </div>
       <p class="cta-note"><strong>Free.</strong> No call required. Sent to your inbox within 24 hours.</p>
       <ul class="hero-facts">
-        <li>{TICK}Starting at $1,500/mo</li>
+        <li>{TICK}Starting at {PRICE}/mo</li>
         <li>{TICK}Month to month</li>
         <li>{TICK}No setup fee</li>
       </ul>
@@ -548,7 +570,7 @@ index = head(
     <aside class="facts-card reveal reveal-2" aria-labelledby="facts-title">
       <h3 id="facts-title">The short version</h3>
       <dl class="facts">
-        <div class="fact"><dt>Retainer</dt><dd>Starting at $1,500/mo</dd></div>
+        <div class="fact"><dt>Retainer</dt><dd>Starting at {PRICE}/mo</dd></div>
         <div class="fact"><dt>Term</dt><dd>Month to month</dd></div>
         <div class="fact"><dt>Setup fee</dt><dd>None</dd></div>
         <div class="fact"><dt>Who runs it</dt><dd>One operator</dd></div>
@@ -587,7 +609,7 @@ index = head(
       {faq("Do you need to be in my city to rank my business?", "No. Every signal Google weighs belongs to your business: your location, your profile, your reviews, your site. We work remotely and the math does not change.")}
       {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense cities take longer, and we tell you which yours is before you commit.")}
       {faq("I already have a profile and a website. Do I start over?", "No. You keep your profile and your site. We fix what is holding them back and build from there.")}
-      {faq("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month.")}
+      {faq("What does it cost?", f"Campaigns start at {PRICE} a month, with no setup fee. Month to month.")}
     </div>
   </div>
 </section>
@@ -644,8 +666,8 @@ apply = head(
           <label for="fbudget">Monthly budget <span class="req" aria-hidden="true">*</span></label>
           <select id="fbudget" name="budget" required>
             <option value="" disabled selected>Select a range</option>
-            <option value="Under $1,500/mo">Under $1,500/mo</option>
-            <option value="$1,500 to $2,500/mo">$1,500 to $2,500/mo</option>
+            <option value="Under {PRICE}/mo">Under {PRICE}/mo</option>
+            <option value="{PRICE} to $2,500/mo">{PRICE} to $2,500/mo</option>
             <option value="$2,500/mo and up">$2,500/mo and up</option>
           </select>
         </div>
@@ -961,7 +983,7 @@ def city_page(c):
     </div>
     <p class="cta-note"><strong>Free.</strong> No call required. Sent to your inbox within 24 hours.</p>
     <ul class="hero-facts">
-      <li>{TICK}Starting at $1,500/mo</li>
+      <li>{TICK}Starting at {PRICE}/mo</li>
       <li>{TICK}Month to month</li>
       <li>{TICK}Local services only</li>
     </ul>
@@ -1078,7 +1100,7 @@ def industry_page(c):
         </div>
         <p class="cta-note"><strong>Free.</strong> No call required. Sent to your inbox within 24 hours.</p>
         <ul class="hero-facts">
-          <li>{TICK}Starting at $1,500/mo</li>
+          <li>{TICK}Starting at {PRICE}/mo</li>
           <li>{TICK}Month to month</li>
           <li>{TICK}Local services only</li>
         </ul>
@@ -1225,11 +1247,11 @@ AD_FOOTER = """
 
 REQ = ' <span class="req" aria-hidden="true">*</span>'
 AD_FIELDS = {
-    "name": ('fname', 'Name', '<input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>'),
-    "email": ('femail', 'Email', '<input type="email" id="femail" name="email" placeholder="john@yourbiz.com" autocomplete="email" required>'),
-    "business": ('fbiz', 'Business name', '<input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>'),
+    "name": ('fname', 'Name', '<input type="text" id="fname" name="name" autocomplete="name" required>'),
+    "email": ('femail', 'Email', '<input type="email" id="femail" name="email" placeholder="you@yourbusiness.com" autocomplete="email" required>'),
+    "business": ('fbiz', 'Business name', '<input type="text" id="fbiz" name="business" autocomplete="organization" required>'),
     "website": ('fsite', 'Website', '<input type="text" id="fsite" name="website" placeholder="yourbusiness.com" inputmode="url" autocomplete="url" required>'),
-    "city": ('fcity', 'City you serve', '<input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>'),
+    "city": ('fcity', 'City you serve', '<input type="text" id="fcity" name="city" placeholder="City, state" autocomplete="address-level2" required>'),
 }
 
 def ad_field(key):
@@ -1271,6 +1293,7 @@ def ad_page(c, vkey):
   <div class="form-card">
     <h2>Get your free audit</h2>
     <p class="sub">{v['count_word']} quick fields. We email the audit within 24 hours.</p>
+    <p class="form-legend"><span class="req" aria-hidden="true">*</span> Required</p>
 
     <form id="auditForm" action="{FORM_AUDIT}" method="POST" novalidate>
       <input type="hidden" name="_subject" value="New free SEO audit request ({c['industry']}, ad page {vkey.upper()})">
@@ -1300,7 +1323,7 @@ def ad_page(c, vkey):
       </button>
     </form>
 
-    <p class="form-footer">No sales call unless you ask for one.</p>
+    <p class="form-footer">No sales call unless you ask for one. Month to month, no setup fee.<br>Your details are only used for your audit and never shared. <a href="/privacy">Privacy</a></p>
   </div>
 </div></main>
 
@@ -1317,7 +1340,7 @@ def ad_page(c, vkey):
       <li>{TICK}Reviews next to the {c['plural']} above you</li>
       <li>{TICK}Who holds the map and the results, and why</li>
     </ul>
-    <p class="audit-fit">The audit is free and yours to keep. If you want us to do the work after, it is starting at $1,500/mo, month to month, with no setup fee.</p>
+    <p class="audit-fit">The audit is free and yours to keep. If you want us to do the work after, it is starting at {PRICE}/mo, month to month, with no setup fee.</p>
   </div>
 </section>
 
@@ -1345,7 +1368,7 @@ def ad_page(c, vkey):
       {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense cities take longer, and we tell you which yours is before you commit.")}
       {faq("Do you need to be in my city to rank my business?", "No. Every signal Google weighs belongs to your business: your location, your profile, your reviews, your site. We work remotely and the math does not change.")}
       {faq("I already have a profile and a website. Do I start over?", "No. You keep your profile and your site. We fix what is holding them back and build from there.")}
-      {faq("What does it cost?", "Campaigns start at $1,500 a month, with no setup fee. Month to month.")}
+      {faq("What does it cost?", f"Campaigns start at {PRICE} a month, with no setup fee. Month to month.")}
     </div>
   </div>
 </section>
