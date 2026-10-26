@@ -60,9 +60,10 @@
     <p class="sub">Five quick fields. We email the audit within 24 hours.</p>
 
     <form id="auditForm" action="https://formspree.io/f/mnpnqnyd" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="New free SEO audit request (Moving, ad page)">
+      <input type="hidden" name="_subject" value="New free SEO audit request (Moving, ad page A)">
       <input type="hidden" name="industry" value="Moving">
       <input type="hidden" name="form_page" value="/moving-company-seo-audit">
+      <input type="hidden" name="form_variant" value="a">
       <input type="hidden" name="gclid" data-attr="gclid" value=""><input type="hidden" name="utm_source" data-attr="utm_source" value=""><input type="hidden" name="utm_medium" data-attr="utm_medium" value=""><input type="hidden" name="utm_campaign" data-attr="utm_campaign" value=""><input type="hidden" name="utm_term" data-attr="utm_term" value=""><input type="hidden" name="utm_content" data-attr="utm_content" value=""><input type="hidden" name="matchtype" data-attr="matchtype" value=""><input type="hidden" name="landing_page" data-attr="landing_page" value=""><input type="hidden" name="first_seen" data-attr="first_seen" value="">
       <div class="honey" aria-hidden="true">
         <label for="fcompany">Leave this empty</label>
@@ -71,52 +72,34 @@
 
       <div class="field-row">
         <div class="field">
-          <label for="fname">Name</label>
+          <label for="fname">Name <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>
         </div>
         <div class="field">
-          <label for="femail">Email</label>
+          <label for="femail">Email <span class="req" aria-hidden="true">*</span></label>
           <input type="email" id="femail" name="email" placeholder="john@yourbiz.com" autocomplete="email" required>
         </div>
       </div>
-
-      <div class="field">
-        <label for="fbiz">Business name</label>
-        <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
-      </div>
-
       <div class="field-row">
         <div class="field">
-          <label for="fsite">Website</label>
+          <label for="fbiz">Business name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="fsite">Website <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="fsite" name="website" placeholder="yourbusiness.com" inputmode="url" autocomplete="url" required>
         </div>
+      </div>
         <div class="field">
-          <label for="fcity">City you serve</label>
+          <label for="fcity">City you serve <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>
         </div>
-      </div>
 
-      <details class="more-fields">
-        <summary>Add more detail <span>(optional)</span></summary>
-        <div>
       <div class="field">
-        <label for="fgbp">Google Business Profile link</label>
-        <p class="hint" id="fgbp-hint">Find your business on Google Maps, tap Share, and paste the link here.</p>
-        <input type="text" id="fgbp" name="gbp_link" placeholder="maps.app.goo.gl/..." inputmode="url" aria-describedby="fgbp-hint">
+        <label for="fphone">Phone <span class="opt">(optional)</span></label>
+        <p class="hint" id="fphone-hint">Only used if we cannot reach you by email.</p>
+        <input type="tel" id="fphone" name="phone" placeholder="(555) 555-0100" autocomplete="tel" aria-describedby="fphone-hint">
       </div>
-
-      <div class="field-row">
-        <div class="field">
-          <label for="fsearch">Search you want to win</label>
-          <input type="text" id="fsearch" name="target_search" placeholder="local movers Denver">
-        </div>
-        <div class="field">
-          <label for="fphone">Phone</label>
-          <input type="tel" id="fphone" name="phone" placeholder="(555) 555-0100" autocomplete="tel">
-        </div>
-      </div>
-        </div>
-      </details>
 
       <div class="form-error" id="formError" role="alert">
         Something went wrong. Email us at <a href="mailto:info@localscaling.com">info@localscaling.com</a>
@@ -220,7 +203,7 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-bottom">
-      <span>© 2026 LocalScaling</span>
+      <span>© 2026 LocalScaling · <a href="/privacy">Privacy</a></span>
       <a href="mailto:info@localscaling.com">info@localscaling.com</a>
     </div>
   </div>
@@ -246,6 +229,14 @@
     if (!valid) { first.focus(); return; }
 
     try {
+      const em = this.querySelector('[name=email]'), ind = this.querySelector('[name=industry]');
+      sessionStorage.setItem('ls_lead', JSON.stringify({
+        email: em ? em.value : '', industry: ind ? ind.value : '',
+        variant: (this.querySelector('[name=form_variant]') || {}).value || ''
+      }));
+    } catch (err) {}
+
+    try {
       const a = JSON.parse(localStorage.getItem('ls_attr') || 'null');
       if (a && Date.now() - a.t < 90 * 864e5) {
         this.querySelectorAll('[data-attr]').forEach(el => { el.value = a.v[el.dataset.attr] || ''; });
@@ -263,7 +254,7 @@
         headers: { 'Accept': 'application/json' }
       });
       if (res.ok) {
-        window.location.href = '/audit-thank-you';
+        window.location.href = '/ad-audit-thank-you';
       } else {
         throw new Error();
       }
@@ -273,6 +264,16 @@
       submitText.style.display = 'inline';
       spinner.style.display = 'none';
     }
+  });
+  // Check each required field when the visitor leaves it, not only on submit
+  ['fname', 'femail', 'fbiz', 'fsite', 'fcity'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('blur', () => {
+      const bad = !el.value.trim() || (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim()));
+      el.classList.toggle('error', bad);
+      if (bad) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+    });
   });
 </script>
 

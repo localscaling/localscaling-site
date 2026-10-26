@@ -511,6 +511,9 @@ h1.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: 0.14em; line-hei
 .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
 .field label { font-size: 14px; font-weight: 700; color: var(--ink); }
 .field label .opt { font-weight: 500; color: var(--muted); }
+.field label .req { color: var(--forest); }
+.prose h2.section-title { margin-top: 36px; font-size: 22px; }
+.prose a { color: var(--forest); }
 .field .hint { font-size: 14px; color: var(--muted); line-height: 1.4; margin-top: -2px; }
 .field input, .field select, .field textarea {
   width: 100%;

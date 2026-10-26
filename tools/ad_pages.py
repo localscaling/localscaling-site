@@ -63,3 +63,13 @@ PAGES = [
         "search": "kitchen remodel Charlotte",
     },
 ]
+
+# Form versions. Each trade gets one page per version: version "a" lives at the
+# trade slug, "b" at the slug plus "-b". Split clicks between them with a Google
+# Ads experiment and keep the version with the lower cost per qualified lead.
+# Phone is optional on both. Google Business Profile link and target search
+# moved to the thank-you page.
+FORM_VARIANTS = {
+    "a": {"suffix": "", "count_word": "Five", "fields": ["name", "email", "business", "website", "city"]},
+    "b": {"suffix": "-b", "count_word": "Three", "fields": ["email", "website", "city"]},
+}

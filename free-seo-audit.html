@@ -83,32 +83,32 @@
 
       <div class="field-row">
         <div class="field">
-          <label for="fname">Name</label>
+          <label for="fname">Name <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>
         </div>
         <div class="field">
-          <label for="femail">Email</label>
+          <label for="femail">Email <span class="req" aria-hidden="true">*</span></label>
           <input type="email" id="femail" name="email" placeholder="john@yourbiz.com" autocomplete="email" required>
         </div>
       </div>
 
       <div class="field">
-        <label for="fbiz">Business name</label>
+        <label for="fbiz">Business name <span class="req" aria-hidden="true">*</span></label>
         <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
       </div>
 
       <div class="field">
-        <label for="fsite">Website</label>
+        <label for="fsite">Website <span class="req" aria-hidden="true">*</span></label>
         <input type="text" id="fsite" name="website" placeholder="yourbusiness.com" inputmode="url" autocomplete="url" required>
       </div>
 
       <div class="field-row">
         <div class="field">
-          <label for="fcity">City you serve</label>
+          <label for="fcity">City you serve <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>
         </div>
         <div class="field">
-          <label for="ftrade">Industry</label>
+          <label for="ftrade">Industry <span class="req" aria-hidden="true">*</span></label>
           <select id="ftrade" name="industry" required>
             <option value="" disabled selected>Select one</option>
             <optgroup label="Trades and home services">
@@ -143,24 +143,24 @@
         <summary>Add more detail <span>(optional)</span></summary>
         <div>
       <div class="field">
-        <label for="fgbp">Google Business Profile link</label>
+        <label for="fgbp">Google Business Profile link <span class="opt">(optional)</span></label>
         <p class="hint" id="fgbp-hint">Find your business on Google Maps, tap Share, and paste the link here.</p>
         <input type="text" id="fgbp" name="gbp_link" placeholder="maps.app.goo.gl/..." inputmode="url" aria-describedby="fgbp-hint">
       </div>
 
       <div class="field-row">
         <div class="field">
-          <label for="fsearch">Search you want to win</label>
+          <label for="fsearch">Search you want to win <span class="opt">(optional)</span></label>
           <input type="text" id="fsearch" name="target_search" placeholder="emergency plumber Dallas">
         </div>
         <div class="field">
-          <label for="fphone">Phone</label>
+          <label for="fphone">Phone <span class="opt">(optional)</span></label>
           <input type="tel" id="fphone" name="phone" placeholder="(555) 555-0100" autocomplete="tel">
         </div>
       </div>
 
       <div class="field">
-        <label for="fnotes">Anything else we should look at?</label>
+        <label for="fnotes">Anything else we should look at? <span class="opt">(optional)</span></label>
         <textarea id="fnotes" name="notes" placeholder="A competitor that keeps beating you, a listing with the wrong number, a second location..."></textarea>
       </div>
         </div>
@@ -200,7 +200,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 LocalScaling</span>
+      <span>© 2026 LocalScaling · <a href="/privacy">Privacy</a></span>
       <a href="mailto:info@localscaling.com">info@localscaling.com</a>
     </div>
   </div>
@@ -224,6 +224,14 @@
       if (!el.value.trim()) { el.classList.add('error'); el.setAttribute('aria-invalid', 'true'); valid = false; first = first || el; }
     });
     if (!valid) { first.focus(); return; }
+
+    try {
+      const em = this.querySelector('[name=email]'), ind = this.querySelector('[name=industry]');
+      sessionStorage.setItem('ls_lead', JSON.stringify({
+        email: em ? em.value : '', industry: ind ? ind.value : '',
+        variant: (this.querySelector('[name=form_variant]') || {}).value || ''
+      }));
+    } catch (err) {}
 
     try {
       const a = JSON.parse(localStorage.getItem('ls_attr') || 'null');
@@ -253,6 +261,16 @@
       submitText.style.display = 'inline';
       spinner.style.display = 'none';
     }
+  });
+  // Check each required field when the visitor leaves it, not only on submit
+  ['fname', 'femail', 'fbiz', 'fsite', 'fcity', 'ftrade'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('blur', () => {
+      const bad = !el.value.trim() || (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim()));
+      el.classList.toggle('error', bad);
+      if (bad) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+    });
   });
 </script>
 
