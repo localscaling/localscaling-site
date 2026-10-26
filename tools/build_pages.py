@@ -111,7 +111,7 @@ FOOTER = f'''
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 LocalScaling</span>
+      <span>© 2026 LocalScaling · <a href="/privacy">Privacy</a></span>
       <a href="mailto:info@localscaling.com">info@localscaling.com</a>
     </div>
   </div>
@@ -216,6 +216,14 @@ FORM_JS = '''
     if (!valid) { first.focus(); return; }
 
     try {
+      const em = this.querySelector('[name=email]'), ind = this.querySelector('[name=industry]');
+      sessionStorage.setItem('ls_lead', JSON.stringify({
+        email: em ? em.value : '', industry: ind ? ind.value : '',
+        variant: (this.querySelector('[name=form_variant]') || {}).value || ''
+      }));
+    } catch (err) {}
+
+    try {
       const a = JSON.parse(localStorage.getItem('ls_attr') || 'null');
       if (a && Date.now() - a.t < 90 * 864e5) {
         this.querySelectorAll('[data-attr]').forEach(el => { el.value = a.v[el.dataset.attr] || ''; });
@@ -243,6 +251,16 @@ FORM_JS = '''
       submitText.style.display = 'inline';
       spinner.style.display = 'none';
     }
+  });
+  // Check each required field when the visitor leaves it, not only on submit
+  %(ids)s.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('blur', () => {
+      const bad = !el.value.trim() || (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim()));
+      el.classList.toggle('error', bad);
+      if (bad) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+    });
   });
 </script>
 '''
@@ -602,28 +620,28 @@ apply = head(
 
         <div class="field-row">
           <div class="field">
-            <label for="fname">Name</label>
+            <label for="fname">Name <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>
           </div>
           <div class="field">
-            <label for="femail">Email</label>
+            <label for="femail">Email <span class="req" aria-hidden="true">*</span></label>
             <input type="email" id="femail" name="email" placeholder="john@yourbiz.com" autocomplete="email" required>
           </div>
         </div>
 
         <div class="field-row">
           <div class="field">
-            <label for="fbiz">Business name</label>
+            <label for="fbiz">Business name <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
           </div>
           <div class="field">
-            <label for="fcity">City</label>
+            <label for="fcity">City <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>
           </div>
         </div>
 
         <div class="field">
-          <label for="fbudget">Monthly budget</label>
+          <label for="fbudget">Monthly budget <span class="req" aria-hidden="true">*</span></label>
           <select id="fbudget" name="budget" required>
             <option value="" disabled selected>Select a range</option>
             <option value="Under $1,500/mo">Under $1,500/mo</option>
@@ -734,32 +752,32 @@ audit = head(
 
       <div class="field-row">
         <div class="field">
-          <label for="fname">Name</label>
+          <label for="fname">Name <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>
         </div>
         <div class="field">
-          <label for="femail">Email</label>
+          <label for="femail">Email <span class="req" aria-hidden="true">*</span></label>
           <input type="email" id="femail" name="email" placeholder="john@yourbiz.com" autocomplete="email" required>
         </div>
       </div>
 
       <div class="field">
-        <label for="fbiz">Business name</label>
+        <label for="fbiz">Business name <span class="req" aria-hidden="true">*</span></label>
         <input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>
       </div>
 
       <div class="field">
-        <label for="fsite">Website</label>
+        <label for="fsite">Website <span class="req" aria-hidden="true">*</span></label>
         <input type="text" id="fsite" name="website" placeholder="yourbusiness.com" inputmode="url" autocomplete="url" required>
       </div>
 
       <div class="field-row">
         <div class="field">
-          <label for="fcity">City you serve</label>
+          <label for="fcity">City you serve <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>
         </div>
         <div class="field">
-          <label for="ftrade">Industry</label>
+          <label for="ftrade">Industry <span class="req" aria-hidden="true">*</span></label>
           <select id="ftrade" name="industry" required>
             <option value="" disabled selected>Select one</option>
             <optgroup label="Trades and home services">
@@ -794,24 +812,24 @@ audit = head(
         <summary>Add more detail <span>(optional)</span></summary>
         <div>
       <div class="field">
-        <label for="fgbp">Google Business Profile link</label>
+        <label for="fgbp">Google Business Profile link <span class="opt">(optional)</span></label>
         <p class="hint" id="fgbp-hint">Find your business on Google Maps, tap Share, and paste the link here.</p>
         <input type="text" id="fgbp" name="gbp_link" placeholder="maps.app.goo.gl/..." inputmode="url" aria-describedby="fgbp-hint">
       </div>
 
       <div class="field-row">
         <div class="field">
-          <label for="fsearch">Search you want to win</label>
+          <label for="fsearch">Search you want to win <span class="opt">(optional)</span></label>
           <input type="text" id="fsearch" name="target_search" placeholder="emergency plumber Dallas">
         </div>
         <div class="field">
-          <label for="fphone">Phone</label>
+          <label for="fphone">Phone <span class="opt">(optional)</span></label>
           <input type="tel" id="fphone" name="phone" placeholder="(555) 555-0100" autocomplete="tel">
         </div>
       </div>
 
       <div class="field">
-        <label for="fnotes">Anything else we should look at?</label>
+        <label for="fnotes">Anything else we should look at? <span class="opt">(optional)</span></label>
         <textarea id="fnotes" name="notes" placeholder="A competitor that keeps beating you, a listing with the wrong number, a second location..."></textarea>
       </div>
         </div>
@@ -1180,6 +1198,287 @@ def industry_page(c):
     page += cta(c["cta_h"], c["cta_p"]) + "\n</main>\n" + STICKY + FOOTER + REVEAL_JS + "\n</body>\n</html>\n"
     return page
 
+# ---------------- AD LANDING PAGES ----------------
+# Google Ads traffic only. noindex, no menu, form on the first screen.
+# Two form versions per trade, each at its own URL, so a Google Ads experiment
+# can split clicks between them and report conversions per version.
+from ad_pages import PAGES as AD_PAGES, FORM_VARIANTS
+
+AD_NAV = f"""
+<header class="nav">
+  <div class="nav-inner">
+    <span class="logo">{LOGO}</span>
+  </div>
+</header>
+"""
+
+AD_FOOTER = """
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 LocalScaling · <a href="/privacy">Privacy</a></span>
+      <a href="mailto:info@localscaling.com">info@localscaling.com</a>
+    </div>
+  </div>
+</footer>
+"""
+
+REQ = ' <span class="req" aria-hidden="true">*</span>'
+AD_FIELDS = {
+    "name": ('fname', 'Name', '<input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>'),
+    "email": ('femail', 'Email', '<input type="email" id="femail" name="email" placeholder="john@yourbiz.com" autocomplete="email" required>'),
+    "business": ('fbiz', 'Business name', '<input type="text" id="fbiz" name="business" placeholder="Smith & Sons LLC" autocomplete="organization" required>'),
+    "website": ('fsite', 'Website', '<input type="text" id="fsite" name="website" placeholder="yourbusiness.com" inputmode="url" autocomplete="url" required>'),
+    "city": ('fcity', 'City you serve', '<input type="text" id="fcity" name="city" placeholder="Dallas, TX" required>'),
+}
+
+def ad_field(key):
+    fid, label, inp = AD_FIELDS[key]
+    return f"""
+        <div class="field">
+          <label for="{fid}">{label}{REQ}</label>
+          {inp}
+        </div>"""
+
+def ad_fields_html(keys):
+    # pair fields two per row, any leftover gets its own row
+    out, i = "", 0
+    while i < len(keys):
+        if i + 1 < len(keys):
+            out += f'\n      <div class="field-row">{ad_field(keys[i])}{ad_field(keys[i+1])}\n      </div>'
+            i += 2
+        else:
+            out += ad_field(keys[i]); i += 1
+    return out
+
+def ad_page(c, vkey):
+    v = FORM_VARIANTS[vkey]
+    slug = c["slug"] + v["suffix"]
+    ids = "[" + ", ".join(f"'{AD_FIELDS[k][0]}'" for k in v["fields"]) + "]"
+    return head(
+      f"{c['eyebrow']} | LocalScaling",
+      f"Free local SEO audit for {c['plural']}. We check your Google Business Profile, listings, website, and reviews against the businesses above you and email you the findings within 24 hours.",
+      "/" + slug, robots="noindex, follow",
+    ) + AD_NAV + f"""
+<main class="audit-page" id="main"><div class="container audit-grid">
+  <section class="audit-intro" aria-labelledby="audit-h1">
+    <p class="eyebrow">{c['eyebrow']}</p>
+    <h1 id="audit-h1">{c['h1']}</h1>
+    <p class="lede">{c['lede']}</p>
+    <p class="audit-fit">Free, no call, in your inbox within 24 hours.</p>
+  </section>
+
+  <div class="form-card">
+    <h2>Get your free audit</h2>
+    <p class="sub">{v['count_word']} quick fields. We email the audit within 24 hours.</p>
+
+    <form id="auditForm" action="{FORM_AUDIT}" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="New free SEO audit request ({c['industry']}, ad page {vkey.upper()})">
+      <input type="hidden" name="industry" value="{c['industry']}">
+      <input type="hidden" name="form_page" value="/{slug}">
+      <input type="hidden" name="form_variant" value="{vkey}">
+      {ATTR_INPUTS}
+      <div class="honey" aria-hidden="true">
+        <label for="fcompany">Leave this empty</label>
+        <input type="text" id="fcompany" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+{ad_fields_html(v['fields'])}
+
+      <div class="field">
+        <label for="fphone">Phone <span class="opt">(optional)</span></label>
+        <p class="hint" id="fphone-hint">Only used if we cannot reach you by email.</p>
+        <input type="tel" id="fphone" name="phone" placeholder="(555) 555-0100" autocomplete="tel" aria-describedby="fphone-hint">
+      </div>
+
+      <div class="form-error" id="formError" role="alert">
+        Something went wrong. Email us at <a href="mailto:info@localscaling.com">info@localscaling.com</a>
+      </div>
+
+      <button type="submit" class="btn btn-clay btn-block" id="submitBtn">
+        <span id="submitText">Send my free audit request</span>
+        <span class="spinner" id="submitSpinner" aria-hidden="true"></span>
+      </button>
+    </form>
+
+    <p class="form-footer">No sales call unless you ask for one.</p>
+  </div>
+</div></main>
+
+<section class="section bg-white" aria-labelledby="checks-title">
+  <div class="container">
+    <p class="eyebrow">The audit</p>
+    <h2 id="checks-title" class="section-title">What the free audit checks</h2>
+    <ul class="audit-list">
+      <li>{TICK}Your Google Business Profile</li>
+      <li>{TICK}Name, address, and phone across listings</li>
+      <li>{TICK}Service and city pages on your site</li>
+      <li>{TICK}Reviews next to the {c['plural']} above you</li>
+      <li>{TICK}Who holds the map and the results, and why</li>
+    </ul>
+    <p class="audit-fit">The audit is free and yours to keep. If you want us to do the work after, it is starting at $1,500/mo, month to month, with no setup fee.</p>
+  </div>
+</section>
+
+<section class="section bg-sand topo" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">What happens next</p>
+        <h2 id="how-title" class="section-title">From form to audit in 24 hours</h2>
+      </div>
+    </div>
+    <div class="steps">
+      {step("1", "You send the form", "It takes about a minute. No call and no card.")}
+      {step("2", "We build your audit", f"We check your profile, your site, your listings, and your reviews against the {c['plural']} above you, on the map and in the results.")}
+      {step("3", "It lands in your inbox", "Within 24 hours. You see what is costing you calls and what it takes to fix. If you want us to do the work, reply to the email.")}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white" aria-labelledby="faq-title">
+  <div class="container">
+    <p class="eyebrow">Questions</p>
+    <h2 id="faq-title" class="section-title">What owners ask us first</h2>
+    <div class="faq">
+      {faq("How long until I see results?", "Usually three to six months to start seeing big results. Some areas move sooner, dense cities take longer, and we tell you which yours is before you commit.")}
+      {faq("Do you need to be in my city to rank my business?", "No. Every signal Google weighs belongs to your business: your location, your profile, your reviews, your site. We work remotely and the math does not change.")}
+      {faq("I already have a profile and a website. Do I start over?", "No. You keep your profile and your site. We fix what is holding them back and build from there.")}
+      {faq("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month.")}
+    </div>
+  </div>
+</section>
+
+<section class="bg-forest cta topo" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 id="cta-title">See where your calls are going</h2>
+    <p class="lede">{v['count_word']} fields, no call, and the audit is in your inbox within 24 hours.</p>
+    <div class="cta-actions">
+      <a href="#auditForm" class="btn btn-light">Get my free audit</a>
+    </div>
+  </div>
+</section>
+""" + AD_FOOTER + FORM_JS % {"form": "auditForm", "ids": ids, "next": "/ad-audit-thank-you"} + REVEAL_JS + """
+</body>
+</html>
+"""
+
+# Thank-you page for ad leads. The URL contains "audit-thank-you", so the
+# "Audit request" conversion in Google Ads counts it. The optional details form
+# stays on this page, so it never fires a second conversion.
+ad_thanks = head(
+  "Audit Request Received | LocalScaling",
+  "Your free local SEO audit request is in. We email the audit within 24 hours.",
+  "/ad-audit-thank-you", robots="noindex, follow",
+) + AD_NAV + f"""
+<main class="audit-page" id="main"><div class="container audit-grid">
+  <section class="audit-intro" aria-labelledby="ty-h1">
+    <p class="eyebrow">Request received</p>
+    <h1 id="ty-h1">Your audit is on its way.</h1>
+    <p class="lede">It lands in your inbox within 24 hours, from info@localscaling.com. If you do not see it by then, check your spam folder.</p>
+    <ol class="audit-list">
+      <li>{TICK}We look up your profile, your site, and the businesses above you</li>
+      <li>{TICK}We write up what is costing you calls and what it takes to fix</li>
+      <li>{TICK}You read it whenever suits you. Reply if you want us to do the work</li>
+    </ol>
+  </section>
+
+  <div class="form-card">
+    <h2>Want a sharper audit?</h2>
+    <p class="sub">Optional. Two answers help us check the exact thing you care about.</p>
+    <form id="moreForm" action="{FORM_AUDIT}" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Audit details (follow-up from ad lead)">
+      <input type="hidden" name="email" id="mEmail" value="">
+      <input type="hidden" name="industry" id="mIndustry" value="">
+      <input type="hidden" name="form_variant" id="mVariant" value="">
+      <div class="honey" aria-hidden="true">
+        <label for="mcompany">Leave this empty</label>
+        <input type="text" id="mcompany" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="fgbp">Google Business Profile link <span class="opt">(optional)</span></label>
+        <p class="hint" id="fgbp-hint">Find your business on Google Maps, tap Share, and paste the link here.</p>
+        <input type="text" id="fgbp" name="gbp_link" placeholder="maps.app.goo.gl/..." inputmode="url" aria-describedby="fgbp-hint">
+      </div>
+      <div class="field">
+        <label for="fsearch">Search you want to win <span class="opt">(optional)</span></label>
+        <input type="text" id="fsearch" name="target_search" placeholder="your service and your city">
+      </div>
+      <div class="form-error" id="moreError" role="alert">
+        Something went wrong. Reply to the audit email with these instead.
+      </div>
+      <button type="submit" class="btn btn-clay btn-block" id="moreBtn">Add to my audit</button>
+      <p class="form-footer" id="moreDone" hidden>Got it. We will use these in your audit.</p>
+    </form>
+  </div>
+</div></main>
+""" + AD_FOOTER + """
+<script>
+  (function () {
+    var lead = {};
+    try { lead = JSON.parse(sessionStorage.getItem('ls_lead') || '{}'); } catch (e) {}
+    document.getElementById('mEmail').value = lead.email || '';
+    document.getElementById('mIndustry').value = lead.industry || '';
+    document.getElementById('mVariant').value = lead.variant || '';
+    var f = document.getElementById('moreForm');
+    f.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      if (!document.getElementById('fgbp').value.trim() && !document.getElementById('fsearch').value.trim()) return;
+      var btn = document.getElementById('moreBtn');
+      btn.disabled = true;
+      try {
+        var res = await fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } });
+        if (!res.ok) throw new Error();
+        btn.hidden = true;
+        document.getElementById('moreDone').hidden = false;
+      } catch (err) {
+        document.getElementById('moreError').style.display = 'block';
+        btn.disabled = false;
+      }
+    });
+  })();
+</script>
+</body>
+</html>
+"""
+
+# ---------------- PRIVACY ----------------
+def psec(title, *paras):
+    return f'<h2 class="section-title">{title}</h2>' + "".join(f"<p>{x}</p>" for x in paras)
+
+privacy = head(
+  "Privacy Policy | LocalScaling",
+  "How LocalScaling collects, uses, and protects the information you send through this site.",
+  "/privacy", robots="noindex, follow",
+) + NAV_MIN + f"""
+<main class="section bg-white" id="main">
+  <div class="container prose">
+    <p class="eyebrow">Privacy</p>
+    <h1 class="section-title">Privacy policy</h1>
+    <p>Last updated 2026-10-25. LocalScaling provides local SEO services to service businesses. This page explains what we collect through this site and what we do with it. Questions go to <a href="mailto:info@localscaling.com">info@localscaling.com</a>.</p>
+    {psec("What we collect",
+      "What you type into our forms: your name, email, business name, website, the city you serve, and anything optional you choose to add, such as a phone number or your Google Business Profile link.",
+      "How you reached the site: if you arrive from one of our ads, the site stores the ad click ID, the search keyword, and the page you landed on, and sends them with your form so we know which ad brought you.",
+      "Site usage: the Google tag on this site uses cookies to record visits and form submissions for our Google Ads account.")}
+    {psec("How we use it",
+      "To build and send the audit you asked for and to reply to you. To measure which ads lead to audit requests and clients. To show our ads to people who have visited this site, on Google and on partner sites.",
+      "We do not sell your information.")}
+    {psec("Who else handles it",
+      "Formspree receives our form submissions and passes them to us by email. Google provides the Google tag and our ads.",
+      "Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google's use of advertising cookies lets it and its partners serve ads to you based on your visits to this site and other sites on the internet.")}
+    {psec("Your choices",
+      'You can turn off personalized ads from Google in <a href="https://myadcenter.google.com/">My Ad Center</a>, and from many other ad companies at <a href="https://www.aboutads.info/">aboutads.info</a>. You can also block or delete cookies in your browser.',
+      "To see, correct, or delete what we hold about you, email info@localscaling.com and we will handle it.")}
+    {psec("How long we keep it",
+      "We keep form details for as long as we need them to send your audit and follow up, and delete them when you ask.")}
+    {psec("Changes",
+      "If this policy changes, the date at the top of this page changes with it.")}
+  </div>
+</main>
+""" + FOOTER + """
+</body>
+</html>
+"""
+
 files = {
   "index.html": index,
   "apply.html": apply,
@@ -1191,6 +1490,11 @@ for cfg in CITY_PAGES:
     files[cfg["slug"] + ".html"] = city_page(cfg)
 for cfg in INDUSTRY_PAGES:
     files[cfg["slug"] + ".html"] = industry_page(cfg)
+for cfg in AD_PAGES:
+    for vkey, v in FORM_VARIANTS.items():
+        files[cfg["slug"] + v["suffix"] + ".html"] = ad_page(cfg, vkey)
+files["ad-audit-thank-you.html"] = ad_thanks
+files["privacy.html"] = privacy
 for name, content in files.items():
     p = os.path.join(SITE, name)
     os.makedirs(os.path.dirname(p), exist_ok=True)
