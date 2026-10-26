@@ -1448,7 +1448,7 @@ def psec(title, *paras):
 privacy = head(
   "Privacy Policy | LocalScaling",
   "How LocalScaling collects, uses, and protects the information you send through this site.",
-  "/privacy",
+  "/privacy", robots="noindex, follow",
 ) + NAV_MIN + f"""
 <main class="section bg-white" id="main">
   <div class="container prose">
