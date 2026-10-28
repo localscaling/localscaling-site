@@ -606,4 +606,64 @@ FORT_WORTH = {
   "cta_p": "We map where you rank across Fort Worth and the towns you serve, show you which areas are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH]
+CHARLOTTE = {
+  "slug": "local-seo-charlotte",
+  "city": "Charlotte",
+  "short": "Charlotte",
+  "region": "Mecklenburg County and the towns around it",
+  "title": "Local SEO Agency in Charlotte | LocalScaling",
+  "meta": "Local SEO for Charlotte service businesses. We get contractors, clinics, and firms into the Google map pack and the search results under it, from South End to Huntersville and across the line to Fort Mill. Starting at $1,500/mo.",
+  "eyebrow": "Serving Charlotte, Lake Norman, and both sides of the state line",
+  "h1": "Local SEO agency in Charlotte",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Charlotte neighborhoods and nearby towns their customers search from. The metro spills into two states and four directions, and people here search by the name of the place they live.",
+
+  "why_eyebrow": "Why Charlotte is different",
+  "why_h2": "A metro that sits on a state line",
+  "why_paragraphs": [
+    "Charlotte grew fast, and most of that growth landed outside the old city. Locals call downtown Uptown, and the neighborhoods around it each have their own name and their own crowd. A family in Myers Park and a young couple in NoDa live ten minutes apart and search for different businesses.",
+    ("pull", "Someone in Fort Mill types Fort Mill. Charlotte is the city across the line where they work."),
+    "Head south on I-77 and you are in South Carolina within half an hour. Fort Mill, Tega Cay, and Rock Hill sit in York County, and Indian Land sits in Lancaster County. People there shop in Charlotte and search close to home. The map pays no attention to the state line, and the searcher still types their own town.",
+    "To the north, the towns around Lake Norman have filled in with families: Huntersville, Cornelius, Davidson, and Mooresville. To the east sit Matthews and Mint Hill, and Concord is up past the speedway. I-485 loops around the city, and plenty of people treat it as the line they will not cross for a service call. A roofing company in Steele Creek rarely shows on the map for a homeowner in Cornelius, however strong the profile.",
+  ],
+
+  "search_example": "AC repair Huntersville",
+  "pack_rows": [("Your business", "HVAC contractor · 0.8 mi"), ("Another company", "Air conditioning contractor · 2.0 mi"), ("Another company", "HVAC contractor · 3.3 mi")],
+  "organic_rows": [("AC repair in Huntersville, same day service", "yourbusiness.com"), ("HVAC companies in Huntersville", "a directory"), ("Another company", "anothercompany.com")],
+  "both_intro": "When someone in the Charlotte area searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the neighborhood or town they are searching from. A business that holds a spot in both, in that place, gets the call.",
+
+  "how_h2": "Built around how Charlotte searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across Charlotte and the towns you serve, from Mooresville down to Rock Hill. A search from your own office tells you very little about the other side of the loop. The plan is built on the grid."),
+    ("We build a page for each neighborhood and town", "Nobody in Matthews searches for an accountant in Charlotte. They type Matthews, and someone in Dilworth types Dilworth. Your site and profile are built around the names people actually use."),
+    ("We plan for both sides of the state line", "If you work in Fort Mill or Indian Land, those towns get their own pages and their own reviews from customers there. Your listings match on the North Carolina and South Carolina directories alike, so Google sees one business on both sides."),
+    ("We treat Lake Norman as its own market", "The lake towns sit far enough north that a Charlotte address reads as a drive. If you want that work, it gets its own pages, its own reviews, and its own spot on the grid."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the towns you really cover, photos, and posts. This is what wins the map."),
+    ("Neighborhood and town pages", "One page for each place you want to win, written for the people who live there. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone the same on every directory Google compares, in both Carolinas and in your industry."),
+    ("Review generation", "A follow-up that asks every happy customer at the right moment, so each town you serve has recent reviews from its own people."),
+    ("Monthly reporting", "Where you rank on the grid, town by town, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every area and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across Charlotte and nearby towns",
+  "areas": ["Uptown","South End","NoDa","Plaza Midwood","Dilworth","Myers Park","SouthPark","Ballantyne","University City","Steele Creek","Matthews","Mint Hill","Huntersville","Cornelius","Mooresville","Concord","Gastonia","Fort Mill","Indian Land","Rock Hill"],
+  "areas_note": "This list is where we start. Your own reach decides the plan, so if your part of town is missing, ask and we will tell you straight whether it is winnable.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego", "local-seo-chicago", "local-seo-san-antonio", "local-seo-austin", "local-seo-jacksonville", "local-seo-fort-worth"],
+
+  "faq": [
+    ("Do you need to be in Charlotte to rank my business here?", "No. What Google weighs is your location, your profile, your reviews, and your site. We run Charlotte campaigns remotely and the work is the same."),
+    ("We are in Charlotte and want customers in Fort Mill and Rock Hill. Does the state line matter?", "Google ignores it. Distance still matters, so you reach across with a page for each South Carolina town you serve, a service area that includes them, and reviews from customers there."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some parts of town move sooner than others, and we tell you which yours is before you commit."),
+    ("Can one profile cover the whole metro?", "No single listing reaches from Mooresville to Rock Hill. You win the area around your address first, then reach further with town pages as the profile gets stronger. A second listing needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("We are in Huntersville. Should our pages say Huntersville or Charlotte?", "Both, each on its own page. People nearby search for Huntersville or Lake Norman, and people further south search for Charlotte. Your profile keeps your real address, and your site gets a page for each name you want to win."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of Charlotte you can win.",
+  "cta_p": "We map where you rank across Charlotte, Lake Norman, and the towns over the state line, show you which areas are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE]

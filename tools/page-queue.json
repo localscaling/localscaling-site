@@ -1,9 +1,8 @@
 {
   "publish": true,
   "cadence_days": 4,
-  "last_run": "2026-10-24",
+  "last_run": "2026-10-28",
   "cities": [
-    "Charlotte",
     "Columbus",
     "Indianapolis",
     "San Jose",
@@ -26,7 +25,6 @@
     "New York"
   ],
   "industries": [
-    "physical therapists",
     "pest control companies",
     "landscapers",
     "insurance agents",
@@ -173,6 +171,18 @@
       "name": "family law attorneys",
       "slug": "local-seo-for-family-law-attorneys",
       "date": "2026-10-24"
+    },
+    {
+      "type": "city",
+      "name": "Charlotte",
+      "slug": "local-seo-charlotte",
+      "date": "2026-10-28"
+    },
+    {
+      "type": "industry",
+      "name": "physical therapists",
+      "slug": "local-seo-for-physical-therapists",
+      "date": "2026-10-28"
     }
   ]
 }

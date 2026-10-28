@@ -1160,4 +1160,109 @@ FAMILY_LAW = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three firms ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW]
+PHYSICAL_THERAPISTS = {
+  "slug": "local-seo-for-physical-therapists",
+  "title": "Local SEO for Physical Therapists | LocalScaling",
+  "meta": "Local SEO for physical therapists and PT clinics. We get your clinic into the Google map pack and the search results under it, in the neighborhoods your patients live in, for the care you want to do more of. Starting at $1,500/mo.",
+  "crumb": "Physical therapists",
+  "eyebrow": "Local SEO for physical therapists",
+  "h1": "Local SEO for physical therapists",
+  "lede": "A runner with a sore knee searches on a phone and calls a clinic from the map. A patient whose surgeon handed them a referral looks up the clinic before they book, and reads the pages under the map to see if it feels right. We get your clinic into both places for the neighborhoods you draw from and the care you want to do more of.",
+  "short": "physical therapy clinics",
+  "industry_value": "Chiropractic or physical therapy",
+  "you": "Your clinic",
+
+  "pack_search": "physical therapy near me",
+  "pack_rows": [("Your clinic", "Physical therapy clinic · 0.6 mi"), ("Another clinic", "Physical therapist · 1.4 mi"), ("Another clinic", "Sports medicine clinic · 2.5 mi")],
+  "organic_rows": [("Physical therapy after knee surgery in your city", "yourclinic.com"), ("Best physical therapists near you", "a directory"), ("Another clinic", "anotherclinic.com")],
+  "pack_note": "Three spots. A patient holding a referral slip calls one of these.",
+  "both_intro": "When someone searches for physical therapy, Google shows the map first and the regular results under it. The patient with a referral calls the closest clinic that looks good on the map. The patient comparing options reads the sites under it, checks which clinics take their insurance and treat their problem, and books with the one that answered both. A clinic that holds a spot in both gets both patients.",
+
+  "timeline": [(1, 2, "peak", "New plans, new goals"), (3, 4, "build", "Profile and pages"), (5, 8, "peak", "Sports, yard work, surgery"), (9, 10, "quiet", "Reviews"), (11, 12, "peak", "Deductibles met")],
+  "timeline_start": 3,
+  "timeline_alt": "A twelve month timeline. New patient searches pick up in January and February as insurance plans renew and people start new routines, the profile and pages are built in March and April, searches climb from May to August with sports, yard work, and planned surgeries, settle in September and October, and rise again in November and December as patients who met their deductible try to finish care before the year ends.",
+  "timeline_caption": "The general shape of a physical therapy clinic's year. Injuries and surgeries happen in every month, so the build can start any time. Spring is a good moment to have the profile and pages ready before summer.",
+
+  "intent": [
+    ("physical therapy near me", "Someone with a referral in hand who wants a clinic close to home or work", "Your Google Business Profile"),
+    ("physical therapy after ACL surgery [city]", "A patient with a surgery date who is picking where to do rehab", "A service page"),
+    ("pelvic floor therapist [city]", "Someone who has put off asking about this for a long time", "A service page"),
+    ("vertigo physical therapy [city]", "Someone dizzy for weeks who just learned PT can help", "A service page"),
+    ("do I need a referral for physical therapy", "Someone deciding whether to call you or their doctor first", "A plain answer page"),
+    ("physical therapy in [the neighborhood next door]", "A family ten minutes away whose old clinic closed", "A city page"),
+  ],
+
+  "why_eyebrow": "Why physical therapy is different",
+  "why_h2": "Patients choose the clinic, even with a referral",
+  "why_paragraphs": [
+    "A doctor's referral used to settle where a patient went. Now most patients look up the clinic first. They check the map for distance, the reviews for whether the therapists listened, and the site for their insurance. A referral to a clinic with a thin profile often ends up at the clinic down the street.",
+    "Plenty of patients never see a doctor first. Every state lets people see a physical therapist without a referral in some form, with limits that vary by state, and some insurance plans still ask for one. People search for the problem they have, such as a frozen shoulder or a sore back, and the clinic with a clear page about it gets the call.",
+    ("pull", "A patient comes two or three times a week for weeks. The clinic that is easy to reach wins that schedule."),
+    "Distance matters more here than in most care. Nobody wants a long drive three times a week, so patients pick a clinic near home or work. That makes the map, and the neighborhoods your profile reaches, most of the game.",
+  ],
+
+  "leaks_h2": "Six things we find on most physical therapy profiles",
+  "leaks_intro": "None of them look serious alone. Together they send referrals and new patients to the clinic down the road.",
+  "leaks": [
+    ("Categories that undersell the clinic", "Physical therapy clinic or Physical therapist as the primary, then Sports medicine clinic or Occupational therapist only if that care is really offered. Many clinics stop at one category and leave the rest to competitors."),
+    ("One page called Services", "Post surgery rehab, sports injuries, back pain, vertigo, and pelvic floor therapy on one page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("No word about insurance", "Patients want to know if you are in network before they call. A site that lists the plans you take, and says what happens if yours is not on the list, keeps them from calling someone else."),
+    ("Each location muddled with the others", "Clinic groups often share one phone number and one page for every location. Google cannot tell the clinics apart, so each one ranks worse than it should."),
+    ("Old details on the directories", "A clinic that moved, was bought by a group, or changed its name keeps the old details on health directories for years. The mismatch drags the profile down."),
+    ("Review replies that say too much", "A reply that mentions someone's surgery or injury confirms they are a patient. Short, kind replies with no details are safer and read better to the next person."),
+  ],
+
+  "how_h2": "Built around how patients find a physical therapist",
+  "how": [
+    ("We fix the profile before anything else", "The right primary category, secondary ones only for care you provide, true hours including early and late slots, the conditions you treat as services, the plans you take, and photos of your real gym and team."),
+    ("We build a page for each kind of care", "Post surgery rehab, sports injuries, back and neck pain, vertigo and balance, pelvic floor therapy, and dry needling, only for what you offer. Each one gets its own page, written for the person searching for it. Those pages are what put you in the results under the map."),
+    ("We answer the questions people ask before they book", "Whether they need a referral in your state, which plans you take, what happens at a first visit, and how many visits care usually takes. Plain answers, approved by you, with no promises about outcomes."),
+    ("We make the clinic easy to refer to", "Surgeons and doctors send patients to clinics they trust, and their staff look you up too. A clear page for each surgery you rehab, with your therapists and their training, gives them something to point to."),
+    ("We keep reviews coming", "The front desk asks near the end of a plan of care, when the patient feels the difference, and a text follows with a link. Replies stay short and never confirm anything about anyone's care."),
+    ("We report new patients", "Each month you see where you rank across your area for the searches that matter, how that moved, and how many people called or booked. Traffic stays off the report because nobody pays you in traffic."),
+  ],
+
+  "searches_h2": "What your next patient is typing",
+  "searches": ["physical therapy near me", "physical therapist near me", "physical therapy that takes my insurance", "physical therapy open late", "knee pain physical therapy", "shoulder pain physical therapy", "physical therapy for lower back pain", "do I need a referral for physical therapy"],
+  "specialty_searches": ["pelvic floor physical therapy", "vestibular therapy for vertigo", "ACL rehab", "physical therapy after hip replacement", "rotator cuff rehab", "dry needling", "sports physical therapy", "pediatric physical therapy", "running injury physical therapist", "concussion physical therapy", "plantar fasciitis treatment", "terapia física"],
+  "searches_note": "Add your city or neighborhood to any of these and that is the search. The specialty ones have fewer clinics competing for them. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your care, true hours, the conditions and plans patients look for, and real photos of your clinic. This is what wins the map."),
+    ("Service pages", "One page for each kind of care you want more of, written for the person typing the search. This is what wins the listing under the map."),
+    ("City pages", "One page for each neighborhood or suburb you draw patients from, so people close to your door can find you."),
+    ("Listings that match", "Your clinic name, address, and phone matched across the directories Google checks, including the health and insurance ones."),
+    ("Review generation", "A follow-up near the end of each plan of care that keeps asking all year, with replies that never confirm a patient."),
+    ("Your website", "Built for local search, with your therapists up front, online booking, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which clinics this is for",
+  "fit_yes": [
+    "A clinic with a real location, independent or part of a small group",
+    "Open slots in the schedule and therapists who can take them",
+    "You already help people and have patients who would say so",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You want the schedule full next week. That is an ads job",
+    "You want pages that promise patients will be pain free",
+    "You only see patients at home and want a clinic listing anyway",
+    "You want blog posts by the dozen instead of new patients",
+  ],
+
+  "faq": [
+    ("Most of our patients come from doctor referrals. Do we still need this?", "Yes. Referred patients look you up before they call, and many pick a different clinic if yours looks thin. Doctors' staff check too. A strong profile and clear pages help the referral turn into a booked visit."),
+    ("How long until we see new patients?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Service pages and reviews take longer and keep building."),
+    ("We have several locations. One profile or several?", "One profile for each real location with staff and posted hours, each with its own phone number and its own page on your site. That way each clinic can rank in its own neighborhood."),
+    ("Should each therapist have a Google profile?", "Sometimes. Google allows one for a practitioner who sees patients, and it has rules for how it is named. Set up right it can help. Set up wrong it competes with the clinic. We decide that with you."),
+    ("Can we get more of one kind of patient?", "Partly. The pages and categories decide which searches you win, so we build more around pelvic floor or sports rehab if that is the work you want. Other patients still come."),
+    ("We are out of network with most plans. Does that change anything?", "A little. Patients still search the same way, but the questions change. Your pages explain how payment works and why you work that way, so the people who call are fine with it."),
+    ("Do you write about health on our site?", "We write service pages and city pages in plain words. You approve anything clinical before it publishes, and we make no claims about outcomes."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the clinic patients find first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three clinics ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS]
