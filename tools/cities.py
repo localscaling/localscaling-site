@@ -666,4 +666,65 @@ CHARLOTTE = {
   "cta_p": "We map where you rank across Charlotte, Lake Norman, and the towns over the state line, show you which areas are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE]
+COLUMBUS = {
+  "slug": "local-seo-columbus",
+  "city": "Columbus",
+  "short": "Columbus",
+  "region": "Central Ohio and the suburbs around it",
+  "title": "Local SEO Agency in Columbus | LocalScaling",
+  "meta": "Local SEO for Columbus service businesses. We get contractors, clinics, and firms into the Google map pack and the search results under it, from German Village to Dublin and out to New Albany. Starting at $1,500/mo.",
+  "eyebrow": "Serving Columbus, the suburbs, and Central Ohio",
+  "h1": "Local SEO agency in Columbus",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Columbus neighborhoods and suburbs their customers search from. Central Ohio is a ring of separate towns around one big city, and people here search by the one they call home.",
+
+  "why_eyebrow": "Why Columbus is different",
+  "why_h2": "A city stitched together from a lot of names",
+  "why_paragraphs": [
+    "Columbus grew by taking in land around it, so the city line wanders. A Columbus mailing address can sit in a township, or right beside a suburb with its own city hall and its own schools. People here know which side they live on, and they search by that name.",
+    ("pull", "A family in Westerville types Westerville. Columbus is where they go for a game at the Horseshoe."),
+    "Inside the city, the neighborhoods carry their own names too. Short North, German Village, Clintonville, Victorian Village, and the University District around Ohio State each have their own crowd. The campus blocks turn over with every school year, and the people moving in need a dentist, a mechanic, and a landlord who answers the phone.",
+    "I-270 loops the city, and locals call it the Outerbelt. Plenty of people treat it as the edge of how far they will look. Dublin and Hilliard sit to the northwest, Westerville and Gahanna to the northeast, Grove City to the south, and Pickerington to the east. The growth keeps pushing north into Delaware County toward Powell and Delaware, and northeast past New Albany. A clinic in Grove City rarely shows on the map for a patient in Powell, however strong the profile.",
+    "The weather sets the busy weeks for a lot of trades. Central Ohio winters freeze and thaw, spring rain finds every weak basement wall, and summers run humid. Furnaces, sump pumps, roofs, and gutters all get their rush, and Google decides who shows up in it from what your profile and site looked like before it started.",
+  ],
+
+  "search_example": "family dentist Worthington",
+  "pack_rows": [("Your practice", "Dentist · 0.7 mi"), ("Another practice", "Dentist · 1.8 mi"), ("Another practice", "Cosmetic dentist · 3.0 mi")],
+  "organic_rows": [("Family dentist in Worthington, new patients welcome", "yourpractice.com"), ("Dentists in Worthington", "a directory"), ("Another practice", "anotherpractice.com")],
+  "both_intro": "When someone in the Columbus area searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the neighborhood or suburb they are searching from. A business that holds a spot in both, in that place, gets the call.",
+
+  "how_h2": "Built around how Columbus searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across Columbus and the suburbs you serve, from Powell down to Grove City. A search from your own office tells you very little about the other side of the Outerbelt. The plan is built on the grid."),
+    ("We build a page for each neighborhood and suburb", "Nobody in Bexley searches for an accountant in Columbus. They type Bexley, and someone in Clintonville types Clintonville. Your site and profile are built around the names people actually use."),
+    ("We treat each suburb as its own market", "Dublin, Upper Arlington, and Gahanna are their own cities with their own identity, and people there expect a business that knows the place. Each suburb you want gets its own page, its own reviews from customers there, and its own spot on the grid."),
+    ("We plan for the growing edges", "New neighborhoods keep filling in up toward Delaware County and out past New Albany. Families there arrive with no list of who to call, and they search the name of the place they just moved to. If you want that work, we build for it before your competitors do."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the suburbs you really cover, photos, and posts. This is what wins the map."),
+    ("Neighborhood and suburb pages", "One page for each place you want to win, written for the people who live there. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone the same on every directory Google compares, including the Ohio and industry ones."),
+    ("Review generation", "A follow-up that asks every happy customer at the right moment, so each suburb you serve has recent reviews from its own people."),
+    ("Monthly reporting", "Where you rank on the grid, suburb by suburb, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every area and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across Columbus and nearby suburbs",
+  "areas": ["Short North","German Village","Clintonville","Victorian Village","Italian Village","Olde Towne East","Franklinton","Brewery District","University District","Polaris","Upper Arlington","Bexley","Grandview Heights","Worthington","Dublin","Hilliard","Westerville","Gahanna","New Albany","Grove City"],
+  "areas_note": "This list is where we start. Your own reach decides the plan, so if your part of town is missing, ask and we will tell you straight whether it is winnable.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego", "local-seo-chicago", "local-seo-san-antonio", "local-seo-austin", "local-seo-jacksonville", "local-seo-fort-worth", "local-seo-charlotte"],
+
+  "faq": [
+    ("Do you need to be in Columbus to rank my business here?", "No. What Google weighs is your location, your profile, your reviews, and your site. We run Columbus campaigns remotely and the work is the same."),
+    ("Our mailing address says Columbus but we are in a township. What goes on the profile?", "Your real street address, exactly as the post office has it. Your pages then name the area the way locals say it, so people searching for your township or the suburb next door still find you."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some suburbs move sooner than others, and we tell you which yours is before you commit."),
+    ("Can one profile cover the whole Outerbelt and beyond?", "No single listing reaches from Delaware to Grove City. You win the area around your address first, then reach further with suburb pages as the profile gets stronger. A second listing needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("We are in Dublin. Should our pages say Dublin or Columbus?", "Both, each on its own page. People nearby search for Dublin, and people further out search for Columbus. Your profile keeps your real address, and your site gets a page for each name you want to win."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of Columbus you can win.",
+  "cta_p": "We map where you rank across Columbus and the suburbs you serve, show you which areas are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE, COLUMBUS]

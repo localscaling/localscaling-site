@@ -1265,4 +1265,109 @@ PHYSICAL_THERAPISTS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three clinics ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS]
+PEST_CONTROL = {
+  "slug": "local-seo-for-pest-control-companies",
+  "title": "Local SEO for Pest Control Companies | LocalScaling",
+  "meta": "Local SEO for pest control companies and exterminators. We get your company into the Google map pack and the search results under it, in the towns you service, for the pests you want more calls about. Starting at $1,500/mo.",
+  "crumb": "Pest control companies",
+  "eyebrow": "Local SEO for pest control companies",
+  "h1": "Local SEO for pest control companies",
+  "lede": "Someone who just saw a mouse run across the kitchen searches on a phone and calls a company from the map. Someone selling a house, or tired of ants every spring, reads the pages under it and picks who to sign a yearly plan with. We get your company into both places, in the towns your trucks already drive.",
+  "short": "pest control companies",
+  "industry_value": "Pest control",
+  "you": "Your company",
+
+  "pack_search": "exterminator near me",
+  "pack_rows": [("Your company", "Pest control service · 0.9 mi"), ("Another company", "Pest control service · 2.2 mi"), ("Another company", "Bird control service · 3.6 mi")],
+  "organic_rows": [("Mouse and rodent control in your town", "yourcompany.com"), ("Best exterminators near you", "a directory"), ("Another company", "anothercompany.com")],
+  "pack_note": "Three spots. Someone with wasps over the back door calls one of these.",
+  "both_intro": "When someone searches for pest control, Google shows the map first and the regular results under it. The person with a pest in the house right now calls from the map. The person thinking about a yearly plan, or a termite inspection before closing on a house, reads the sites under it and calls the company that explained the work plainly. A company that holds a spot in both gets both calls.",
+
+  "timeline": [(1, 2, "build", "Profile, pages, listings"), (3, 5, "peak", "Ants and termite swarms"), (6, 8, "peak", "Wasps and mosquitoes"), (9, 11, "peak", "Mice move indoors"), (12, 12, "quiet", "Reviews, renewals")],
+  "timeline_start": 1,
+  "timeline_alt": "A twelve month timeline. The profile, pages, and listings are built in January and February, ant and termite calls pick up from March to May, wasps and mosquitoes fill June to August, mice and other rodents push indoors from September to November, and December is a good month for reviews and plan renewals.",
+  "timeline_caption": "The general shape of a pest control company's year in much of the country. The season starts earlier in the south and later in the north. Winter is the time to build, so the profile and pages are ready before the first warm week.",
+
+  "intent": [
+    ("exterminator near me", "Someone with a pest in the house who wants a truck there today", "Your Google Business Profile"),
+    ("termite inspection [city]", "A buyer or seller with a closing date coming up", "A service page"),
+    ("bed bug treatment [city]", "Someone embarrassed and worried, who wants it handled quietly", "A service page"),
+    ("mice in walls how to get rid of", "Someone deciding whether to try it alone or call a pro", "A plain answer page"),
+    ("quarterly pest control service", "A homeowner ready to stop dealing with bugs every spring", "A service page"),
+    ("pest control in [the town next door]", "Someone who wants a company that already services their street", "A city page"),
+  ],
+
+  "why_eyebrow": "Why pest control is different",
+  "why_h2": "Half your calls are urgent and half are a yearly decision",
+  "why_paragraphs": [
+    "A wasp nest by the front door or droppings in the pantry is an urgent call. People search on a phone, look at the map, and call the first company that looks real and answers. They rarely scroll far.",
+    "The rest of the business is slower. A homeowner signing up for a quarterly plan, a landlord who needs a building treated every month, or a family selling a house compares a few companies before choosing one. They read the pages, check the reviews for the technician's name, and look for a company that explains what it sprays and when.",
+    ("pull", "One urgent call can turn into years of plan renewals. The map is where most of them start."),
+    "Each pest is its own search. Termites, bed bugs, mice, mosquitoes, and stinging insects are typed by different people at different times of year. A single page called services tells none of them they are in the right place. Pest control is licensed work too, and people want to know a licensed technician is coming into their home.",
+  ],
+
+  "leaks_h2": "Six things we find on most pest control profiles",
+  "leaks_intro": "Each one looks small. Together they send the call, and the yearly plan after it, to the truck down the street.",
+  "leaks": [
+    ("A service area that covers half the state", "Drawing the service area wider than your routes does not stretch the map. Google still weighs distance, and the area reads better when it matches the towns you really service."),
+    ("One page for every pest", "Termites, bed bugs, rodents, and mosquitoes on a single page. Google ranks whole pages, so a page about everything ranks for nothing."),
+    ("No license number anywhere", "Your state license is a real trust signal for a company that sprays inside people's homes. Many sites leave it off."),
+    ("Review replies that name the problem", "A reply that thanks someone for letting you treat their bed bugs tells their neighbors what they had. Short, warm replies with no details protect the customer and read better."),
+    ("Photos from a stock library", "A generic bug photo tells nobody anything. Real trucks, real technicians in uniform, and real work give Google and the customer something to trust."),
+    ("Old details from a buyout", "Pest control companies change hands often. The old name and phone number keep living on directories for years, and the mismatch drags the profile down."),
+  ],
+
+  "how_h2": "Built around how people find a pest control company",
+  "how": [
+    ("We set up the categories and the profile", "Pest control service as the primary. Bird control service or Animal control service as secondaries only when you really do that work. Termites, bed bugs, mosquitoes, and rodents go in as services, and your hours say when someone will actually pick up."),
+    ("We build a page for each pest and service", "Termite inspections and treatment, bed bugs, mice and rats, ants, wasps and hornets, mosquito yard treatment, and recurring home plans, only for the work you do. Each one gets its own page. Those pages are what put you in the results under the map."),
+    ("We build a page for each town on your routes", "People want the company whose truck is already in their neighborhood. A page for each town you service, with the pests that show up there, reaches them before they call anyone else."),
+    ("We answer the questions people ask before they call", "Whether a treatment is safe around kids and pets, how long until they can go back in a room, what a plan includes, and how follow-up visits work. Only what is true for your products and your company, approved by you."),
+    ("We keep reviews coming", "The technician asks at the end of a visit that went well, and a text follows with a link. Recurring customers get asked once, after a few quiet months. Replies never name the pest or the address."),
+    ("We report calls", "Each month you see where you rank across your routes, how that moved, and how many people called. Traffic stays off the report because nobody signs a plan from traffic."),
+  ],
+
+  "searches_h2": "What your next customer is typing",
+  "searches": ["exterminator near me", "pest control near me", "pest control same day", "mice in house", "ant exterminator", "wasp nest removal", "how much is pest control", "pet safe pest control"],
+  "specialty_searches": ["termite inspection for home sale", "bed bug heat treatment", "mosquito yard spraying", "rodent exclusion", "carpenter ant treatment", "stink bug control", "flea treatment for house", "spider control", "commercial pest control for restaurants", "apartment pest control", "yellow jacket nest in ground", "control de plagas"],
+  "searches_note": "Add your town or city to any of these and that is the search. The specialty ones have fewer companies competing and often bring the bigger jobs. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match your work, true hours, the pests and services people look for, real photos of your trucks and team, and posts all year. This is what wins the map."),
+    ("Pest and service pages", "One page for each pest or service you want more calls about, written for the person typing the search. This is what wins the listing under the map."),
+    ("Town pages", "One page for each town on your routes, so people in the next town over can find you too."),
+    ("Listings that match", "One name, one address, and one phone number across the directories Google checks, including the home service ones."),
+    ("Review generation", "A request after each good visit and a check-in with plan customers, with replies that never name the problem."),
+    ("Your website", "Built for local search, with a call button up top, your license number, online booking if you take it, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which pest control companies this is for",
+  "fit_yes": [
+    "A licensed company with trucks on the road and room on the routes",
+    "An owner operator or a team of technicians",
+    "You want calls from your own profile instead of shared leads",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You need the schedule full next week. That is an ads job",
+    "You want pages that promise a pest free home forever",
+    "You want a fake address in a town you do not reach",
+    "You want reviews you paid for or keywords in your business name",
+  ],
+
+  "faq": [
+    ("Most of our money is in recurring plans. Does local SEO help with that?", "Yes. Most plan customers start with one urgent call or one search for a yearly service. A page for your plans, and reviews that mention the same technician coming back, help those calls turn into renewals."),
+    ("How long until the phone rings more?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Pest pages and town pages take longer and keep building."),
+    ("We work out of a home office. Can we still rank on the map?", "Yes. You hide the address and set a service area of the towns you really cover. Google still uses your real location to decide how far you reach, so town pages and reviews do the rest."),
+    ("Can you get us more termite or bed bug work?", "Partly. The pages and categories decide which searches you win, so we build more around the jobs you want. Other calls still come."),
+    ("Should we list our prices?", "Only if you want to. Some companies list a starting price for a one time treatment or a plan, and some explain what drives the cost. Both answer what people are typing, and you decide."),
+    ("We just bought another company. What happens to its listings?", "We look at both before anything changes. Usually the old profile and listings are merged or updated to the new name and number, carefully, so the reviews and history are not thrown away."),
+    ("Do you write about chemicals and safety on our site?", "We write in plain words about how you treat and what customers should do before and after. You approve anything about products or safety before it publishes, and nothing goes up that your labels and license do not support."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the truck they call first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three companies ranking above you.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS, PEST_CONTROL]
