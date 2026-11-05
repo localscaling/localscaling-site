@@ -1370,4 +1370,109 @@ PEST_CONTROL = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three companies ranking above you.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS, PEST_CONTROL]
+LANDSCAPERS = {
+  "slug": "local-seo-for-landscapers",
+  "title": "Local SEO for Landscapers | LocalScaling",
+  "meta": "Local SEO for landscapers and lawn care companies. We get your company into the Google map pack and the search results under it, in the towns your crews work, for the jobs you want more of. Starting at $1,500/mo.",
+  "crumb": "Landscapers",
+  "eyebrow": "Local SEO for landscapers",
+  "h1": "Local SEO for landscapers",
+  "lede": "Someone looking at an overgrown yard in April searches on a phone and calls a company from the map. Someone planning a patio or a new front yard reads the pages under it, looks through your past jobs, and asks for a quote. We get your company into both places, in the towns your crews already work.",
+  "short": "landscaping companies",
+  "industry_value": "Landscaping",
+  "you": "Your company",
+
+  "pack_search": "landscapers near me",
+  "pack_rows": [("Your company", "Landscaper · 0.9 mi"), ("Another company", "Lawn care service · 2.1 mi"), ("Another company", "Landscaper · 3.4 mi")],
+  "organic_rows": [("Paver patios and retaining walls in your town", "yourcompany.com"), ("Best landscapers near you", "a directory"), ("Another company", "anothercompany.com")],
+  "pack_note": "Three spots. Someone with a yard that got away from them calls one of these.",
+  "both_intro": "When someone searches for a landscaper, Google shows the map first and the regular results under it. The person who wants a yard cleaned up soon calls from the map. The person planning a bigger project reads the sites under it, looks for work like theirs, and asks a few companies for quotes. A company that holds a spot in both gets both jobs.",
+
+  "timeline": [(1, 2, "build", "Profile, pages"), (3, 5, "peak", "Cleanups, planting, mulch"), (6, 8, "peak", "Mowing, patios, irrigation"), (9, 11, "peak", "Leaves, aeration"), (12, 12, "quiet", "Snow")],
+  "timeline_start": 1,
+  "timeline_alt": "A twelve month timeline. The profile and pages are built in January and February, cleanups, planting, and mulch fill March to May, mowing, patios, and irrigation run June to August, leaves and aeration take September to November, and December goes to snow work where it falls.",
+  "timeline_caption": "The general shape of a landscaping year in much of the country. Warm states start earlier and mow longer, and snow states add plowing. Winter is the time to build, because homeowners start planning spring projects before the ground thaws.",
+
+  "intent": [
+    ("landscapers near me", "Someone who wants a yard handled and a quote this week", "Your Google Business Profile"),
+    ("paver patio installation [city]", "A homeowner with a project in mind who is comparing a few companies", "A service page"),
+    ("lawn mowing service [city]", "Someone ready to hand off the mowing for the whole season", "A service page"),
+    ("fall leaf removal [city]", "Someone looking at a full yard with cold weather coming", "A seasonal page"),
+    ("how much does a retaining wall cost", "Someone deciding whether the project is worth asking for a quote", "A plain answer page"),
+    ("landscaping in [the town next door]", "Someone who wants a crew that already works nearby", "A city page"),
+  ],
+
+  "why_eyebrow": "Why landscaping is different",
+  "why_h2": "A mowing route and a patio job are two different searches",
+  "why_paragraphs": [
+    "A yard that got away from someone is a quick call. They search on a phone, look at the map, and call whoever looks real and picks up. Mowing, cleanups, and mulch are often decided in minutes, and a crew already working nearby has the edge.",
+    "A patio, a retaining wall, or a new front yard takes longer. People look for weeks, study photos, ask neighbors, and get a few quotes. They read your site to decide if you are worth the visit.",
+    ("pull", "The mowing customer wants your truck on their street. The patio customer wants to see a patio you built near their street."),
+    "Most companies do some of both, and that is where the profile goes wrong. The primary category should match the work that pays the bills: Landscaper for project work, Lawn care service for recurring routes. Everything else goes in as a service, and each kind of job needs its own page. Timing matters too. Spring cleanups, fall leaves, and snow all get searched in short windows, so the pages have to be up before the window opens.",
+  ],
+
+  "leaks_h2": "Six things we find on most landscaping profiles",
+  "leaks_intro": "Each one seems minor in the middle of a busy season. Together they hand the better jobs to the crew in the next town.",
+  "leaks": [
+    ("A primary category picked years ago", "Many companies started out mowing and now want patios, or the other way around. The category on the profile still says what the business was back then, and it shapes which searches you show up for."),
+    ("One page for every job", "Mowing, cleanups, planting, patios, and irrigation all sit on a page called services. Google ranks whole pages, and a page that covers everything gives it no reason to pick you for any one job."),
+    ("Great work with no town attached", "The best photos are on someone's phone, or in a gallery with no captions. A job photo with the kind of work and the town beside it tells Google and the next customer far more."),
+    ("A service area wider than the crews drive", "Adding towns two hours away does not stretch the map. Google still weighs distance, and the leads you do get from far off are ones you will turn down."),
+    ("Reviews that all came in one spring", "A burst of reviews followed by a long gap makes a profile look asleep. Steady reviews through the season, mentioning the work and the town, read much better."),
+    ("Seasonal pages that go up too late", "A fall cleanup page published when the leaves are already down has no time to rank. New pages take a while to get picked up, so they go live well before their season."),
+  ],
+
+  "how_h2": "Built around how people find a landscaper",
+  "how": [
+    ("We pick the categories from the work you want", "Landscaper or Lawn care service as the primary. Gardener, Tree service, or Snow removal service as secondaries only when you really run that work. Patios, retaining walls, irrigation, and cleanups go in as services."),
+    ("We build a page for each kind of job", "Mowing and maintenance, spring and fall cleanups, mulch and planting, paver patios, retaining walls, sod, drainage, and irrigation, only for the work you do. Each one gets its own page. Those pages are what put you in the results under the map."),
+    ("We build town pages around real jobs", "People want proof you have worked near them. A page for each town you serve, with photos of jobs there and what the work involved, reaches them where a generic gallery cannot."),
+    ("We get seasonal pages up ahead of the rush", "Spring cleanups, aeration, leaf removal, and snow plowing where it applies. Each page goes up well before its season, and your profile posts follow the same calendar."),
+    ("We keep reviews coming all season", "Whoever is on site asks when the job is done, and a text follows with a link. Project customers get asked with the finished work fresh. Mowing customers get asked once, after a few good visits."),
+    ("We report calls and quote requests", "Each month you see where you rank across your towns, how that moved, and how many people called or asked for a quote. Traffic stays off the report because nobody hires a crew from traffic."),
+  ],
+
+  "searches_h2": "What your next customer is typing",
+  "searches": ["landscaping near me", "lawn care near me", "lawn mowing service", "yard cleanup", "landscaping companies near me", "spring cleanup", "mulch installation", "how much does landscaping cost"],
+  "specialty_searches": ["paver patio installation", "retaining wall contractor", "french drain installation", "sod installation", "sprinkler repair", "outdoor lighting installation", "lawn aeration and overseeding", "leaf removal service", "commercial grounds maintenance", "snow plowing", "hardscaping", "jardinería"],
+  "searches_note": "Put your town or city on the end of any of these and that is the search. The specialty ones have fewer companies after them, and many lead to bigger jobs. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "A primary category that fits your main work, the jobs you do listed as services, true hours, job photos by town, and seasonal posts. This is what wins the map."),
+    ("Job and season pages", "One page for each kind of work you want more of, plus pages ready before each busy season. This is what wins the listing under the map."),
+    ("Town pages", "One page for each town your crews work, with real jobs from that town wherever you have them."),
+    ("Listings that match", "The same name, address, and phone number across the directories Google checks, including the home service ones people use for quotes."),
+    ("Review generation", "A request after each finished project and a well-timed ask for mowing customers, so reviews keep coming through the season."),
+    ("Your website", "Built for local search, with a call button up top, a quote form, your past work by town, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which landscaping companies this is for",
+  "fit_yes": [
+    "A lawn or project company with real crews and real jobs to photograph",
+    "You have room for more work, or you want better work than you have now",
+    "You would rather own your calls than buy leads other companies also get",
+    "You will give it three to six months before deciding",
+  ],
+  "fit_no": [
+    "You need the calendar full by next week. Ads do that better",
+    "You want pages that promise a perfect lawn",
+    "You want to list an address in a town you never work",
+    "You want bought reviews, or a town name stuffed into your business name",
+  ],
+
+  "faq": [
+    ("Should we go after lawn care searches or landscaping searches?", "Whichever work pays you best, and usually some of both. People use the two words differently, so each kind of work gets its own pages. Your primary category follows your main line of work."),
+    ("How long until the phone rings more?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Job pages and town pages take longer and keep building."),
+    ("We are booked all summer. Why would we want more calls?", "More calls let you choose. You can take the jobs that pay better and drop the ones that do not. They also help fill the slower weeks at the start and end of the season."),
+    ("Can we rank in towns where we have no office?", "Yes, with limits. Google weighs distance on the map, so nearby towns come first. A page for each town, with real jobs and reviews from there, can win the listings under the map. A rented mailbox or virtual office can get the profile suspended."),
+    ("Does this do anything for us in winter?", "Yes. People plan spring projects over the winter and look for quotes early. Where it snows, plowing and removal get searched too. Winter is also when your crews have time to send us photos and details."),
+    ("Do we need professional photos?", "No. Phone photos from real jobs work fine, as long as they are clear and honest. We tell your crews what to shoot, and we ask for the town and the kind of work with each one."),
+    ("Should we list our prices?", "Only if you want to. Some companies give a starting price for mowing or cleanups, and others explain what drives the cost of a patio or a wall. Both answer what people are typing, and you decide."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the crew they call first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the landscapers showing above you on the map.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS, PEST_CONTROL, LANDSCAPERS]

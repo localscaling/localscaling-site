@@ -1,9 +1,8 @@
 {
   "publish": true,
   "cadence_days": 4,
-  "last_run": "2026-11-01",
+  "last_run": "2026-11-05",
   "cities": [
-    "Indianapolis",
     "San Jose",
     "Seattle",
     "Denver",
@@ -24,7 +23,6 @@
     "New York"
   ],
   "industries": [
-    "landscapers",
     "insurance agents",
     "financial advisors",
     "orthodontists",
@@ -193,6 +191,18 @@
       "name": "pest control companies",
       "slug": "local-seo-for-pest-control-companies",
       "date": "2026-11-01"
+    },
+    {
+      "type": "city",
+      "name": "Indianapolis",
+      "slug": "local-seo-indianapolis",
+      "date": "2026-11-05"
+    },
+    {
+      "type": "industry",
+      "name": "landscapers",
+      "slug": "local-seo-for-landscapers",
+      "date": "2026-11-05"
     }
   ]
 }

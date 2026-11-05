@@ -727,4 +727,64 @@ COLUMBUS = {
   "cta_p": "We map where you rank across Columbus and the suburbs you serve, show you which areas are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE, COLUMBUS]
+INDIANAPOLIS = {
+  "slug": "local-seo-indianapolis",
+  "city": "Indianapolis",
+  "short": "Indianapolis",
+  "region": "Marion County and the counties around it",
+  "title": "Local SEO Agency in Indianapolis | LocalScaling",
+  "meta": "Local SEO for Indianapolis service businesses. We get contractors, clinics, and firms into the Google map pack and the search results under it, from Broad Ripple to Greenwood and up through Carmel and Fishers. Starting at $1,500/mo.",
+  "eyebrow": "Serving Indianapolis and the cities around it",
+  "h1": "Local SEO agency in Indianapolis",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Indianapolis neighborhoods and suburbs their customers search from. One city name covers nearly a whole county here, so the names people type are often much smaller than the one on their mail.",
+
+  "why_eyebrow": "Why Indianapolis is different",
+  "why_h2": "One city name stretched across a county",
+  "why_paragraphs": [
+    "Indianapolis merged with most of Marion County in 1970, under a plan called Unigov. Since then the word Indianapolis has covered old neighborhoods, former towns, and miles of subdivisions. Plenty of people with an Indianapolis address will tell you they live in Nora, Castleton, or Irvington, and that is what they type.",
+    ("pull", "The mail says Indianapolis. The search says Nora."),
+    "A few places inside the county kept their own government: Lawrence, Beech Grove, Southport, and Speedway. Speedway is a separate town with Indianapolis on every side. People there use those names, and a page that only says Indianapolis gives them little reason to think you work there.",
+    "Past the county line, the suburbs run in every direction. Carmel, Fishers, Noblesville, and Westfield sit in Hamilton County to the north, and Geist wraps around the reservoir on the northeast side. Zionsville is to the northwest, Brownsburg and Avon to the west, and Greenwood to the south. I-465 loops the city, and a lot of people think of a service call as inside the loop or outside it. A vet in Greenwood rarely shows on the map for a pet owner in Westfield, however strong the profile.",
+  ],
+
+  "search_example": "veterinarian Broad Ripple",
+  "pack_rows": [("Your clinic", "Veterinarian · 0.6 mi"), ("Another clinic", "Animal hospital · 1.7 mi"), ("Another clinic", "Veterinarian · 2.9 mi")],
+  "organic_rows": [("Veterinarian in Broad Ripple, new clients welcome", "yourclinic.com"), ("Vets in Broad Ripple", "a directory"), ("Another clinic", "anotherclinic.com")],
+  "both_intro": "When someone around Indianapolis searches for what you do, Google shows the map first and the regular results under it, and both shift with the part of town they are searching from. A business that holds a spot in both, for that part of town, gets the call.",
+
+  "how_h2": "Built around how Indianapolis searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across Marion County and the suburbs you serve, from Westfield down to Greenwood. A search from your own desk says very little about the far side of I-465. The grid decides the plan."),
+    ("We build a page for each place people name", "A homeowner in Irvington looking for a painter types Irvington, and someone in Meridian-Kessler types Meridian-Kessler. A page that only says Indianapolis misses both of them. Your site and profile use the names locals use."),
+    ("We sort out the address question", "Many businesses here have an Indianapolis address and serve people who call the area something else. Your profile keeps your real address, exactly as the post office has it. Your pages name Lawrence, Speedway, Beech Grove, and the rest the way people there say them."),
+    ("We treat Hamilton County as its own market", "Carmel, Fishers, Noblesville, and Westfield are separate cities, and people there tend to look close to home first. If you want that work, each one gets its own page, its own reviews from customers there, and its own spot on the grid."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "Categories that fit your work, the services people look for, a service area that matches where you really go, real photos, and regular posts. This is what wins the map."),
+    ("Neighborhood and city pages", "A page for each part of town and each suburb you want, written for the people who live there. These are what put you in the results under the map."),
+    ("Listings that match", "One name, address, and phone number on every directory Google compares, from the national ones to the Indiana and trade ones."),
+    ("Review generation", "A request sent at the right moment after each job or visit, so every area you serve collects recent reviews from people who live there."),
+    ("Monthly reporting", "Your rank on the grid, area by area, what changed since last month, and how many people called."),
+    ("Your website", "Built for local search from day one, with a page for each service and each place you work. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across Indianapolis and nearby cities",
+  "areas": ["Broad Ripple","Fountain Square","Irvington","Meridian-Kessler","Butler-Tarkington","Mass Ave","Garfield Park","Nora","Castleton","Geist","Lawrence","Speedway","Beech Grove","Southport","Carmel","Fishers","Noblesville","Westfield","Zionsville","Greenwood"],
+  "areas_note": "We start with these. Don't see your part of town? Ask, and we will tell you honestly whether it makes sense for your business.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego", "local-seo-chicago", "local-seo-san-antonio", "local-seo-austin", "local-seo-jacksonville", "local-seo-fort-worth", "local-seo-charlotte", "local-seo-columbus"],
+
+  "faq": [
+    ("You are not based in Indianapolis. Does that matter?", "No. Google looks at your location, your profile, your reviews, and your site, and none of those depend on where we sit. We run the work remotely and report to you each month."),
+    ("We are in Lawrence, but our customers are all over the county. What should our pages say?", "Say Lawrence on one page and each other area you serve on its own page. Your profile keeps your real address. Distance still counts on the map, so the nearby areas tend to come first."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some areas take longer than a quieter part of town, and we tell you what to expect before you commit."),
+    ("Can one profile cover Marion County and the suburbs?", "One profile will not reach from Noblesville to Greenwood on the map. You win around your address first, and pages for each area reach further as the profile gets stronger. A second listing needs a real staffed office. A virtual office or a mailbox can get the profile suspended."),
+    ("Can a small shop compete with national brands here?", "Often, yes, close to your address. Distance counts on the map, and a national brand cannot sit in every neighborhood. Your pages and your reviews from local customers can cover the places a national site treats as a line on a list."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of Indianapolis you can win.",
+  "cta_p": "We map where you rank from Marion County out through the suburbs you serve, point out the areas within reach today, and tell you what the rest would take.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE, COLUMBUS, INDIANAPOLIS]
