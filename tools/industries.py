@@ -1475,4 +1475,109 @@ LANDSCAPERS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the landscapers showing above you on the map.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS, PEST_CONTROL, LANDSCAPERS]
+INSURANCE_AGENTS = {
+  "slug": "local-seo-for-insurance-agents",
+  "title": "Local SEO for Insurance Agents | LocalScaling",
+  "meta": "Local SEO for insurance agents and agencies. We get your agency into the Google map pack and the search results under it, in the towns you write business in, for the lines you want more of. Starting at $1,500/mo.",
+  "crumb": "Insurance agents",
+  "eyebrow": "Local SEO for insurance agents",
+  "h1": "Local SEO for insurance agents",
+  "lede": "Someone who just bought a house, a car, or a business searches on a phone and calls an agency from the map. Someone unhappy with a renewal reads the pages under it and picks who to ask for a quote. We get your agency into both places, in the towns where you already write policies.",
+  "short": "insurance agencies",
+  "industry_value": "Insurance",
+  "you": "Your agency",
+
+  "pack_search": "insurance agency near me",
+  "pack_rows": [("Your agency", "Insurance agency · 0.8 mi"), ("Another agency", "Auto insurance agency · 1.9 mi"), ("Another agency", "Insurance broker · 3.1 mi")],
+  "organic_rows": [("Home and auto insurance in your town", "youragency.com"), ("Best insurance agents near you", "a directory"), ("Another agency", "anotheragency.com")],
+  "pack_note": "Three spots. Someone with a closing date this week calls one of these.",
+  "both_intro": "When someone searches for insurance, Google shows the map first and the regular results under it. The person who needs proof of coverage by Friday calls from the map. The person shopping a renewal, or setting up a new business, reads the sites under it and calls the agency that explained things plainly. An agency that holds a spot in both gets both calls.",
+
+  "timeline": [(1, 2, "build", "Profile, pages"), (3, 8, "peak", "Home buying and moves"), (9, 9, "quiet", "Reviews"), (10, 12, "peak", "Open enrollment")],
+  "timeline_start": 1,
+  "timeline_alt": "A twelve month timeline. The profile and pages are built in January and February, home purchases and moves keep home and auto calls busy from March to August, September is a good month for reviews, and Medicare and health insurance enrollment fill October to December.",
+  "timeline_caption": "The general shape of a year for an agency that writes personal lines and some health. Renewals land every month, each on its own date, and commercial work follows your clients' policy dates. Build early so the pages are ready before the spring moves.",
+
+  "intent": [
+    ("insurance agency near me", "Someone who needs a policy soon and wants a person to talk to", "Your Google Business Profile"),
+    ("home insurance [city]", "A buyer with a closing date and a lender asking for proof of coverage", "A service page"),
+    ("insurance for contractors [city]", "A business owner who needs a certificate before a job can start", "A service page"),
+    ("why did my car insurance go up", "Someone with a renewal notice deciding whether to shop around", "A plain answer page"),
+    ("medicare agent [city]", "Someone turning 65, or helping a parent, who wants it explained in person", "A service page"),
+    ("insurance agent in [the town next door]", "Someone who wants an agent they could meet nearby", "A city page"),
+  ],
+
+  "why_eyebrow": "Why insurance is different",
+  "why_h2": "People shop for insurance when their life changes",
+  "why_paragraphs": [
+    "Most people do not think about insurance until they have to. A new house, a new car, a teenager with a new license, a wedding, a baby, a new business. Each of those sends someone to a search bar, often with a deadline attached.",
+    "The other big trigger is a renewal notice with a higher number on it. That person is in no rush. They read pages, compare a few agencies, and look through reviews for signs that someone will answer the phone when they have a claim.",
+    ("pull", "A national carrier can outspend you on ads. It cannot sit on every street the way the map needs."),
+    "Every line is its own search. Home, auto, life, health, Medicare, and commercial are typed by different people, and a page called insurance services tells none of them they are in the right place. Captive and independent agents also play by different rules. Captive agents usually work inside the carrier's brand rules, and some carriers manage the website for them, so the work starts with what you are allowed to change.",
+  ],
+
+  "leaks_h2": "Six things we find on most insurance agency profiles",
+  "leaks_intro": "Each one is easy to miss. Together they send the quote request to the agency across town.",
+  "leaks": [
+    ("Duplicate listings from the carrier", "Carriers and listing services sometimes create profiles for agents, and old ones linger after a move or a switch. Two listings for one office split the reviews and leave Google unsure which one is real."),
+    ("An old name that never left the directories", "Agents who go independent, or buy a book from a retiring agent, often leave the old name and phone number out there for years. The mismatch drags the profile down."),
+    ("One page for every line", "Home, auto, life, and business all on a single page. Google picks one page to show for a search, and a page about every policy gives it no reason to pick yours for any of them."),
+    ("Reviews kept on a private widget", "Some review tools collect feedback on a page Google never sees. Reviews on your Google profile are the ones that help on the map, so that is where the ask should point."),
+    ("No people on the profile", "Insurance is bought from a person. Stock photos and no faces give the shopper nothing to go on. Real photos of the office and the team make the call feel safe."),
+    ("Showing up for lines you do not write", "An agency that only writes personal lines and ranks for business insurance wastes the caller's time and yours. The categories and pages should match the policies you can actually quote."),
+  ],
+
+  "how_h2": "Built around how people find an insurance agent",
+  "how": [
+    ("We set up the categories and the profile", "Insurance agency as the primary for most offices, or Insurance broker if that is how you work. Auto insurance agency, Home insurance agency, Life insurance agency, or Health insurance agency as secondaries only for lines you really write. Your hours say when a person will answer."),
+    ("We build a page for each line you write", "Home, auto, renters, umbrella, life, Medicare, and commercial lines like general liability or workers comp, only for what you quote. Each one gets its own page. Those pages are what put you in the results under the map."),
+    ("We build a page for each town you write in", "People like an agent they could meet in person, even if they never do. A page for each town you serve, with what people there tend to need, reaches them before they call anyone else."),
+    ("We work inside your carrier's rules", "If you are captive, we read the brand rules and check what the carrier already manages before we touch anything. If you are independent, we make it clear which carriers you can quote, with nothing on the page a carrier would object to."),
+    ("We keep reviews coming", "A text with a link goes out after a policy is bound or a claim is handled well. Replies thank the person and never mention their policy, their claim, or their health."),
+    ("We report calls and quote requests", "Each month you see where you rank across your towns, how that moved, and how many people called or asked for a quote. Traffic stays off the report because nobody buys a policy from traffic."),
+  ],
+
+  "searches_h2": "What your next customer is typing",
+  "searches": ["insurance agency near me", "insurance agent near me", "car insurance near me", "home insurance quote", "cheap auto insurance", "renters insurance", "life insurance agent", "insurance office open saturday"],
+  "specialty_searches": ["commercial insurance for contractors", "general liability insurance for small business", "workers comp insurance", "medicare supplement agent", "business owners policy", "umbrella insurance", "flood insurance", "sr22 insurance", "classic car insurance", "landlord insurance", "high risk auto insurance", "seguro de auto"],
+  "searches_note": "Add your town or city to any of these and that is the search. The specialty ones have fewer agencies after them, and many bring bigger policies or a whole household. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that match the lines you write, true hours, the policies people look for listed as services, real photos of your office and team, and regular posts. This is what wins the map."),
+    ("Line of business pages", "One page for each kind of policy you want more of, written for the person typing the search. This is what wins the listing under the map."),
+    ("Town pages", "One page for each town you write business in, so people nearby can find an agent close to them."),
+    ("Listings that match", "One name, address, and phone number across the directories Google checks, with old carrier and former agency listings cleaned up."),
+    ("Review generation", "A request after each new policy or well handled claim, with replies that never mention coverage or claims."),
+    ("Your website", "Built for local search, with a quote form, a call button up top, your license number, the carriers you work with, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which insurance agencies this is for",
+  "fit_yes": [
+    "An independent agency, or a captive agent whose carrier lets you market locally",
+    "You have licensed staff with time to answer more calls",
+    "You want quote requests from your own profile instead of shared leads",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You need new policies this week. Ads or bought leads do that faster",
+    "You want pages that promise the lowest rate in town",
+    "You want an office address in a town where nobody works",
+    "You want paid reviews or a city name added to your agency name",
+  ],
+
+  "faq": [
+    ("We are a captive agent. Can we still do local SEO?", "Usually, yes. What you can change depends on your carrier. Some manage the website or the listing for you, and some leave more of it to the agent. We start from your brand guide and agreement, and anything unclear goes to the carrier before we change it."),
+    ("How long until the phone rings more?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Line pages and town pages take longer and keep building."),
+    ("We just went independent. What happens to our old listings?", "We find the old profile and every directory listing with the former name or number, then update or merge them carefully. Some of it may belong to the carrier, and we tell you what can move with you before anything changes."),
+    ("Can you help us win more commercial business?", "Partly. The categories and pages decide which searches you show up for, so we build more around the commercial lines you want. Personal lines calls still come."),
+    ("Can we list the carriers we write with?", "Usually yes, as long as your appointments are current and the carrier allows it. A page that says who you can quote helps people who already have a carrier in mind."),
+    ("We serve clients by phone across the state. Do we still need town pages?", "The map still weighs distance from your office, so nearby towns come first. For clients further out, pages for each line of business do more of the work, along with reviews from people across the state."),
+    ("Do you write about coverage on our site?", "We write in plain words about what each policy is for and when people usually need it. You approve anything about coverage before it publishes, and nothing goes up that your carriers' rules do not support."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the agent they call first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three agencies showing above you on the map.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS, PEST_CONTROL, LANDSCAPERS, INSURANCE_AGENTS]

@@ -787,4 +787,64 @@ INDIANAPOLIS = {
   "cta_p": "We map where you rank from Marion County out through the suburbs you serve, point out the areas within reach today, and tell you what the rest would take.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE, COLUMBUS, INDIANAPOLIS]
+SAN_JOSE = {
+  "slug": "local-seo-san-jose",
+  "city": "San Jose",
+  "short": "San Jose",
+  "region": "Santa Clara County and the South Bay",
+  "title": "Local SEO Agency in San Jose | LocalScaling",
+  "meta": "Local SEO for San Jose service businesses. We get contractors, clinics, and firms into the Google map pack and the search results under it, from Willow Glen to Berryessa and out to Campbell and Milpitas. Starting at $1,500/mo.",
+  "eyebrow": "Serving San Jose and the South Bay",
+  "h1": "Local SEO agency in San Jose",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the San Jose neighborhoods and nearby cities their customers search from. The cities of the valley run into each other with no gap between them, and people here still search by the one they live in.",
+
+  "why_eyebrow": "Why San Jose is different",
+  "why_h2": "A dozen cities with no space between them",
+  "why_paragraphs": [
+    "San Jose is the biggest city in the valley, and it shares its edges with Santa Clara, Campbell, Milpitas, Cupertino, and Los Gatos. You can drive from one into the next without seeing a sign. The people who live there know exactly where the line is. A homeowner in Campbell types Campbell, and a family in Cupertino types Cupertino.",
+    ("pull", "On a map the valley looks like one long city. In the search box it is a list of names."),
+    "Inside San Jose the neighborhoods carry their own names too. Willow Glen and the Rose Garden sit west of downtown, Berryessa and Alum Rock are on the east side, and Evergreen and Almaden Valley climb toward the hills. The city is wide, and traffic on 101, 280, and 87 makes a short trip on the map feel long, so most people pick someone close. A physical therapist in Evergreen rarely shows on the map for a patient in North San Jose, however strong the profile.",
+    "A lot of households here speak a language other than English at home, and plenty of people search in Spanish, Vietnamese, Chinese, or Tagalog. A business that can serve them in their language should say so where they look first.",
+  ],
+
+  "search_example": "CPA Willow Glen",
+  "pack_rows": [("Your firm", "Certified public accountant · 0.5 mi"), ("Another firm", "Tax preparation service · 1.6 mi"), ("Another firm", "Accountant · 2.7 mi")],
+  "organic_rows": [("CPA and tax help in Willow Glen", "yourfirm.com"), ("Accountants in Willow Glen", "a directory"), ("Another firm", "anotherfirm.com")],
+  "both_intro": "When someone in San Jose or a nearby city searches for what you do, Google shows the map first and the regular results under it, and both are drawn around the place they are searching from. A business that holds a spot in both, for that place, gets the call.",
+
+  "how_h2": "Built around how San Jose searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across San Jose and the cities you serve, from Milpitas down to Almaden Valley. A search from your own office says very little about the other side of 101. The plan starts from the grid."),
+    ("We build a page for each neighborhood and city", "Nobody in Willow Glen searches for an accountant in the South Bay. They type Willow Glen, and someone in Berryessa types Berryessa. Your site and profile are built around the names people actually use."),
+    ("We treat each neighboring city as its own market", "Santa Clara, Campbell, Milpitas, and Los Gatos have their own city halls and their own identity, even where the streets run straight through. Each one you want gets its own page, its own reviews from customers there, and its own spot on the grid."),
+    ("We write for the languages your customers use", "If your team serves people in Spanish, Vietnamese, Chinese, or Tagalog, we say so on your profile and your pages, so people searching in that language know they can call. We only add a language someone on your team really speaks."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "The right categories, the services people search for, a service area drawn around the places you really cover, photos, and posts. This is what wins the map."),
+    ("Neighborhood and city pages", "One page for each place you want to win, written for the people who live there. These are what put you in the results under the map."),
+    ("Listings that match", "Your name, address, and phone number the same on every directory Google compares, including the California and trade ones."),
+    ("Review generation", "A follow-up that asks each happy customer at the right moment, so every area you serve has recent reviews from its own people."),
+    ("Monthly reporting", "Where you rank on the grid, area by area, how that moved, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for every area and every service. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across San Jose and nearby cities",
+  "areas": ["Downtown San Jose","Willow Glen","Rose Garden","Japantown","Naglee Park","Almaden Valley","Cambrian","Blossom Valley","Evergreen","Silver Creek","Berryessa","Alum Rock","North San Jose","West San Jose","Santa Clara","Campbell","Milpitas","Los Gatos","Sunnyvale","Morgan Hill"],
+  "areas_note": "These are where we usually start. If your part of the valley is missing, ask and we will tell you plainly whether it is within reach.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego", "local-seo-chicago", "local-seo-san-antonio", "local-seo-austin", "local-seo-jacksonville", "local-seo-fort-worth", "local-seo-charlotte", "local-seo-columbus", "local-seo-indianapolis"],
+
+  "faq": [
+    ("Do you need to be in San Jose to rank my business here?", "No. Google weighs your location, your profile, your reviews, and your site, and none of those depend on where we work from. We run San Jose campaigns remotely and report to you every month."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some parts of the valley move faster than others, and we tell you which before you commit."),
+    ("Can one profile cover San Jose and the whole valley?", "No single listing reaches from Milpitas to Morgan Hill. You win the area around your address first, then reach further with area pages as the profile gets stronger. A second listing needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("We are in Campbell. Should our pages say Campbell or San Jose?", "Both, each on its own page. People nearby search for Campbell, and people further out search for San Jose. Your profile keeps your real address, and your site gets a page for each name you want to win."),
+    ("Should we have pages in Spanish or Vietnamese?", "Only if someone on your team can serve customers in that language. If they can, a page in that language reaches the people who search in it, and your profile can tell them they are welcome to call."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, flat, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of San Jose you can win.",
+  "cta_p": "We map where you rank across San Jose and the cities around it, show you which areas are winnable now, and tell you what it takes.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE, COLUMBUS, INDIANAPOLIS, SAN_JOSE]
