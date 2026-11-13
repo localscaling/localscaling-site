@@ -847,4 +847,64 @@ SAN_JOSE = {
   "cta_p": "We map where you rank across San Jose and the cities around it, show you which areas are winnable now, and tell you what it takes.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE, COLUMBUS, INDIANAPOLIS, SAN_JOSE]
+SEATTLE = {
+  "slug": "local-seo-seattle",
+  "city": "Seattle",
+  "short": "Seattle",
+  "region": "King County and the Puget Sound area",
+  "title": "Local SEO Agency in Seattle | LocalScaling",
+  "meta": "Local SEO for Seattle service businesses. We get contractors, clinics, and firms into the Google map pack and the search results under it, from Ballard to West Seattle and across the lake to Bellevue and Kirkland. Starting at $1,500/mo.",
+  "eyebrow": "Serving Seattle and the Eastside",
+  "h1": "Local SEO agency in Seattle",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Seattle neighborhoods and nearby cities their customers search from. Water and hills cut this city into pieces, and people here pick someone on their own side of the bridge.",
+
+  "why_eyebrow": "Why Seattle is different",
+  "why_h2": "A city split up by water",
+  "why_paragraphs": [
+    "Seattle sits between Puget Sound and Lake Washington, and the Ship Canal cuts across the city from Ballard to Lake Union. A trip from Ballard to Beacon Hill can mean a bridge, a hill, and a lot of traffic. People know that, so they look for someone close and on the same side of the water.",
+    ("pull", "Two miles on the map can be a long drive here. People search like they know it."),
+    "The neighborhoods carry their own names and their own loyalty. Someone in Fremont types Fremont, and a family in West Seattle types West Seattle. A page that only says Seattle gives either of them little reason to think you work on their street.",
+    "Across Lake Washington, the Eastside is its own market. Bellevue, Redmond, and Kirkland have their own downtowns, and getting across the lake means one of a few busy bridges. A business in Ballard rarely shows on the map for a homeowner in Bellevue, however strong the profile. South of the city, Renton and Burien work the same way.",
+  ],
+
+  "search_example": "physical therapy Ballard",
+  "pack_rows": [("Your clinic", "Physical therapy clinic · 0.6 mi"), ("Another clinic", "Physical therapist · 1.5 mi"), ("Another clinic", "Physical therapy clinic · 2.8 mi")],
+  "organic_rows": [("Physical therapy in Ballard, evening visits", "yourclinic.com"), ("Physical therapists in Ballard", "a directory"), ("Another clinic", "anotherclinic.com")],
+  "both_intro": "When someone in Seattle searches for what you do, Google shows the map first and the regular results under it, and both change with the neighborhood they are searching from. A business that holds a spot in both, for that neighborhood, gets the call.",
+
+  "how_h2": "Built around how Seattle searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across Seattle and the cities you serve, from Shoreline down to Renton. A search from your own office says very little about the far side of the Ship Canal. The plan comes from the grid."),
+    ("We build a page for each neighborhood people name", "A homeowner on Queen Anne looking for an electrician types Queen Anne, and someone in Columbia City types Columbia City. Your site and profile use the names people here actually say."),
+    ("We plan around the water", "Bridges and hills decide how far your customers will look. We start with the neighborhoods on your side of the water and reach across once those are won, so the effort goes where the calls are."),
+    ("We treat the Eastside as its own market", "Bellevue, Redmond, Kirkland, and Issaquah have their own centers, and people there tend to look close to home. If you want that work, each city gets its own page, its own reviews from customers there, and its own spot on the grid."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "Categories that fit your work, the services people look for, a service area drawn around where you really go, real photos, and regular posts. This is what wins the map."),
+    ("Neighborhood and city pages", "A page for each neighborhood and nearby city you want, written for the people who live there. These are what put you in the results under the map."),
+    ("Listings that match", "One name, address, and phone number on every directory Google compares, from the national ones to the Washington and trade ones."),
+    ("Review generation", "A request sent at the right moment after each job or visit, so every area you serve collects recent reviews from people who live there."),
+    ("Monthly reporting", "Your rank on the grid, neighborhood by neighborhood, what changed since last month, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for each service and each place you work. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across Seattle and nearby cities",
+  "areas": ["Ballard","Fremont","Capitol Hill","Queen Anne","Wallingford","Green Lake","Greenwood","Magnolia","University District","Northgate","West Seattle","Beacon Hill","Columbia City","Georgetown","Bellevue","Redmond","Kirkland","Issaquah","Renton","Shoreline"],
+  "areas_note": "These are a starting point. If your neighborhood or city is missing, ask and we will tell you honestly whether it is within reach.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego", "local-seo-chicago", "local-seo-san-antonio", "local-seo-austin", "local-seo-jacksonville", "local-seo-fort-worth", "local-seo-charlotte", "local-seo-columbus", "local-seo-indianapolis", "local-seo-san-jose"],
+
+  "faq": [
+    ("You are not in Seattle. Does that matter?", "No. Google looks at your location, your profile, your reviews, and your site, and none of those depend on where we work. We run Seattle campaigns remotely and report to you every month."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some neighborhoods move faster than others, and we tell you which before you commit."),
+    ("We are in Bellevue. Can we show up for customers in Seattle?", "In the results under the map, yes, with good pages for the Seattle neighborhoods you serve. On the map, distance counts, and the lake adds to it, so the Eastside comes first. A second listing in Seattle needs a real staffed office."),
+    ("Can one profile cover the whole metro?", "No single listing reaches from Shoreline to Renton and over to Issaquah. You win the area around your address first, then reach further with neighborhood and city pages as the profile gets stronger. A virtual office or a mailbox can get the whole profile suspended."),
+    ("Every address here says Seattle. Do neighborhood pages still help?", "Yes. Many people search with the neighborhood name when they want someone close. Your profile keeps your real address, and your pages name the neighborhoods the way locals say them."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of Seattle you can win.",
+  "cta_p": "We map where you rank across Seattle and the cities around it, show you which neighborhoods are within reach now, and tell you what the rest would take.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE, COLUMBUS, INDIANAPOLIS, SAN_JOSE, SEATTLE]

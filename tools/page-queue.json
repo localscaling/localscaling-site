@@ -1,9 +1,8 @@
 {
   "publish": true,
   "cadence_days": 4,
-  "last_run": "2026-11-09",
+  "last_run": "2026-11-13",
   "cities": [
-    "Seattle",
     "Denver",
     "Nashville",
     "Las Vegas",
@@ -22,7 +21,6 @@
     "New York"
   ],
   "industries": [
-    "financial advisors",
     "orthodontists",
     "garage door companies",
     "water damage restoration companies",
@@ -213,6 +211,18 @@
       "name": "insurance agents",
       "slug": "local-seo-for-insurance-agents",
       "date": "2026-11-09"
+    },
+    {
+      "type": "city",
+      "name": "Seattle",
+      "slug": "local-seo-seattle",
+      "date": "2026-11-13"
+    },
+    {
+      "type": "industry",
+      "name": "financial advisors",
+      "slug": "local-seo-for-financial-advisors",
+      "date": "2026-11-13"
     }
   ]
 }

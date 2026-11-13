@@ -1580,4 +1580,109 @@ INSURANCE_AGENTS = {
   "cta_p": "Start with a free audit of your profile, your reviews, and the three agencies showing above you on the map.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS, PEST_CONTROL, LANDSCAPERS, INSURANCE_AGENTS]
+FINANCIAL_ADVISORS = {
+  "slug": "local-seo-for-financial-advisors",
+  "title": "Local SEO for Financial Advisors | LocalScaling",
+  "meta": "Local SEO for financial advisors and planning firms. We get your practice into the Google map pack and the search results under it, in the towns your clients live in, for the kind of planning you want more of. Starting at $1,500/mo.",
+  "crumb": "Financial advisors",
+  "eyebrow": "Local SEO for financial advisors",
+  "h1": "Local SEO for financial advisors",
+  "lede": "Someone who just inherited money, sold a business, or got a retirement date searches for an advisor nearby and looks at the map. Then they read the pages under it for weeks before they book a call. We get your practice into both places, in the towns where your clients already live.",
+  "short": "advisory firms",
+  "industry_value": "Accounting or finance",
+  "you": "Your practice",
+
+  "pack_search": "financial advisor near me",
+  "pack_rows": [("Your practice", "Financial planner · 0.7 mi"), ("Another firm", "Financial consultant · 1.8 mi"), ("Another firm", "Investment service · 3.0 mi")],
+  "organic_rows": [("Retirement planning in your town", "yourpractice.com"), ("Top rated financial advisors near you", "a directory"), ("Another firm", "anotherfirm.com")],
+  "pack_note": "Three spots. Someone with a rollover form on the kitchen table looks here first.",
+  "both_intro": "When someone searches for a financial advisor, Google shows the map first and the regular results under it. Very few people hire an advisor from the map alone. They use it to see who is close, then read the sites under it to learn how each firm works, how it is paid, and who they would sit across from. A practice that holds a spot in both gets the first meeting.",
+
+  "timeline": [(1, 2, "build", "Profile, pages"), (3, 4, "peak", "Tax season"), (5, 8, "quiet", "Reviews, guides"), (9, 12, "peak", "Year-end planning")],
+  "timeline_start": 1,
+  "timeline_alt": "A twelve month timeline. The profile and pages are built in January and February, tax season keeps people thinking about money in March and April, May to August goes to reviews and guides, and year-end planning fills September to December.",
+  "timeline_caption": "The general shape of a year for a planning practice. Retirements, inheritances, and job changes land in any month, so the pages need to be ready all year. People think hardest about money around tax time and as the year closes.",
+
+  "intent": [
+    ("financial advisor near me", "Someone ready to talk to a person who is close enough to meet", "Your Google Business Profile"),
+    ("fee only financial planner [city]", "Someone who already knows how they want an advisor to be paid", "A service page"),
+    ("401k rollover help [city]", "Someone who just left a job and has a form to fill out", "A service page"),
+    ("how much does a financial advisor cost", "Someone deciding whether advice is worth paying for", "A plain answer page"),
+    ("financial advisor for small business owners", "An owner thinking about a sale, a succession, or their own retirement", "A specialty page"),
+    ("financial planner in [the town next door]", "Someone who wants an advisor they can see in person", "A city page"),
+  ],
+
+  "why_eyebrow": "Why financial advice is different",
+  "why_h2": "Nobody hires an advisor on the first visit",
+  "why_paragraphs": [
+    "Most people go looking for an advisor after something changes. A retirement date, an inheritance, a divorce, a business sale, a new job with a pile of stock. They search with real money on the line, and they are careful about who they call.",
+    "So they read. They look at how you are paid, who you work with, what a first meeting looks like, and whether you seem like someone they could trust for twenty years. A thin site with a stock photo of a sunset gives them nothing to go on.",
+    ("pull", "The map shows them you are close. Your pages show them you are the right person."),
+    "Rules shape all of it. What you can say, how you can use reviews, and who controls your listing depend on how you are registered and which firm you work through. Some advisors at large firms cannot touch their own website. Every word we write goes to your compliance team before it goes live.",
+  ],
+
+  "leaks_h2": "Six things we find on most advisor profiles",
+  "leaks_intro": "None of them look urgent. Together they send the careful reader to the firm across town.",
+  "leaks": [
+    ("A category that says nothing", "Many practices sit under a broad finance category, or a category picked by whoever set up the profile years ago. Financial planner and Financial consultant tell Google what you do."),
+    ("Old listings from a former firm", "Advisors who change firms or go independent often leave a profile and a dozen directory listings under the old name. Those keep collecting searches and sending them nowhere."),
+    ("One page for everything", "Retirement planning, investment management, tax planning, and estate coordination all on one services page. Google picks one page per search, and that page is a poor match for all of them."),
+    ("Nothing about how you are paid", "Fee only, fee based, flat fee, or a percentage of assets. People search for these words, and a site that never says which one you are loses them."),
+    ("No faces", "People want to see the advisor they would hire. A site with no team photos and no plain bios makes a careful reader wonder who they would actually be talking to."),
+    ("Reviews nobody thought about", "Some firms never ask, and some ask with no plan for compliance. Both leave the profile thin. A clear, approved process fixes it."),
+  ],
+
+  "how_h2": "Built around how people choose an advisor",
+  "how": [
+    ("We set up the profile inside your rules", "Financial planner or Financial consultant as the primary, with Investment service or others only where they fit the work you do. Hours, photos, and a description your compliance team has signed off on."),
+    ("We build a page for each kind of planning", "Retirement income, rollovers, investment management, tax planning, business owner planning, and planning after a loss or a divorce, only for the work you do. Each one gets its own page. Those pages are what put you in the results under the map."),
+    ("We answer the questions people ask before they call", "How you are paid, what a first meeting covers, who you work best with, and what happens after they say yes. Plain answers here do more than any slogan."),
+    ("We build a page for each town your clients live in", "People like an advisor they could visit, even if most meetings end up on video. A page for each town you serve reaches them close to home."),
+    ("We set up reviews with your compliance team", "If your firm allows reviews, we build a simple, approved way to ask, and replies that never mention a client's money or accounts. If it does not, we lean on everything else."),
+    ("We report calls and booked meetings", "Each month you see where you rank across your towns, how that moved, and how many people called or booked a meeting. Traffic stays off the report because nobody hires an advisor from traffic."),
+  ],
+
+  "searches_h2": "What your next client is typing",
+  "searches": ["financial advisor near me", "financial planner near me", "wealth management near me", "retirement planner near me", "investment advisor near me", "fiduciary financial advisor", "financial advisor for retirement", "how much does a financial advisor cost"],
+  "specialty_searches": ["fee only financial planner", "flat fee financial advisor", "401k rollover advice", "retirement income planning", "social security claiming advice", "roth conversion planning", "financial advisor for doctors", "financial advisor for business owners", "financial planning after divorce", "inheritance financial advice", "stock options advisor", "asesor financiero"],
+  "searches_note": "Add your town or city to any of these and that is the search. The specialty ones have fewer firms after them, and they bring the clients who fit you best. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Categories that fit your practice, true hours, real photos of your office and team, the planning you offer listed as services, and posts your compliance team approves. This is what wins the map."),
+    ("Planning pages", "One page for each kind of planning you want more of, written for the person typing the search. This is what wins the listing under the map."),
+    ("Town pages", "One page for each town your clients live in, so people nearby find an advisor close to them."),
+    ("Listings that match", "One name, address, and phone number across the directories Google checks, with old listings from former firms cleaned up."),
+    ("Review process", "An approved way to ask clients for reviews where your firm allows it, and replies that stay inside the rules."),
+    ("Your website", "Built for local search, with plain bios, how you are paid, what a first meeting looks like, a booking link, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which advisory practices this is for",
+  "fit_yes": [
+    "An independent practice, or an advisor whose firm lets you market locally",
+    "You have room for new clients and a clear idea of who you serve best",
+    "Your compliance team can review pages in a reasonable time",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You need new clients this month. Referrals and events do that faster",
+    "You want pages that talk about returns or beating the market",
+    "You want an office listed in a town where nobody works",
+    "You want reviews bought, traded, or written by friends",
+  ],
+
+  "faq": [
+    ("Are we allowed to ask clients for Google reviews?", "Often yes, with conditions that depend on how you are registered and what your firm allows. Your compliance team decides how we ask, what replies say, and whether reviews appear on your site. We never offer anything in return for a review."),
+    ("How long until we get more calls?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Planning pages and town pages take longer and keep building."),
+    ("Our firm controls our website. Can we still do this?", "Usually some of it. Many firms let advisors run their own Google profile, and some allow local pages or a separate site. We start from your firm's marketing rules and ask before we change anything."),
+    ("We just went independent. What happens to the old listings?", "We find the old profile and the directory listings with your former firm's name or number, then update or remove them carefully. Some of them may belong to the old firm, and we tell you which before anything changes."),
+    ("Most of our meetings are on video. Does local search still matter?", "Yes. People still search for an advisor near them, and many want the option of meeting in person. Your profile wins nearby searches, and your planning pages reach people further out."),
+    ("Should we list our fees?", "Only if you want to. Some firms show a starting fee or how fees are worked out, and others explain it on a call. People search for how advisors are paid, so a plain page on it helps either way."),
+    ("Who approves what goes on the site?", "You and your compliance team, every time. We write in plain words about what you do and who you help, with no talk of returns, and nothing goes live until it is approved."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the advisor they call first.",
+  "cta_p": "Start with a free audit of your profile, your listings, and the three firms showing above you on the map.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS, PEST_CONTROL, LANDSCAPERS, INSURANCE_AGENTS, FINANCIAL_ADVISORS]
