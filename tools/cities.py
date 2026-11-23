@@ -907,4 +907,65 @@ SEATTLE = {
   "cta_p": "We map where you rank across Seattle and the cities around it, show you which neighborhoods are within reach now, and tell you what the rest would take.",
 }
 
-PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE, COLUMBUS, INDIANAPOLIS, SAN_JOSE, SEATTLE]
+DENVER = {
+  "slug": "local-seo-denver",
+  "city": "Denver",
+  "short": "Denver",
+  "region": "the Denver metro and the Front Range",
+  "title": "Local SEO Agency in Denver | LocalScaling",
+  "meta": "Local SEO for Denver service businesses. We get contractors, clinics, and firms into the Google map pack and the search results under it, from Highland to Washington Park and out to Aurora, Lakewood, and Highlands Ranch. Starting at $1,500/mo.",
+  "eyebrow": "Serving Denver and the metro",
+  "h1": "Local SEO agency in Denver",
+  "lede": "We get local service businesses into the map pack and the search results under it, in the Denver neighborhoods and suburbs their customers search from. The metro keeps spreading north, south, and east along the highways, and people here look for someone close to home.",
+
+  "why_eyebrow": "Why Denver is different",
+  "why_h2": "One city ringed by a dozen suburbs",
+  "why_paragraphs": [
+    "Denver is a city and a county at once, and the suburbs around it sit in several other counties. Aurora to the east is a big city of its own. Lakewood and Arvada run west toward the foothills, Westminster and Thornton spread north, and Littleton, Centennial, and Highlands Ranch fill in the south side.",
+    ("pull", "On the map it reads as one metro. In the search box it is a list of town names."),
+    "Inside the city, the neighborhoods carry their own names. Someone in Highland types Highland, and a family near Washington Park types Wash Park. A page that only says Denver gives either of them little reason to think you work on their street.",
+    "Distance matters more than it looks. Traffic on I-25, I-70, and C-470 makes a short trip on the map feel long, so most people pick someone on their side of town. A law office in Cherry Creek rarely shows on the map for a client in Arvada, however strong the profile.",
+  ],
+
+  "search_example": "estate planning attorney Cherry Creek",
+  "pack_rows": [("Your firm", "Estate planning attorney · 0.4 mi"), ("Another firm", "Attorney · 1.7 mi"), ("Another firm", "Estate planning attorney · 2.9 mi")],
+  "organic_rows": [("Wills and trusts in Cherry Creek", "yourfirm.com"), ("Estate planning lawyers in Denver", "a directory"), ("Another firm", "anotherfirm.com")],
+  "both_intro": "When someone in Denver or a nearby suburb searches for what you do, Google shows the map first and the regular results under it, and both change with the place they are searching from. A business that holds a spot in both, for that place, gets the call.",
+
+  "how_h2": "Built around how Denver searches",
+  "how": [
+    ("We measure your real reach first", "We check where your profile ranks from a grid of points across Denver and the suburbs you serve, from Thornton down to Highlands Ranch. A search from your own office says very little about the other side of I-25. The plan comes from the grid."),
+    ("We build a page for each neighborhood people name", "A homeowner in Park Hill looking for a landscaper types Park Hill, and someone in Sloan's Lake types Sloan's Lake. Your site and profile use the names people here actually say."),
+    ("We treat each suburb as its own market", "Aurora, Lakewood, Arvada, and Littleton have their own downtowns and their own identity. Each one you want gets its own page, its own reviews from customers there, and its own spot on the grid."),
+    ("We plan around the highways", "I-25, I-70, and C-470 decide how far your customers will look. We start with the areas closest to you and reach further once those are won, so the effort goes where the calls are."),
+  ],
+
+  "included": [
+    ("Google Business Profile", "Categories that fit your work, the services people look for, a service area drawn around where you really go, real photos, and regular posts. This is what wins the map."),
+    ("Neighborhood and suburb pages", "A page for each neighborhood and suburb you want, written for the people who live there. These are what put you in the results under the map."),
+    ("Listings that match", "One name, address, and phone number on every directory Google compares, from the national ones to the Colorado and trade ones."),
+    ("Review generation", "A request sent at the right moment after each job or visit, so every area you serve collects recent reviews from people who live there."),
+    ("Monthly reporting", "Your rank on the grid, area by area, what changed since last month, and how many people called."),
+    ("Your website", "Built for local search from the start, with a page for each service and each place you work. Every client gets one."),
+  ],
+
+  "areas_h2": "Areas we work across Denver and nearby suburbs",
+  "areas": ["LoDo","RiNo","Capitol Hill","Highland","Cherry Creek","Washington Park","Baker","Park Hill","Central Park","Sloan's Lake","Berkeley","University Park","Lowry","Green Valley Ranch","Aurora","Lakewood","Arvada","Westminster","Littleton","Highlands Ranch"],
+  "areas_note": "These are a starting point. If your neighborhood or suburb is missing, ask and we will tell you honestly whether it is within reach.",
+  "more_cities": ["local-seo-los-angeles", "local-seo-houston", "local-seo-phoenix", "local-seo-dallas", "local-seo-san-diego", "local-seo-chicago", "local-seo-san-antonio", "local-seo-austin", "local-seo-jacksonville", "local-seo-fort-worth", "local-seo-charlotte", "local-seo-columbus", "local-seo-indianapolis", "local-seo-san-jose", "local-seo-seattle"],
+
+  "faq": [
+    ("You are not in Denver. Does that matter?", "No. Google looks at your location, your profile, your reviews, and your site, and none of those depend on where we work. We run Denver campaigns remotely and report to you every month."),
+    ("How long until I see results?", "Usually three to six months to start seeing big results. Some neighborhoods and suburbs move faster than others, and we tell you which before you commit."),
+    ("We are in Lakewood. Should our pages say Lakewood or Denver?", "Both, each on its own page. People nearby search for Lakewood, and people further out search for Denver. Your profile keeps your real address, and your site gets a page for each name you want to win."),
+    ("Can one profile cover the whole metro?", "No single listing reaches from Thornton to Highlands Ranch and out to Aurora. You win the area around your address first, then reach further with neighborhood and suburb pages as the profile gets stronger. A second listing needs a real staffed office, and a virtual office or a mailbox can get the whole profile suspended."),
+    ("How many reviews do we need?", "There is no set number. In each area you need more recent reviews than the businesses showing above you, from people who live there, and a steady flow does more than a burst."),
+    ("We also work in Boulder and the mountain towns. Can you help there?", "Yes, with pages for each town you really serve. On the map, distance from your address still counts, so the areas closest to you come first and the far ones lean on your pages and reviews."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Find out which parts of Denver you can win.",
+  "cta_p": "We map where you rank across Denver and the suburbs around it, show you which areas are within reach now, and tell you what the rest would take.",
+}
+
+PAGES = [LOS_ANGELES, HOUSTON, PHOENIX, DALLAS, SAN_DIEGO, CHICAGO, SAN_ANTONIO, AUSTIN, JACKSONVILLE, FORT_WORTH, CHARLOTTE, COLUMBUS, INDIANAPOLIS, SAN_JOSE, SEATTLE, DENVER]

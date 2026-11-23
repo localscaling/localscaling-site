@@ -1685,4 +1685,110 @@ FINANCIAL_ADVISORS = {
   "cta_p": "Start with a free audit of your profile, your listings, and the three firms showing above you on the map.",
 }
 
-PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS, PEST_CONTROL, LANDSCAPERS, INSURANCE_AGENTS, FINANCIAL_ADVISORS]
+ORTHODONTISTS = {
+  "slug": "local-seo-for-orthodontists",
+  "title": "Local SEO for Orthodontists | LocalScaling",
+  "meta": "Local SEO for orthodontists. We get your practice into the Google map pack and the search results under it, in the towns your patients live in, for braces, aligners, and the cases you want more of. Starting at $1,500/mo.",
+  "crumb": "Orthodontists",
+  "eyebrow": "Local SEO for orthodontists",
+  "h1": "Local SEO for orthodontists",
+  "lede": "A parent whose dentist mentioned braces searches on a phone that night, looks at the map, and reads the reviews. An adult who has wanted straighter teeth for years reads the pages under it for weeks. We get your practice into both places, in the towns your patients drive in from.",
+  "short": "orthodontic practices",
+  "industry_value": "Dental",
+  "you": "Your practice",
+
+  "pack_search": "orthodontist near me",
+  "pack_rows": [("Your practice", "Orthodontist · 0.9 mi"), ("Another practice", "Orthodontist · 2.2 mi"), ("A general dentist", "Dentist · 3.4 mi")],
+  "organic_rows": [("Braces and Invisalign for kids and adults in your town", "yourpractice.com"), ("Best orthodontists near you", "a directory"), ("Another practice", "anotherpractice.com")],
+  "pack_note": "Three spots. A parent with a referral slip in hand still checks these first.",
+  "both_intro": "When someone searches for an orthodontist, Google shows the map first and the regular results under it. Parents use the map to see who is close to home and school, then read the reviews. Adults thinking about aligners read the sites under it to learn about cost, time, and what treatment looks like. A practice that holds a spot in both gets the consult.",
+
+  "timeline": [(1, 2, "peak", "New benefits"), (3, 4, "build", "Profile, pages"), (5, 5, "quiet", "Reviews"), (6, 8, "peak", "Summer starts"), (9, 10, "quiet", "Early checks"), (11, 12, "peak", "Benefits end")],
+  "timeline_start": 3,
+  "timeline_alt": "A twelve month timeline. The profile and pages are built in March and April, May goes to reviews, summer brings the most new starts for kids out of school, September and October are good months for early checks, and November to February fill with families using benefits before they end and after they reset.",
+  "timeline_caption": "The general shape of a year for an orthodontic practice. Adults start treatment in any month, so the pages need to be ready all year. Families plan around school and around benefits, and a build in early spring is in place for the summer rush.",
+
+  "intent": [
+    ("orthodontist near me", "A parent who just heard the word braces from the family dentist", "Your Google Business Profile"),
+    ("Invisalign [city]", "An adult who has thought about it for a long time and wants to know the cost", "A service page"),
+    ("braces for kids [city]", "A parent comparing two or three practices before a free consult", "A service page"),
+    ("how much do braces cost", "Someone deciding whether treatment fits the family budget", "A plain answer page"),
+    ("adult braces [city]", "Someone who wants it done right and wants to know if it shows", "A service page"),
+    ("orthodontist in [the town next door]", "A family who wants appointments close to school", "A city page"),
+  ],
+
+  "why_eyebrow": "Why orthodontics is different",
+  "why_h2": "Two very different people search for you",
+  "why_paragraphs": [
+    "Most of your patients start with a parent. A dentist mentions crowding, or a friend's child gets braces, and the parent searches that night. The American Association of Orthodontists suggests a child's first orthodontic check no later than age seven, so some of those parents are looking well before treatment starts.",
+    "The other patient is an adult. They have thought about straightening their teeth for years, and now they compare clear aligners, braces, and cost. They read more, they ask more questions, and they often pay for it themselves.",
+    ("pull", "Treatment can run for a long time. Parents want to like the office before they sign up."),
+    "Your competition is wider than the orthodontist down the road. General dentists offer aligners, and some aligners are sold by mail. The map and a clear page about specialty training, the consult, and payment plans are where a specialist makes the case for a visit.",
+  ],
+
+  "leaks_h2": "Six things we find on most orthodontic practice profiles",
+  "leaks_intro": "Each one looks minor. Together they send the parent to the practice across town.",
+  "leaks": [
+    ("Listed as a dentist", "Some practices sit under Dentist or Dental clinic. Orthodontist is its own category, and it is the one that matches the search."),
+    ("Satellite offices with the wrong hours", "Many practices see patients in a second office a few days a week. If the profile says it is open every day, people call to an empty office and Google gets mixed signals."),
+    ("The doctor and the practice split apart", "A profile for the orthodontist and another for the practice, with different phone numbers. Reviews land on both, and neither gets strong."),
+    ("One page for all treatment", "Braces, clear aligners, early treatment, and retainers on a single page. Google picks one page to show for a search, and a page about everything is a weak match for each one."),
+    ("Nothing about cost or payment", "Cost is the first question most families ask. A site that never mentions consults, insurance, or monthly payment plans sends them to the practice that does."),
+    ("Reviews asked for once, at the end", "Treatment runs for months, and many practices only ask on the day braces come off. Good moments come earlier too, and a steady flow of reviews does more than a burst."),
+  ],
+
+  "how_h2": "Built around how families and adults choose an orthodontist",
+  "how": [
+    ("We set up the categories and the profile", "Orthodontist as the primary category. Your hours for each office as they really are, photos of the team and the treatment area, and the treatments people search for listed as services."),
+    ("We build a page for each treatment", "Braces for kids and teens, clear aligners, adult orthodontics, early treatment, and retainers, only for what you offer. Each one gets its own page. Those pages are what put you in the results under the map."),
+    ("We answer the money questions", "What a consult covers, whether it is free, how insurance usually works for orthodontics, and whether you offer monthly payments. Plain answers on the page bring in families who would otherwise just call around."),
+    ("We give every office its own presence", "Each office gets its own profile, its own page, and its own reviews, with true hours. We also build pages for the towns and school areas your families come from."),
+    ("We ask for reviews at the good moments", "Starting treatment, a milestone, and the day braces come off. A text with a link goes to the parent or the adult patient, and replies never confirm who is a patient."),
+    ("We report calls and booked consults", "Each month you see where you rank across your towns, how that moved, and how many people called or booked a consult. Traffic stays off the report because nobody starts treatment from traffic."),
+  ],
+
+  "searches_h2": "What your next patient is typing",
+  "searches": ["orthodontist near me", "braces near me", "Invisalign near me", "free orthodontic consultation", "orthodontist that takes my insurance", "braces cost", "clear aligners near me", "orthodontist open Saturday"],
+  "specialty_searches": ["adult braces", "early orthodontic treatment", "braces for teens", "ceramic braces", "lingual braces", "Invisalign Teen", "retainer replacement", "orthodontist payment plans", "overbite correction", "palate expander", "second opinion orthodontist", "ortodoncista cerca de mi"],
+  "searches_note": "Add your town or city to any of these and that is the search. The specialty ones have fewer practices after them, and many bring a full case. Each one needs its own page, and that is most of the work.",
+
+  "included": [
+    ("Google Business Profile", "Orthodontist as the primary category, true hours for every office, real photos of the team, the treatments people search for listed as services, and regular posts. This is what wins the map."),
+    ("Treatment pages", "One page for each treatment you want more of, written for the parent or adult typing the search. This is what wins the listing under the map."),
+    ("Town pages", "One page for each town your families come from, so parents nearby can find an office close to home and school."),
+    ("Listings that match", "One name, address, and phone number per office across the directories Google checks, with old doctor and practice listings merged or cleaned up."),
+    ("Review generation", "Requests at the start of treatment, at milestones, and on the day braces come off, with replies that never confirm who is a patient."),
+    ("Your website", "Built for local search, with your specialty training up front, consult booking, a page on cost and payment, and a structure that gets stronger every year."),
+  ],
+
+  "fit_h2": "Which orthodontic practices this is for",
+  "fit_yes": [
+    "A practice with one office, or a main office and a few satellites",
+    "You have chair time for more consults and new starts",
+    "You want more of a certain case, like adult aligners or early treatment",
+    "You can give it three to six months before you judge it",
+  ],
+  "fit_no": [
+    "You need new starts this month. Ads do that faster",
+    "You want pages that promise a finish date or a perfect smile",
+    "You want a profile for an office that is not staffed",
+    "You want reviews traded for discounts or gifts",
+  ],
+
+  "faq": [
+    ("Most of our patients come from dentist referrals. Do we need this?", "Referrals still matter, and many referred parents search your name before they call. Your profile and reviews decide whether they book with you or with someone closer. Local search also brings families who never had a referral."),
+    ("How long until we get more consults?", "Usually three to six months to start seeing big results. Fixing the profile and listings moves the map first. Treatment pages and town pages take longer and keep building."),
+    ("We have satellite offices open two days a week. Can each one have a profile?", "Yes, if the office is staffed during the hours it lists. Each one gets true hours, its own phone number if it has one, and its own page. An office with no staff should never be listed."),
+    ("General dentists near us offer Invisalign. Can we still win those searches?", "Often, yes. Orthodontist is its own category, and your pages can explain what a specialist does and who treatment is right for. The map still weighs distance, so the towns closest to you come first."),
+    ("We already have a dental marketing company. Is this any different?", "Dental marketing usually targets cleanings and checkups. Orthodontic searches are fewer, come from parents and adults weighing a long treatment, and need their own category, pages, and review timing. We build for those searches only."),
+    ("Can we post before and after photos?", "Only with written consent from the patient, or from a parent for a child. Photos of the office and the team do a lot of the work too."),
+    ("Should we list prices?", "That is up to you. Many practices explain what changes the cost, what the consult covers, and whether they offer payment plans. People search for cost, so a plain page on it helps either way."),
+    ("Do you write about treatment on our site?", "We write treatment pages and town pages in plain words. You approve anything clinical before it publishes, and we make no claims about outcomes or finish dates."),
+    ("What does it cost?", "Campaigns start at $1,500 a month, with no setup fee. Month to month."),
+  ],
+
+  "cta_h": "Be the practice parents call first.",
+  "cta_p": "Start with a free audit of your profile, your reviews, and the three practices showing above you on the map.",
+}
+
+PAGES = [ACCOUNTANTS, DENTISTS, PLUMBERS, VETERINARIANS, HVAC, ROOFERS, PERSONAL_INJURY, CHIROPRACTORS, ELECTRICIANS, MED_SPAS, FAMILY_LAW, PHYSICAL_THERAPISTS, PEST_CONTROL, LANDSCAPERS, INSURANCE_AGENTS, FINANCIAL_ADVISORS, ORTHODONTISTS]
